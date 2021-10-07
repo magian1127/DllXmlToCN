@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.IO.FileSystem.DriveInfo</name>
+  </assembly>
+  <members>
+    <member name="T:System.IO.DriveInfo">
+      <summary>
+              提供对有关驱动器的信息的访问。
+            </summary>
+    </member>
+    <member name="M:System.IO.DriveInfo.#ctor(System.String)">
+      <summary>
+              提供对有关指定驱动器的信息的访问。
+            </summary>
+      <param name="driveName">
+                有效驱动器路径或驱动器号。
+                 它可以是从“a”到“z”的大写或小写字母。
+                 Null 值无效。
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+                  驱动器号不能为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+                  第一个字母 <paramref name="driveName" /> 不是一个大写或小写字母后从 a 到 z。
+                
+                  - 或 -
+                
+                  <paramref name="driveName" /> 未引用有效的驱动器。
+                </exception>
+    </member>
+    <member name="P:System.IO.DriveInfo.AvailableFreeSpace">
+      <summary>
+              指示驱动器上的可用空闲空间总量（以字节为单位）。
+            </summary>
+      <returns>
+              驱动器上的可用空闲空间量（以字节为单位）。
+            </returns>
+      <exception cref="T:System.UnauthorizedAccessException">
+                  对驱动器信息的访问被拒绝。
+                </exception>
+      <exception cref="T:System.IO.IOException">
+                  （有关示例，出现了磁盘错误或驱动器未准备好），将发生了 I/O 错误。
+                </exception>
+    </member>
+    <member name="P:System.IO.DriveInfo.DriveFormat">
+      <summary>
+              获取文件系统的名称，例如 NTFS 或 FAT32。
+            </summary>
+      <returns>
+              指定驱动器上文件系统的名称。
+            </returns>
+      <exception cref="T:System.UnauthorizedAccessException">
+                  对驱动器信息的访问被拒绝。
+                </exception>
+      <exception cref="T:System.IO.DriveNotFoundException">
+                  驱动器不存在或未映射。
+                </exception>
+      <exception cref="T:System.IO.IOException">
+                  （有关示例，出现了磁盘错误或驱动器未准备好），将发生了 I/O 错误。
+                </exception>
+    </member>
+    <member name="P:System.IO.DriveInfo.DriveType">
+      <summary>
+              获取驱动器类型，如 CD-ROM、可移动、网络或固定。
+            </summary>
+      <returns>
+              指定驱动器类型的枚举值之一。
+            </returns>
+    </member>
+    <member name="M:System.IO.DriveInfo.GetDrives">
+      <summary>
+              检索计算机上的所有逻辑驱动器的驱动器名称。
+            </summary>
+      <returns>
+        <see cref="T:System.IO.DriveInfo" /> 类型的数组，表示计算机上的逻辑驱动器。
+            </returns>
+      <exception cref="T:System.IO.IOException">
+                  （有关示例，出现了磁盘错误或驱动器未准备好），将发生了 I/O 错误。
+                </exception>
+      <exception cref="T:System.UnauthorizedAccessException">
+                  调用方没有所要求的权限。
+                </exception>
+    </member>
+    <member name="P:System.IO.DriveInfo.IsReady">
+      <summary>
+              获取一个指示驱动器是否已准备好的值。
+            </summary>
+      <returns>
+              如果驱动器已准备好，则为 <see langword="true" />；如果驱动器未准备好，则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.IO.DriveInfo.Name">
+      <summary>
+              获取驱动器的名称，如 C:\。
+            </summary>
+      <returns>
+              驱动器的名称。
+            </returns>
+    </member>
+    <member name="P:System.IO.DriveInfo.RootDirectory">
+      <summary>
+              获取驱动器的根目录。
+            </summary>
+      <returns>
+              包含驱动器根目录的对象。
+            </returns>
+    </member>
+    <member name="M:System.IO.DriveInfo.ToString">
+      <summary>
+              将驱动器名称作为字符串返回。
+            </summary>
+      <returns>
+              驱动器的名称。
+            </returns>
+    </member>
+    <member name="P:System.IO.DriveInfo.TotalFreeSpace">
+      <summary>
+              获取驱动器上的可用空闲空间总量（以字节为单位）。
+            </summary>
+      <returns>
+              驱动器上的可用空闲空间总量（以字节为单位）。
+            </returns>
+      <exception cref="T:System.UnauthorizedAccessException">
+                  对驱动器信息的访问被拒绝。
+                </exception>
+      <exception cref="T:System.IO.DriveNotFoundException">
+                  驱动器未映射，或不存在。
+                </exception>
+      <exception cref="T:System.IO.IOException">
+                  （有关示例，出现了磁盘错误或驱动器未准备好），将发生了 I/O 错误。
+                </exception>
+    </member>
+    <member name="P:System.IO.DriveInfo.TotalSize">
+      <summary>
+              获取驱动器上存储空间的总大小（以字节为单位）。
+            </summary>
+      <returns>
+              驱动器的总大小（以字节为单位）。
+            </returns>
+      <exception cref="T:System.UnauthorizedAccessException">
+                  对驱动器信息的访问被拒绝。
+                </exception>
+      <exception cref="T:System.IO.DriveNotFoundException">
+                  驱动器未映射，或不存在。
+                </exception>
+      <exception cref="T:System.IO.IOException">
+                  （有关示例，出现了磁盘错误或驱动器未准备好），将发生了 I/O 错误。
+                </exception>
+    </member>
+    <member name="P:System.IO.DriveInfo.VolumeLabel">
+      <summary>
+              获取或设置驱动器的卷标。
+            </summary>
+      <returns>
+              卷标。
+            </returns>
+      <exception cref="T:System.IO.IOException">
+                  发生 I/O 错误 （例如，磁盘错误或驱动器未准备好）。
+                </exception>
+      <exception cref="T:System.IO.DriveNotFoundException">
+                  该驱动器未映射，或不存在。
+                </exception>
+      <exception cref="T:System.Security.SecurityException">
+                  调用方没有所要求的权限。
+                </exception>
+      <exception cref="T:System.UnauthorizedAccessException">
+                  CD-ROM 驱动器或网络上设置的卷标签。
+                
+                  - 或 -
+                
+                  对驱动器信息的访问被拒绝。
+                </exception>
+    </member>
+    <member name="M:System.IO.DriveInfo.System#Runtime#Serialization#ISerializable#GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+              使用序列化目标对象所需的数据填充 <see cref="T:System.Runtime.Serialization.SerializationInfo" /> 对象。
+            </summary>
+      <param name="info">
+                要填充数据的对象。
+              </param>
+      <param name="context">
+                此序列化的目标（请参见 <see cref="T:System.Runtime.Serialization.StreamingContext" />）。
+              </param>
+    </member>
+    <member name="T:System.IO.DriveNotFoundException">
+      <summary>
+              当尝试访问的驱动器或共享不可用时引发的异常。
+            </summary>
+    </member>
+    <member name="M:System.IO.DriveNotFoundException.#ctor">
+      <summary>
+              新实例初始化 <see cref="T:System.IO.DriveNotFoundException" /> 带有其消息字符串设置为系统提供的消息和将设置为 COR_E_DIRECTORYNOTFOUND 其 HRESULT 的类。
+            </summary>
+    </member>
+    <member name="M:System.IO.DriveNotFoundException.#ctor(System.String)">
+      <summary>
+              新实例初始化 <see cref="T:System.IO.DriveNotFoundException" /> 类，具有指定的消息字符串并设置为 COR_E_DIRECTORYNOTFOUND 的 HRESULT。
+            </summary>
+      <param name="message">
+                一个 <see cref="T:System.String" /> 描述错误的对象。
+                 此构造函数的调用方需要确保此字符串已针对当前系统区域性进行了本地化。
+              </param>
+    </member>
+    <member name="M:System.IO.DriveNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+              初始化的新实例 <see cref="T:System.IO.DriveNotFoundException" /> 用指定的序列化和上下文信息的类。
+            </summary>
+      <param name="info">
+                一个 <see cref="T:System.Runtime.Serialization.SerializationInfo" /> 对象，其中包含有关所引发的异常的序列化的对象数据。
+              </param>
+      <param name="context">
+                一个 <see cref="T:System.Runtime.Serialization.StreamingContext" /> 对象，其中包含有关源或目标的所引发的异常上下文信息。
+              </param>
+    </member>
+    <member name="M:System.IO.DriveNotFoundException.#ctor(System.String,System.Exception)">
+      <summary>
+              新实例初始化 <see cref="T:System.IO.DriveNotFoundException" /> 使用指定的错误消息和对导致此异常的内部异常的引用。
+            </summary>
+      <param name="message">
+                解释异常原因的错误消息。
+              </param>
+      <param name="innerException">
+                导致当前异常的异常。
+                 如果 <paramref name="innerException" /> 参数不为 <see langword="null" />，则当前异常将在处理内部异常的 <see langword="catch" /> 块中引发。
+              </param>
+    </member>
+    <member name="T:System.IO.DriveType">
+      <summary>
+              定义常数驱动器类型，包括 CDRom、 固定、 网络、 NoRootDirectory、 Ram、 可移动和未知。
+            </summary>
+    </member>
+    <member name="F:System.IO.DriveType.CDRom">
+      <summary>
+              驱动器是一种光盘设备，如 CD 或 DVD rom。
+            </summary>
+    </member>
+    <member name="F:System.IO.DriveType.Fixed">
+      <summary>
+              驱动器是固定的磁盘。
+            </summary>
+    </member>
+    <member name="F:System.IO.DriveType.Network">
+      <summary>
+              驱动器是网络驱动器。
+            </summary>
+    </member>
+    <member name="F:System.IO.DriveType.NoRootDirectory">
+      <summary>
+              驱动器没有根目录。
+            </summary>
+    </member>
+    <member name="F:System.IO.DriveType.Ram">
+      <summary>
+              驱动器是 RAM 磁盘。
+            </summary>
+    </member>
+    <member name="F:System.IO.DriveType.Removable">
+      <summary>
+              驱动器是可移动存储设备，如软盘驱动器或 USB 闪存驱动器。
+            </summary>
+    </member>
+    <member name="F:System.IO.DriveType.Unknown">
+      <summary>
+              驱动器的类型是未知的。
+            </summary>
+    </member>
+  </members>
+</doc>

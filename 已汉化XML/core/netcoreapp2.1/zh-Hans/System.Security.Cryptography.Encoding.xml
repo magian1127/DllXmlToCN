@@ -1,0 +1,911 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Security.Cryptography.Encoding</name>
+  </assembly>
+  <members>
+    <member name="T:System.Security.Cryptography.FromBase64Transform">
+      <summary>
+              从 Base 64 转换 <see cref="T:System.Security.Cryptography.CryptoStream" />。
+            </summary>
+    </member>
+    <member name="M:System.Security.Cryptography.FromBase64Transform.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Security.Cryptography.FromBase64Transform" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Security.Cryptography.FromBase64Transform.#ctor(System.Security.Cryptography.FromBase64TransformMode)">
+      <summary>
+              使用指定的转换模式初始化 <see cref="T:System.Security.Cryptography.FromBase64Transform" /> 类的新实例。
+            </summary>
+      <param name="whitespaces">
+        <see cref="T:System.Security.Cryptography.FromBase64Transform" /> 值之一。
+              </param>
+    </member>
+    <member name="P:System.Security.Cryptography.FromBase64Transform.CanReuseTransform">
+      <summary>
+              获取一个值，该值指示是否可重复使用当前转换。
+            </summary>
+      <returns>
+              总是为 <see langword="true" />。
+            </returns>
+    </member>
+    <member name="P:System.Security.Cryptography.FromBase64Transform.CanTransformMultipleBlocks">
+      <summary>
+              获取一个值，该值指示是否可转换多个块。
+            </summary>
+      <returns>
+              总是为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Security.Cryptography.FromBase64Transform.Clear">
+      <summary>
+              释放由 <see cref="T:System.Security.Cryptography.FromBase64Transform" /> 使用的所有资源。
+            </summary>
+    </member>
+    <member name="M:System.Security.Cryptography.FromBase64Transform.Dispose">
+      <summary>
+              释放 <see cref="T:System.Security.Cryptography.FromBase64Transform" /> 类的当前实例所使用的所有资源。
+            </summary>
+    </member>
+    <member name="M:System.Security.Cryptography.FromBase64Transform.Dispose(System.Boolean)">
+      <summary>
+              释放由 <see cref="T:System.Security.Cryptography.FromBase64Transform" /> 占用的非托管资源，还可以另外再释放托管资源。
+            </summary>
+      <param name="disposing">
+                若要释放托管资源和非托管资源，则为 <see langword="true" />；若仅释放非托管资源，则为 <see langword="false" />。
+              </param>
+    </member>
+    <member name="M:System.Security.Cryptography.FromBase64Transform.Finalize">
+      <summary>
+              释放 <see cref="T:System.Security.Cryptography.FromBase64Transform" /> 使用的非托管资源。
+            </summary>
+    </member>
+    <member name="P:System.Security.Cryptography.FromBase64Transform.InputBlockSize">
+      <summary>
+              获取输入块大小。
+            </summary>
+      <returns>
+              输入数据块的大小（以字节为单位）。
+            </returns>
+    </member>
+    <member name="P:System.Security.Cryptography.FromBase64Transform.OutputBlockSize">
+      <summary>
+              获取输出块大小。
+            </summary>
+      <returns>
+              输出数据块的大小（以字节为单位）。
+            </returns>
+    </member>
+    <member name="M:System.Security.Cryptography.FromBase64Transform.TransformBlock(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32)">
+      <summary>
+              将输入字节数组的指定区域从 Base 64 进行转换，并将结果复制到输出字节数组的指定区域。
+            </summary>
+      <param name="inputBuffer">
+                从 Base 64 计算的输入。
+              </param>
+      <param name="inputOffset">
+                输入字节数组中的偏移量，从该位置开始使用数据。
+              </param>
+      <param name="inputCount">
+                输入字节数组中用作数据的字节数。
+              </param>
+      <param name="outputBuffer">
+                要向其写入结果的输出。
+              </param>
+      <param name="outputOffset">
+                输入字节数组中的偏移量，从该位置开始使用数据。
+              </param>
+      <returns>
+              写入的字节数。
+            </returns>
+      <exception cref="T:System.ObjectDisposedException">
+                  当前 <see cref="T:System.Security.Cryptography.FromBase64Transform" /> 对象被释放。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="inputCount" /> 使用了无效值。
+                
+                  - 或 -
+                
+                  <paramref name="inputBuffer" /> 具有无效的偏移量的长度。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="inputOffset" /> 超出范围。
+                   此参数需要非负数。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="inputBuffer" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Security.Cryptography.FromBase64Transform.TransformFinalBlock(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+              从 base 64 转换指定字节数组的指定区域。
+            </summary>
+      <param name="inputBuffer">
+                要从 Base 64 转换的输入。
+              </param>
+      <param name="inputOffset">
+                字节数组中的偏移量，从该位置开始使用数据。
+              </param>
+      <param name="inputCount">
+                字节数组中用作数据的字节数。
+              </param>
+      <returns>
+              已计算的转换。
+            </returns>
+      <exception cref="T:System.ObjectDisposedException">
+                  当前 <see cref="T:System.Security.Cryptography.FromBase64Transform" /> 对象被释放。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="inputBuffer" /> 具有无效的偏移量的长度。
+                
+                  - 或 -
+                
+                  <paramref name="inputCount" /> 具有无效值。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="inputOffset" /> 超出范围。
+                   此参数需要非负数。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="inputBuffer" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="T:System.Security.Cryptography.FromBase64TransformMode">
+      <summary>
+              指定是否应在 base 64 转换中忽略空白区域。
+            </summary>
+    </member>
+    <member name="F:System.Security.Cryptography.FromBase64TransformMode.DoNotIgnoreWhiteSpaces">
+      <summary>
+              不应忽略空白区域。
+            </summary>
+    </member>
+    <member name="F:System.Security.Cryptography.FromBase64TransformMode.IgnoreWhiteSpaces">
+      <summary>
+              应忽略空白区域。
+            </summary>
+    </member>
+    <member name="T:System.Security.Cryptography.AsnEncodedData">
+      <summary>
+              表示抽象语法表示法一 (ASN.1) 编码的数据。
+            </summary>
+    </member>
+    <member name="M:System.Security.Cryptography.AsnEncodedData.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Security.Cryptography.AsnEncodedData.#ctor(System.Byte[])">
+      <summary>
+              新实例初始化 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 类使用的字节数组。
+            </summary>
+      <param name="rawData">
+                包含抽象语法标记一个 ASN.1 编码数据的字节数组。
+              </param>
+    </member>
+    <member name="M:System.Security.Cryptography.AsnEncodedData.#ctor(System.Security.Cryptography.AsnEncodedData)">
+      <summary>
+              新实例初始化 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 类使用的实例 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 类。
+            </summary>
+      <param name="asnEncodedData">
+        <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 类的实例。
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="asnEncodedData" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Security.Cryptography.AsnEncodedData.#ctor(System.Security.Cryptography.Oid,System.Byte[])">
+      <summary>
+              新实例初始化 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 类使用 <see cref="T:System.Security.Cryptography.Oid" /> 对象和一个字节数组。
+            </summary>
+      <param name="oid">
+                一个 <see cref="T:System.Security.Cryptography.Oid" /> 对象。
+              </param>
+      <param name="rawData">
+                包含抽象语法标记一个 ASN.1 编码数据的字节数组。
+              </param>
+    </member>
+    <member name="M:System.Security.Cryptography.AsnEncodedData.#ctor(System.String,System.Byte[])">
+      <summary>
+              新实例初始化 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 类使用的字节数组。
+            </summary>
+      <param name="oid">
+                一个字符串，表示 <see cref="T:System.Security.Cryptography.Oid" /> 信息。
+              </param>
+      <param name="rawData">
+                包含抽象语法标记一个 ASN.1 编码数据的字节数组。
+              </param>
+    </member>
+    <member name="M:System.Security.Cryptography.AsnEncodedData.CopyFrom(System.Security.Cryptography.AsnEncodedData)">
+      <summary>
+              将信息从复制 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 对象。
+            </summary>
+      <param name="asnEncodedData">
+        <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 新对象所基于的对象。
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="asnEncodedData " />是 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Security.Cryptography.AsnEncodedData.Format(System.Boolean)">
+      <summary>
+              以字符串形式返回的抽象语法标记一个 ASN.1 编码数据的格式的版本。
+            </summary>
+      <param name="multiLine">
+        <see langword="true" /> 如果返回的字符串应包含回车;否则为 <see langword="false" />。
+              </param>
+      <returns>
+              表示的抽象语法标记一个 ASN.1 编码数据的格式化的字符串。
+            </returns>
+    </member>
+    <member name="P:System.Security.Cryptography.AsnEncodedData.Oid">
+      <summary>
+              获取或设置 <see cref="T:System.Security.Cryptography.Oid" /> 值 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 对象。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Security.Cryptography.Oid" /> 对象。
+            </returns>
+    </member>
+    <member name="P:System.Security.Cryptography.AsnEncodedData.RawData">
+      <summary>
+              获取或设置一个字节数组中表示的抽象语法标记一个 ASN.1 编码数据。
+            </summary>
+      <returns>
+              一个表示的抽象语法标记一个 ASN.1 编码数据的字节数组。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+                  该值为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="T:System.Security.Cryptography.AsnEncodedDataCollection">
+      <summary>
+              表示 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 对象集合。
+               此类不能被继承。
+            </summary>
+    </member>
+    <member name="M:System.Security.Cryptography.AsnEncodedDataCollection.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Security.Cryptography.AsnEncodedDataCollection.#ctor(System.Security.Cryptography.AsnEncodedData)">
+      <summary>
+              新实例初始化 <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> 类，并添加 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 到集合的对象。
+            </summary>
+      <param name="asnEncodedData">
+                要添加到集合的 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 对象。
+              </param>
+    </member>
+    <member name="M:System.Security.Cryptography.AsnEncodedDataCollection.Add(System.Security.Cryptography.AsnEncodedData)">
+      <summary>
+              添加 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 对象传递给 <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> 对象。
+            </summary>
+      <param name="asnEncodedData">
+                要添加到集合的 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 对象。
+              </param>
+      <returns>
+              添加的索引 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 对象。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="asnEncodedData" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+                  这两个 Oid 都 <see langword="null" /> 和 Oid 不匹配。
+                </exception>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+                  有了 Oid <see langword="null" /> 和 Oid 不匹配。
+                </exception>
+    </member>
+    <member name="M:System.Security.Cryptography.AsnEncodedDataCollection.CopyTo(System.Security.Cryptography.AsnEncodedData[],System.Int32)">
+      <summary>
+              将 <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> 对象复制到一个数组中。
+            </summary>
+      <param name="array">
+                该数组的 <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> 对象将被复制到。
+              </param>
+      <param name="index">
+                复制操作开始的位置。
+              </param>
+    </member>
+    <member name="P:System.Security.Cryptography.AsnEncodedDataCollection.Count">
+      <summary>
+              获取的数 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 集合中的对象。
+            </summary>
+      <returns>
+              数 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 对象。
+            </returns>
+    </member>
+    <member name="M:System.Security.Cryptography.AsnEncodedDataCollection.GetEnumerator">
+      <summary>
+              返回 <see cref="T:System.Security.Cryptography.AsnEncodedDataEnumerator" /> 对象，它可用于导航 <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> 对象。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Security.Cryptography.AsnEncodedDataEnumerator" /> 对象。
+            </returns>
+    </member>
+    <member name="P:System.Security.Cryptography.AsnEncodedDataCollection.IsSynchronized">
+      <summary>
+              获取一个值，该值指示是否访问 <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> 对象是线程安全。
+            </summary>
+      <returns>
+              在所有情况下均为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Security.Cryptography.AsnEncodedDataCollection.Item(System.Int32)">
+      <summary>
+              获取 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 对象从 <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> 对象。
+            </summary>
+      <param name="index">
+                集合中的位置。
+              </param>
+      <returns>
+              一个 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 对象。
+            </returns>
+    </member>
+    <member name="M:System.Security.Cryptography.AsnEncodedDataCollection.Remove(System.Security.Cryptography.AsnEncodedData)">
+      <summary>
+              删除 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 对象从 <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> 对象。
+            </summary>
+      <param name="asnEncodedData">
+                要移除的 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 对象。
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="asnEncodedData" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="P:System.Security.Cryptography.AsnEncodedDataCollection.SyncRoot">
+      <summary>
+              获取一个对象，该对象可用于同步对 <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> 对象的访问。
+            </summary>
+      <returns>
+              用于对访问进行同步的对象 <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> 对象。
+            </returns>
+    </member>
+    <member name="M:System.Security.Cryptography.AsnEncodedDataCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>
+              将 <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> 对象复制到一个数组中。
+            </summary>
+      <param name="array">
+                该数组的 <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> 对象将被复制到。
+              </param>
+      <param name="index">
+                复制操作开始的位置。
+              </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="array" /> 为此方法不支持多维数组。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+                  长度为 <paramref name="index" /> 无效。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="array" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+                  长度为 <paramref name="index" /> 超出范围。
+                </exception>
+    </member>
+    <member name="P:System.Security.Cryptography.AsnEncodedDataCollection.System#Collections#ICollection#IsSynchronized">
+      <returns>
+      </returns>
+    </member>
+    <member name="P:System.Security.Cryptography.AsnEncodedDataCollection.System#Collections#ICollection#SyncRoot">
+      <returns>
+      </returns>
+    </member>
+    <member name="M:System.Security.Cryptography.AsnEncodedDataCollection.System#Collections#IEnumerable#GetEnumerator">
+      <summary>
+              返回 <see cref="T:System.Security.Cryptography.AsnEncodedDataEnumerator" /> 对象，它可用于导航 <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> 对象。
+            </summary>
+      <returns>
+        <see cref="T:System.Security.Cryptography.AsnEncodedDataEnumerator" /> 可用于导航集合的对象。
+            </returns>
+    </member>
+    <member name="T:System.Security.Cryptography.AsnEncodedDataEnumerator">
+      <summary>
+              提供在 <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> 对象中导航的能力。
+               无法继承此类。
+            </summary>
+    </member>
+    <member name="P:System.Security.Cryptography.AsnEncodedDataEnumerator.Current">
+      <summary>
+              获取当前 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 对象在 <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> 对象。
+            </summary>
+      <returns>
+              当前 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 集合中的对象。
+            </returns>
+    </member>
+    <member name="M:System.Security.Cryptography.AsnEncodedDataEnumerator.MoveNext">
+      <summary>
+              前进到下一个 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 对象在 <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> 对象。
+            </summary>
+      <returns>
+        <see langword="true" />, 如果枚举数成功地推进到下一个元素; <see langword="false" />, ，如果枚举器已通过集合的末尾。
+            </returns>
+      <exception cref="T:System.InvalidOperationException">
+                  创建枚举器后，已修改该集合。
+                </exception>
+    </member>
+    <member name="M:System.Security.Cryptography.AsnEncodedDataEnumerator.Reset">
+      <summary>
+              将枚举数设置为其初始位置。
+            </summary>
+      <exception cref="T:System.InvalidOperationException">
+                  创建枚举器后，已修改该集合。
+                </exception>
+    </member>
+    <member name="P:System.Security.Cryptography.AsnEncodedDataEnumerator.System#Collections#IEnumerator#Current">
+      <summary>
+              获取当前 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 对象在 <see cref="T:System.Security.Cryptography.AsnEncodedDataCollection" /> 对象。
+            </summary>
+      <returns>
+              当前的 <see cref="T:System.Security.Cryptography.AsnEncodedData" /> 对象。
+            </returns>
+    </member>
+    <member name="T:System.Security.Cryptography.Oid">
+      <summary>
+              表示加密对象标识符。
+               无法继承此类。
+            </summary>
+    </member>
+    <member name="M:System.Security.Cryptography.Oid.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Security.Cryptography.Oid" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Security.Cryptography.Oid.#ctor(System.Security.Cryptography.Oid)">
+      <summary>
+              使用指定的 <see cref="T:System.Security.Cryptography.Oid" /> 对象初始化 <see cref="T:System.Security.Cryptography.Oid" /> 类的新实例。
+            </summary>
+      <param name="oid">
+                要用于创建新的对象标识符的对象标识符信息。
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="oid " /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Security.Cryptography.Oid.#ctor(System.String)">
+      <summary>
+              新实例初始化 <see cref="T:System.Security.Cryptography.Oid" /> 类使用的字符串值 <see cref="T:System.Security.Cryptography.Oid" /> 对象。
+            </summary>
+      <param name="oid">
+                对象标识符。
+              </param>
+    </member>
+    <member name="M:System.Security.Cryptography.Oid.#ctor(System.String,System.String)">
+      <summary>
+              新实例初始化 <see cref="T:System.Security.Cryptography.Oid" /> 类使用指定的值和友好名称。
+            </summary>
+      <param name="value">
+                标识符以点分隔的数字。
+              </param>
+      <param name="friendlyName">
+                标识符的友好名称。
+              </param>
+    </member>
+    <member name="P:System.Security.Cryptography.Oid.FriendlyName">
+      <summary>
+              获取或设置标识符的友好名称。
+            </summary>
+      <returns>
+              标识符的友好名称。
+            </returns>
+    </member>
+    <member name="M:System.Security.Cryptography.Oid.FromFriendlyName(System.String,System.Security.Cryptography.OidGroup)">
+      <summary>
+              创建 <see cref="T:System.Security.Cryptography.Oid" /> 对象从一个 OID 通过搜索指定的组的友好名称。
+            </summary>
+      <param name="friendlyName">
+                标识符的友好名称。
+              </param>
+      <param name="group">
+                要搜索中的组。
+              </param>
+      <returns>
+              一个对象，表示指定的 OID。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="friendlyName " /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+                  找不到 OID。
+                </exception>
+    </member>
+    <member name="M:System.Security.Cryptography.Oid.FromOidValue(System.String,System.Security.Cryptography.OidGroup)">
+      <summary>
+              创建 <see cref="T:System.Security.Cryptography.Oid" /> 通过使用指定的 OID 值和组的对象。
+            </summary>
+      <param name="oidValue">
+                OID 值。
+              </param>
+      <param name="group">
+                要搜索中的组。
+              </param>
+      <returns>
+              新实例 <see cref="T:System.Security.Cryptography.Oid" /> 对象。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="oidValue" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+                  找不到 OID 值的友好名称。
+                </exception>
+    </member>
+    <member name="P:System.Security.Cryptography.Oid.Value">
+      <summary>
+              获取或设置标识符以点分隔的数字。
+            </summary>
+      <returns>
+              标识符以点分隔的数字。
+            </returns>
+    </member>
+    <member name="T:System.Security.Cryptography.OidCollection">
+      <summary>
+              表示 <see cref="T:System.Security.Cryptography.Oid" /> 对象集合。
+               此类不能被继承。
+            </summary>
+    </member>
+    <member name="M:System.Security.Cryptography.OidCollection.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Security.Cryptography.OidCollection" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Security.Cryptography.OidCollection.Add(System.Security.Cryptography.Oid)">
+      <summary>
+              将 <see cref="T:System.Security.Cryptography.Oid" /> 对象添加到 <see cref="T:System.Security.Cryptography.OidCollection" /> 对象。
+            </summary>
+      <param name="oid">
+                要添加到集合的 <see cref="T:System.Security.Cryptography.Oid" /> 对象。
+              </param>
+      <returns>
+              已添加的 <see cref="T:System.Security.Cryptography.Oid" /> 对象的索引。
+            </returns>
+    </member>
+    <member name="M:System.Security.Cryptography.OidCollection.CopyTo(System.Security.Cryptography.Oid[],System.Int32)">
+      <summary>
+              将 <see cref="T:System.Security.Cryptography.OidCollection" /> 对象复制到一个数组中。
+            </summary>
+      <param name="array">
+                要将 <see cref="T:System.Security.Cryptography.OidCollection" /> 对象复制到的数组。
+              </param>
+      <param name="index">
+                复制操作开始的位置。
+              </param>
+    </member>
+    <member name="P:System.Security.Cryptography.OidCollection.Count">
+      <summary>
+              获取集合中的 <see cref="T:System.Security.Cryptography.Oid" /> 对象数。
+            </summary>
+      <returns>
+              集合中的 <see cref="T:System.Security.Cryptography.Oid" /> 对象数。
+            </returns>
+    </member>
+    <member name="M:System.Security.Cryptography.OidCollection.GetEnumerator">
+      <summary>
+              返回可用于导航 <see cref="T:System.Security.Cryptography.OidCollection" /> 对象的 <see cref="T:System.Security.Cryptography.OidEnumerator" /> 对象。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Security.Cryptography.OidEnumerator" /> 对象。
+            </returns>
+    </member>
+    <member name="P:System.Security.Cryptography.OidCollection.IsSynchronized">
+      <summary>
+              获取一个值，该值表示对 <see cref="T:System.Security.Cryptography.OidCollection" /> 对象的访问是否线程安全。
+            </summary>
+      <returns>
+              在所有情况下均为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Security.Cryptography.OidCollection.Item(System.Int32)">
+      <summary>
+              从 <see cref="T:System.Security.Cryptography.OidCollection" /> 对象获取 <see cref="T:System.Security.Cryptography.Oid" /> 对象。
+            </summary>
+      <param name="index">
+                集合中 <see cref="T:System.Security.Cryptography.Oid" /> 对象的位置。
+              </param>
+      <returns>
+              一个 <see cref="T:System.Security.Cryptography.Oid" /> 对象。
+            </returns>
+    </member>
+    <member name="P:System.Security.Cryptography.OidCollection.Item(System.String)">
+      <summary>
+              获取包含与 <see cref="T:System.Security.Cryptography.OidCollection" /> 对象中指定字符串值匹配的 <see cref="P:System.Security.Cryptography.Oid.Value" /> 属性值或 <see cref="P:System.Security.Cryptography.Oid.FriendlyName" /> 属性值的第一个 <see cref="T:System.Security.Cryptography.Oid" /> 对象。
+            </summary>
+      <param name="oid">
+                一个表示 <see cref="P:System.Security.Cryptography.Oid.Value" /> 属性或 <see cref="P:System.Security.Cryptography.Oid.FriendlyName" /> 属性的字符串。
+              </param>
+      <returns>
+              一个 <see cref="T:System.Security.Cryptography.Oid" /> 对象。
+            </returns>
+    </member>
+    <member name="P:System.Security.Cryptography.OidCollection.SyncRoot">
+      <summary>
+              获取一个对象，该对象可用于同步对 <see cref="T:System.Security.Cryptography.OidCollection" /> 对象的访问。
+            </summary>
+      <returns>
+              一个对象，该对象可用于同步对 <see cref="T:System.Security.Cryptography.OidCollection" /> 对象的访问。
+            </returns>
+    </member>
+    <member name="M:System.Security.Cryptography.OidCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+      <summary>
+              将 <see cref="T:System.Security.Cryptography.OidCollection" /> 对象复制到数组。
+            </summary>
+      <param name="array">
+                要将 <see cref="T:System.Security.Cryptography.OidCollection" /> 对象复制到的数组。
+              </param>
+      <param name="index">
+                复制操作开始的位置。
+              </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="array" /> 不能为多维数组。
+                
+                  - 或 -
+                
+                  <paramref name="array" /> 的长度是无效的偏移量长度。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="array" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="index" /> 的值超出范围。
+                </exception>
+    </member>
+    <member name="P:System.Security.Cryptography.OidCollection.System#Collections#ICollection#IsSynchronized">
+      <returns>
+      </returns>
+    </member>
+    <member name="P:System.Security.Cryptography.OidCollection.System#Collections#ICollection#SyncRoot">
+      <returns>
+      </returns>
+    </member>
+    <member name="M:System.Security.Cryptography.OidCollection.System#Collections#IEnumerable#GetEnumerator">
+      <summary>
+              返回可用于导航 <see cref="T:System.Security.Cryptography.OidCollection" /> 对象的 <see cref="T:System.Security.Cryptography.OidEnumerator" /> 对象。
+            </summary>
+      <returns>
+              返回可用于导航集合的 <see cref="T:System.Security.Cryptography.OidEnumerator" /> 对象。
+            </returns>
+    </member>
+    <member name="T:System.Security.Cryptography.OidEnumerator">
+      <summary>
+              提供在 <see cref="T:System.Security.Cryptography.OidCollection" /> 对象中导航的能力。
+               无法继承此类。
+            </summary>
+    </member>
+    <member name="P:System.Security.Cryptography.OidEnumerator.Current">
+      <summary>
+              获取当前 <see cref="T:System.Security.Cryptography.Oid" /> 对象在 <see cref="T:System.Security.Cryptography.OidCollection" /> 对象。
+            </summary>
+      <returns>
+              当前 <see cref="T:System.Security.Cryptography.Oid" /> 集合中的对象。
+            </returns>
+    </member>
+    <member name="M:System.Security.Cryptography.OidEnumerator.MoveNext">
+      <summary>
+              前进到下一个 <see cref="T:System.Security.Cryptography.Oid" /> 对象在 <see cref="T:System.Security.Cryptography.OidCollection" /> 对象。
+            </summary>
+      <returns>
+        <see langword="true" />, 如果枚举数成功地推进到下一个元素; <see langword="false" />, ，如果枚举器已通过集合的末尾。
+            </returns>
+      <exception cref="T:System.InvalidOperationException">
+                  创建枚举器后，已修改该集合。
+                </exception>
+    </member>
+    <member name="M:System.Security.Cryptography.OidEnumerator.Reset">
+      <summary>
+              将枚举数设置为其初始位置。
+            </summary>
+      <exception cref="T:System.InvalidOperationException">
+                  创建枚举器后，已修改该集合。
+                </exception>
+    </member>
+    <member name="P:System.Security.Cryptography.OidEnumerator.System#Collections#IEnumerator#Current">
+      <summary>
+              获取当前<see cref="T:System.Security.Cryptography.Oid" />对象在<see cref="T:System.Security.Cryptography.OidCollection" />对象。
+            </summary>
+      <returns>
+              当前的 <see cref="T:System.Security.Cryptography.Oid" /> 对象。
+            </returns>
+    </member>
+    <member name="T:System.Security.Cryptography.OidGroup">
+      <summary>
+              标识 Windows 加密对象标识符 (OID) 组。
+            </summary>
+    </member>
+    <member name="F:System.Security.Cryptography.OidGroup.All">
+      <summary>
+              所有组。
+            </summary>
+    </member>
+    <member name="F:System.Security.Cryptography.OidGroup.Attribute">
+      <summary>
+              由 CRYPT_RDN_ATTR_OID_GROUP_ID 表示 Windows 组。
+            </summary>
+    </member>
+    <member name="F:System.Security.Cryptography.OidGroup.EncryptionAlgorithm">
+      <summary>
+              由 CRYPT_ENCRYPT_ALG_OID_GROUP_ID 表示 Windows 组。
+            </summary>
+    </member>
+    <member name="F:System.Security.Cryptography.OidGroup.EnhancedKeyUsage">
+      <summary>
+              由 CRYPT_ENHKEY_USAGE_OID_GROUP_ID 表示 Windows 组。
+            </summary>
+    </member>
+    <member name="F:System.Security.Cryptography.OidGroup.ExtensionOrAttribute">
+      <summary>
+              由 CRYPT_EXT_OR_ATTR_OID_GROUP_ID 表示 Windows 组。
+            </summary>
+    </member>
+    <member name="F:System.Security.Cryptography.OidGroup.HashAlgorithm">
+      <summary>
+              由 CRYPT_HASH_ALG_OID_GROUP_ID 表示 Windows 组。
+            </summary>
+    </member>
+    <member name="F:System.Security.Cryptography.OidGroup.KeyDerivationFunction">
+      <summary>
+              由 CRYPT_KDF_OID_GROUP_ID 表示 Windows 组。
+            </summary>
+    </member>
+    <member name="F:System.Security.Cryptography.OidGroup.Policy">
+      <summary>
+              由 CRYPT_POLICY_OID_GROUP_ID 表示 Windows 组。
+            </summary>
+    </member>
+    <member name="F:System.Security.Cryptography.OidGroup.PublicKeyAlgorithm">
+      <summary>
+              由 CRYPT_PUBKEY_ALG_OID_GROUP_ID 表示 Windows 组。
+            </summary>
+    </member>
+    <member name="F:System.Security.Cryptography.OidGroup.SignatureAlgorithm">
+      <summary>
+              由 CRYPT_SIGN_ALG_OID_GROUP_ID 表示 Windows 组。
+            </summary>
+    </member>
+    <member name="F:System.Security.Cryptography.OidGroup.Template">
+      <summary>
+              由 CRYPT_TEMPLATE_OID_GROUP_ID 表示 Windows 组。
+            </summary>
+    </member>
+    <member name="T:System.Security.Cryptography.ToBase64Transform">
+      <summary>
+              将 <see cref="T:System.Security.Cryptography.CryptoStream" /> 转换为 Base 64。
+            </summary>
+    </member>
+    <member name="M:System.Security.Cryptography.ToBase64Transform.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Security.Cryptography.ToBase64Transform" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="P:System.Security.Cryptography.ToBase64Transform.CanReuseTransform">
+      <summary>
+              获取一个值，该值指示是否可重复使用当前转换。
+            </summary>
+      <returns>
+              总是为 <see langword="true" />。
+            </returns>
+    </member>
+    <member name="P:System.Security.Cryptography.ToBase64Transform.CanTransformMultipleBlocks">
+      <summary>
+              获取一个值，该值指示是否可转换多个块。
+            </summary>
+      <returns>
+              总是为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Security.Cryptography.ToBase64Transform.Clear">
+      <summary>
+              释放由 <see cref="T:System.Security.Cryptography.ToBase64Transform" /> 使用的所有资源。
+            </summary>
+    </member>
+    <member name="M:System.Security.Cryptography.ToBase64Transform.Dispose">
+      <summary>
+              释放 <see cref="T:System.Security.Cryptography.ToBase64Transform" /> 类的当前实例所使用的所有资源。
+            </summary>
+    </member>
+    <member name="M:System.Security.Cryptography.ToBase64Transform.Dispose(System.Boolean)">
+      <summary>
+              释放由 <see cref="T:System.Security.Cryptography.ToBase64Transform" /> 占用的非托管资源，还可以另外再释放托管资源。
+            </summary>
+      <param name="disposing">
+                若要释放托管资源和非托管资源，则为 <see langword="true" />；若仅释放非托管资源，则为 <see langword="false" />。
+              </param>
+    </member>
+    <member name="M:System.Security.Cryptography.ToBase64Transform.Finalize">
+      <summary>
+              释放 <see cref="T:System.Security.Cryptography.ToBase64Transform" /> 使用的非托管资源。
+            </summary>
+    </member>
+    <member name="P:System.Security.Cryptography.ToBase64Transform.InputBlockSize">
+      <summary>
+              获取输入块大小。
+            </summary>
+      <returns>
+              输入数据块的大小（以字节为单位）。
+            </returns>
+    </member>
+    <member name="P:System.Security.Cryptography.ToBase64Transform.OutputBlockSize">
+      <summary>
+              获取输出块大小。
+            </summary>
+      <returns>
+              输出数据块的大小（以字节为单位）。
+            </returns>
+    </member>
+    <member name="M:System.Security.Cryptography.ToBase64Transform.TransformBlock(System.Byte[],System.Int32,System.Int32,System.Byte[],System.Int32)">
+      <summary>
+              将输入字节数组的指定区域转换为 Base 64，并将结果复制到输出字节数组的指定区域。
+            </summary>
+      <param name="inputBuffer">
+                要计算为 Base 64 的输入。
+              </param>
+      <param name="inputOffset">
+                输入字节数组中的偏移量，从该位置开始使用数据。
+              </param>
+      <param name="inputCount">
+                输入字节数组中用作数据的字节数。
+              </param>
+      <param name="outputBuffer">
+                要向其写入结果的输出。
+              </param>
+      <param name="outputOffset">
+                输入字节数组中的偏移量，从该位置开始使用数据。
+              </param>
+      <returns>
+              写入的字节数。
+            </returns>
+      <exception cref="T:System.ObjectDisposedException">
+                  当前 <see cref="T:System.Security.Cryptography.ToBase64Transform" /> 对象被释放。
+                </exception>
+      <exception cref="T:System.Security.Cryptography.CryptographicException">
+                  数据大小不是有效的。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="inputBuffer" /> 参数包含无效的偏移量的长度。
+                
+                  - 或 -
+                
+                  <paramref name="inputCount" /> 参数包含无效值。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="inputBuffer" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="inputBuffer" /> 参数需要非负数。
+                </exception>
+    </member>
+    <member name="M:System.Security.Cryptography.ToBase64Transform.TransformFinalBlock(System.Byte[],System.Int32,System.Int32)">
+      <summary>
+              将指定字节数组的指定区域转换为 Base 64。
+            </summary>
+      <param name="inputBuffer">
+                要转换为 Base 64 的输入。
+              </param>
+      <param name="inputOffset">
+                字节数组中的偏移量，从该位置开始使用数据。
+              </param>
+      <param name="inputCount">
+                字节数组中用作数据的字节数。
+              </param>
+      <returns>
+              已计算的 Base 64 转换。
+            </returns>
+      <exception cref="T:System.ObjectDisposedException">
+                  当前 <see cref="T:System.Security.Cryptography.ToBase64Transform" /> 对象被释放。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="inputBuffer" /> 参数包含无效的偏移量的长度。
+                
+                  - 或 -
+                
+                  <paramref name="inputCount" /> 参数包含无效值。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="inputBuffer" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="inputBuffer" /> 参数需要非负数。
+                </exception>
+    </member>
+  </members>
+</doc>

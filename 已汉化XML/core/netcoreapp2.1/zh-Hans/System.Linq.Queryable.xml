@@ -1,0 +1,2916 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Linq.Queryable</name>
+  </assembly>
+  <members>
+    <member name="T:System.Linq.EnumerableExecutor`1">
+      <summary>
+              表示一个表达式树，并提供在重写之后执行表达式树的功能。
+            </summary>
+      <typeparam name="T">
+                执行表达式树所得到的值数据类型。
+              </typeparam>
+    </member>
+    <member name="M:System.Linq.EnumerableExecutor`1.#ctor(System.Linq.Expressions.Expression)">
+      <summary>
+              初始化 <see cref="T:System.Linq.EnumerableExecutor`1" /> 类的新实例。
+            </summary>
+      <param name="expression">
+                要将与新的实例相关联的表达式树。
+              </param>
+    </member>
+    <member name="T:System.Linq.EnumerableExecutor">
+      <summary>
+              表示一个表达式树，并提供在重写之后执行表达式树的功能。
+            </summary>
+    </member>
+    <member name="M:System.Linq.EnumerableExecutor.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Linq.EnumerableExecutor" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="T:System.Linq.EnumerableQuery`1">
+      <summary>
+              表示作为 <see cref="T:System.Linq.IQueryable`1" /> 数据源的 <see cref="T:System.Collections.Generic.IEnumerable`1" /> 集合。
+            </summary>
+      <typeparam name="T">
+                集合中数据的类型。
+              </typeparam>
+    </member>
+    <member name="M:System.Linq.EnumerableQuery`1.#ctor(System.Collections.Generic.IEnumerable{`0})">
+      <summary>
+              新实例初始化 <see cref="T:System.Linq.EnumerableQuery`1" /> 类并将其与关联 <see cref="T:System.Collections.Generic.IEnumerable`1" /> 集合。
+            </summary>
+      <param name="enumerable">
+                要将与新的实例相关联的集合。
+              </param>
+    </member>
+    <member name="M:System.Linq.EnumerableQuery`1.#ctor(System.Linq.Expressions.Expression)">
+      <summary>
+              新实例初始化 <see cref="T:System.Linq.EnumerableQuery`1" /> 类，并将该实例关联的表达式树。
+            </summary>
+      <param name="expression">
+                要将与新的实例相关联的表达式树。
+              </param>
+    </member>
+    <member name="M:System.Linq.EnumerableQuery`1.ToString">
+      <summary>
+              返回的文本表示形式的可枚举集合，或者，如果它为 null，则该表达式树将与此实例相关联。
+            </summary>
+      <returns>
+              文本表示形式的可枚举集合或，如果该值为 null，是此实例相关联的表达式目录树。
+            </returns>
+    </member>
+    <member name="M:System.Linq.EnumerableQuery`1.System#Collections#Generic#IEnumerable{T}#GetEnumerator">
+      <summary>
+              返回一个枚举器可遍历关联 <see cref="T:System.Collections.Generic.IEnumerable`1" /> 集合，或者，如果该值为 null，访问集合重新关联的表达式树以查询形式编写上得出 <see cref="T:System.Collections.Generic.IEnumerable`1" /> 数据源，然后执行它。
+            </summary>
+      <returns>
+              一个枚举器可用于循环访问相关联的数据源。
+            </returns>
+    </member>
+    <member name="M:System.Linq.EnumerableQuery`1.System#Collections#IEnumerable#GetEnumerator">
+      <summary>
+              返回一个枚举器可遍历关联 <see cref="T:System.Collections.Generic.IEnumerable`1" /> 集合，或者，如果该值为 null，访问集合重新关联的表达式树以查询形式编写上得出 <see cref="T:System.Collections.Generic.IEnumerable`1" /> 数据源，然后执行它。
+            </summary>
+      <returns>
+              一个枚举器可用于循环访问相关联的数据源。
+            </returns>
+    </member>
+    <member name="P:System.Linq.EnumerableQuery`1.System#Linq#IQueryable#ElementType">
+      <summary>
+              获取此实例表示的集合中的数据类型。
+            </summary>
+      <returns>
+              此实例表示的集合中的数据类型。
+            </returns>
+    </member>
+    <member name="P:System.Linq.EnumerableQuery`1.System#Linq#IQueryable#Expression">
+      <summary>
+              获取表示此实例或相关联的表达式树。
+            </summary>
+      <returns>
+              表达式树表示此实例或相关联。
+            </returns>
+    </member>
+    <member name="P:System.Linq.EnumerableQuery`1.System#Linq#IQueryable#Provider">
+      <summary>
+              获取与此实例关联的查询提供程序。
+            </summary>
+      <returns>
+              查询提供程序与此实例相关联。
+            </returns>
+    </member>
+    <member name="M:System.Linq.EnumerableQuery`1.System#Linq#IQueryProvider#CreateQuery(System.Linq.Expressions.Expression)">
+      <summary>
+              构造一个新 <see cref="T:System.Linq.EnumerableQuery`1" /> 对象，并将其与指定的表达式树，它表示关联 <see cref="T:System.Linq.IQueryable" /> 的数据的集合。
+            </summary>
+      <param name="expression">
+                一个表示的表达式树 <see cref="T:System.Linq.IQueryable" /> 的数据的集合。
+              </param>
+      <returns>
+        <see cref="T:System.Linq.EnumerableQuery`1" /> 与关联的对象 <paramref name="expression" />。
+            </returns>
+    </member>
+    <member name="M:System.Linq.EnumerableQuery`1.System#Linq#IQueryProvider#CreateQuery``1(System.Linq.Expressions.Expression)">
+      <summary>
+              构造一个新 <see cref="T:System.Linq.EnumerableQuery`1" /> 对象，并将其与指定的表达式树，它表示关联 <see cref="T:System.Linq.IQueryable`1" /> 的数据的集合。
+            </summary>
+      <param name="expression">
+                要执行的表达式树。
+              </param>
+      <typeparam name="S">
+                集合中的数据的类型， <paramref name="expression" /> 表示。
+              </typeparam>
+      <returns>
+              与之关联的 EnumerableQuery 对象 <paramref name="expression" />。
+            </returns>
+    </member>
+    <member name="M:System.Linq.EnumerableQuery`1.System#Linq#IQueryProvider#Execute(System.Linq.Expressions.Expression)">
+      <summary>
+              执行后重写代码可以调用表达式 <see cref="T:System.Linq.Enumerable" /> 方法而不是 <see cref="T:System.Linq.Queryable" /> 上不能通过查询任何可枚举数据源的方法 <see cref="T:System.Linq.Queryable" /> 方法。
+            </summary>
+      <param name="expression">
+                要执行的表达式树。
+              </param>
+      <returns>
+              执行所得到的值 <paramref name="expression" />。
+            </returns>
+    </member>
+    <member name="M:System.Linq.EnumerableQuery`1.System#Linq#IQueryProvider#Execute``1(System.Linq.Expressions.Expression)">
+      <summary>
+              执行后重写代码可以调用表达式 <see cref="T:System.Linq.Enumerable" /> 方法而不是 <see cref="T:System.Linq.Queryable" /> 上不能通过查询任何可枚举数据源的方法 <see cref="T:System.Linq.Queryable" /> 方法。
+            </summary>
+      <param name="expression">
+                要执行的表达式树。
+              </param>
+      <typeparam name="S">
+                集合中的数据的类型， <paramref name="expression" /> 表示。
+              </typeparam>
+      <returns>
+              执行所得到的值 <paramref name="expression" />。
+            </returns>
+    </member>
+    <member name="T:System.Linq.EnumerableQuery">
+      <summary>
+              表示 <see cref="T:System.Collections.IEnumerable" /> 作为 <see cref="T:System.Linq.EnumerableQuery" /> 数据源。
+            </summary>
+    </member>
+    <member name="M:System.Linq.EnumerableQuery.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Linq.EnumerableQuery" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="T:System.Linq.Queryable">
+      <summary>
+              提供了一套 <see langword="static" /> (<see langword="Shared" /> 在 Visual Basic 中) 方法来查询数据结构，并实现 <see cref="T:System.Linq.IQueryable`1" />。
+            </summary>
+    </member>
+    <member name="M:System.Linq.Queryable.Aggregate``3(System.Linq.IQueryable{``0},``1,System.Linq.Expressions.Expression{System.Func{``1,``0,``1}},System.Linq.Expressions.Expression{System.Func{``1,``2}})">
+      <summary>
+              对一个序列应用累加器函数。
+               将指定的种子值用作累加器的初始值，并使用指定的函数选择结果值。
+            </summary>
+      <param name="source">
+                要对其进行聚合的序列。
+              </param>
+      <param name="seed">
+                累加器的初始值。
+              </param>
+      <param name="func">
+                要对每个元素调用的累加器函数。
+              </param>
+      <param name="selector">
+                将累加器的最终值转换为结果值的函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TAccumulate">
+                累加器值的类型。
+              </typeparam>
+      <typeparam name="TResult">
+                结果值的类型。
+              </typeparam>
+      <returns>
+              已转换的累加器最终值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" />、<paramref name="func" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Aggregate``2(System.Linq.IQueryable{``0},``1,System.Linq.Expressions.Expression{System.Func{``1,``0,``1}})">
+      <summary>
+              对一个序列应用累加器函数。
+               将指定的种子值用作累加器初始值。
+            </summary>
+      <param name="source">
+                要对其进行聚合的序列。
+              </param>
+      <param name="seed">
+                累加器的初始值。
+              </param>
+      <param name="func">
+                要对每个元素调用的累加器函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TAccumulate">
+                累加器值的类型。
+              </typeparam>
+      <returns>
+              累加器的最终值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="func" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Aggregate``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``0,``0}})">
+      <summary>
+              对一个序列应用累加器函数。
+            </summary>
+      <param name="source">
+                要对其进行聚合的序列。
+              </param>
+      <param name="func">
+                要应用于每个元素的累加器函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              累加器的最终值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="func" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="source" /> 不包含任何元素。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.All``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+      <summary>
+              确定是否对序列的所有元素都满足条件。
+            </summary>
+      <param name="source">
+                其元素进行测试的条件的序列。
+              </param>
+      <param name="predicate">
+                用于测试每个元素是否满足条件的函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+        <see langword="true" /> 如果源序列中的每个元素通过与指定谓词中的测试，或者如果序列为空，则为否则为 <see langword="false" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="predicate" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Any``1(System.Linq.IQueryable{``0})">
+      <summary>
+              确定序列是否包含任何元素。
+            </summary>
+      <param name="source">
+                要检查为空的序列。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+        <see langword="true" /> 如果源序列中不包含任何元素，则否则为 <see langword="false" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Any``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+      <summary>
+              确定是否序列中的任何元素都满足条件。
+            </summary>
+      <param name="source">
+                其元素进行测试的条件的序列。
+              </param>
+      <param name="predicate">
+                用于测试每个元素是否满足条件的函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+        <see langword="true" /> 如果源序列中的任何元素中指定的谓词; 通过的测试否则为 <see langword="false" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="predicate" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Append``1(System.Linq.IQueryable{``0},``0)">
+      <param name="source">
+      </param>
+      <param name="element">
+      </param>
+      <typeparam name="TSource">
+      </typeparam>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:System.Linq.Queryable.AsQueryable(System.Collections.IEnumerable)">
+      <summary>
+              将转换 <see cref="T:System.Collections.IEnumerable" /> 到 <see cref="T:System.Linq.IQueryable" />。
+            </summary>
+      <param name="source">
+                要转换的序列。
+              </param>
+      <returns>
+        <see cref="T:System.Linq.IQueryable" /> ，它表示在输入的序列。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="source" /> 未实现 <see cref="T:System.Collections.Generic.IEnumerable`1" /> 对于某些 <paramref name="T" />。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.AsQueryable``1(System.Collections.Generic.IEnumerable{``0})">
+      <summary>
+              将转换泛型 <see cref="T:System.Collections.Generic.IEnumerable`1" /> 于泛型 <see cref="T:System.Linq.IQueryable`1" />。
+            </summary>
+      <param name="source">
+                要转换的序列。
+              </param>
+      <typeparam name="TElement">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，它表示在输入的序列。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Average(System.Linq.IQueryable{System.Single})">
+      <summary>
+              计算序列的平均值 <see cref="T:System.Single" /> 值。
+            </summary>
+      <param name="source">
+                一系列 <see cref="T:System.Single" /> 要计算平均值的值。
+              </param>
+      <returns>
+              值序列的平均值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="source" /> 不包含任何元素。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Average(System.Linq.IQueryable{System.Nullable{System.Single}})">
+      <summary>
+              可以为 null 的序列的平均值，计算 <see cref="T:System.Single" /> 值。
+            </summary>
+      <param name="source">
+                可以为 null 的序列 <see cref="T:System.Single" /> 要计算平均值的值。
+              </param>
+      <returns>
+              值序列的平均值或 <see langword="null" /> 如果源序列为空或只包含 <see langword="null" /> 值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Average(System.Linq.IQueryable{System.Nullable{System.Int64}})">
+      <summary>
+              可以为 null 的序列的平均值，计算 <see cref="T:System.Int64" /> 值。
+            </summary>
+      <param name="source">
+                可以为 null 的序列 <see cref="T:System.Int64" /> 要计算平均值的值。
+              </param>
+      <returns>
+              值序列的平均值或 <see langword="null" /> 如果源序列为空或只包含 <see langword="null" /> 值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Average(System.Linq.IQueryable{System.Nullable{System.Double}})">
+      <summary>
+              可以为 null 的序列的平均值，计算 <see cref="T:System.Double" /> 值。
+            </summary>
+      <param name="source">
+                可以为 null 的序列 <see cref="T:System.Double" /> 要计算平均值的值。
+              </param>
+      <returns>
+              值序列的平均值或 <see langword="null" /> 如果源序列为空或只包含 <see langword="null" /> 值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Average(System.Linq.IQueryable{System.Nullable{System.Int32}})">
+      <summary>
+              计算可以为 null 的 <see cref="T:System.Int32" /> 值序列的平均值。
+            </summary>
+      <param name="source">
+                要计算平均值的可以为 null 的 <see cref="T:System.Int32" /> 值序列。
+              </param>
+      <returns>
+              如果源序列为空或仅包含 <see langword="null" /> 值，则为 <see langword="null" />；否则为值序列的平均值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Average(System.Linq.IQueryable{System.Int64})">
+      <summary>
+              计算序列的平均值 <see cref="T:System.Int64" /> 值。
+            </summary>
+      <param name="source">
+                一系列 <see cref="T:System.Int64" /> 要计算平均值的值。
+              </param>
+      <returns>
+              值序列的平均值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="source" /> 不包含任何元素。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Average(System.Linq.IQueryable{System.Int32})">
+      <summary>
+              计算序列的平均值 <see cref="T:System.Int32" /> 值。
+            </summary>
+      <param name="source">
+                一系列 <see cref="T:System.Int32" /> 要计算平均值的值。
+              </param>
+      <returns>
+              值序列的平均值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="source" /> 不包含任何元素。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Average(System.Linq.IQueryable{System.Double})">
+      <summary>
+              计算序列的平均值 <see cref="T:System.Double" /> 值。
+            </summary>
+      <param name="source">
+                一系列 <see cref="T:System.Double" /> 要计算平均值的值。
+              </param>
+      <returns>
+              值序列的平均值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="source" /> 不包含任何元素。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Average(System.Linq.IQueryable{System.Decimal})">
+      <summary>
+              计算序列的平均值 <see cref="T:System.Decimal" /> 值。
+            </summary>
+      <param name="source">
+                一系列 <see cref="T:System.Decimal" /> 要计算平均值的值。
+              </param>
+      <returns>
+              值序列的平均值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="source" /> 不包含任何元素。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Average(System.Linq.IQueryable{System.Nullable{System.Decimal}})">
+      <summary>
+              可以为 null 的序列的平均值，计算 <see cref="T:System.Decimal" /> 值。
+            </summary>
+      <param name="source">
+                可以为 null 的序列 <see cref="T:System.Decimal" /> 要计算平均值的值。
+              </param>
+      <returns>
+              值序列的平均值或 <see langword="null" /> 如果源序列为空或只包含 <see langword="null" /> 值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Average``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Single}})">
+      <summary>
+              计算序列的平均值 <see cref="T:System.Single" /> 通过调用对输入序列中的每个元素的投影函数获得的值。
+            </summary>
+      <param name="source">
+                要计算的平均值的值序列。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              值序列的平均值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="source" /> 不包含任何元素。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Average``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Single}}})">
+      <summary>
+              可以为 null 的序列的平均值，计算 <see cref="T:System.Single" /> 通过调用对输入序列中的每个元素的投影函数获得的值。
+            </summary>
+      <param name="source">
+                要计算的平均值的值序列。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              值序列的平均值或 <see langword="null" /> 如果 <paramref name="source" /> 序列为空或只包含 <see langword="null" /> 值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Average``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int64}}})">
+      <summary>
+              可以为 null 的序列的平均值，计算 <see cref="T:System.Int64" /> 通过调用对输入序列中的每个元素的投影函数获得的值。
+            </summary>
+      <param name="source">
+                要计算的平均值的值序列。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              值序列的平均值或 <see langword="null" /> 如果 <paramref name="source" /> 序列为空或只包含 <see langword="null" /> 值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Average``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int32}}})">
+      <summary>
+              可以为 null 的序列的平均值，计算 <see cref="T:System.Int32" /> 通过调用对输入序列中的每个元素的投影函数获得的值。
+            </summary>
+      <param name="source">
+                要计算的平均值的值序列。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              值序列的平均值或 <see langword="null" /> 如果 <paramref name="source" /> 序列为空或只包含 <see langword="null" /> 值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Average``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Double}}})">
+      <summary>
+              可以为 null 的序列的平均值，计算 <see cref="T:System.Double" /> 通过调用对输入序列中的每个元素的投影函数获得的值。
+            </summary>
+      <param name="source">
+                要计算的平均值的值序列。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              值序列的平均值或 <see langword="null" /> 如果 <paramref name="source" /> 序列为空或只包含 <see langword="null" /> 值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Average``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int64}})">
+      <summary>
+              计算序列的平均值 <see cref="T:System.Int64" /> 通过调用对输入序列中的每个元素的投影函数获得的值。
+            </summary>
+      <param name="source">
+                要计算的平均值的值序列。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              值序列的平均值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="source" /> 不包含任何元素。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Average``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int32}})">
+      <summary>
+              计算序列的平均值 <see cref="T:System.Int32" /> 通过调用对输入序列中的每个元素的投影函数获得的值。
+            </summary>
+      <param name="source">
+                要计算的平均值的值序列。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              值序列的平均值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="source" /> 不包含任何元素。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Average``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Double}})">
+      <summary>
+              计算序列的平均值 <see cref="T:System.Double" /> 通过调用对输入序列中的每个元素的投影函数获得的值。
+            </summary>
+      <param name="source">
+                要计算的平均值的值序列。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              值序列的平均值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="source" /> 不包含任何元素。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Average``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Decimal}})">
+      <summary>
+              计算序列的平均值 <see cref="T:System.Decimal" /> 通过调用对输入序列中的每个元素的投影函数获得的值。
+            </summary>
+      <param name="source">
+                用于计算平均值的值序列。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              值序列的平均值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="source" /> 不包含任何元素。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Average``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Decimal}}})">
+      <summary>
+              可以为 null 的序列的平均值，计算 <see cref="T:System.Decimal" /> 通过调用对输入序列中的每个元素的投影函数获得的值。
+            </summary>
+      <param name="source">
+                要计算的平均值的值序列。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              值序列的平均值或 <see langword="null" /> 如果 <paramref name="source" /> 序列为空或只包含 <see langword="null" /> 值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Cast``1(System.Linq.IQueryable)">
+      <summary>
+              将元素转换 <see cref="T:System.Linq.IQueryable" /> 为指定的类型。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable" /> ，其中包含要转换的元素。
+              </param>
+      <typeparam name="TResult">
+                要转换的元素的类型 <paramref name="source" /> 到。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含每个元素均转换为指定类型的源序列。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidCastException">
+                  序列中的元素不能转换为类型 <paramref name="TResult" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Concat``1(System.Linq.IQueryable{``0},System.Collections.Generic.IEnumerable{``0})">
+      <summary>
+              连接两个序列。
+            </summary>
+      <param name="source1">
+                要连接的第一个序列。
+              </param>
+      <param name="source2">
+                要与第一个序列连接的序列。
+              </param>
+      <typeparam name="TSource">
+                输入序列中的元素的类型。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含两个输入序列的串联的元素。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source1" /> 或 <paramref name="source2" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Contains``1(System.Linq.IQueryable{``0},``0,System.Collections.Generic.IEqualityComparer{``0})">
+      <summary>
+              确定序列是否使用指定的包含指定的元素 <see cref="T:System.Collections.Generic.IEqualityComparer`1" />。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 要在其中查找 <paramref name="item" />。
+              </param>
+      <param name="item">
+                要在序列中定位的对象。
+              </param>
+      <param name="comparer">
+        <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> 对值进行比较。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+        <see langword="true" /> 如果输入的序列中不包含具有指定的值; 的元素否则为 <see langword="false" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Contains``1(System.Linq.IQueryable{``0},``0)">
+      <summary>
+              确定序列是否包含指定的元素使用的默认相等比较器。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 要在其中查找 <paramref name="item" />。
+              </param>
+      <param name="item">
+                要在序列中定位的对象。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+        <see langword="true" /> 如果输入的序列中不包含具有指定的值; 的元素否则为 <see langword="false" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Count``1(System.Linq.IQueryable{``0})">
+      <summary>
+              返回序列中的元素数。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含要计数的元素。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              输入序列中的元素数量。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.OverflowException">
+                  中的元素数 <paramref name="source" /> 大于 <see cref="F:System.Int32.MaxValue" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Count``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+      <summary>
+              返回在指定的序列中满足条件的元素数。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含要计数的元素。
+              </param>
+      <param name="predicate">
+                用于测试每个元素是否满足条件的函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              序列中满足谓词函数中的条件中的元素数。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="predicate" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.OverflowException">
+                  中的元素数 <paramref name="source" /> 大于 <see cref="F:System.Int32.MaxValue" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.DefaultIfEmpty``1(System.Linq.IQueryable{``0})">
+      <summary>
+              返回单一实例集合中指定的序列或类型参数的默认值的元素，如果序列为空。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 要返回的默认值，如果为空。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含 <see langword="default" />(<paramref name="TSource" />) 如果 <paramref name="source" /> 空; 否则为 <paramref name="source" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.DefaultIfEmpty``1(System.Linq.IQueryable{``0},``0)">
+      <summary>
+              返回单一实例集合中指定的序列或指定的值的元素，如果序列为空。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 返回为指定的值，如果为空。
+              </param>
+      <param name="defaultValue">
+                序列为空时要返回的值。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含 <paramref name="defaultValue" /> 如果 <paramref name="source" /> 空; 否则为 <paramref name="source" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Distinct``1(System.Linq.IQueryable{``0})">
+      <summary>
+              通过使用的默认相等比较器对值进行比较从序列返回非重复元素。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 要从中删除重复项。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含非重复元素从 <paramref name="source" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Distinct``1(System.Linq.IQueryable{``0},System.Collections.Generic.IEqualityComparer{``0})">
+      <summary>
+              返回序列中通过使用指定的非重复元素 <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> 对值进行比较。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 要从中删除重复项。
+              </param>
+      <param name="comparer">
+        <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> 对值进行比较。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含非重复元素从 <paramref name="source" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="comparer" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.ElementAt``1(System.Linq.IQueryable{``0},System.Int32)">
+      <summary>
+              返回序列中的指定索引处的元素。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 以返回元素。
+              </param>
+      <param name="index">
+                要检索的从零开始的元素索引。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              中的指定位置处的元素 <paramref name="source" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="index" /> 小于零。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.ElementAtOrDefault``1(System.Linq.IQueryable{``0},System.Int32)">
+      <summary>
+              返回序列中指定索引处的元素；如果索引超出范围，则返回默认值。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 以返回元素。
+              </param>
+      <param name="index">
+                要检索的从零开始的元素索引。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              default(<paramref name="TSource" />) 如果 <paramref name="index" /> 超出界限 <paramref name="source" />; 否则为中的指定位置处的元素 <paramref name="source" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Except``1(System.Linq.IQueryable{``0},System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0})">
+      <summary>
+              使用指定的生成两个序列的差集 <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> 对值进行比较。
+            </summary>
+      <param name="source1">
+        <see cref="T:System.Linq.IQueryable`1" /> 也不是在其元素 <paramref name="source2" /> 将返回。
+              </param>
+      <param name="source2">
+        <see cref="T:System.Collections.Generic.IEnumerable`1" /> 同时出现在第一个序列的元素不会出现在返回的序列。
+              </param>
+      <param name="comparer">
+        <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> 对值进行比较。
+              </param>
+      <typeparam name="TSource">
+                输入序列中的元素的类型。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含两个序列的差集。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source1" /> 或 <paramref name="source2" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Except``1(System.Linq.IQueryable{``0},System.Collections.Generic.IEnumerable{``0})">
+      <summary>
+              通过使用默认的相等比较器对值进行比较，生成两个序列的差集。
+            </summary>
+      <param name="source1">
+        <see cref="T:System.Linq.IQueryable`1" /> 也不是在其元素 <paramref name="source2" /> 将返回。
+              </param>
+      <param name="source2">
+        <see cref="T:System.Collections.Generic.IEnumerable`1" /> 同时出现在第一个序列的元素不会出现在返回的序列。
+              </param>
+      <typeparam name="TSource">
+                输入序列中的元素的类型。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含两个序列的差集。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source1" /> 或 <paramref name="source2" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.First``1(System.Linq.IQueryable{``0})">
+      <summary>
+              返回一个序列的第一个元素。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 要返回的第一个元素。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              中的第一个元素 <paramref name="source" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+                  源序列为空。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.First``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+      <summary>
+              返回序列中满足指定的条件的第一个元素。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 以返回元素。
+              </param>
+      <param name="predicate">
+                用于测试每个元素是否满足条件的函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              中的第一个元素 <paramref name="source" /> 通过的测试中 <paramref name="predicate" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="predicate" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+                  没有元素满足该条件在 <paramref name="predicate" />。
+                
+                  - 或 -
+                
+                  源序列为空。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.FirstOrDefault``1(System.Linq.IQueryable{``0})">
+      <summary>
+              返回序列中的第一个元素；如果序列中不包含任何元素，则返回默认值。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 要返回的第一个元素。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              default(<paramref name="TSource" />) 如果 <paramref name="source" /> 空; 否则为中的第一个元素 <paramref name="source" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.FirstOrDefault``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+      <summary>
+              返回序列中满足指定的条件或默认值，如果找到这样的元素的第一个元素。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 以返回元素。
+              </param>
+      <param name="predicate">
+                用于测试每个元素是否满足条件的函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              default(<paramref name="TSource" />) 如果 <paramref name="source" /> 为空，或者如果没有元素通过由指定的测试 <paramref name="predicate" />; 否则为中的第一个元素 <paramref name="source" /> 通过由指定的测试 <paramref name="predicate" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="predicate" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.GroupBy``4(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Linq.Expressions.Expression{System.Func{``0,``2}},System.Linq.Expressions.Expression{System.Func{``1,System.Collections.Generic.IEnumerable{``2},``3}},System.Collections.Generic.IEqualityComparer{``1})">
+      <summary>
+              根据指定的键选择器函数对序列中的元素进行分组，并且从每个组及其键中创建结果值。
+               通过使用指定比较器对键进行比较，并通过使用指定的函数的每个组元素进行投影。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 其元素进行分组。
+              </param>
+      <param name="keySelector">
+                用于提取每个元素的键的函数。
+              </param>
+      <param name="elementSelector">
+                用于将每个源元素映射到中的元素 <see cref="T:System.Linq.IGrouping`2" />。
+              </param>
+      <param name="resultSelector">
+                用于从每个组中创建结果值的函数。
+              </param>
+      <param name="comparer">
+        <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> 对键进行比较。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TKey">
+                表示的函数返回的键的类型 <paramref name="keySelector" />。
+              </typeparam>
+      <typeparam name="TElement">
+                在每个元素的类型 <see cref="T:System.Linq.IGrouping`2" />。
+              </typeparam>
+      <typeparam name="TResult">
+                返回的结果值的类型 <paramref name="resultSelector" />。
+              </typeparam>
+      <returns>
+              T:System.Linq.IQueryable`1 ，其参数的类型 <paramref name="TResult" /> 和其中的每个元素都表示对一组及其键的投影。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="keySelector" /> 或 <paramref name="elementSelector" /> 或 <paramref name="resultSelector" /> 或 <paramref name="comparer" /> 是 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.GroupBy``4(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Linq.Expressions.Expression{System.Func{``0,``2}},System.Linq.Expressions.Expression{System.Func{``1,System.Collections.Generic.IEnumerable{``2},``3}})">
+      <summary>
+              根据指定的键选择器函数对序列中的元素进行分组，并且从每个组及其键中创建结果值。
+               通过使用指定的函数对每个组的元素进行投影。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 其元素进行分组。
+              </param>
+      <param name="keySelector">
+                用于提取每个元素的键的函数。
+              </param>
+      <param name="elementSelector">
+                用于将每个源元素映射到中的元素 <see cref="T:System.Linq.IGrouping`2" />。
+              </param>
+      <param name="resultSelector">
+                用于从每个组中创建结果值的函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TKey">
+                表示的函数返回的键的类型 <paramref name="keySelector" />。
+              </typeparam>
+      <typeparam name="TElement">
+                在每个元素的类型 <see cref="T:System.Linq.IGrouping`2" />。
+              </typeparam>
+      <typeparam name="TResult">
+                返回的结果值的类型 <paramref name="resultSelector" />。
+              </typeparam>
+      <returns>
+              T:System.Linq.IQueryable`1 ，其参数的类型 <paramref name="TResult" /> 和其中的每个元素都表示对一组及其键的投影。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="keySelector" /> 或 <paramref name="elementSelector" /> 或 <paramref name="resultSelector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.GroupBy``3(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Linq.Expressions.Expression{System.Func{``0,``2}})">
+      <summary>
+              根据指定的键选择器函数和项目的元素的每个组通过使用指定的函数对序列的元素进行分组。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 其元素进行分组。
+              </param>
+      <param name="keySelector">
+                用于提取每个元素的键的函数。
+              </param>
+      <param name="elementSelector">
+                用于将每个源元素映射到中的元素 <see cref="T:System.Linq.IGrouping`2" />。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TKey">
+                表示的函数返回的键的类型 <paramref name="keySelector" />。
+              </typeparam>
+      <typeparam name="TElement">
+                在每个元素的类型 <see cref="T:System.Linq.IGrouping`2" />。
+              </typeparam>
+      <returns>
+              IQueryable&lt;IGrouping&lt;TKey, TElement&gt;&gt; 在 C# 或 IQueryable(Of IGrouping(Of TKey, TElement)) 中 Visual Basic 其中每个 <see cref="T:System.Linq.IGrouping`2" /> 包含类型的对象的一系列 <paramref name="TElement" /> 和密钥。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" />、<paramref name="keySelector" /> 或 <paramref name="elementSelector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.GroupBy``3(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Linq.Expressions.Expression{System.Func{``0,``2}},System.Collections.Generic.IEqualityComparer{``1})">
+      <summary>
+              一个序列的元素进行分组，并通过使用指定的函数为每个组的元素进行投影。
+               通过使用指定的比较器，键值进行比较。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 其元素进行分组。
+              </param>
+      <param name="keySelector">
+                用于提取每个元素的键的函数。
+              </param>
+      <param name="elementSelector">
+                用于将每个源元素映射到中的元素 <see cref="T:System.Linq.IGrouping`2" />。
+              </param>
+      <param name="comparer">
+        <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> 对键进行比较。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TKey">
+                表示的函数返回的键的类型 <paramref name="keySelector" />。
+              </typeparam>
+      <typeparam name="TElement">
+                在每个元素的类型 <see cref="T:System.Linq.IGrouping`2" />。
+              </typeparam>
+      <returns>
+              IQueryable&lt;IGrouping&lt;TKey, TElement&gt;&gt; 在 C# 或 IQueryable(Of IGrouping(Of TKey, TElement)) 中 Visual Basic 其中每个 <see cref="T:System.Linq.IGrouping`2" /> 包含类型的对象的一系列 <paramref name="TElement" /> 和密钥。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="keySelector" /> 或 <paramref name="elementSelector" /> 或 <paramref name="comparer" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.GroupBy``3(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Linq.Expressions.Expression{System.Func{``1,System.Collections.Generic.IEnumerable{``0},``2}})">
+      <summary>
+              根据指定的键选择器函数对序列中的元素进行分组，并且从每个组及其键中创建结果值。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 其元素进行分组。
+              </param>
+      <param name="keySelector">
+                用于提取每个元素的键的函数。
+              </param>
+      <param name="resultSelector">
+                用于从每个组中创建结果值的函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TKey">
+                表示的函数返回的键的类型 <paramref name="keySelector" />。
+              </typeparam>
+      <typeparam name="TResult">
+                返回的结果值的类型 <paramref name="resultSelector" />。
+              </typeparam>
+      <returns>
+              T:System.Linq.IQueryable`1 ，其参数的类型 <paramref name="TResult" /> 和其中的每个元素都表示对一组及其键的投影。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" />、<paramref name="keySelector" /> 或 <paramref name="resultSelector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.GroupBy``3(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Linq.Expressions.Expression{System.Func{``1,System.Collections.Generic.IEnumerable{``0},``2}},System.Collections.Generic.IEqualityComparer{``1})">
+      <summary>
+              根据指定的键选择器函数对序列中的元素进行分组，并且从每个组及其键中创建结果值。
+               通过使用指定的比较器，键进行比较。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 其元素进行分组。
+              </param>
+      <param name="keySelector">
+                用于提取每个元素的键的函数。
+              </param>
+      <param name="resultSelector">
+                用于从每个组中创建结果值的函数。
+              </param>
+      <param name="comparer">
+        <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> 对键进行比较。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TKey">
+                表示的函数返回的键的类型 <paramref name="keySelector" />。
+              </typeparam>
+      <typeparam name="TResult">
+                返回的结果值的类型 <paramref name="resultSelector" />。
+              </typeparam>
+      <returns>
+              T:System.Linq.IQueryable`1 ，其参数的类型 <paramref name="TResult" /> 和其中的每个元素都表示对一组及其键的投影。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="keySelector" /> 或 <paramref name="resultSelector" /> 或 <paramref name="comparer" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.GroupBy``2(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Collections.Generic.IEqualityComparer{``1})">
+      <summary>
+              根据指定的键选择器函数并将进行比较的键使用指定的比较器对序列的元素进行分组。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 其元素进行分组。
+              </param>
+      <param name="keySelector">
+                用于提取每个元素的键的函数。
+              </param>
+      <param name="comparer">
+        <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> 对键进行比较。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TKey">
+                表示的函数返回的键的类型 <paramref name="keySelector" />。
+              </typeparam>
+      <returns>
+              IQueryable&lt;IGrouping&lt;TKey, TSource&gt;&gt; 在 C# 或 IQueryable(Of IGrouping(Of TKey, TSource)) 中 Visual Basic 其中每个 <see cref="T:System.Linq.IGrouping`2" /> 包含一系列对象和一个密钥。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" />、<paramref name="keySelector" /> 或 <paramref name="comparer" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.GroupBy``2(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+      <summary>
+              根据指定的键选择器函数对序列的元素进行分组。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 其元素进行分组。
+              </param>
+      <param name="keySelector">
+                用于提取每个元素的键的函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TKey">
+                表示的函数返回的键的类型 <paramref name="keySelector" />。
+              </typeparam>
+      <returns>
+              IQueryable&lt;IGrouping&lt;TKey, TSource&gt;&gt; 在 C# 或 IQueryable(Of IGrouping(Of TKey, TSource)) 中 Visual Basic 其中每个 <see cref="T:System.Linq.IGrouping`2" /> 对象包含一系列对象和一个密钥。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="keySelector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.GroupJoin``4(System.Linq.IQueryable{``0},System.Collections.Generic.IEnumerable{``1},System.Linq.Expressions.Expression{System.Func{``0,``2}},System.Linq.Expressions.Expression{System.Func{``1,``2}},System.Linq.Expressions.Expression{System.Func{``0,System.Collections.Generic.IEnumerable{``1},``3}})">
+      <summary>
+              基于键相等对两个序列的元素进行关联，并对结果进行分组。
+               使用默认的相等比较器对键进行比较。
+            </summary>
+      <param name="outer">
+                要联接的第一个序列。
+              </param>
+      <param name="inner">
+                要与第一个序列联接的序列。
+              </param>
+      <param name="outerKeySelector">
+                用于从第一个序列的每个元素提取联接键的函数。
+              </param>
+      <param name="innerKeySelector">
+                用于从第二个序列的每个元素提取联接键的函数。
+              </param>
+      <param name="resultSelector">
+                用于从第一个序列的元素和第二个序列的匹配元素集合中创建结果元素的函数。
+              </param>
+      <typeparam name="TOuter">
+                第一个序列中的元素的类型。
+              </typeparam>
+      <typeparam name="TInner">
+                第二个序列中的元素的类型。
+              </typeparam>
+      <typeparam name="TKey">
+                键选择器函数返回的键的类型。
+              </typeparam>
+      <typeparam name="TResult">
+                结果元素的类型。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含类型的元素 <paramref name="TResult" /> 通过对两个序列执行分组的联接获得的。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="outer" /> 或 <paramref name="inner" /> 或 <paramref name="outerKeySelector" /> 或 <paramref name="innerKeySelector" /> 或 <paramref name="resultSelector" /> 是 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.GroupJoin``4(System.Linq.IQueryable{``0},System.Collections.Generic.IEnumerable{``1},System.Linq.Expressions.Expression{System.Func{``0,``2}},System.Linq.Expressions.Expression{System.Func{``1,``2}},System.Linq.Expressions.Expression{System.Func{``0,System.Collections.Generic.IEnumerable{``1},``3}},System.Collections.Generic.IEqualityComparer{``2})">
+      <summary>
+              基于键相等对两个序列的元素进行关联，并对结果进行分组。
+               指定 <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> 用来对键进行比较。
+            </summary>
+      <param name="outer">
+                要联接的第一个序列。
+              </param>
+      <param name="inner">
+                要与第一个序列联接的序列。
+              </param>
+      <param name="outerKeySelector">
+                用于从第一个序列的每个元素提取联接键的函数。
+              </param>
+      <param name="innerKeySelector">
+                用于从第二个序列的每个元素提取联接键的函数。
+              </param>
+      <param name="resultSelector">
+                用于从第一个序列的元素和第二个序列的匹配元素集合中创建结果元素的函数。
+              </param>
+      <param name="comparer">
+                哈希和比较键比较器。
+              </param>
+      <typeparam name="TOuter">
+                第一个序列中的元素的类型。
+              </typeparam>
+      <typeparam name="TInner">
+                第二个序列中的元素的类型。
+              </typeparam>
+      <typeparam name="TKey">
+                键选择器函数返回的键的类型。
+              </typeparam>
+      <typeparam name="TResult">
+                结果元素的类型。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含类型的元素 <paramref name="TResult" /> 通过对两个序列执行分组的联接获得的。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="outer" /> 或 <paramref name="inner" /> 或 <paramref name="outerKeySelector" /> 或 <paramref name="innerKeySelector" /> 或 <paramref name="resultSelector" /> 是 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Intersect``1(System.Linq.IQueryable{``0},System.Collections.Generic.IEnumerable{``0})">
+      <summary>
+              通过使用默认的相等比较器对值进行比较，生成两个序列的交集。
+            </summary>
+      <param name="source1">
+                也会显示在其非重复元素的序列 <paramref name="source2" /> 返回。
+              </param>
+      <param name="source2">
+                一个序列，其中的同时出现在第一个序列中的非重复元素将返回。
+              </param>
+      <typeparam name="TSource">
+                输入序列中的元素的类型。
+              </typeparam>
+      <returns>
+              一个包含两个序列的交集的序列。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source1" /> 或 <paramref name="source2" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Intersect``1(System.Linq.IQueryable{``0},System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0})">
+      <summary>
+              使用指定的生成两个序列的交集 <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> 对值进行比较。
+            </summary>
+      <param name="source1">
+        <see cref="T:System.Linq.IQueryable`1" /> 也会显示在其非重复元素 <paramref name="source2" /> 返回。
+              </param>
+      <param name="source2">
+        <see cref="T:System.Collections.Generic.IEnumerable`1" /> 返回也出现在第一个序列中的非重复元素。
+              </param>
+      <param name="comparer">
+        <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> 对值进行比较。
+              </param>
+      <typeparam name="TSource">
+                输入序列中的元素的类型。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含两个序列的交集。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source1" /> 或 <paramref name="source2" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Join``4(System.Linq.IQueryable{``0},System.Collections.Generic.IEnumerable{``1},System.Linq.Expressions.Expression{System.Func{``0,``2}},System.Linq.Expressions.Expression{System.Func{``1,``2}},System.Linq.Expressions.Expression{System.Func{``0,``1,``3}})">
+      <summary>
+              基于匹配键对两个序列的元素关联。
+               使用默认的相等比较器对键进行比较。
+            </summary>
+      <param name="outer">
+                要联接的第一个序列。
+              </param>
+      <param name="inner">
+                要与第一个序列联接的序列。
+              </param>
+      <param name="outerKeySelector">
+                用于从第一个序列的每个元素提取联接键的函数。
+              </param>
+      <param name="innerKeySelector">
+                用于从第二个序列的每个元素提取联接键的函数。
+              </param>
+      <param name="resultSelector">
+                用于从两个匹配元素创建结果元素的函数。
+              </param>
+      <typeparam name="TOuter">
+                第一个序列中的元素的类型。
+              </typeparam>
+      <typeparam name="TInner">
+                第二个序列中的元素的类型。
+              </typeparam>
+      <typeparam name="TKey">
+                键选择器函数返回的键的类型。
+              </typeparam>
+      <typeparam name="TResult">
+                结果元素的类型。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其类型的元素 <paramref name="TResult" /> 通过对两个序列执行内部联接获得的。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="outer" /> 或 <paramref name="inner" /> 或 <paramref name="outerKeySelector" /> 或 <paramref name="innerKeySelector" /> 或 <paramref name="resultSelector" /> 是 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Join``4(System.Linq.IQueryable{``0},System.Collections.Generic.IEnumerable{``1},System.Linq.Expressions.Expression{System.Func{``0,``2}},System.Linq.Expressions.Expression{System.Func{``1,``2}},System.Linq.Expressions.Expression{System.Func{``0,``1,``3}},System.Collections.Generic.IEqualityComparer{``2})">
+      <summary>
+              基于匹配键对两个序列的元素关联。
+               指定 <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> 用来对键进行比较。
+            </summary>
+      <param name="outer">
+                要联接的第一个序列。
+              </param>
+      <param name="inner">
+                要与第一个序列联接的序列。
+              </param>
+      <param name="outerKeySelector">
+                用于从第一个序列的每个元素提取联接键的函数。
+              </param>
+      <param name="innerKeySelector">
+                用于从第二个序列的每个元素提取联接键的函数。
+              </param>
+      <param name="resultSelector">
+                用于从两个匹配元素创建结果元素的函数。
+              </param>
+      <param name="comparer">
+        <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> 键进行哈希和比较。
+              </param>
+      <typeparam name="TOuter">
+                第一个序列中的元素的类型。
+              </typeparam>
+      <typeparam name="TInner">
+                第二个序列中的元素的类型。
+              </typeparam>
+      <typeparam name="TKey">
+                键选择器函数返回的键的类型。
+              </typeparam>
+      <typeparam name="TResult">
+                结果元素的类型。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其类型的元素 <paramref name="TResult" /> 通过对两个序列执行内部联接获得的。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="outer" /> 或 <paramref name="inner" /> 或 <paramref name="outerKeySelector" /> 或 <paramref name="innerKeySelector" /> 或 <paramref name="resultSelector" /> 是 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Last``1(System.Linq.IQueryable{``0})">
+      <summary>
+              返回序列中的最后一个元素。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 要返回的最后一个元素。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              中的最后一个位置处的值 <paramref name="source" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+                  源序列为空。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Last``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+      <summary>
+              返回序列中满足指定条件的最后一个元素。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 以返回元素。
+              </param>
+      <param name="predicate">
+                用于测试每个元素是否满足条件的函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              中的最后一个元素 <paramref name="source" /> 通过由指定的测试 <paramref name="predicate" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="predicate" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+                  没有元素满足该条件在 <paramref name="predicate" />。
+                
+                  - 或 -
+                
+                  源序列为空。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.LastOrDefault``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+      <summary>
+              返回序列中满足条件的最后一个元素；如果未找到这样的元素，则返回默认值。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 以返回元素。
+              </param>
+      <param name="predicate">
+                用于测试每个元素是否满足条件的函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              default(<paramref name="TSource" />) 如果 <paramref name="source" /> 为空，或者如果没有元素通过测试在谓词函数中; 否则为最后一个元素的 <paramref name="source" /> 谓词函数中通过的测试。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="predicate" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.LastOrDefault``1(System.Linq.IQueryable{``0})">
+      <summary>
+              如果序列不包含任何元素，则返回的最后一个元素中的序列或默认值。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 要返回的最后一个元素。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              default(<paramref name="TSource" />) 如果 <paramref name="source" /> 空; 否则为最后一个元素 <paramref name="source" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.LongCount``1(System.Linq.IQueryable{``0})">
+      <summary>
+              返回 <see cref="T:System.Int64" /> ，它表示序列中的元素的总数。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含要计数的元素。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+        <paramref name="source" /> 中的元素数。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.OverflowException">
+                  元素数目超出 <see cref="F:System.Int64.MaxValue" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.LongCount``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+      <summary>
+              返回 <see cref="T:System.Int64" /> ，表示序列中满足条件的元素的数量。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含要计数的元素。
+              </param>
+      <param name="predicate">
+                用于测试每个元素是否满足条件的函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              中的元素数 <paramref name="source" /> 满足谓词函数中的条件。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="predicate" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.OverflowException">
+                  匹配的元素数超过 <see cref="F:System.Int64.MaxValue" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Max``2(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+      <summary>
+              调用泛型的每个元素的投影函数 <see cref="T:System.Linq.IQueryable`1" /> 并返回最大结果值。
+            </summary>
+      <param name="source">
+                要确定的最大值的值序列。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TResult">
+                由该函数返回的值的类型 <paramref name="selector" />。
+              </typeparam>
+      <returns>
+              序列中的最大值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Max``1(System.Linq.IQueryable{``0})">
+      <summary>
+              返回泛型中的最大值 <see cref="T:System.Linq.IQueryable`1" />。
+            </summary>
+      <param name="source">
+                要确定的最大值的值序列。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              序列中的最大值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Min``2(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+      <summary>
+              调用泛型的每个元素的投影函数 <see cref="T:System.Linq.IQueryable`1" /> 并返回最小的结果值。
+            </summary>
+      <param name="source">
+                要确定的最小值的值序列。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TResult">
+                由该函数返回的值的类型 <paramref name="selector" />。
+              </typeparam>
+      <returns>
+              序列中的最小值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Min``1(System.Linq.IQueryable{``0})">
+      <summary>
+              返回一个一般的最小值 <see cref="T:System.Linq.IQueryable`1" />。
+            </summary>
+      <param name="source">
+                要确定的最小值的值序列。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              序列中的最小值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.OfType``1(System.Linq.IQueryable)">
+      <summary>
+              筛选的元素 <see cref="T:System.Linq.IQueryable" /> 根据指定的类型。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable" /> 要筛选其元素。
+              </param>
+      <typeparam name="TResult">
+                筛选序列元素所根据的类型。
+              </typeparam>
+      <returns>
+              包含中的元素的集合 <paramref name="source" /> 具有类型 <paramref name="TResult" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.OrderBy``2(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Collections.Generic.IComparer{``1})">
+      <summary>
+              按使用指定的比较器按升序对序列的元素进行排序。
+            </summary>
+      <param name="source">
+                一个要排序的值序列。
+              </param>
+      <param name="keySelector">
+                用于从元素中提取键的函数。
+              </param>
+      <param name="comparer">
+        <see cref="T:System.Collections.Generic.IComparer`1" /> 对键进行比较。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TKey">
+                由该函数返回的键的类型 <paramref name="keySelector" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IOrderedQueryable`1" /> 的元素根据某个键进行排序。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" />、<paramref name="keySelector" /> 或 <paramref name="comparer" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.OrderBy``2(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+      <summary>
+              按根据某个键按升序对序列的元素进行排序。
+            </summary>
+      <param name="source">
+                一个要排序的值序列。
+              </param>
+      <param name="keySelector">
+                用于从元素中提取键的函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TKey">
+                由该函数返回的键的类型 <paramref name="keySelector" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IOrderedQueryable`1" /> 的元素根据某个键进行排序。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="keySelector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.OrderByDescending``2(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+      <summary>
+              按根据某个键按降序对序列的元素进行排序。
+            </summary>
+      <param name="source">
+                一个要排序的值序列。
+              </param>
+      <param name="keySelector">
+                用于从元素中提取键的函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TKey">
+                由该函数返回的键的类型 <paramref name="keySelector" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IOrderedQueryable`1" /> 的元素按降序顺序根据某个键进行排序。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="keySelector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.OrderByDescending``2(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Collections.Generic.IComparer{``1})">
+      <summary>
+              使用指定的比较器按降序对序列的元素排序。
+            </summary>
+      <param name="source">
+                一个要排序的值序列。
+              </param>
+      <param name="keySelector">
+                用于从元素中提取键的函数。
+              </param>
+      <param name="comparer">
+        <see cref="T:System.Collections.Generic.IComparer`1" /> 对键进行比较。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TKey">
+                由该函数返回的键的类型 <paramref name="keySelector" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IOrderedQueryable`1" /> 的元素按降序顺序根据某个键进行排序。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" />、<paramref name="keySelector" /> 或 <paramref name="comparer" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Prepend``1(System.Linq.IQueryable{``0},``0)">
+      <param name="source">
+      </param>
+      <param name="element">
+      </param>
+      <typeparam name="TSource">
+      </typeparam>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:System.Linq.Queryable.Reverse``1(System.Linq.IQueryable{``0})">
+      <summary>
+              反转序列中元素的顺序。
+            </summary>
+      <param name="source">
+                要反转的值序列。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> 其元素以相反顺序对应于输入序列。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Select``2(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int32,``1}})">
+      <summary>
+              通过合并元素的索引投影到一个新窗体的序列的每个元素。
+            </summary>
+      <param name="source">
+                一个要投影的值序列。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TResult">
+                由该函数返回的值的类型 <paramref name="selector" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> 其元素是调用上的每个元素的投影函数的结果 <paramref name="source" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Select``2(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+      <summary>
+              将序列中的每个元素投影到新表单。
+            </summary>
+      <param name="source">
+                一个要投影的值序列。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TResult">
+                由该函数返回的值的类型 <paramref name="selector" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> 其元素是调用上的每个元素的投影函数的结果 <paramref name="source" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.SelectMany``3(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int32,System.Collections.Generic.IEnumerable{``1}}},System.Linq.Expressions.Expression{System.Func{``0,``1,``2}})">
+      <summary>
+              一个序列的每个元素投影 <see cref="T:System.Collections.Generic.IEnumerable`1" /> 包含生成它的源元素的索引。
+               每个中间序列的每个元素调用结果选择器函数并生成值合并到一维的序列，并返回。
+            </summary>
+      <param name="source">
+                一个要投影的值序列。
+              </param>
+      <param name="collectionSelector">
+                要应用于输入序列; 中的每个元素的投影函数此函数的第二个参数表示源元素的索引。
+              </param>
+      <param name="resultSelector">
+                若要将应用于每个中间序列的每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TCollection">
+                中间元素的类型所表示的函数收集 <paramref name="collectionSelector" />。
+              </typeparam>
+      <typeparam name="TResult">
+                结果序列的元素的类型。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> 其元素是调用一种一对多投影函数结果 <paramref name="collectionSelector" /> 的每个元素 <paramref name="source" /> 然后将这些序列元素以及其对应的每个映射 <paramref name="source" /> 到一个结果元素的元素。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" />、<paramref name="collectionSelector" /> 或 <paramref name="resultSelector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.SelectMany``3(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Collections.Generic.IEnumerable{``1}}},System.Linq.Expressions.Expression{System.Func{``0,``1,``2}})">
+      <summary>
+              一个序列的每个元素投影 <see cref="T:System.Collections.Generic.IEnumerable`1" /> 和其中调用结果选择器函数对每个元素。
+               从每个中间序列生成的值将合并到一维的序列，并返回。
+            </summary>
+      <param name="source">
+                一个要投影的值序列。
+              </param>
+      <param name="collectionSelector">
+                要应用于输入序列中的每个元素投影函数。
+              </param>
+      <param name="resultSelector">
+                若要将应用于每个中间序列的每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TCollection">
+                中间元素的类型所表示的函数收集 <paramref name="collectionSelector" />。
+              </typeparam>
+      <typeparam name="TResult">
+                结果序列的元素的类型。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> 其元素是调用一种一对多投影函数结果 <paramref name="collectionSelector" /> 的每个元素 <paramref name="source" /> 然后将这些序列元素以及其对应的每个映射 <paramref name="source" /> 到一个结果元素的元素。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" />、<paramref name="collectionSelector" /> 或 <paramref name="resultSelector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.SelectMany``2(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int32,System.Collections.Generic.IEnumerable{``1}}})">
+      <summary>
+              一个序列的每个元素投影 <see cref="T:System.Collections.Generic.IEnumerable`1" /> ，并将组合为一个序列将结果序列。
+               每个源元素的索引用于该元素的投影表。
+            </summary>
+      <param name="source">
+                一个要投影的值序列。
+              </param>
+      <param name="selector">
+                要应用于每个元素，则投影函数此函数的第二个参数表示源元素的索引。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TResult">
+                由该函数返回的序列的元素的类型 <paramref name="selector" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> 其元素是调用输入序列中的每个元素上的一到多投影函数的结果。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.SelectMany``2(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Collections.Generic.IEnumerable{``1}}})">
+      <summary>
+              一个序列的每个元素投影 <see cref="T:System.Collections.Generic.IEnumerable`1" /> ，并将组合为一个序列将结果序列。
+            </summary>
+      <param name="source">
+                一个要投影的值序列。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TResult">
+                由该函数返回的序列的元素的类型 <paramref name="selector" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> 其元素是调用输入序列中的每个元素上的一到多投影函数的结果。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.SequenceEqual``1(System.Linq.IQueryable{``0},System.Collections.Generic.IEnumerable{``0})">
+      <summary>
+              确定两个序列是否使用默认的相等比较用于比较元素相等。
+            </summary>
+      <param name="source1">
+        <see cref="T:System.Linq.IQueryable`1" /> 其元素进行比较与 <paramref name="source2" />。
+              </param>
+      <param name="source2">
+        <see cref="T:System.Collections.Generic.IEnumerable`1" /> 其元素进行比较的第一个序列。
+              </param>
+      <typeparam name="TSource">
+                输入序列中的元素的类型。
+              </typeparam>
+      <returns>
+        <see langword="true" /> 如果两个源序列的长度相等，且其相应元素相等，则为否则为 <see langword="false" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source1" /> 或 <paramref name="source2" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.SequenceEqual``1(System.Linq.IQueryable{``0},System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0})">
+      <summary>
+              确定两个序列是否使用指定的相等 <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> 用于比较元素。
+            </summary>
+      <param name="source1">
+        <see cref="T:System.Linq.IQueryable`1" /> 其元素进行比较与 <paramref name="source2" />。
+              </param>
+      <param name="source2">
+        <see cref="T:System.Collections.Generic.IEnumerable`1" /> 其元素进行比较的第一个序列。
+              </param>
+      <param name="comparer">
+        <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> 要用来比较元素。
+              </param>
+      <typeparam name="TSource">
+                输入序列中的元素的类型。
+              </typeparam>
+      <returns>
+        <see langword="true" /> 如果两个源序列的长度相等，且其相应元素相等，则为否则为 <see langword="false" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source1" /> 或 <paramref name="source2" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Single``1(System.Linq.IQueryable{``0})">
+      <summary>
+              返回序列的唯一元素；如果该序列并非恰好包含一个元素，则会引发异常。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 要返回的单个元素。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              输入序列的单个元素。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="source" /> 具有多个元素。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Single``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+      <summary>
+              返回序列中满足指定条件的唯一元素；如果有多个这样的元素存在，则会引发异常。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 以返回从的单个元素。
+              </param>
+      <param name="predicate">
+                用于测试元素是否满足条件的函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              输入序列中满足条件中的单个元素 <paramref name="predicate" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="predicate" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+                  没有元素满足该条件在 <paramref name="predicate" />。
+                
+                  - 或 -
+                
+                  多个元素满足该条件在 <paramref name="predicate" />。
+                
+                  - 或 -
+                
+                  源序列为空。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.SingleOrDefault``1(System.Linq.IQueryable{``0})">
+      <summary>
+              返回一个序列，或默认值的唯一元素，如果序列为空，则为如果序列中存在多个元素，则此方法将引发异常。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 要返回的单个元素。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              在输入序列的单个元素或 default(<paramref name="TSource" />) 如果序列不包含任何元素。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <paramref name="source" /> 具有多个元素。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.SingleOrDefault``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+      <summary>
+              返回序列中满足指定条件的唯一元素；如果这类元素不存在，则返回默认值；如果有多个元素满足该条件，此方法将引发异常。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 以返回从的单个元素。
+              </param>
+      <param name="predicate">
+                用于测试元素是否满足条件的函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              输入序列中满足条件中的单个元素 <paramref name="predicate" />, ，或 default(<paramref name="TSource" />) 如果找到这样的元素。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="predicate" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+                  多个元素满足该条件在 <paramref name="predicate" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Skip``1(System.Linq.IQueryable{``0},System.Int32)">
+      <summary>
+              跳过指定的数量的序列中的元素，然后返回剩余元素。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 返回中的元素。
+              </param>
+      <param name="count">
+                返回剩余元素前要跳过的元素数量。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含输入序列中的指定索引后出现的元素。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.SkipLast``1(System.Linq.IQueryable{``0},System.Int32)">
+      <param name="source">
+      </param>
+      <param name="count">
+      </param>
+      <typeparam name="TSource">
+      </typeparam>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:System.Linq.Queryable.SkipWhile``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+      <summary>
+              只要指定的条件为 true，然后返回剩余元素，跳过序列中的元素。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 返回中的元素。
+              </param>
+      <param name="predicate">
+                用于测试每个元素是否满足条件的函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含从元素 <paramref name="source" /> 未通过测试由指定的线性系列中的第一个元素开始 <paramref name="predicate" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="predicate" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.SkipWhile``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int32,System.Boolean}})">
+      <summary>
+              只要指定的条件为 true，然后返回剩余元素，跳过序列中的元素。
+               将在谓词函数的逻辑中使用元素的索引。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 返回中的元素。
+              </param>
+      <param name="predicate">
+                用于测试条件; 每个元素的函数此函数的第二个参数表示源元素的索引。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含从元素 <paramref name="source" /> 未通过测试由指定的线性系列中的第一个元素开始 <paramref name="predicate" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="predicate" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Sum(System.Linq.IQueryable{System.Single})">
+      <summary>
+              计算的一系列总和 <see cref="T:System.Single" /> 值。
+            </summary>
+      <param name="source">
+                一系列 <see cref="T:System.Single" /> 要对其求和的值。
+              </param>
+      <returns>
+              在序列中值的总和。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Sum(System.Linq.IQueryable{System.Nullable{System.Single}})">
+      <summary>
+              计算可以为 null 的序列的和 <see cref="T:System.Single" /> 值。
+            </summary>
+      <param name="source">
+                可以为 null 的序列 <see cref="T:System.Single" /> 要对其求和的值。
+              </param>
+      <returns>
+              在序列中值的总和。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Sum(System.Linq.IQueryable{System.Nullable{System.Int64}})">
+      <summary>
+              计算可以为 null 的序列的和 <see cref="T:System.Int64" /> 值。
+            </summary>
+      <param name="source">
+                可以为 null 的序列 <see cref="T:System.Int64" /> 要对其求和的值。
+              </param>
+      <returns>
+              在序列中值的总和。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.OverflowException">
+                  之和大于 <see cref="F:System.Int64.MaxValue" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Sum(System.Linq.IQueryable{System.Nullable{System.Int32}})">
+      <summary>
+              计算可以为 null 的序列的和 <see cref="T:System.Int32" /> 值。
+            </summary>
+      <param name="source">
+                可以为 null 的序列 <see cref="T:System.Int32" /> 要对其求和的值。
+              </param>
+      <returns>
+              在序列中值的总和。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.OverflowException">
+                  之和大于 <see cref="F:System.Int32.MaxValue" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Sum(System.Linq.IQueryable{System.Nullable{System.Double}})">
+      <summary>
+              计算可以为 null 的序列的和 <see cref="T:System.Double" /> 值。
+            </summary>
+      <param name="source">
+                可以为 null 的序列 <see cref="T:System.Double" /> 要对其求和的值。
+              </param>
+      <returns>
+              在序列中值的总和。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Sum(System.Linq.IQueryable{System.Double})">
+      <summary>
+              计算的一系列总和 <see cref="T:System.Double" /> 值。
+            </summary>
+      <param name="source">
+                一系列 <see cref="T:System.Double" /> 要对其求和的值。
+              </param>
+      <returns>
+              在序列中值的总和。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Sum(System.Linq.IQueryable{System.Int64})">
+      <summary>
+              计算的一系列总和 <see cref="T:System.Int64" /> 值。
+            </summary>
+      <param name="source">
+                一系列 <see cref="T:System.Int64" /> 要对其求和的值。
+              </param>
+      <returns>
+              在序列中值的总和。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.OverflowException">
+                  之和大于 <see cref="F:System.Int64.MaxValue" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Sum(System.Linq.IQueryable{System.Int32})">
+      <summary>
+              计算的一系列总和 <see cref="T:System.Int32" /> 值。
+            </summary>
+      <param name="source">
+                一系列 <see cref="T:System.Int32" /> 要对其求和的值。
+              </param>
+      <returns>
+              在序列中值的总和。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.OverflowException">
+                  之和大于 <see cref="F:System.Int32.MaxValue" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Sum(System.Linq.IQueryable{System.Nullable{System.Decimal}})">
+      <summary>
+              计算可以为 null 的序列的和 <see cref="T:System.Decimal" /> 值。
+            </summary>
+      <param name="source">
+                可以为 null 的序列 <see cref="T:System.Decimal" /> 要对其求和的值。
+              </param>
+      <returns>
+              在序列中值的总和。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.OverflowException">
+                  之和大于 <see cref="F:System.Decimal.MaxValue" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Sum(System.Linq.IQueryable{System.Decimal})">
+      <summary>
+              计算的一系列总和 <see cref="T:System.Decimal" /> 值。
+            </summary>
+      <param name="source">
+                一系列 <see cref="T:System.Decimal" /> 要对其求和的值。
+              </param>
+      <returns>
+              在序列中值的总和。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.OverflowException">
+                  之和大于 <see cref="F:System.Decimal.MaxValue" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Sum``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Single}}})">
+      <summary>
+              计算可以为 null 的序列的和 <see cref="T:System.Single" /> 通过调用对输入序列中的每个元素的投影函数获得的值。
+            </summary>
+      <param name="source">
+                类型的值的序列 <paramref name="TSource" />。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              投影值的总和。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Sum``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int64}}})">
+      <summary>
+              计算可以为 null 的序列的和 <see cref="T:System.Int64" /> 通过调用对输入序列中的每个元素的投影函数获得的值。
+            </summary>
+      <param name="source">
+                类型的值的序列 <paramref name="TSource" />。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              投影值的总和。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.OverflowException">
+                  之和大于 <see cref="F:System.Int64.MaxValue" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Sum``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Int32}}})">
+      <summary>
+              计算可以为 null 的序列的和 <see cref="T:System.Int32" /> 通过调用对输入序列中的每个元素的投影函数获得的值。
+            </summary>
+      <param name="source">
+                类型的值的序列 <paramref name="TSource" />。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              投影值的总和。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.OverflowException">
+                  之和大于 <see cref="F:System.Int32.MaxValue" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Sum``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Double}}})">
+      <summary>
+              计算可以为 null 的序列的和 <see cref="T:System.Double" /> 通过调用对输入序列中的每个元素的投影函数获得的值。
+            </summary>
+      <param name="source">
+                类型的值的序列 <paramref name="TSource" />。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              投影值的总和。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Sum``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Single}})">
+      <summary>
+              计算的序列的和 <see cref="T:System.Single" /> 通过调用对输入序列中的每个元素的投影函数获得的值。
+            </summary>
+      <param name="source">
+                类型的值的序列 <paramref name="TSource" />。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              投影值的总和。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Sum``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int64}})">
+      <summary>
+              计算的序列的和 <see cref="T:System.Int64" /> 通过调用对输入序列中的每个元素的投影函数获得的值。
+            </summary>
+      <param name="source">
+                类型的值的序列 <paramref name="TSource" />。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              投影值的总和。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.OverflowException">
+                  之和大于 <see cref="F:System.Int64.MaxValue" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Sum``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int32}})">
+      <summary>
+              计算的序列的和 <see cref="T:System.Int32" /> 通过调用对输入序列中的每个元素的投影函数获得的值。
+            </summary>
+      <param name="source">
+                类型的值的序列 <paramref name="TSource" />。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              投影值的总和。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.OverflowException">
+                  之和大于 <see cref="F:System.Int32.MaxValue" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Sum``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Double}})">
+      <summary>
+              计算的序列的和 <see cref="T:System.Double" /> 通过调用对输入序列中的每个元素的投影函数获得的值。
+            </summary>
+      <param name="source">
+                类型的值的序列 <paramref name="TSource" />。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              投影值的总和。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Sum``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Decimal}})">
+      <summary>
+              计算的序列的和 <see cref="T:System.Decimal" /> 通过调用对输入序列中的每个元素的投影函数获得的值。
+            </summary>
+      <param name="source">
+                类型的值的序列 <paramref name="TSource" />。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              投影值的总和。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.OverflowException">
+                  之和大于 <see cref="F:System.Decimal.MaxValue" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Sum``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Nullable{System.Decimal}}})">
+      <summary>
+              计算可以为 null 的序列的和 <see cref="T:System.Decimal" /> 通过调用对输入序列中的每个元素的投影函数获得的值。
+            </summary>
+      <param name="source">
+                类型的值的序列 <paramref name="TSource" />。
+              </param>
+      <param name="selector">
+                要应用于每个元素投影函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+              投影值的总和。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="selector" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.OverflowException">
+                  之和大于 <see cref="F:System.Decimal.MaxValue" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Take``1(System.Linq.IQueryable{``0},System.Int32)">
+      <summary>
+              从序列的开头返回指定的数量的连续元素。
+            </summary>
+      <param name="source">
+                要从其返回元素的序列。
+              </param>
+      <param name="count">
+                要返回的元素数量。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含指定的数量的开始处的元素 <paramref name="source" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.TakeLast``1(System.Linq.IQueryable{``0},System.Int32)">
+      <param name="source">
+      </param>
+      <param name="count">
+      </param>
+      <typeparam name="TSource">
+      </typeparam>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:System.Linq.Queryable.TakeWhile``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int32,System.Boolean}})">
+      <summary>
+              返回序列中的元素，只要指定的条件为真。
+               将在谓词函数的逻辑中使用元素的索引。
+            </summary>
+      <param name="source">
+                要从其返回元素的序列。
+              </param>
+      <param name="predicate">
+                用于测试条件; 每个元素的函数该函数的第二个参数表示源序列中的元素的索引。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含测试由指定的元素之前出现的输入序列中的元素 <paramref name="predicate" /> 不再能够通过。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="predicate" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.TakeWhile``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+      <summary>
+              返回序列中的元素，只要指定的条件为真。
+            </summary>
+      <param name="source">
+                要从其返回元素的序列。
+              </param>
+      <param name="predicate">
+                用于测试每个元素是否满足条件的函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含测试由指定的元素之前出现的输入序列中的元素 <paramref name="predicate" /> 不再能够通过。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="predicate" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.ThenBy``2(System.Linq.IOrderedQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+      <summary>
+              执行后续排序以根据某个键按升序对序列的元素。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IOrderedQueryable`1" /> ，其中包含要排序的元素。
+              </param>
+      <param name="keySelector">
+                用于从每个元素中提取键的函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TKey">
+                由该函数返回的键的类型 <paramref name="keySelector" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IOrderedQueryable`1" /> 的元素根据某个键进行排序。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="keySelector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.ThenBy``2(System.Linq.IOrderedQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Collections.Generic.IComparer{``1})">
+      <summary>
+              执行后续排序中使用指定的比较器按升序对序列的元素。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IOrderedQueryable`1" /> ，其中包含要排序的元素。
+              </param>
+      <param name="keySelector">
+                用于从每个元素中提取键的函数。
+              </param>
+      <param name="comparer">
+        <see cref="T:System.Collections.Generic.IComparer`1" /> 对键进行比较。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TKey">
+                由该函数返回的键的类型 <paramref name="keySelector" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IOrderedQueryable`1" /> 的元素根据某个键进行排序。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" />、<paramref name="keySelector" /> 或 <paramref name="comparer" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.ThenByDescending``2(System.Linq.IOrderedQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}})">
+      <summary>
+              根据某个键将执行后续排序顺序，按降序对序列的元素。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IOrderedQueryable`1" /> ，其中包含要排序的元素。
+              </param>
+      <param name="keySelector">
+                用于从每个元素中提取键的函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TKey">
+                由该函数返回的键的类型 <paramref name="keySelector" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IOrderedQueryable`1" /> 的元素按降序顺序根据某个键进行排序。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="keySelector" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.ThenByDescending``2(System.Linq.IOrderedQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,``1}},System.Collections.Generic.IComparer{``1})">
+      <summary>
+              执行后续排序中使用指定的比较器按降序对序列的元素。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IOrderedQueryable`1" /> ，其中包含要排序的元素。
+              </param>
+      <param name="keySelector">
+                用于从每个元素中提取键的函数。
+              </param>
+      <param name="comparer">
+        <see cref="T:System.Collections.Generic.IComparer`1" /> 对键进行比较。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <typeparam name="TKey">
+                返回的键的类型 <paramref name="keySelector" /> 函数。
+              </typeparam>
+      <returns>
+              集合的元素按降序顺序根据某个键进行排序。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" />、<paramref name="keySelector" /> 或 <paramref name="comparer" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Union``1(System.Linq.IQueryable{``0},System.Collections.Generic.IEnumerable{``0})">
+      <summary>
+              通过使用默认的相等比较器生成的两个序列的并集。
+            </summary>
+      <param name="source1">
+                一个序列的非重复元素构成 union 运算的第一个集。
+              </param>
+      <param name="source2">
+                一个序列的非重复元素构成 union 运算的第二个集。
+              </param>
+      <typeparam name="TSource">
+                输入序列中的元素的类型。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含非重复这两个输入序列中的元素。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source1" /> 或 <paramref name="source2" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Union``1(System.Linq.IQueryable{``0},System.Collections.Generic.IEnumerable{``0},System.Collections.Generic.IEqualityComparer{``0})">
+      <summary>
+              使用指定的生成两个序列的并集 <see cref="T:System.Collections.Generic.IEqualityComparer`1" />。
+            </summary>
+      <param name="source1">
+                一个序列的非重复元素构成 union 运算的第一个集。
+              </param>
+      <param name="source2">
+                一个序列的非重复元素构成 union 运算的第二个集。
+              </param>
+      <param name="comparer">
+        <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> 对值进行比较。
+              </param>
+      <typeparam name="TSource">
+                输入序列中的元素的类型。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含非重复这两个输入序列中的元素。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source1" /> 或 <paramref name="source2" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Where``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Int32,System.Boolean}})">
+      <summary>
+              基于谓词筛选值序列。
+               将在谓词函数的逻辑中使用每个元素的索引。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 进行筛选。
+              </param>
+      <param name="predicate">
+                用于测试条件; 每个元素的函数该函数的第二个参数表示源序列中的元素的索引。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含输入序列中满足指定条件的元素 <paramref name="predicate" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="predicate" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Where``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+      <summary>
+              基于谓词筛选值序列。
+            </summary>
+      <param name="source">
+        <see cref="T:System.Linq.IQueryable`1" /> 进行筛选。
+              </param>
+      <param name="predicate">
+                用于测试每个元素是否满足条件的函数。
+              </param>
+      <typeparam name="TSource">
+                中的元素的类型 <paramref name="source" />。
+              </typeparam>
+      <returns>
+        <see cref="T:System.Linq.IQueryable`1" /> ，其中包含输入序列中满足指定条件的元素 <paramref name="predicate" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 或 <paramref name="predicate" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Linq.Queryable.Zip``3(System.Linq.IQueryable{``0},System.Collections.Generic.IEnumerable{``1},System.Linq.Expressions.Expression{System.Func{``0,``1,``2}})">
+      <summary>
+              通过使用指定的谓词函数合并两个序列。
+            </summary>
+      <param name="source1">
+                要合并的第一个序列。
+              </param>
+      <param name="source2">
+                要合并的第二个序列。
+              </param>
+      <param name="resultSelector">
+                用于指定如何合并这两个序列中的元素的函数。
+              </param>
+      <typeparam name="TFirst">
+                第一个输入序列的元素的类型。
+              </typeparam>
+      <typeparam name="TSecond">
+                第二个输入序列的元素的类型。
+              </typeparam>
+      <typeparam name="TResult">
+                结果序列的元素的类型。
+              </typeparam>
+      <returns>
+              一个包含两个输入序列中的合并元素的 <see cref="T:System.Linq.IQueryable`1" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source1" />或<paramref name="source2 " />是<see langword="null" />。
+                </exception>
+    </member>
+  </members>
+</doc>

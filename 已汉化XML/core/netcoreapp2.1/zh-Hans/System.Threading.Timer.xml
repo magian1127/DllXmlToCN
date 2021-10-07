@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Threading.Timer</name>
+  </assembly>
+  <members>
+    <member name="T:System.Threading.Timer">
+      <summary>
+              提供以指定的时间间隔对线程池线程执行方法的机制。
+               无法继承此类。
+            
+              若要浏览此类型的 .NET Framework 源代码，请参阅引用源。
+            </summary>
+    </member>
+    <member name="M:System.Threading.Timer.#ctor(System.Threading.TimerCallback)">
+      <summary>
+              新实例初始化 <see cref="T:System.Threading.Timer" /> 类，具有无限期和无限到期时间，请使用新创建 <see cref="T:System.Threading.Timer" /> 对象作为状态对象。
+            </summary>
+      <param name="callback">
+                一个 <see cref="T:System.Threading.TimerCallback" /> 委托，表示要执行的方法。
+              </param>
+    </member>
+    <member name="M:System.Threading.Timer.#ctor(System.Threading.TimerCallback,System.Object,System.Int32,System.Int32)">
+      <summary>
+              新实例初始化 <see langword="Timer" /> 类，使用 32 位带符号的整数指定时间间隔。
+            </summary>
+      <param name="callback">
+                一个 <see cref="T:System.Threading.TimerCallback" /> 委托，表示要执行的方法。
+              </param>
+      <param name="state">
+                一个包含回调方法中，要使用信息的对象或 <see langword="null" />。
+              </param>
+      <param name="dueTime">
+                在之前的延迟时间量 <paramref name="callback" /> 调用，以毫秒为单位。
+                 指定 <see cref="F:System.Threading.Timeout.Infinite" /> 以防止启动计时器。
+                 指定零 (0) 可立即启动计时器。
+              </param>
+      <param name="period">
+                调用之间的时间间隔 <paramref name="callback" />, ，以毫秒为单位。
+                 指定 <see cref="F:System.Threading.Timeout.Infinite" /> 可以禁用定期终止。
+              </param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="dueTime" /> 或 <paramref name="period" /> 参数为负，且不等于 <see cref="F:System.Threading.Timeout.Infinite" />。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="callback" /> 参数为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Timer.#ctor(System.Threading.TimerCallback,System.Object,System.Int64,System.Int64)">
+      <summary>
+              新实例初始化 <see langword="Timer" /> 类，用 64 位有符号的整数度量时间间隔。
+            </summary>
+      <param name="callback">
+                一个 <see cref="T:System.Threading.TimerCallback" /> 委托，表示要执行的方法。
+              </param>
+      <param name="state">
+                一个包含回调方法中，要使用信息的对象或 <see langword="null" />。
+              </param>
+      <param name="dueTime">
+                在之前的延迟时间量 <paramref name="callback" /> 调用，以毫秒为单位。
+                 指定 <see cref="F:System.Threading.Timeout.Infinite" /> 以防止启动计时器。
+                 指定零 (0) 可立即启动计时器。
+              </param>
+      <param name="period">
+                调用之间的时间间隔 <paramref name="callback" />, ，以毫秒为单位。
+                 指定 <see cref="F:System.Threading.Timeout.Infinite" /> 可以禁用定期终止。
+              </param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="dueTime" /> 或 <paramref name="period" /> 参数为负，且不等于 <see cref="F:System.Threading.Timeout.Infinite" />。
+                </exception>
+      <exception cref="T:System.NotSupportedException">
+        <paramref name="dueTime" /> 或 <paramref name="period" /> 参数是否大于 4294967294。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Timer.#ctor(System.Threading.TimerCallback,System.Object,System.TimeSpan,System.TimeSpan)">
+      <summary>
+              新实例初始化 <see langword="Timer" /> 类，使用 <see cref="T:System.TimeSpan" /> 值度量时间间隔。
+            </summary>
+      <param name="callback">
+                表示要执行的方法的委托。
+              </param>
+      <param name="state">
+                一个包含回调方法中，要使用信息的对象或 <see langword="null" />。
+              </param>
+      <param name="dueTime">
+                在之前的延迟时间量 <paramref name="callback" /> 参数调用其方法。
+                 指定 -1 毫秒以防止启动计时器。
+                 指定零 (0) 可立即启动计时器。
+              </param>
+      <param name="period">
+                由所引用的方法的调用之间的时间间隔 <paramref name="callback" />。
+                 指定 -1 毫秒可以禁用定期终止。
+              </param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+                  值中的毫秒数 <paramref name="dueTime" /> 或 <paramref name="period" /> 为负数，并且不等于 <see cref="F:System.Threading.Timeout.Infinite" />, ，或者大于 <see cref="F:System.Int32.MaxValue" />。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="callback" /> 参数为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Timer.#ctor(System.Threading.TimerCallback,System.Object,System.UInt32,System.UInt32)">
+      <summary>
+              新实例初始化 <see langword="Timer" /> 类，用 32 位无符号的整数度量时间间隔。
+            </summary>
+      <param name="callback">
+                表示要执行的方法的委托。
+              </param>
+      <param name="state">
+                一个包含回调方法中，要使用信息的对象或 <see langword="null" />。
+              </param>
+      <param name="dueTime">
+                在之前的延迟时间量 <paramref name="callback" /> 调用，以毫秒为单位。
+                 指定 <see cref="F:System.Threading.Timeout.Infinite" /> 以防止启动计时器。
+                 指定零 (0) 可立即启动计时器。
+              </param>
+      <param name="period">
+                调用之间的时间间隔 <paramref name="callback" />, ，以毫秒为单位。
+                 指定 <see cref="F:System.Threading.Timeout.Infinite" /> 可以禁用定期终止。
+              </param>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="dueTime" /> 或 <paramref name="period" /> 参数为负，且不等于 <see cref="F:System.Threading.Timeout.Infinite" />。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="callback" /> 参数为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Timer.Change(System.Int32,System.Int32)">
+      <summary>
+              更改计时器的启动时间和方法调用之间的间隔，用 32 位有符号整数度量时间间隔。
+            </summary>
+      <param name="dueTime">
+                延迟之前调用的回调方法时指定的时间量 <see cref="T:System.Threading.Timer" /> 构造的以毫秒为单位。
+                 指定 <see cref="F:System.Threading.Timeout.Infinite" /> 以防止计时器重新启动。
+                 指定零 (0) 可立即重新启动计时器。
+              </param>
+      <param name="period">
+                回调方法的调用之间的时间间隔时指定 <see cref="T:System.Threading.Timer" /> 构造的以毫秒为单位。
+                 指定 <see cref="F:System.Threading.Timeout.Infinite" /> 可以禁用定期终止。
+              </param>
+      <returns>
+        <see langword="true" /> 如果已成功更新计时器;否则为 <see langword="false" />。
+            </returns>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.Threading.Timer" /> 被释放。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="dueTime" /> 或 <paramref name="period" /> 参数为负，且不等于 <see cref="F:System.Threading.Timeout.Infinite" />。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Timer.Change(System.Int64,System.Int64)">
+      <summary>
+              更改计时器的启动时间和方法调用之间的间隔，用 64 位有符号整数度量时间间隔。
+            </summary>
+      <param name="dueTime">
+                延迟之前调用的回调方法时指定的时间量 <see cref="T:System.Threading.Timer" /> 构造的以毫秒为单位。
+                 指定 <see cref="F:System.Threading.Timeout.Infinite" /> 以防止计时器重新启动。
+                 指定零 (0) 可立即重新启动计时器。
+              </param>
+      <param name="period">
+                回调方法的调用之间的时间间隔时指定 <see cref="T:System.Threading.Timer" /> 构造的以毫秒为单位。
+                 指定 <see cref="F:System.Threading.Timeout.Infinite" /> 可以禁用定期终止。
+              </param>
+      <returns>
+        <see langword="true" /> 如果已成功更新计时器;否则为 <see langword="false" />。
+            </returns>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.Threading.Timer" /> 被释放。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="dueTime" /> 或 <paramref name="period" /> 参数是小于-1。
+                </exception>
+      <exception cref="T:System.NotSupportedException">
+        <paramref name="dueTime" /> 或 <paramref name="period" /> 参数是否大于 4294967294。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Timer.Change(System.TimeSpan,System.TimeSpan)">
+      <summary>
+              更改开始时间和计时器，并将方法调用之间的间隔 <see cref="T:System.TimeSpan" /> 值度量时间间隔。
+            </summary>
+      <param name="dueTime">
+                一个 <see cref="T:System.TimeSpan" /> 表示在调用回调方法之前延迟的时间量时指定 <see cref="T:System.Threading.Timer" /> 构造。
+                 指定负 -1 毫秒以防止计时器重新启动。
+                 指定零 (0) 可立即重新启动计时器。
+              </param>
+      <param name="period">
+                回调方法的调用之间的时间间隔时指定 <see cref="T:System.Threading.Timer" /> 构造。
+                 指定 -1 毫秒可以禁用定期终止。
+              </param>
+      <returns>
+        <see langword="true" /> 如果已成功更新计时器;否则为 <see langword="false" />。
+            </returns>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.Threading.Timer" /> 被释放。
+                </exception>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+        <paramref name="dueTime" /> 或 <paramref name="period" /> 参数，以毫秒为单位，是小于-1。
+                </exception>
+      <exception cref="T:System.NotSupportedException">
+        <paramref name="dueTime" /> 或 <paramref name="period" /> 参数，以毫秒为单位，大于 4294967294。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Timer.Change(System.UInt32,System.UInt32)">
+      <summary>
+              更改计时器的启动时间和方法调用之间的间隔，用 32 位无符号整数度量时间间隔。
+            </summary>
+      <param name="dueTime">
+                延迟之前调用的回调方法时指定的时间量 <see cref="T:System.Threading.Timer" /> 构造的以毫秒为单位。
+                 指定 <see cref="F:System.Threading.Timeout.Infinite" /> 以防止计时器重新启动。
+                 指定零 (0) 可立即重新启动计时器。
+              </param>
+      <param name="period">
+                回调方法的调用之间的时间间隔时指定 <see cref="T:System.Threading.Timer" /> 构造的以毫秒为单位。
+                 指定 <see cref="F:System.Threading.Timeout.Infinite" /> 可以禁用定期终止。
+              </param>
+      <returns>
+        <see langword="true" /> 如果已成功更新计时器;否则为 <see langword="false" />。
+            </returns>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.Threading.Timer" /> 被释放。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Timer.Dispose">
+      <summary>
+              释放当前实例所使用的所有资源 <see cref="T:System.Threading.Timer" />。
+            </summary>
+    </member>
+    <member name="M:System.Threading.Timer.Dispose(System.Threading.WaitHandle)">
+      <summary>
+              释放当前实例所使用的所有资源 <see cref="T:System.Threading.Timer" /> 和信号时已释放计时器。
+            </summary>
+      <param name="notifyObject">
+        <see cref="T:System.Threading.WaitHandle" /> 时发出信号 <see langword="Timer" /> 已经被释放。
+              </param>
+      <returns>
+        <see langword="true" /> 如果该函数成功，则否则为 <see langword="false" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="notifyObject" /> 参数为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="T:System.Threading.TimerCallback">
+      <summary>
+              表示处理来自调用的方法 <see cref="T:System.Threading.Timer" />。
+            </summary>
+      <param name="state">
+                一个包含与所调用此委托的方法相关的应用程序特定信息的对象或 <see langword="null" />。
+              </param>
+    </member>
+  </members>
+</doc>

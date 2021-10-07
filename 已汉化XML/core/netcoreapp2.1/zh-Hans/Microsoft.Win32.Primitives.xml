@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.Win32.Primitives</name>
+  </assembly>
+  <members>
+    <member name="T:System.ComponentModel.Win32Exception">
+      <summary>
+              引发 Win32 错误代码异常。
+            </summary>
+    </member>
+    <member name="M:System.ComponentModel.Win32Exception.#ctor">
+      <summary>
+              新实例初始化 <see cref="T:System.ComponentModel.Win32Exception" /> 类所发生的最后一个 Win32 错误。
+            </summary>
+    </member>
+    <member name="M:System.ComponentModel.Win32Exception.#ctor(System.Int32)">
+      <summary>
+              新实例初始化 <see cref="T:System.ComponentModel.Win32Exception" /> 类，具有指定的错误。
+            </summary>
+      <param name="error">
+                与此异常关联的 Win32 错误代码。
+              </param>
+    </member>
+    <member name="M:System.ComponentModel.Win32Exception.#ctor(System.String)">
+      <summary>
+              新实例初始化 <see cref="T:System.ComponentModel.Win32Exception" /> 类，具有指定的详细说明。
+            </summary>
+      <param name="message">
+                错误的详细的说明。
+              </param>
+    </member>
+    <member name="M:System.ComponentModel.Win32Exception.#ctor(System.Int32,System.String)">
+      <summary>
+              新实例初始化 <see cref="T:System.ComponentModel.Win32Exception" /> 带有指定的错误和指定的类的详细说明。
+            </summary>
+      <param name="error">
+                与此异常关联的 Win32 错误代码。
+              </param>
+      <param name="message">
+                错误的详细的说明。
+              </param>
+    </member>
+    <member name="M:System.ComponentModel.Win32Exception.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+              新实例初始化 <see cref="T:System.ComponentModel.Win32Exception" /> 类，具有指定的上下文和序列化信息。
+            </summary>
+      <param name="info">
+                与此异常关联的 <see cref="T:System.Runtime.Serialization.SerializationInfo" />。
+              </param>
+      <param name="context">
+                一个 <see cref="T:System.Runtime.Serialization.StreamingContext" /> ，表示此异常的上下文。
+              </param>
+    </member>
+    <member name="M:System.ComponentModel.Win32Exception.#ctor(System.String,System.Exception)">
+      <summary>
+              新实例初始化 <see cref="T:System.ComponentModel.Win32Exception" /> 带有指定的详细的说明和指定的异常类。
+            </summary>
+      <param name="message">
+                错误的详细的说明。
+              </param>
+      <param name="innerException">
+                对导致此异常的内部异常的引用。
+              </param>
+    </member>
+    <member name="M:System.ComponentModel.Win32Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+              集 <see cref="T:System.Runtime.Serialization.SerializationInfo" /> 对象与此的文件名和行号 <see cref="T:System.ComponentModel.Win32Exception" /> 发生。
+            </summary>
+      <param name="info">
+        <see cref="T:System.Runtime.Serialization.SerializationInfo" />。
+              </param>
+      <param name="context">
+                关于来源和目标的上下文信息
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="info" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="P:System.ComponentModel.Win32Exception.NativeErrorCode">
+      <summary>
+              获取与此异常关联的 Win32 错误代码。
+            </summary>
+      <returns>
+              与此异常关联的 Win32 错误代码。
+            </returns>
+    </member>
+  </members>
+</doc>

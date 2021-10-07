@@ -1,0 +1,1452 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Threading.Tasks.Parallel</name>
+  </assembly>
+  <members>
+    <member name="T:System.Threading.Tasks.Parallel">
+      <summary>
+              提供对并行循环和区域的支持。
+            </summary>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.For(System.Int32,System.Int32,System.Action{System.Int32,System.Threading.Tasks.ParallelLoopState})">
+      <summary>
+              执行 <see langword="for" />（在 Visual Basic 中为 <see langword="For" />）循环，其中可能会并行运行迭代，而且可以监视和操作循环的状态。
+            </summary>
+      <param name="fromInclusive">
+                开始索引（含）。
+              </param>
+      <param name="toExclusive">
+                结束索引（不含）。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="body" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.For(System.Int32,System.Int32,System.Action{System.Int32})">
+      <summary>
+              执行 <see langword="for" />（在 Visual Basic 中为 <see langword="For" />）循环，其中可能会并行运行迭代。
+            </summary>
+      <param name="fromInclusive">
+                开始索引（含）。
+              </param>
+      <param name="toExclusive">
+                结束索引（不含）。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="body" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.For(System.Int64,System.Int64,System.Action{System.Int64,System.Threading.Tasks.ParallelLoopState})">
+      <summary>
+              执行具有 64 位索引的 <see langword="for" />（在 Visual Basic 中为 <see langword="For" />）循环，其中可能会并行运行迭代，而且可以监视和操作循环的状态。
+            </summary>
+      <param name="fromInclusive">
+                开始索引（含）。
+              </param>
+      <param name="toExclusive">
+                结束索引（不含）。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <returns>
+              一个 <see cref="T:System.Threading.Tasks.ParallelLoopResult" /> 结构，其中包含有关已完成的循环部分的信息。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="body" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.For(System.Int64,System.Int64,System.Action{System.Int64})">
+      <summary>
+              执行具有 64 位索引的 <see langword="for" />（在 Visual Basic 中为 <see langword="For" />）循环，其中可能会并行运行迭代。
+            </summary>
+      <param name="fromInclusive">
+                开始索引（含）。
+              </param>
+      <param name="toExclusive">
+                结束索引（不含）。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="body" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.For(System.Int32,System.Int32,System.Threading.Tasks.ParallelOptions,System.Action{System.Int32,System.Threading.Tasks.ParallelLoopState})">
+      <summary>
+              执行 <see langword="for" />（在 Visual Basic 中为 <see langword="For" />）循环，其中可能会并行运行迭代，而且可以配置循环选项，可以监视和操作循环的状态。
+            </summary>
+      <param name="fromInclusive">
+                开始索引（含）。
+              </param>
+      <param name="toExclusive">
+                结束索引（不含）。
+              </param>
+      <param name="parallelOptions">
+                一个对象，用于配置此操作的行为。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.OperationCanceledException">
+        <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 参数被取消。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="body" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="parallelOptions" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.Threading.CancellationTokenSource" /> 与关联 <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 已被释放。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.For(System.Int32,System.Int32,System.Threading.Tasks.ParallelOptions,System.Action{System.Int32})">
+      <summary>
+              执行 <see langword="for" />（在 Visual Basic 中为 <see langword="For" />）循环，其中可能会并行运行迭代，而且可以配置循环选项。
+            </summary>
+      <param name="fromInclusive">
+                开始索引（含）。
+              </param>
+      <param name="toExclusive">
+                结束索引（不含）。
+              </param>
+      <param name="parallelOptions">
+                一个对象，用于配置此操作的行为。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.OperationCanceledException">
+        <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 参数被取消。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="body" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="parallelOptions" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.Threading.CancellationTokenSource" /> 与关联 <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 已被释放。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.For(System.Int64,System.Int64,System.Threading.Tasks.ParallelOptions,System.Action{System.Int64,System.Threading.Tasks.ParallelLoopState})">
+      <summary>
+              执行具有 64 位索引的 <see langword="for" />（在 Visual Basic 中为 <see langword="For" />）循环，其中可能会并行运行迭代，而且可以配置循环选项，可以监视和操作循环的状态。
+            </summary>
+      <param name="fromInclusive">
+                开始索引（含）。
+              </param>
+      <param name="toExclusive">
+                结束索引（不含）。
+              </param>
+      <param name="parallelOptions">
+                一个对象，用于配置此操作的行为。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.OperationCanceledException">
+        <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 参数被取消。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="body" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="parallelOptions" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.Threading.CancellationTokenSource" /> 与关联 <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 已被释放。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.For(System.Int64,System.Int64,System.Threading.Tasks.ParallelOptions,System.Action{System.Int64})">
+      <summary>
+              执行具有 64 位索引的 <see langword="for" />（在 Visual Basic 中为 <see langword="For" />）循环，其中可能会并行运行迭代，而且可以配置循环选项。
+            </summary>
+      <param name="fromInclusive">
+                开始索引（含）。
+              </param>
+      <param name="toExclusive">
+                结束索引（不含）。
+              </param>
+      <param name="parallelOptions">
+                一个对象，用于配置此操作的行为。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.OperationCanceledException">
+        <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 参数被取消。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="body" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="parallelOptions" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.Threading.CancellationTokenSource" /> 与关联 <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 已被释放。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.For``1(System.Int64,System.Int64,System.Threading.Tasks.ParallelOptions,System.Func{``0},System.Func{System.Int64,System.Threading.Tasks.ParallelLoopState,``0,``0},System.Action{``0})">
+      <summary>
+              执行具有 64 位索引和线程本地数据的 <see langword="for" />（在 Visual Basic 中为 <see langword="For" />）循环，其中可能会并行运行迭代，而且可以配置循环选项，可以监视和操作循环的状态。
+            </summary>
+      <param name="fromInclusive">
+                开始索引（含）。
+              </param>
+      <param name="toExclusive">
+                结束索引（不含）。
+              </param>
+      <param name="parallelOptions">
+                一个对象，用于配置此操作的行为。
+              </param>
+      <param name="localInit">
+                用于返回每个线程的本地数据的初始状态的函数委托。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <param name="localFinally">
+                用于对每个线程的本地状态执行一个最终操作的委托。
+              </param>
+      <typeparam name="TLocal">
+                线程本地数据的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="body" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localInit" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localFinally" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="parallelOptions" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.OperationCanceledException">
+        <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 参数被取消。
+                </exception>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.Threading.CancellationTokenSource" /> 与关联 <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 已被释放。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.For``1(System.Int32,System.Int32,System.Threading.Tasks.ParallelOptions,System.Func{``0},System.Func{System.Int32,System.Threading.Tasks.ParallelLoopState,``0,``0},System.Action{``0})">
+      <summary>
+              执行具有线程本地数据的 <see langword="for" />（在 Visual Basic 中为 <see langword="For" />）循环，其中可能会并行运行迭代，而且可以配置循环选项，可以监视和操作循环的状态。
+            </summary>
+      <param name="fromInclusive">
+                开始索引（含）。
+              </param>
+      <param name="toExclusive">
+                结束索引（不含）。
+              </param>
+      <param name="parallelOptions">
+                一个对象，用于配置此操作的行为。
+              </param>
+      <param name="localInit">
+                用于返回每个任务的本地数据的初始状态的函数委托。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <param name="localFinally">
+                用于对每个任务的本地状态执行一个最终操作的委托。
+              </param>
+      <typeparam name="TLocal">
+                线程本地数据的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="body" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localInit" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localFinally" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="parallelOptions" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.OperationCanceledException">
+        <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 参数被取消。
+                </exception>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.Threading.CancellationTokenSource" /> 与关联 <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 已被释放。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.For``1(System.Int32,System.Int32,System.Func{``0},System.Func{System.Int32,System.Threading.Tasks.ParallelLoopState,``0,``0},System.Action{``0})">
+      <summary>
+              执行具有线程本地数据的 <see langword="for" />（在 Visual Basic 中为 <see langword="For" />）循环，其中可能会并行运行迭代，而且可以监视和操作循环的状态。
+            </summary>
+      <param name="fromInclusive">
+                开始索引（含）。
+              </param>
+      <param name="toExclusive">
+                结束索引（不含）。
+              </param>
+      <param name="localInit">
+                用于返回每个任务的本地数据的初始状态的函数委托。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <param name="localFinally">
+                用于对每个任务的本地状态执行一个最终操作的委托。
+              </param>
+      <typeparam name="TLocal">
+                线程本地数据的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="body" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localInit" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localFinally" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.For``1(System.Int64,System.Int64,System.Func{``0},System.Func{System.Int64,System.Threading.Tasks.ParallelLoopState,``0,``0},System.Action{``0})">
+      <summary>
+              执行具有 64 位索引和线程本地数据的 <see langword="for" />（在 Visual Basic 中为 <see langword="For" />）循环，其中可能会并行运行迭代，而且可以监视和操作循环的状态。
+            </summary>
+      <param name="fromInclusive">
+                开始索引（含）。
+              </param>
+      <param name="toExclusive">
+                结束索引（不含）。
+              </param>
+      <param name="localInit">
+                用于返回每个任务的本地数据的初始状态的函数委托。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <param name="localFinally">
+                用于对每个任务的本地状态执行一个最终操作的委托。
+              </param>
+      <typeparam name="TLocal">
+                线程本地数据的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="body" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localInit" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localFinally" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,``1,``1},System.Action{``1})">
+      <summary>
+              执行具有线程本地数据的 <see langword="foreach" />（在 Visual Basic 中为 <see langword="For Each" />）操作，其中在 <see cref="T:System.Collections.IEnumerable" /> 上可能会并行运行迭代，而且可以配置循环选项，可以监视和操作循环的状态。
+            </summary>
+      <param name="source">
+                可枚举的数据源。
+              </param>
+      <param name="parallelOptions">
+                一个对象，用于配置此操作的行为。
+              </param>
+      <param name="localInit">
+                用于返回每个任务的本地数据的初始状态的函数委托。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <param name="localFinally">
+                用于对每个任务的本地状态执行一个最终操作的委托。
+              </param>
+      <typeparam name="TSource">
+                源中数据的类型。
+              </typeparam>
+      <typeparam name="TLocal">
+                线程本地数据的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="parallelOptions" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="body" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localInit" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localFinally" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.OperationCanceledException">
+        <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 参数被取消。
+                </exception>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.Threading.CancellationTokenSource" /> 与关联 <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 已被释放。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1},System.Action{``1})">
+      <summary>
+              执行具有线程本地数据和 64 位索引的 <see langword="foreach" />（在 Visual Basic 中为 <see langword="For Each" />）操作，其中在 <see cref="T:System.Collections.IEnumerable" /> 上可能会并行运行迭代，而且可以配置循环选项，可以监视和操作循环的状态。
+            </summary>
+      <param name="source">
+                可枚举的数据源。
+              </param>
+      <param name="parallelOptions">
+                一个对象，用于配置此操作的行为。
+              </param>
+      <param name="localInit">
+                用于返回每个任务的本地数据的初始状态的函数委托。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <param name="localFinally">
+                用于对每个任务的本地状态执行一个最终操作的委托。
+              </param>
+      <typeparam name="TSource">
+                源中数据的类型。
+              </typeparam>
+      <typeparam name="TLocal">
+                线程本地数据的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="parallelOptions" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="body" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localInit" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localFinally" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.OperationCanceledException">
+        <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 参数被取消。
+                </exception>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.Threading.CancellationTokenSource" /> 与关联 <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 已被释放。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Concurrent.Partitioner{``0},System.Threading.Tasks.ParallelOptions,System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,``1,``1},System.Action{``1})">
+      <summary>
+              执行具有线程本地数据的 <see langword="foreach" />（在 Visual Basic 中为 <see langword="For Each" />）操作，其中在 <see cref="T:System.Collections.Concurrent.Partitioner" /> 上可能会并行运行迭代，而且可以配置循环选项，可以监视和操作循环的状态。
+            </summary>
+      <param name="source">
+                包含原始数据源的分区程序。
+              </param>
+      <param name="parallelOptions">
+                一个对象，用于配置此操作的行为。
+              </param>
+      <param name="localInit">
+                用于返回每个任务的本地数据的初始状态的函数委托。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <param name="localFinally">
+                用于对每个任务的本地状态执行一个最终操作的委托。
+              </param>
+      <typeparam name="TSource">
+        <paramref name="source" /> 中的元素的类型。
+              </typeparam>
+      <typeparam name="TLocal">
+                线程本地数据的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="parallelOptions" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="body" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localInit" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localFinally" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> 中的属性 <paramref name="source" /><see cref="T:System.Collections.Concurrent.Partitioner" /> 返回 <see langword="false" /> 或分区程序返回 <see langword="null" /> 分区。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+      <exception cref="T:System.OperationCanceledException">
+        <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 参数被取消。
+                </exception>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.Threading.CancellationTokenSource" /> 与关联 <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 已被释放。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Concurrent.OrderablePartitioner{``0},System.Threading.Tasks.ParallelOptions,System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1},System.Action{``1})">
+      <summary>
+              执行具有 64 位索引和线程本地数据的 <see langword="foreach" />（在 Visual Basic 中为 <see langword="For Each" />）操作，其中在 <see cref="T:System.Collections.Concurrent.OrderablePartitioner`1" /> 上可能会并行运行迭代，而且可以配置循环选项，可以监视和操作循环的状态。
+            </summary>
+      <param name="source">
+                包含原始数据源的可排序分区程序。
+              </param>
+      <param name="parallelOptions">
+                一个对象，用于配置此操作的行为。
+              </param>
+      <param name="localInit">
+                用于返回每个任务的本地数据的初始状态的函数委托。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <param name="localFinally">
+                用于对每个任务的本地状态执行一个最终操作的委托。
+              </param>
+      <typeparam name="TSource">
+        <paramref name="source" /> 中的元素的类型。
+              </typeparam>
+      <typeparam name="TLocal">
+                线程本地数据的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="parallelOptions" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="body" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localInit" /> 或 <paramref name="localFinally" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> 中的属性 <paramref name="source" /><see cref="T:System.Collections.Concurrent.Partitioner" /> 返回 <see langword="false" /> 或分区程序返回 <see langword="null" />  分区。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+      <exception cref="T:System.OperationCanceledException">
+        <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 参数被取消。
+                </exception>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.Threading.CancellationTokenSource" /> 与关联 <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 已被释放。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,``1,``1},System.Action{``1})">
+      <summary>
+              执行具有线程本地数据的 <see langword="foreach" />（在 Visual Basic 中为 <see langword="For Each" />）操作，其中在 <see cref="T:System.Collections.IEnumerable" /> 上可能会并行运行迭代，而且可以监视和操作循环的状态。
+            </summary>
+      <param name="source">
+                可枚举的数据源。
+              </param>
+      <param name="localInit">
+                用于返回每个任务的本地数据的初始状态的函数委托。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <param name="localFinally">
+                用于对每个任务的本地状态执行一个最终操作的委托。
+              </param>
+      <typeparam name="TSource">
+                源中数据的类型。
+              </typeparam>
+      <typeparam name="TLocal">
+                线程本地数据的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="body" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localInit" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localFinally" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Generic.IEnumerable{``0},System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1},System.Action{``1})">
+      <summary>
+              执行具有线程本地数据的 <see langword="foreach" />（在 Visual Basic 中为 <see langword="For Each" />）操作，其中在 <see cref="T:System.Collections.IEnumerable" /> 上可能会并行运行迭代，而且可以监视和操作循环的状态。
+            </summary>
+      <param name="source">
+                可枚举的数据源。
+              </param>
+      <param name="localInit">
+                用于返回每个任务的本地数据的初始状态的函数委托。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <param name="localFinally">
+                用于对每个任务的本地状态执行一个最终操作的委托。
+              </param>
+      <typeparam name="TSource">
+                源中数据的类型。
+              </typeparam>
+      <typeparam name="TLocal">
+                线程本地数据的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="body" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localInit" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localFinally" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Concurrent.Partitioner{``0},System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,``1,``1},System.Action{``1})">
+      <summary>
+              执行具有线程本地数据的 <see langword="foreach" />（在 Visual Basic 中为 <see langword="For Each" />）操作，其中在 <see cref="T:System.Collections.Concurrent.Partitioner" /> 上可能会并行运行迭代，而且可以监视和操作循环的状态。
+            </summary>
+      <param name="source">
+                包含原始数据源的分区程序。
+              </param>
+      <param name="localInit">
+                用于返回每个任务的本地数据的初始状态的函数委托。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <param name="localFinally">
+                用于对每个任务的本地状态执行一个最终操作的委托。
+              </param>
+      <typeparam name="TSource">
+        <paramref name="source" /> 中的元素的类型。
+              </typeparam>
+      <typeparam name="TLocal">
+                线程本地数据的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="body" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localInit" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localFinally" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> 中的属性 <paramref name="source" /><see cref="T:System.Collections.Concurrent.Partitioner" /> 返回 <see langword="false" /> 或分区程序返回 <see langword="null" /> 分区。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.ForEach``2(System.Collections.Concurrent.OrderablePartitioner{``0},System.Func{``1},System.Func{``0,System.Threading.Tasks.ParallelLoopState,System.Int64,``1,``1},System.Action{``1})">
+      <summary>
+              执行具有线程本地数据的 <see langword="foreach" />（在 Visual Basic 中为 <see langword="For Each" />）操作，其中在 <see cref="T:System.Collections.Concurrent.OrderablePartitioner`1" /> 上可能会并行运行迭代，而且可以配置循环选项，可以监视和操作循环的状态。
+            </summary>
+      <param name="source">
+                包含原始数据源的可排序分区程序。
+              </param>
+      <param name="localInit">
+                用于返回每个任务的本地数据的初始状态的函数委托。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <param name="localFinally">
+                用于对每个任务的本地状态执行一个最终操作的委托。
+              </param>
+      <typeparam name="TSource">
+        <paramref name="source" /> 中的元素的类型。
+              </typeparam>
+      <typeparam name="TLocal">
+                线程本地数据的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="body" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localInit" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="localFinally" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> 中的属性 <paramref name="source" /><see cref="T:System.Collections.Concurrent.Partitioner" /> 返回 <see langword="false" /> 或分区程序返回 <see langword="null" /> 分区。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0})">
+      <summary>
+              执行 <see langword="foreach" />（在 Visual Basic 中为 <see langword="For Each" />）操作，其中在 <see cref="T:System.Collections.IEnumerable" /> 中可能会并行运行迭代，而且可以匹配配置循环选项。
+            </summary>
+      <param name="source">
+                可枚举的数据源。
+              </param>
+      <param name="parallelOptions">
+                一个对象，用于配置此操作的行为。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <typeparam name="TSource">
+                源中数据的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.OperationCanceledException">
+        <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 取消参数
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="parallelOptions" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="body" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.Threading.CancellationTokenSource" /> 与关联 <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 已被释放。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0,System.Threading.Tasks.ParallelLoopState})">
+      <summary>
+              执行 <see langword="foreach" />（在 Visual Basic 中为 <see langword="For Each" />）操作，其中在 <see cref="T:System.Collections.IEnumerable" /> 中可能会并行运行迭代，而且可以配置循环选项，可以监视和操作循环的状态。
+            </summary>
+      <param name="source">
+                可枚举的数据源。
+              </param>
+      <param name="parallelOptions">
+                一个对象，用于配置此操作的行为。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <typeparam name="TSource">
+                源中数据的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.OperationCanceledException">
+        <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 取消参数
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="parallelOptions" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="body" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.Threading.CancellationTokenSource" /> 与关联 <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 已被释放。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Threading.Tasks.ParallelLoopState})">
+      <summary>
+              执行 <see langword="foreach" />（在 Visual Basic 中为 <see langword="For Each" />）操作，其中在 <see cref="T:System.Collections.IEnumerable" /> 中可能会并行运行迭代，而且可以监视和操作循环的状态。
+            </summary>
+      <param name="source">
+                可枚举的数据源。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <typeparam name="TSource">
+                源中数据的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="body" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0})">
+      <summary>
+              执行 <see langword="foreach" />（在 Visual Basic 中为 <see langword="For Each" />）操作，其中在 <see cref="T:System.Collections.Concurrent.Partitioner" /> 中可能会并行运行迭代，而且可以配置循环选项。
+            </summary>
+      <param name="source">
+                包含原始数据源的分区程序。
+              </param>
+      <param name="parallelOptions">
+                一个对象，用于配置此操作的行为。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <typeparam name="TSource">
+        <paramref name="source" /> 中的元素的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.OperationCanceledException">
+        <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 参数被取消。
+                </exception>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.Threading.CancellationTokenSource" /> 与关联 <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 已被释放。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="parallelOptions" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="body" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> 中的属性 <paramref name="source" /> 分区程序返回 <see langword="false" />。
+                
+                  - 或 -
+                
+                  时，将引发的异常中的任何方法 <paramref name="source" /> 分区程序返回 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0,System.Threading.Tasks.ParallelLoopState})">
+      <summary>
+              执行 <see langword="foreach" />（在 Visual Basic 中为 <see langword="For Each" />）操作，其中在 <see cref="T:System.Collections.Concurrent.Partitioner" /> 中可能会并行运行迭代，而且可以配置循环选项，可以监视和操作循环的状态。
+            </summary>
+      <param name="source">
+                包含原始数据源的分区程序。
+              </param>
+      <param name="parallelOptions">
+                一个对象，用于配置此操作的行为。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <typeparam name="TSource">
+        <paramref name="source" /> 中的元素的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.OperationCanceledException">
+        <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 参数被取消。
+                </exception>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.Threading.CancellationTokenSource" /> 与关联 <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 已被释放。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="parallelOptions" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="body" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> 中的属性 <paramref name="source" /> 分区程序返回 <see langword="false" />。
+                
+                  - 或 -
+                
+                  时，将引发的异常中的任何方法 <paramref name="source" /> 分区程序返回 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.OrderablePartitioner{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0,System.Threading.Tasks.ParallelLoopState,System.Int64})">
+      <summary>
+              执行 <see langword="foreach" />（在 Visual Basic 中为 <see langword="For Each" />）操作，其中在 <see cref="T:System.Collections.Concurrent.OrderablePartitioner`1" /> 中可能会并行运行迭代，而且可以配置循环选项，可以监视和操作循环的状态。
+            </summary>
+      <param name="source">
+                包含原始数据源的可排序分区程序。
+              </param>
+      <param name="parallelOptions">
+                一个对象，用于配置此操作的行为。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <typeparam name="TSource">
+        <paramref name="source" /> 中的元素的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.OperationCanceledException">
+        <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 取消参数
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 参数是  <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="parallelOptions" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="body" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.Threading.CancellationTokenSource" /> 与关联 <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 已被释放。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> 中的属性 <paramref name="source" /> 可排序分区程序返回 <see langword="false" />。
+                
+                  - 或 -
+                
+                  <see cref="P:System.Collections.Concurrent.OrderablePartitioner`1.KeysNormalized" /> 中的属性 <paramref name="source" /> 可排序分区程序返回 <see langword="false" />。
+                
+                  - 或 -
+                
+                  时，将引发的异常中的任何方法 <paramref name="source" /> 可排序分区程序返回 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0})">
+      <summary>
+              执行 <see langword="foreach" />（在 Visual Basic 中为 <see langword="For Each" />）操作，其中在 <see cref="T:System.Collections.IEnumerable" /> 上可能会并行运行迭代。
+            </summary>
+      <param name="source">
+                可枚举的数据源。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <typeparam name="TSource">
+                源中数据的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="body" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Action{``0,System.Threading.Tasks.ParallelLoopState,System.Int64})">
+      <summary>
+              执行具有 64 位索引的 <see langword="foreach" />（在 Visual Basic 中为 <see langword="For Each" />）操作，其中在 <see cref="T:System.Collections.IEnumerable" /> 上可能会并行运行迭代，而且可以监视和操作循环的状态。
+            </summary>
+      <param name="source">
+                可枚举的数据源。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <typeparam name="TSource">
+                源中数据的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="body" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Action{``0})">
+      <summary>
+              执行 <see langword="foreach" />（在 Visual Basic 中为 <see langword="For Each" />）操作，其中在 <see cref="T:System.Collections.Concurrent.Partitioner" /> 上可能会并行运行迭代。
+            </summary>
+      <param name="source">
+                包含原始数据源的分区程序。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <typeparam name="TSource">
+        <paramref name="source" /> 中的元素的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 参数是  <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="body" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> 中的属性 <paramref name="source" /> 分区程序返回 <see langword="false" />。
+                
+                  - 或 -
+                
+                  时，将引发的异常中的任何方法 <paramref name="source" /> 分区程序返回 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <see cref="M:System.Collections.Concurrent.Partitioner`1.GetPartitions(System.Int32)" /> 中的方法 <paramref name="source" /> 分区程序不返回正确的分区数。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Action{``0,System.Threading.Tasks.ParallelLoopState})">
+      <summary>
+              执行 <see langword="foreach" />（在 Visual Basic 中为 <see langword="For Each" />）操作，其中在 <see cref="T:System.Collections.Concurrent.Partitioner" /> 中可能会并行运行迭代，而且可以监视和操作循环的状态。
+            </summary>
+      <param name="source">
+                包含原始数据源的分区程序。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <typeparam name="TSource">
+        <paramref name="source" /> 中的元素的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="body" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> 中的属性 <paramref name="source" /> 分区程序返回 <see langword="false" />。
+                
+                  - 或 -
+                
+                  中的某个方法 <paramref name="source" /> 分区程序返回 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <see cref="M:System.Collections.Concurrent.Partitioner`1.GetPartitions(System.Int32)" /> 中的方法 <paramref name="source" /> 分区程序不返回正确的分区数。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.OrderablePartitioner{``0},System.Action{``0,System.Threading.Tasks.ParallelLoopState,System.Int64})">
+      <summary>
+              执行 <see langword="foreach" />（在 Visual Basic 中为 <see langword="For Each" />）操作，其中在 <see cref="T:System.Collections.Concurrent.OrderablePartitioner`1" /> 中可能会并行运行迭代，而且可以监视和操作循环的状态。
+            </summary>
+      <param name="source">
+                包含原始数据源的可排序分区程序。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <typeparam name="TSource">
+        <paramref name="source" /> 中的元素的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="body" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="P:System.Collections.Concurrent.Partitioner`1.SupportsDynamicPartitions" /> 中的属性 <paramref name="source" /> 可排序分区程序返回 <see langword="false" />。
+                
+                  - 或 -
+                
+                  <see cref="P:System.Collections.Concurrent.OrderablePartitioner`1.KeysNormalized" /> 源可排序分区程序的属性将返回 <see langword="false" />。
+                
+                  - 或 -
+                
+                  源可排序分区程序中的任何方法返回 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Generic.IEnumerable{``0},System.Threading.Tasks.ParallelOptions,System.Action{``0,System.Threading.Tasks.ParallelLoopState,System.Int64})">
+      <summary>
+              执行具有 64 位索引的 <see langword="foreach" />（在 Visual Basic 中为 <see langword="For Each" />）操作，其中在 <see cref="T:System.Collections.IEnumerable" /> 上可能会并行运行迭代，而且可以配置循环选项，可以监视和操作循环的状态。
+            </summary>
+      <param name="source">
+                可枚举的数据源。
+              </param>
+      <param name="parallelOptions">
+                一个对象，用于配置此操作的行为。
+              </param>
+      <param name="body">
+                将为每个迭代调用一次的委托。
+              </param>
+      <typeparam name="TSource">
+                源中数据的类型。
+              </typeparam>
+      <returns>
+              包含有关已完成的循环部分的信息的结构。
+            </returns>
+      <exception cref="T:System.OperationCanceledException">
+        <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 取消参数
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="source" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="parallelOptions" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="body" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  包含在所有线程上引发的所有单个异常的异常。
+                </exception>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.Threading.CancellationTokenSource" /> 与关联 <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 已被释放。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.Invoke(System.Action[])">
+      <summary>
+              尽可能并行执行提供的每个操作。
+            </summary>
+      <param name="actions">
+                要执行的 <see cref="T:System.Action" /> 数组。
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="actions" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  时，将引发的异常中的任何操作 <paramref name="actions" /> 数组将引发异常。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="actions" /> 数组包含 <see langword="null" /> 元素。
+                </exception>
+    </member>
+    <member name="M:System.Threading.Tasks.Parallel.Invoke(System.Threading.Tasks.ParallelOptions,System.Action[])">
+      <summary>
+              执行所提供的每个操作，而且尽可能并行运行，除非用户取消了操作。
+            </summary>
+      <param name="parallelOptions">
+                一个对象，用于配置此操作的行为。
+              </param>
+      <param name="actions">
+                要执行的操作数组。
+              </param>
+      <exception cref="T:System.OperationCanceledException">
+        <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 设置。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="actions" /> 参数为 <see langword="null" />。
+                
+                  - 或 -
+                
+                  <paramref name="parallelOptions" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.AggregateException">
+                  时，将引发的异常中的任何操作 <paramref name="actions" /> 数组将引发异常。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="actions" /> 数组包含 <see langword="null" /> 元素。
+                </exception>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.Threading.CancellationTokenSource" /> 与关联 <see cref="T:System.Threading.CancellationToken" /> 中 <paramref name="parallelOptions" /> 已被释放。
+                </exception>
+    </member>
+    <member name="T:System.Threading.Tasks.ParallelLoopResult">
+      <summary>
+              提供有关执行的完成状态 <see cref="T:System.Threading.Tasks.Parallel" /> 循环。
+            </summary>
+    </member>
+    <member name="P:System.Threading.Tasks.ParallelLoopResult.IsCompleted">
+      <summary>
+              获取指示循环已完成运行，以便所有的循环迭代期间执行，并且该循环没有收到提前结束的请求。
+            </summary>
+      <returns>
+              如果循环已完成运行的; 则为 true否则为 false。
+            </returns>
+    </member>
+    <member name="P:System.Threading.Tasks.ParallelLoopResult.LowestBreakIteration">
+      <summary>
+              从中获取的最低迭代索引 <see cref="M:System.Threading.Tasks.ParallelLoopState.Break" /> 调用。
+            </summary>
+      <returns>
+              返回一个整数，表示从其调用 Break 语句的最低迭代。
+            </returns>
+    </member>
+    <member name="T:System.Threading.Tasks.ParallelLoopState">
+      <summary>
+              可使并行循环迭代与其他迭代交互。
+               此类的实例由 <see cref="T:System.Threading.Tasks.Parallel" /> 类提供给每个循环；不能在您的用户代码中创建实例。
+            </summary>
+    </member>
+    <member name="M:System.Threading.Tasks.ParallelLoopState.Break">
+      <summary>
+              告知 <see cref="T:System.Threading.Tasks.Parallel" /> 循环应在系统方便的时候尽早停止执行当前迭代之外的迭代。
+            </summary>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="M:System.Threading.Tasks.ParallelLoopState.Stop" /> 之前已调用方法。
+                  <see cref="M:System.Threading.Tasks.ParallelLoopState.Break" /> 和 <see cref="M:System.Threading.Tasks.ParallelLoopState.Stop" /> 可能不能由结合使用的相同的循环迭代。
+                </exception>
+    </member>
+    <member name="P:System.Threading.Tasks.ParallelLoopState.IsExceptional">
+      <summary>
+              获取循环的任何迭代是否已引发相应迭代未处理的异常。
+            </summary>
+      <returns>
+              如果引发了未经处理的异常，则为 <see langword="true" />；否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Threading.Tasks.ParallelLoopState.IsStopped">
+      <summary>
+              获取循环的任何迭代是否已调用 <see cref="M:System.Threading.Tasks.ParallelLoopState.Stop" /> 方法。
+            </summary>
+      <returns>
+              如果任何迭代通过调用 <see cref="M:System.Threading.Tasks.ParallelLoopState.Stop" /> 方法已停止循环，则为 <see langword="true" />；否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Threading.Tasks.ParallelLoopState.LowestBreakIteration">
+      <summary>
+              获取从中调用 <see cref="M:System.Threading.Tasks.ParallelLoopState.Break" /> 的最低循环迭代。
+            </summary>
+      <returns>
+              从中调用 <see cref="M:System.Threading.Tasks.ParallelLoopState.Break" /> 的最低迭代。
+               如果是 <see cref="M:System.Threading.Tasks.Parallel.ForEach``1(System.Collections.Concurrent.Partitioner{``0},System.Action{``0})" /> 循环，该值会基于内部生成的索引。
+            </returns>
+    </member>
+    <member name="P:System.Threading.Tasks.ParallelLoopState.ShouldExitCurrentIteration">
+      <summary>
+              获取循环的当前迭代是否应基于此迭代或其他迭代发出的请求退出。
+            </summary>
+      <returns>
+              如果当前迭代应退出，则为 <see langword="true" />；否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Threading.Tasks.ParallelLoopState.Stop">
+      <summary>
+              告知 <see cref="T:System.Threading.Tasks.Parallel" /> 循环应在系统方便的时候尽早停止执行。
+            </summary>
+      <exception cref="T:System.InvalidOperationException">
+        <see cref="M:System.Threading.Tasks.ParallelLoopState.Break" /> 以前调用方法。
+                  <see cref="M:System.Threading.Tasks.ParallelLoopState.Break" /> 和 <see cref="M:System.Threading.Tasks.ParallelLoopState.Stop" /> 可能不能由结合使用的相同的循环迭代。
+                </exception>
+    </member>
+    <member name="T:System.Threading.Tasks.ParallelOptions">
+      <summary>
+              存储配置的方法的操作的选项 <see cref="T:System.Threading.Tasks.Parallel" /> 类。
+            </summary>
+    </member>
+    <member name="M:System.Threading.Tasks.ParallelOptions.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Threading.Tasks.ParallelOptions" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="P:System.Threading.Tasks.ParallelOptions.CancellationToken">
+      <summary>
+              获取或设置 <see cref="T:System.Threading.CancellationToken" /> 与此相关 <see cref="T:System.Threading.Tasks.ParallelOptions" /> 实例。
+            </summary>
+      <returns>
+              与此实例关联的标记。
+            </returns>
+    </member>
+    <member name="P:System.Threading.Tasks.ParallelOptions.MaxDegreeOfParallelism">
+      <summary>
+              获取或设置由此启用并发任务最大数目 <see cref="T:System.Threading.Tasks.ParallelOptions" /> 实例。
+            </summary>
+      <returns>
+              一个整数，表示最大并行度。
+            </returns>
+      <exception cref="T:System.ArgumentOutOfRangeException">
+                  该属性设置为零或小于-1 值。
+                </exception>
+    </member>
+    <member name="P:System.Threading.Tasks.ParallelOptions.TaskScheduler">
+      <summary>
+              获取或设置 <see cref="T:System.Threading.Tasks.TaskScheduler" /> 与此相关 <see cref="T:System.Threading.Tasks.ParallelOptions" /> 实例。
+               将此属性设置为 null，则指示应使用当前计划程序。
+            </summary>
+      <returns>
+              任务计划程序与此实例相关联。
+            </returns>
+    </member>
+  </members>
+</doc>

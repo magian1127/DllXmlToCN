@@ -1,0 +1,571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.IO.FileSystem.Watcher</name>
+  </assembly>
+  <members>
+    <member name="T:System.IO.NotifyFilters">
+      <summary>
+              指定要监视的文件或文件夹中更改。
+            </summary>
+    </member>
+    <member name="F:System.IO.NotifyFilters.Attributes">
+      <summary>
+              文件或文件夹的属性。
+            </summary>
+    </member>
+    <member name="F:System.IO.NotifyFilters.CreationTime">
+      <summary>
+              创建文件或文件夹的时间。
+            </summary>
+    </member>
+    <member name="F:System.IO.NotifyFilters.DirectoryName">
+      <summary>
+              目录的名称。
+            </summary>
+    </member>
+    <member name="F:System.IO.NotifyFilters.FileName">
+      <summary>
+              文件的名称。
+            </summary>
+    </member>
+    <member name="F:System.IO.NotifyFilters.LastAccess">
+      <summary>
+              上次打开的文件或文件夹的日期。
+            </summary>
+    </member>
+    <member name="F:System.IO.NotifyFilters.LastWrite">
+      <summary>
+              文件或文件夹上一次有任何内容写入到该日期。
+            </summary>
+    </member>
+    <member name="F:System.IO.NotifyFilters.Security">
+      <summary>
+              文件或文件夹的安全设置。
+            </summary>
+    </member>
+    <member name="F:System.IO.NotifyFilters.Size">
+      <summary>
+              文件或文件夹的大小。
+            </summary>
+    </member>
+    <member name="T:System.IO.ErrorEventArgs">
+      <summary>
+              为 <see cref="E:System.IO.FileSystemWatcher.Error" /> 事件提供数据。
+            </summary>
+    </member>
+    <member name="M:System.IO.ErrorEventArgs.#ctor(System.Exception)">
+      <summary>
+              初始化 <see cref="T:System.IO.ErrorEventArgs" /> 类的新实例。
+            </summary>
+      <param name="exception">
+        <see cref="T:System.Exception" /> 表示已发生的错误。
+              </param>
+    </member>
+    <member name="M:System.IO.ErrorEventArgs.GetException">
+      <summary>
+              获取 <see cref="T:System.Exception" /> 表示已发生的错误。
+            </summary>
+      <returns>
+        <see cref="T:System.Exception" /> 表示已发生的错误。
+            </returns>
+    </member>
+    <member name="T:System.IO.ErrorEventHandler">
+      <summary>
+              表示将处理的方法 <see cref="E:System.IO.FileSystemWatcher.Error" /> 事件 <see cref="T:System.IO.FileSystemWatcher" /> 对象。
+            </summary>
+      <param name="sender">
+                事件源。
+              </param>
+      <param name="e">
+                包含事件数据的 <see cref="T:System.IO.ErrorEventArgs" /> 对象。
+              </param>
+    </member>
+    <member name="T:System.IO.FileSystemEventArgs">
+      <summary>
+              为目录事件提供数据︰ <see cref="E:System.IO.FileSystemWatcher.Changed" />, ，<see cref="E:System.IO.FileSystemWatcher.Created" />, ，<see cref="E:System.IO.FileSystemWatcher.Deleted" />。
+            </summary>
+    </member>
+    <member name="M:System.IO.FileSystemEventArgs.#ctor(System.IO.WatcherChangeTypes,System.String,System.String)">
+      <summary>
+              初始化 <see cref="T:System.IO.FileSystemEventArgs" /> 类的新实例。
+            </summary>
+      <param name="changeType">
+                其中一个 <see cref="T:System.IO.WatcherChangeTypes" /> 值，该值表示文件系统中检测到的更改的种类。
+              </param>
+      <param name="directory">
+                受影响的文件或目录的根目录。
+              </param>
+      <param name="name">
+                受影响的文件或目录的名称。
+              </param>
+    </member>
+    <member name="P:System.IO.FileSystemEventArgs.ChangeType">
+      <summary>
+              获取目录所发生的事件的类型。
+            </summary>
+      <returns>
+              其中一个 <see cref="T:System.IO.WatcherChangeTypes" /> 表示文件系统中检测到的更改类型的值。
+            </returns>
+    </member>
+    <member name="P:System.IO.FileSystemEventArgs.FullPath">
+      <summary>
+              获取受影响的文件或目录的完全限定路径。
+            </summary>
+      <returns>
+              受影响的文件或目录的路径。
+            </returns>
+    </member>
+    <member name="P:System.IO.FileSystemEventArgs.Name">
+      <summary>
+              获取受影响的文件或目录的名称。
+            </summary>
+      <returns>
+              受影响的文件或目录的名称。
+            </returns>
+    </member>
+    <member name="T:System.IO.FileSystemEventHandler">
+      <summary>
+              表示将处理的方法 <see cref="E:System.IO.FileSystemWatcher.Changed" />, ，<see cref="E:System.IO.FileSystemWatcher.Created" />, ，或 <see cref="E:System.IO.FileSystemWatcher.Deleted" /> 事件 <see cref="T:System.IO.FileSystemWatcher" /> 类。
+            </summary>
+      <param name="sender">
+                事件源。
+              </param>
+      <param name="e">
+                包含事件数据的 <see cref="T:System.IO.FileSystemEventArgs" />。
+              </param>
+    </member>
+    <member name="T:System.IO.FileSystemWatcher">
+      <summary>
+              侦听文件系统更改通知，并在目录或目录中的文件发生更改时引发事件。
+            
+              若要浏览此类型的 .NET Framework 源代码，请参阅引用源。
+            </summary>
+    </member>
+    <member name="M:System.IO.FileSystemWatcher.#ctor">
+      <summary>
+              初始化 <see cref="T:System.IO.FileSystemWatcher" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.IO.FileSystemWatcher.#ctor(System.String)">
+      <summary>
+              在给定要监视的指定目录的情况下，初始化 <see cref="T:System.IO.FileSystemWatcher" /> 类的新实例。
+            </summary>
+      <param name="path">
+                要监视的目录，以标准表示法或通用命名约定 (UNC) 表示法表示。
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="path" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="path" /> 参数为空字符串 ("")。
+                
+                  - 或 - 
+                
+                  通过指定的路径 <paramref name="path" /> 参数不存在。
+                </exception>
+      <exception cref="T:System.IO.PathTooLongException">
+        <paramref name="path" /> 过长。
+                </exception>
+    </member>
+    <member name="M:System.IO.FileSystemWatcher.#ctor(System.String,System.String)">
+      <summary>
+              在给定要监视的指定目录和文件类型的情况下，初始化 <see cref="T:System.IO.FileSystemWatcher" /> 类的新实例。
+            </summary>
+      <param name="path">
+                要监视的目录，以标准表示法或通用命名约定 (UNC) 表示法表示。
+              </param>
+      <param name="filter">
+                要监视的文件的类型。
+                 例如，“*.txt”监视所有文本文件的更改。
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="path" /> 参数为 <see langword="null" />。
+                
+                  - 或 - 
+                
+                  <paramref name="filter" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="path" /> 参数为空字符串 ("")。
+                
+                  - 或 - 
+                
+                  通过指定的路径 <paramref name="path" /> 参数不存在。
+                </exception>
+      <exception cref="T:System.IO.PathTooLongException">
+        <paramref name="path" /> 过长。
+                </exception>
+    </member>
+    <member name="M:System.IO.FileSystemWatcher.BeginInit">
+      <summary>
+              开始初始化在窗体上使用或由另一个组件使用的 <see cref="T:System.IO.FileSystemWatcher" />。
+               初始化发生在运行时。
+            </summary>
+    </member>
+    <member name="E:System.IO.FileSystemWatcher.Changed">
+      <summary>
+              当更改指定 <see cref="P:System.IO.FileSystemWatcher.Path" /> 中的文件和目录时发生。
+            </summary>
+    </member>
+    <member name="E:System.IO.FileSystemWatcher.Created">
+      <summary>
+              当在指定 <see cref="P:System.IO.FileSystemWatcher.Path" /> 中创建文件和目录时发生。
+            </summary>
+    </member>
+    <member name="E:System.IO.FileSystemWatcher.Deleted">
+      <summary>
+              删除指定 <see cref="P:System.IO.FileSystemWatcher.Path" /> 中的文件或目录时发生。
+            </summary>
+    </member>
+    <member name="M:System.IO.FileSystemWatcher.Dispose">
+    </member>
+    <member name="M:System.IO.FileSystemWatcher.Dispose(System.Boolean)">
+      <summary>
+              释放由 <see cref="T:System.IO.FileSystemWatcher" /> 占用的非托管资源，还可以另外再释放托管资源。
+            </summary>
+      <param name="disposing">
+                若要释放托管资源和非托管资源，则为 <see langword="true" />；若仅释放非托管资源，则为 <see langword="false" />。
+              </param>
+    </member>
+    <member name="P:System.IO.FileSystemWatcher.EnableRaisingEvents">
+      <summary>
+              获取或设置一个值，该值指示是否启用此组件。
+            </summary>
+      <returns>
+              如果启用此组件，则为 <see langword="true" />；否则为 <see langword="false" />。
+               默认值为 <see langword="false" />。
+               如果在 Visual Studio 2005 的设计器上使用该组件，则默认值为 <see langword="true" />。
+            </returns>
+      <exception cref="T:System.ObjectDisposedException">
+        <see cref="T:System.IO.FileSystemWatcher" /> 对象已被释放。
+                </exception>
+      <exception cref="T:System.PlatformNotSupportedException">
+                  当前操作系统不是 Microsoft Windows NT 或更高版本。
+                </exception>
+      <exception cref="T:System.IO.FileNotFoundException">
+                  中指定的目录 <see cref="P:System.IO.FileSystemWatcher.Path" /> 找不到。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+        <see cref="P:System.IO.FileSystemWatcher.Path" /> 未设置或无效。
+                </exception>
+    </member>
+    <member name="M:System.IO.FileSystemWatcher.EndInit">
+      <summary>
+              结束在窗体上使用或由另一个组件使用的 <see cref="T:System.IO.FileSystemWatcher" /> 的初始化。
+               初始化发生在运行时。
+            </summary>
+    </member>
+    <member name="E:System.IO.FileSystemWatcher.Error">
+      <summary>
+              当 <see cref="T:System.IO.FileSystemWatcher" /> 的实例无法继续监视更改或内部缓冲区溢出时发生。
+            </summary>
+    </member>
+    <member name="P:System.IO.FileSystemWatcher.Filter">
+      <summary>
+              获取或设置用于确定在目录中监视哪些文件的筛选器字符串。
+            </summary>
+      <returns>
+              筛选器字符串。
+               默认值为“*.*”（监视所有文件）。
+            </returns>
+    </member>
+    <member name="P:System.IO.FileSystemWatcher.IncludeSubdirectories">
+      <summary>
+              获取或设置一个值，该值指示是否应监视指定路径中的子目录。
+            </summary>
+      <returns>
+              如果要监视子目录，则为 <see langword="true" />；否则为 <see langword="false" />。
+               默认值为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.IO.FileSystemWatcher.InternalBufferSize">
+      <summary>
+              获取或设置内部缓冲区的大小（以字节为单位）。
+            </summary>
+      <returns>
+              内部缓冲区的大小（以字节为单位）。
+               默认值为 8192 (8 KB)。
+            </returns>
+    </member>
+    <member name="P:System.IO.FileSystemWatcher.NotifyFilter">
+      <summary>
+              获取或设置要监视的更改的类型。
+            </summary>
+      <returns>
+        <see cref="T:System.IO.NotifyFilters" /> 值之一。
+               默认值为 <see langword="LastWrite" />、<see langword="FileName" /> 和 <see langword="DirectoryName" /> 的按位“或”组合。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+                  值不是有效按位或组合 <see cref="T:System.IO.NotifyFilters" /> 值。
+                </exception>
+      <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">
+                  正在设置的值无效。
+                </exception>
+    </member>
+    <member name="M:System.IO.FileSystemWatcher.OnChanged(System.IO.FileSystemEventArgs)">
+      <summary>
+              引发 <see cref="E:System.IO.FileSystemWatcher.Changed" /> 事件。
+            </summary>
+      <param name="e">
+                包含事件数据的 <see cref="T:System.IO.FileSystemEventArgs" />。
+              </param>
+    </member>
+    <member name="M:System.IO.FileSystemWatcher.OnCreated(System.IO.FileSystemEventArgs)">
+      <summary>
+              引发 <see cref="E:System.IO.FileSystemWatcher.Created" /> 事件。
+            </summary>
+      <param name="e">
+                包含事件数据的 <see cref="T:System.IO.FileSystemEventArgs" />。
+              </param>
+    </member>
+    <member name="M:System.IO.FileSystemWatcher.OnDeleted(System.IO.FileSystemEventArgs)">
+      <summary>
+              引发 <see cref="E:System.IO.FileSystemWatcher.Deleted" /> 事件。
+            </summary>
+      <param name="e">
+                包含事件数据的 <see cref="T:System.IO.FileSystemEventArgs" />。
+              </param>
+    </member>
+    <member name="M:System.IO.FileSystemWatcher.OnError(System.IO.ErrorEventArgs)">
+      <summary>
+              引发 <see cref="E:System.IO.FileSystemWatcher.Error" /> 事件。
+            </summary>
+      <param name="e">
+                包含事件数据的 <see cref="T:System.IO.ErrorEventArgs" />。
+              </param>
+    </member>
+    <member name="M:System.IO.FileSystemWatcher.OnRenamed(System.IO.RenamedEventArgs)">
+      <summary>
+              引发 <see cref="E:System.IO.FileSystemWatcher.Renamed" /> 事件。
+            </summary>
+      <param name="e">
+                包含事件数据的 <see cref="T:System.IO.RenamedEventArgs" />。
+              </param>
+    </member>
+    <member name="P:System.IO.FileSystemWatcher.Path">
+      <summary>
+              获取或设置要监视的目录的路径。
+            </summary>
+      <returns>
+              要监视的路径。
+               默认值为空字符串("")。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+                  指定的路径不存在或找不到。
+                
+                  - 或 - 
+                
+                  指定的路径包含通配符字符。
+                
+                  - 或 - 
+                
+                  指定的路径包含无效路径字符。
+                </exception>
+    </member>
+    <member name="E:System.IO.FileSystemWatcher.Renamed">
+      <summary>
+              重命名指定 <see cref="P:System.IO.FileSystemWatcher.Path" /> 中的文件或目录时发生。
+            </summary>
+    </member>
+    <member name="P:System.IO.FileSystemWatcher.Site">
+      <summary>
+              获取或设置 <see cref="T:System.IO.FileSystemWatcher" /> 的 <see cref="T:System.ComponentModel.ISite" />。
+            </summary>
+      <returns>
+              用于 <see cref="T:System.ComponentModel.ISite" /> 的 <see cref="T:System.IO.FileSystemWatcher" />。
+            </returns>
+    </member>
+    <member name="P:System.IO.FileSystemWatcher.SynchronizingObject">
+      <summary>
+              获取或设置用于封送因目录更改而发出的事件处理程序调用的对象。
+            </summary>
+      <returns>
+        <see cref="T:System.ComponentModel.ISynchronizeInvoke" />，表示一个对象，该对象用于封送因目录更改而发出的事件处理程序调用。
+               默认值为 <see langword="null" />。
+            </returns>
+    </member>
+    <member name="M:System.IO.FileSystemWatcher.WaitForChanged(System.IO.WatcherChangeTypes)">
+      <summary>
+              一种同步方法，在给定要监视的更改的类型情况下，它会返回包含已发生的更改上的特定信息的结构。
+            </summary>
+      <param name="changeType">
+                要监视的 <see cref="T:System.IO.WatcherChangeTypes" />。
+              </param>
+      <returns>
+        <see cref="T:System.IO.WaitForChangedResult" />，包含关于已发生的更改的特定信息。
+            </returns>
+    </member>
+    <member name="M:System.IO.FileSystemWatcher.WaitForChanged(System.IO.WatcherChangeTypes,System.Int32)">
+      <summary>
+              一种同步方法，在给定要监视的更改的类型以及在超时前等待的时间（以毫秒表示）的情况下，它会返回包含已发生的更改上的特定信息的结构。
+            </summary>
+      <param name="changeType">
+                要监视的 <see cref="T:System.IO.WatcherChangeTypes" />。
+              </param>
+      <param name="timeout">
+                超时前等待的时间（以毫秒表示）。
+              </param>
+      <returns>
+        <see cref="T:System.IO.WaitForChangedResult" />，包含关于已发生的更改的特定信息。
+            </returns>
+    </member>
+    <member name="T:System.IO.InternalBufferOverflowException">
+      <summary>
+              内部缓冲区溢出时引发的异常。
+            </summary>
+    </member>
+    <member name="M:System.IO.InternalBufferOverflowException.#ctor">
+      <summary>
+              初始化 <see cref="T:System.IO.InternalBufferOverflowException" /> 类的新默认实例。
+            </summary>
+    </member>
+    <member name="M:System.IO.InternalBufferOverflowException.#ctor(System.String)">
+      <summary>
+              新实例初始化 <see cref="T:System.IO.InternalBufferOverflowException" /> 指定具有要显示的错误消息的类。
+            </summary>
+      <param name="message">
+                要为异常提供的消息。
+              </param>
+    </member>
+    <member name="M:System.IO.InternalBufferOverflowException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+              初始化新的空实例 <see cref="T:System.IO.InternalBufferOverflowException" /> ，该类使用指定的可序列化 <see cref="T:System.Runtime.Serialization.SerializationInfo" /> 和 <see cref="T:System.Runtime.Serialization.StreamingContext" /> 对象。
+            </summary>
+      <param name="info">
+                T:System.IO.InternalBufferOverflowException 对象进行序列化所需的信息。
+              </param>
+      <param name="context">
+                源和与 T:System.IO.InternalBufferOverflowException 对象相关联的序列化流的目标。
+              </param>
+    </member>
+    <member name="M:System.IO.InternalBufferOverflowException.#ctor(System.String,System.Exception)">
+      <summary>
+              新实例初始化 <see cref="T:System.IO.InternalBufferOverflowException" /> 要显示的消息和指定所生成的内部异常的类。
+            </summary>
+      <param name="message">
+                要为异常提供的消息。
+              </param>
+      <param name="inner">
+                内部异常。
+              </param>
+    </member>
+    <member name="T:System.IO.RenamedEventArgs">
+      <summary>
+              为 <see cref="E:System.IO.FileSystemWatcher.Renamed" /> 事件提供数据。
+            </summary>
+    </member>
+    <member name="M:System.IO.RenamedEventArgs.#ctor(System.IO.WatcherChangeTypes,System.String,System.String,System.String)">
+      <summary>
+              初始化 <see cref="T:System.IO.RenamedEventArgs" /> 类的新实例。
+            </summary>
+      <param name="changeType">
+        <see cref="T:System.IO.WatcherChangeTypes" /> 值之一。
+              </param>
+      <param name="directory">
+                受影响的文件或目录的名称。
+              </param>
+      <param name="name">
+                受影响的文件或目录的名称。
+              </param>
+      <param name="oldName">
+                受影响的文件或目录的旧名称。
+              </param>
+    </member>
+    <member name="P:System.IO.RenamedEventArgs.OldFullPath">
+      <summary>
+              获取受影响的文件或目录的上一个完全限定的路径。
+            </summary>
+      <returns>
+              受影响的文件或目录的以前的完全限定的路径。
+            </returns>
+    </member>
+    <member name="P:System.IO.RenamedEventArgs.OldName">
+      <summary>
+              获取受影响的文件或目录的旧名称。
+            </summary>
+      <returns>
+              以前的受影响的文件或目录名称。
+            </returns>
+    </member>
+    <member name="T:System.IO.RenamedEventHandler">
+      <summary>
+              表示将处理的方法 <see cref="E:System.IO.FileSystemWatcher.Renamed" /> 事件 <see cref="T:System.IO.FileSystemWatcher" /> 类。
+            </summary>
+      <param name="sender">
+                事件源。
+              </param>
+      <param name="e">
+                包含事件数据的 <see cref="T:System.IO.RenamedEventArgs" />。
+              </param>
+    </member>
+    <member name="T:System.IO.WaitForChangedResult">
+      <summary>
+              包含有关所发生更改的信息。
+            </summary>
+    </member>
+    <member name="P:System.IO.WaitForChangedResult.ChangeType">
+      <summary>
+              获取或设置发生更改的类型。
+            </summary>
+      <returns>
+        <see cref="T:System.IO.WatcherChangeTypes" /> 值之一。
+            </returns>
+    </member>
+    <member name="P:System.IO.WaitForChangedResult.Name">
+      <summary>
+              获取或设置文件或更改的目录的名称。
+            </summary>
+      <returns>
+              文件或更改的目录的名称。
+            </returns>
+    </member>
+    <member name="P:System.IO.WaitForChangedResult.OldName">
+      <summary>
+              获取或设置的文件或目录已被重命名的原始名称。
+            </summary>
+      <returns>
+              文件或目录，已重命名为原始名称。
+            </returns>
+    </member>
+    <member name="P:System.IO.WaitForChangedResult.TimedOut">
+      <summary>
+              获取或设置一个值，该值指示等待操作超时。
+            </summary>
+      <returns>
+        <see langword="true" /> 如果 <see cref="M:System.IO.FileSystemWatcher.WaitForChanged(System.IO.WatcherChangeTypes)" /> 方法超时; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="T:System.IO.WatcherChangeTypes">
+      <summary>
+              可能的文件或目录发生的更改。
+            </summary>
+    </member>
+    <member name="F:System.IO.WatcherChangeTypes.All">
+      <summary>
+              创建、 删除、 更改或重命名文件或文件夹。
+            </summary>
+    </member>
+    <member name="F:System.IO.WatcherChangeTypes.Changed">
+      <summary>
+              文件或文件夹的更改。
+               类型的更改包括︰ 大小、 属性、 安全设置、 最后一次写入和上次访问时间更改。
+            </summary>
+    </member>
+    <member name="F:System.IO.WatcherChangeTypes.Created">
+      <summary>
+              创建文件或文件夹。
+            </summary>
+    </member>
+    <member name="F:System.IO.WatcherChangeTypes.Deleted">
+      <summary>
+              删除文件或文件夹。
+            </summary>
+    </member>
+    <member name="F:System.IO.WatcherChangeTypes.Renamed">
+      <summary>
+              重命名文件或文件夹。
+            </summary>
+    </member>
+  </members>
+</doc>

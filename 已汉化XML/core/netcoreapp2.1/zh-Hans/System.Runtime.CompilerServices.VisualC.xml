@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Runtime.CompilerServices.VisualC</name>
+  </assembly>
+  <members>
+    <member name="T:System.Runtime.CompilerServices.IsPinned">
+      <summary>
+              指示修改后的实例被固定在内存中。
+               此类不能被继承。
+            </summary>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.IsSignUnspecifiedByte">
+      <summary>
+              指示一个修饰符是既不签名也未签名。
+               此类不能被继承。
+            </summary>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.IsUdtReturn">
+      <summary>
+              指示返回类型的用户定义的类型。
+               此类不能被继承。
+            </summary>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.NativeCppClassAttribute">
+      <summary>
+              适用于指示一种类型为非托管的类型的程序集的元数据。
+                此类不能被继承。
+            </summary>
+    </member>
+    <member name="M:System.Runtime.CompilerServices.NativeCppClassAttribute.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Runtime.CompilerServices.NativeCppClassAttribute" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.RequiredAttributeAttribute">
+      <summary>
+              指定导入编译器必须完全理解的一个类型定义，语义或拒绝使用它。
+                此类不能被继承。
+            </summary>
+    </member>
+    <member name="M:System.Runtime.CompilerServices.RequiredAttributeAttribute.#ctor(System.Type)">
+      <summary>
+              初始化 <see cref="T:System.Runtime.CompilerServices.RequiredAttributeAttribute" /> 类的新实例。
+            </summary>
+      <param name="requiredContract">
+                导入编译器必须完全理解的一种类型。
+              
+                在.NET Framework 2.0 及更高版本中不支持此参数。
+              </param>
+    </member>
+    <member name="P:System.Runtime.CompilerServices.RequiredAttributeAttribute.RequiredContract">
+      <summary>
+              获取导入编译器必须完全理解的类型。
+            </summary>
+      <returns>
+              导入编译器必须完全理解的一种类型。
+            </returns>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.ScopelessEnumAttribute">
+      <summary>
+              指示本机枚举不由枚举类型名称限定。
+               此类不能被继承。
+            </summary>
+    </member>
+    <member name="M:System.Runtime.CompilerServices.ScopelessEnumAttribute.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Runtime.CompilerServices.ScopelessEnumAttribute" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.CallConvCdecl">
+      <summary>
+              指示方法应使用 <see langword="Cdecl" /> 调用约定。
+            </summary>
+    </member>
+    <member name="M:System.Runtime.CompilerServices.CallConvCdecl.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Runtime.CompilerServices.CallConvCdecl" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.CallConvFastcall">
+      <summary>
+              在此版本的.NET Framework 不支持此调用约定。
+            </summary>
+    </member>
+    <member name="M:System.Runtime.CompilerServices.CallConvFastcall.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Runtime.CompilerServices.CallConvFastcall" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.CallConvStdcall">
+      <summary>
+              指示方法应使用 <see langword="StdCall" /> 调用约定。
+            </summary>
+    </member>
+    <member name="M:System.Runtime.CompilerServices.CallConvStdcall.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Runtime.CompilerServices.CallConvStdcall" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.CallConvThiscall">
+      <summary>
+              指示方法应使用 <see langword="ThisCall" /> 调用约定。
+            </summary>
+    </member>
+    <member name="M:System.Runtime.CompilerServices.CallConvThiscall.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Runtime.CompilerServices.CallConvThiscall" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.CompilerMarshalOverride">
+      <summary>
+              指示封送处理时变量的修改后的实例，不同于其真正的类型。
+               此类不能被继承。
+            </summary>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.HasCopySemanticsAttribute">
+      <summary>
+              此类不使用.NET Framework 2.0 版中，保留供将来使用。
+               此类不能被继承。
+            </summary>
+    </member>
+    <member name="M:System.Runtime.CompilerServices.HasCopySemanticsAttribute.#ctor">
+      <summary>
+              初始化 <see cref="T:System.Runtime.CompilerServices.HasCopySemanticsAttribute" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.IsBoxed">
+      <summary>
+              指示已修改的引用类型是装箱的值类型。
+               此类不能被继承。
+            </summary>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.IsByValue">
+      <summary>
+              指示应将修改后的方法参数解释为无对象按值传递语义。
+               此修饰符将应用于引用类型。
+                此类不能被继承。
+            </summary>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.IsCopyConstructed">
+      <summary>
+              指示此类型的值的任何复制必须使用类型提供的复制构造函数。
+                此类不能被继承。
+            </summary>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.IsExplicitlyDereferenced">
+      <summary>
+              表示托管的指针表示的指针参数在方法签名中。
+               此类不能被继承。
+            </summary>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.IsImplicitlyDereferenced">
+      <summary>
+              指示已修改的垃圾回收引用表示方法签名中的引用参数。
+               此类不能被继承。
+            </summary>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.IsJitIntrinsic">
+      <summary>
+              指示修改后的方法是在实时 (JIT) 编译器可以为其执行特殊代码生成一个内部值。
+               此类不能被继承。
+            </summary>
+    </member>
+    <member name="T:System.Runtime.CompilerServices.IsLong">
+      <summary>
+              指示修改后的整数是标准 c + + <see langword="long" /> 值。
+               此类不能被继承。
+            </summary>
+    </member>
+  </members>
+</doc>

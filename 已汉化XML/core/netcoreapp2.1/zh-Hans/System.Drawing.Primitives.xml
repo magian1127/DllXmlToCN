@@ -1,0 +1,3055 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Drawing.Primitives</name>
+  </assembly>
+  <members>
+    <member name="T:System.Drawing.Color">
+      <summary>
+              表示 alpha、 红色、 绿色 (蓝色） 的 ARGB 颜色。
+            </summary>
+    </member>
+    <member name="P:System.Drawing.Color.A">
+      <summary>
+              获取此的 alpha 分量值 <see cref="T:System.Drawing.Color" /> 结构。
+            </summary>
+      <returns>
+              This 的 alpha 分量值 <see cref="T:System.Drawing.Color" />。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.AliceBlue">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFF0F8FF。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.AntiqueWhite">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFAEBD7。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Aqua">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF00FFFF。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Aquamarine">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF7FFFD4。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Azure">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFF0FFFF。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.B">
+      <summary>
+              获取此的蓝色分量值 <see cref="T:System.Drawing.Color" /> 结构。
+            </summary>
+      <returns>
+              此的蓝色分量值 <see cref="T:System.Drawing.Color" />。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Beige">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFF5F5DC。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Bisque">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFFE4C4。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Black">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF000000。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.BlanchedAlmond">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFFEBCD。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Blue">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF0000FF。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.BlueViolet">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF8A2BE2。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Brown">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFA52A2A。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.BurlyWood">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFDEB887。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.CadetBlue">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF5F9EA0。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Chartreuse">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF7FFF00。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Chocolate">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFD2691E。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Coral">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFF7F50。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.CornflowerBlue">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF6495ED。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Cornsilk">
+      <summary>
+              获取的 ARGB 值为系统定义的颜色 #FFFFF8DC。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Crimson">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFDC143C。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Cyan">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF00FFFF。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.DarkBlue">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF00008B。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.DarkCyan">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF008B8B。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.DarkGoldenrod">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFB8860B。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.DarkGray">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFA9A9A9。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.DarkGreen">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF006400。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.DarkKhaki">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFBDB76B。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.DarkMagenta">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF8B008B。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.DarkOliveGreen">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF556B2F。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.DarkOrange">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFF8C00。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.DarkOrchid">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF9932CC。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.DarkRed">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF8B0000。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.DarkSalmon">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFE9967A。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.DarkSeaGreen">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF8FBC8F。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.DarkSlateBlue">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF483D8B。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.DarkSlateGray">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF2F4F4F。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.DarkTurquoise">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF00CED1。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.DarkViolet">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF9400D3。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.DeepPink">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFF1493。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.DeepSkyBlue">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF00BFFF。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.DimGray">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF696969。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.DodgerBlue">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF1E90FF。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="F:System.Drawing.Color.Empty">
+      <summary>
+              表示颜色，它是 <see langword="null" />。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.Color.Equals(System.Drawing.Color)">
+      <param name="other">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:System.Drawing.Color.Equals(System.Object)">
+      <summary>
+              测试指定的对象是否为 <see cref="T:System.Drawing.Color" /> 结构，并且等效于此 <see cref="T:System.Drawing.Color" /> 结构。
+            </summary>
+      <param name="obj">
+                要测试的对象。
+              </param>
+      <returns>
+        <see langword="true" /> 如果 <paramref name="obj" /> 是 <see cref="T:System.Drawing.Color" /> 结构等效于此 <see cref="T:System.Drawing.Color" /> 结构; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Firebrick">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFB22222。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.FloralWhite">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFFFAF0。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.ForestGreen">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF228B22。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Color.FromArgb(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+              创建 <see cref="T:System.Drawing.Color" /> 从四个 ARGB 组件 （alpha、 红色、 绿色和蓝色） 的结构的值。
+               尽管此方法允许为每个组件传递一个 32 位值，但每个分量的值仅限于 8 位。
+            </summary>
+      <param name="alpha">
+                Alpha 分量。
+                 有效值为 0 到 255 之间。
+              </param>
+      <param name="red">
+                红色组件。
+                 有效值为 0 到 255 之间。
+              </param>
+      <param name="green">
+                绿色的组件。
+                 有效值为 0 到 255 之间。
+              </param>
+      <param name="blue">
+                蓝色组件。
+                 有效值为 0 到 255 之间。
+              </param>
+      <returns>
+              此方法创建的 <see cref="T:System.Drawing.Color" />。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="alpha" />, <paramref name="red" />, ，<paramref name="green" />, ，或 <paramref name="blue" /> 小于 0 或大于 255。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Color.FromArgb(System.Int32,System.Int32,System.Int32)">
+      <summary>
+              创建 <see cref="T:System.Drawing.Color" /> 从指定的 8 位颜色值 （红色、 绿色和蓝色） 的结构。
+               Alpha 值隐式地为 255 （完全不透明）。
+               尽管此方法允许为每个颜色组件传递一个 32 位值，但每个分量的值仅限于 8 位。
+            </summary>
+      <param name="red">
+                新的红色分量值 <see cref="T:System.Drawing.Color" />。
+                 有效值为 0 到 255 之间。
+              </param>
+      <param name="green">
+                新的绿色分量值 <see cref="T:System.Drawing.Color" />。
+                 有效值为 0 到 255 之间。
+              </param>
+      <param name="blue">
+                新的蓝色分量值 <see cref="T:System.Drawing.Color" />。
+                 有效值为 0 到 255 之间。
+              </param>
+      <returns>
+              此方法创建的 <see cref="T:System.Drawing.Color" />。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="red" />, <paramref name="green" />, ，或 <paramref name="blue" /> 小于 0 或大于 255。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Color.FromArgb(System.Int32,System.Drawing.Color)">
+      <summary>
+              创建 <see cref="T:System.Drawing.Color" /> 从指定的结构 <see cref="T:System.Drawing.Color" /> 结构，但要使用新指定的 alpha 值。
+               虽然此方法允许传递的 alpha 值为 32 位值，该值被限制为 8 位。
+            </summary>
+      <param name="alpha">
+                新的 alpha 值 <see cref="T:System.Drawing.Color" />。
+                 有效值为 0 到 255 之间。
+              </param>
+      <param name="baseColor">
+                从中创建新 <see cref="T:System.Drawing.Color" /> 的 <see cref="T:System.Drawing.Color" />。
+              </param>
+      <returns>
+              此方法创建的 <see cref="T:System.Drawing.Color" />。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="alpha" /> 为小于 0 或大于 255。
+                </exception>
+    </member>
+    <member name="M:System.Drawing.Color.FromArgb(System.Int32)">
+      <summary>
+              创建 <see cref="T:System.Drawing.Color" /> 从 32 位 ARGB 值结构。
+            </summary>
+      <param name="argb">
+                指定的 32 位 ARGB 值的值。
+              </param>
+      <returns>
+        <see cref="T:System.Drawing.Color" /> 此方法创建的结构。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Color.FromName(System.String)">
+      <summary>
+              创建 <see cref="T:System.Drawing.Color" /> 预定义的颜色的指定名称的结构。
+            </summary>
+      <param name="name">
+                一个字符串，是一种预定义颜色的名称。
+                 有效的名称为的元素的名称相同 <see cref="T:System.Drawing.KnownColor" /> 枚举。
+              </param>
+      <returns>
+              此方法创建的 <see cref="T:System.Drawing.Color" />。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Fuchsia">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFF00FF。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.G">
+      <summary>
+              获取此的绿色分量值 <see cref="T:System.Drawing.Color" /> 结构。
+            </summary>
+      <returns>
+              此的绿色分量值 <see cref="T:System.Drawing.Color" />。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Gainsboro">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFDCDCDC。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Color.GetBrightness">
+      <summary>
+              获取此的色调-饱和度-亮度 (HSB) 亮度值 <see cref="T:System.Drawing.Color" /> 结构。
+            </summary>
+      <returns>
+              此亮度 <see cref="T:System.Drawing.Color" />。
+               亮度范围介于 0.0 到 1.0，其中 0.0 表示黑，1.0 表示白。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Color.GetHashCode">
+      <summary>
+              返回此哈希代码 <see cref="T:System.Drawing.Color" /> 结构。
+            </summary>
+      <returns>
+              一个整数值，指定此哈希代码 <see cref="T:System.Drawing.Color" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Color.GetHue">
+      <summary>
+              获取的色调-饱和度-亮度 (HSB) 色调值，以度为单位，此 <see cref="T:System.Drawing.Color" /> 结构。
+            </summary>
+      <returns>
+              色调以度为单位，此 <see cref="T:System.Drawing.Color" />。
+               色调以度为单位，范围介于 0.0 到 360.0，在 HSB 颜色空间中。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Color.GetSaturation">
+      <summary>
+              获取此的色调-饱和度-亮度 (HSB) 饱和度值 <see cref="T:System.Drawing.Color" /> 结构。
+            </summary>
+      <returns>
+              此饱和度 <see cref="T:System.Drawing.Color" />。
+               饱和度介于 0.0 到 1.0，其中 0.0 为灰度，1.0 表示最饱和。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.GhostWhite">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFF8F8FF。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Gold">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFFD700。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Goldenrod">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFDAA520。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Gray">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF808080。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 结构，表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Green">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF008000。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.GreenYellow">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFADFF2F。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Honeydew">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFF0FFF0。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.HotPink">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFF69B4。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.IndianRed">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFCD5C5C。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Indigo">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF4B0082。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.IsEmpty">
+      <summary>
+              指定是否这 <see cref="T:System.Drawing.Color" /> 结构未初始化。
+            </summary>
+      <returns>
+              此属性返回 <see langword="true" /> 该颜色是否未初始化; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.IsNamedColor">
+      <summary>
+              获取一个值，该值指示是否此 <see cref="T:System.Drawing.Color" /> 结构是已命名的颜色或成员的 <see cref="T:System.Drawing.KnownColor" /> 枚举。
+            </summary>
+      <returns>
+        <see langword="true" /> 如果此 <see cref="T:System.Drawing.Color" /> 由使用 <see cref="M:System.Drawing.Color.FromName(System.String)" /> 方法或 <see cref="M:System.Drawing.Color.FromKnownColor(System.Drawing.KnownColor)" /> 方法; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Ivory">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFFFFF0。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Khaki">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFF0E68C。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Lavender">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFE6E6FA。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.LavenderBlush">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFFF0F5。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.LawnGreen">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF7CFC00。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.LemonChiffon">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFFFACD。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.LightBlue">
+      <summary>
+              获取具有 ARGB 值的系统定义的颜色#FFADD8E6。
+            </summary>
+      <returns>
+              A<see cref="T:System.Drawing.Color" />表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.LightCoral">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFF08080。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.LightCyan">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFE0FFFF。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.LightGoldenrodYellow">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFAFAD2。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.LightGray">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFD3D3D3。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.LightGreen">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF90EE90。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.LightPink">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFFB6C1。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.LightSalmon">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFFA07A。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.LightSeaGreen">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF20B2AA。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.LightSkyBlue">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF87CEFA。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.LightSlateGray">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF778899。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.LightSteelBlue">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFB0C4DE。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.LightYellow">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFFFFE0。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Lime">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF00FF00。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.LimeGreen">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF32CD32。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Linen">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFAF0E6。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Magenta">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFF00FF。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Maroon">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF800000。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.MediumAquamarine">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF66CDAA。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.MediumBlue">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF0000CD。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.MediumOrchid">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFBA55D3。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.MediumPurple">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF9370DB。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.MediumSeaGreen">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF3CB371。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.MediumSlateBlue">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF7B68EE。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.MediumSpringGreen">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF00FA9A。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.MediumTurquoise">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF48D1CC。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.MediumVioletRed">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFC71585。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.MidnightBlue">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF191970。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.MintCream">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFF5FFFA。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.MistyRose">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFFE4E1。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Moccasin">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFFE4B5。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Name">
+      <summary>
+              获取此 <see cref="T:System.Drawing.Color" /> 的名称。
+            </summary>
+      <returns>
+              此 <see cref="T:System.Drawing.Color" /> 的名称。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.NavajoWhite">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFFDEAD。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Navy">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF000080。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.OldLace">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFDF5E6。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Olive">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF808000。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.OliveDrab">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF6B8E23。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Color.op_Equality(System.Drawing.Color,System.Drawing.Color)">
+      <summary>
+              测试两个指定 <see cref="T:System.Drawing.Color" /> 结构是否等效。
+            </summary>
+      <param name="left">
+        <see cref="T:System.Drawing.Color" /> 即相等运算符的左侧。
+              </param>
+      <param name="right">
+        <see cref="T:System.Drawing.Color" /> 即相等运算符的右侧。
+              </param>
+      <returns>
+        <see langword="true" /> 如果两个 <see cref="T:System.Drawing.Color" /> 结构是否相等; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Color.op_Inequality(System.Drawing.Color,System.Drawing.Color)">
+      <summary>
+              测试两个指定 <see cref="T:System.Drawing.Color" /> 结构是否不同。
+            </summary>
+      <param name="left">
+        <see cref="T:System.Drawing.Color" /> 这是不等运算符左侧。
+              </param>
+      <param name="right">
+        <see cref="T:System.Drawing.Color" /> 这是不等运算符右侧。
+              </param>
+      <returns>
+        <see langword="true" /> 如果两个 <see cref="T:System.Drawing.Color" /> 结构是否不同; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Orange">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFFA500。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.OrangeRed">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFF4500。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Orchid">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFDA70D6。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.PaleGoldenrod">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFEEE8AA。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.PaleGreen">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF98FB98。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.PaleTurquoise">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFAFEEEE。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.PaleVioletRed">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFDB7093。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.PapayaWhip">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFFEFD5。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.PeachPuff">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFFDAB9。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Peru">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFCD853F。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Pink">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFFC0CB。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Plum">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFDDA0DD。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.PowderBlue">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFB0E0E6。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Purple">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF800080。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.R">
+      <summary>
+              获取此的红色分量值 <see cref="T:System.Drawing.Color" /> 结构。
+            </summary>
+      <returns>
+              此的红色分量值 <see cref="T:System.Drawing.Color" />。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Red">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFF0000。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.RosyBrown">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFBC8F8F。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.RoyalBlue">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF4169E1。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.SaddleBrown">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF8B4513。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Salmon">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFA8072。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.SandyBrown">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFF4A460。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.SeaGreen">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF2E8B57。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.SeaShell">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFFF5EE。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Sienna">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFA0522D。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Silver">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFC0C0C0。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.SkyBlue">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF87CEEB。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.SlateBlue">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF6A5ACD。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.SlateGray">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF708090。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Snow">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFFFAFA。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.SpringGreen">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF00FF7F。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.SteelBlue">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF4682B4。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Tan">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFD2B48C。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Teal">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF008080。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Thistle">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFD8BFD8。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Color.ToArgb">
+      <summary>
+              获取此的 32 位 ARGB 值 <see cref="T:System.Drawing.Color" /> 结构。
+            </summary>
+      <returns>
+              此 32 位 ARGB 值 <see cref="T:System.Drawing.Color" />。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Tomato">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFF6347。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Color.ToString">
+      <summary>
+              将此转换 <see cref="T:System.Drawing.Color" /> 用户可读的字符串的结构。
+            </summary>
+      <returns>
+              此名称的字符串 <see cref="T:System.Drawing.Color" />, ，如果 <see cref="T:System.Drawing.Color" /> 通过使用创建的预定义的颜色 <see cref="M:System.Drawing.Color.FromName(System.String)" /> 方法或 <see cref="M:System.Drawing.Color.FromKnownColor(System.Drawing.KnownColor)" /> 方法; 否则为 ARGB 组件名称和它们的值组成的字符串。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Transparent">
+      <summary>
+              获取系统定义的颜色。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Turquoise">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF40E0D0。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Violet">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFEE82EE。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Wheat">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFF5DEB3。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.White">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFFFFFF。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.WhiteSmoke">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFF5F5F5。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.Yellow">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FFFFFF00。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Color.YellowGreen">
+      <summary>
+              获取系统定义的颜色具有 ARGB 值 #FF9ACD32。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Color" /> 表示系统定义的颜色。
+            </returns>
+    </member>
+    <member name="T:System.Drawing.SizeF">
+      <summary>
+              将存储浮点数、 通常的宽度和高度的矩形的有序的对。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.SizeF.#ctor(System.Drawing.PointF)">
+      <summary>
+              新实例初始化 <see cref="T:System.Drawing.SizeF" /> 从指定的结构 <see cref="T:System.Drawing.PointF" /> 结构。
+            </summary>
+      <param name="pt">
+        <see cref="T:System.Drawing.PointF" /> 结构，可用于初始化此 <see cref="T:System.Drawing.SizeF" /> 结构。
+              </param>
+    </member>
+    <member name="M:System.Drawing.SizeF.#ctor(System.Drawing.SizeF)">
+      <summary>
+              新实例初始化 <see cref="T:System.Drawing.SizeF" /> 从指定的现有结构 <see cref="T:System.Drawing.SizeF" /> 结构。
+            </summary>
+      <param name="size">
+        <see cref="T:System.Drawing.SizeF" /> 从中创建新的结构 <see cref="T:System.Drawing.SizeF" /> 结构。
+              </param>
+    </member>
+    <member name="M:System.Drawing.SizeF.#ctor(System.Single,System.Single)">
+      <summary>
+              新实例初始化 <see cref="T:System.Drawing.SizeF" /> 根据指定的维度的结构。
+            </summary>
+      <param name="width">
+                新的宽度分量 <see cref="T:System.Drawing.SizeF" /> 结构。
+              </param>
+      <param name="height">
+                新的高度分量 <see cref="T:System.Drawing.SizeF" /> 结构。
+              </param>
+    </member>
+    <member name="M:System.Drawing.SizeF.Add(System.Drawing.SizeF,System.Drawing.SizeF)">
+      <summary>
+              添加的宽度和高度的其中一个 <see cref="T:System.Drawing.SizeF" /> 结构的宽度和高度与另一个 <see cref="T:System.Drawing.SizeF" /> 结构。
+            </summary>
+      <param name="sz1">
+                第一个 <see cref="T:System.Drawing.SizeF" /> 可添加结构。
+              </param>
+      <param name="sz2">
+                第二个 <see cref="T:System.Drawing.SizeF" /> 可添加结构。
+              </param>
+      <returns>
+              一个 <see cref="T:System.Drawing.SizeF" /> 结构，它是加法运算的结果。
+            </returns>
+    </member>
+    <member name="F:System.Drawing.SizeF.Empty">
+      <summary>
+              获取 <see cref="T:System.Drawing.SizeF" /> 结构具有 <see cref="P:System.Drawing.SizeF.Height" /> 和 <see cref="P:System.Drawing.SizeF.Width" /> 值为 0。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.SizeF" /> 结构具有 <see cref="P:System.Drawing.SizeF.Height" /> 和 <see cref="P:System.Drawing.SizeF.Width" /> 值为 0。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.SizeF.Equals(System.Drawing.SizeF)">
+      <param name="other">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:System.Drawing.SizeF.Equals(System.Object)">
+      <summary>
+              测试以确定指定的对象是否为 <see cref="T:System.Drawing.SizeF" /> 具有与此相同的维度的结构 <see cref="T:System.Drawing.SizeF" /> 结构。
+            </summary>
+      <param name="obj">
+                要测试的 <see cref="T:System.Object" />。
+              </param>
+      <returns>
+              此方法返回 <see langword="true" /> 如果 <paramref name="obj" /> 是 <see cref="T:System.Drawing.SizeF" /> 具有相同的宽度和高度与此 <see cref="T:System.Drawing.SizeF" />; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.SizeF.GetHashCode">
+      <summary>
+              返回此哈希代码 <see cref="T:System.Drawing.Size" /> 结构。
+            </summary>
+      <returns>
+              一个整数值，指定此哈希值 <see cref="T:System.Drawing.Size" /> 结构。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.SizeF.Height">
+      <summary>
+              获取或设置的垂直分量 <see cref="T:System.Drawing.SizeF" /> 结构。
+            </summary>
+      <returns>
+              垂直分量 <see cref="T:System.Drawing.SizeF" /> 结构，通常以像素为单位进行度量。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.SizeF.IsEmpty">
+      <summary>
+              获取一个值，该值指示是否此 <see cref="T:System.Drawing.SizeF" /> 结构的零宽度和高度。
+            </summary>
+      <returns>
+              此属性返回 <see langword="true" /> 时这 <see cref="T:System.Drawing.SizeF" /> 结构的宽度和高度均为零; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.SizeF.op_Addition(System.Drawing.SizeF,System.Drawing.SizeF)">
+      <summary>
+              添加的宽度和高度的其中一个 <see cref="T:System.Drawing.SizeF" /> 结构的宽度和高度与另一个 <see cref="T:System.Drawing.SizeF" /> 结构。
+            </summary>
+      <param name="sz1">
+                第一个 <see cref="T:System.Drawing.SizeF" /> 可添加结构。
+              </param>
+      <param name="sz2">
+                第二个 <see cref="T:System.Drawing.SizeF" /> 可添加结构。
+              </param>
+      <returns>
+              一个 <see cref="T:System.Drawing.Size" /> 结构，它是加法运算的结果。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.SizeF.op_Equality(System.Drawing.SizeF,System.Drawing.SizeF)">
+      <summary>
+              测试两个 <see cref="T:System.Drawing.SizeF" /> 结构是否相等。
+            </summary>
+      <param name="sz1">
+        <see cref="T:System.Drawing.SizeF" /> 相等运算符左侧的结构。
+              </param>
+      <param name="sz2">
+        <see cref="T:System.Drawing.SizeF" /> 相等运算符右侧的结构。
+              </param>
+      <returns>
+              此运算符可返回 <see langword="true" /> 如果 <paramref name="sz1" /> 和 <paramref name="sz2" /> 具有相等宽度和高度; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.SizeF.op_Explicit(System.Drawing.SizeF)~System.Drawing.PointF">
+      <summary>
+              将指定 <see cref="T:System.Drawing.SizeF" /> 结构 <see cref="T:System.Drawing.PointF" /> 结构。
+            </summary>
+      <param name="size">
+        <see cref="T:System.Drawing.SizeF" /> 结构会在待转换
+              </param>
+      <returns>
+        <see cref="T:System.Drawing.PointF" /> 此运算符将转换为结构。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.SizeF.op_Inequality(System.Drawing.SizeF,System.Drawing.SizeF)">
+      <summary>
+              测试两个 <see cref="T:System.Drawing.SizeF" /> 结构是否不同。
+            </summary>
+      <param name="sz1">
+        <see cref="T:System.Drawing.SizeF" /> 不等运算符左侧的结构。
+              </param>
+      <param name="sz2">
+        <see cref="T:System.Drawing.SizeF" /> 不等运算符右侧的结构。
+              </param>
+      <returns>
+              此运算符可返回 <see langword="true" /> 如果 <paramref name="sz1" /> 和 <paramref name="sz2" /> 不同的宽度或高度; <see langword="false" /> 如果 <paramref name="sz1" /> 和 <paramref name="sz2" /> 是否相等。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.SizeF.op_Subtraction(System.Drawing.SizeF,System.Drawing.SizeF)">
+      <summary>
+              减去的宽度和高度的其中一个 <see cref="T:System.Drawing.SizeF" /> 从宽度和高度与另一个结构 <see cref="T:System.Drawing.SizeF" /> 结构。
+            </summary>
+      <param name="sz1">
+        <see cref="T:System.Drawing.SizeF" /> 减法运算符左侧的结构。
+              </param>
+      <param name="sz2">
+        <see cref="T:System.Drawing.SizeF" /> 减法运算符右侧的结构。
+              </param>
+      <returns>
+              一个 <see cref="T:System.Drawing.SizeF" /> 它是减法运算的结果。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.SizeF.Subtract(System.Drawing.SizeF,System.Drawing.SizeF)">
+      <summary>
+              减去的宽度和高度的其中一个 <see cref="T:System.Drawing.SizeF" /> 从宽度和高度与另一个结构 <see cref="T:System.Drawing.SizeF" /> 结构。
+            </summary>
+      <param name="sz1">
+        <see cref="T:System.Drawing.SizeF" /> 减法运算符左侧的结构。
+              </param>
+      <param name="sz2">
+        <see cref="T:System.Drawing.SizeF" /> 减法运算符右侧的结构。
+              </param>
+      <returns>
+              一个 <see cref="T:System.Drawing.SizeF" /> 结构，它是减法运算的结果。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.SizeF.ToPointF">
+      <summary>
+              将转换 <see cref="T:System.Drawing.SizeF" /> 结构 <see cref="T:System.Drawing.PointF" /> 结构。
+            </summary>
+      <returns>
+              返回 <see cref="T:System.Drawing.PointF" /> 结构。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.SizeF.ToSize">
+      <summary>
+              将转换 <see cref="T:System.Drawing.SizeF" /> 结构 <see cref="T:System.Drawing.Size" /> 结构。
+            </summary>
+      <returns>
+              返回 <see cref="T:System.Drawing.Size" /> 结构。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.SizeF.ToString">
+      <summary>
+              创建一个用户可读的字符串，表示此 <see cref="T:System.Drawing.SizeF" /> 结构。
+            </summary>
+      <returns>
+              一个字符串，表示此 <see cref="T:System.Drawing.SizeF" /> 结构。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.SizeF.Width">
+      <summary>
+              获取或设置的水平分量 <see cref="T:System.Drawing.SizeF" /> 结构。
+            </summary>
+      <returns>
+              水平分量 <see cref="T:System.Drawing.SizeF" /> 结构，通常以像素为单位进行度量。
+            </returns>
+    </member>
+    <member name="T:System.Drawing.Point">
+      <summary>
+              表示的整数 x 坐标和 y 坐标点定义在二维平面中的有序的对。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.Point.#ctor(System.Drawing.Size)">
+      <summary>
+              新实例初始化 <see cref="T:System.Drawing.Point" /> 类 <see cref="T:System.Drawing.Size" />。
+            </summary>
+      <param name="sz">
+                一个 <see cref="T:System.Drawing.Size" /> 新指定的坐标 <see cref="T:System.Drawing.Point" />。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Point.#ctor(System.Int32)">
+      <summary>
+              新实例初始化 <see cref="T:System.Drawing.Point" /> 类使用的整数值所指定的坐标。
+            </summary>
+      <param name="dw">
+                一个 32 位整数，它指定为新的坐标 <see cref="T:System.Drawing.Point" />。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Point.#ctor(System.Int32,System.Int32)">
+      <summary>
+              新实例初始化 <see cref="T:System.Drawing.Point" /> 类的指定坐标。
+            </summary>
+      <param name="x">
+                点的水平位置。
+              </param>
+      <param name="y">
+                点的垂直位置。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Point.Add(System.Drawing.Point,System.Drawing.Size)">
+      <summary>
+              添加指定 <see cref="T:System.Drawing.Size" /> 到指定 <see cref="T:System.Drawing.Point" />。
+            </summary>
+      <param name="pt">
+                要添加的 <see cref="T:System.Drawing.Point" />。
+              </param>
+      <param name="sz">
+        <see cref="T:System.Drawing.Size" /> 添加
+              </param>
+      <returns>
+        <see cref="T:System.Drawing.Point" /> 即加法运算的结果。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Point.Ceiling(System.Drawing.PointF)">
+      <summary>
+              将指定 <see cref="T:System.Drawing.PointF" /> 到 <see cref="T:System.Drawing.Point" /> 通过舍入的值 <see cref="T:System.Drawing.PointF" /> 到下一个较大的整数值。
+            </summary>
+      <param name="value">
+                要转换的 <see cref="T:System.Drawing.PointF" />。
+              </param>
+      <returns>
+        <see cref="T:System.Drawing.Point" /> 此方法将转换为。
+            </returns>
+    </member>
+    <member name="F:System.Drawing.Point.Empty">
+      <summary>
+              表示 <see cref="T:System.Drawing.Point" /> 具有 <see cref="P:System.Drawing.Point.X" /> 和 <see cref="P:System.Drawing.Point.Y" /> 值设置为零。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.Point.Equals(System.Drawing.Point)">
+      <param name="other">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:System.Drawing.Point.Equals(System.Object)">
+      <summary>
+              指定是否这 <see cref="T:System.Drawing.Point" /> 包含与指定相同的坐标 <see cref="T:System.Object" />。
+            </summary>
+      <param name="obj">
+                要测试的 <see cref="T:System.Object" />。
+              </param>
+      <returns>
+        <see langword="true" /> 如果 <paramref name="obj" /> 是 <see cref="T:System.Drawing.Point" /> 并且具有与此相同的坐标 <see cref="T:System.Drawing.Point" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Point.GetHashCode">
+      <summary>
+              返回此哈希代码 <see cref="T:System.Drawing.Point" />。
+            </summary>
+      <returns>
+              一个整数值，指定此哈希值 <see cref="T:System.Drawing.Point" />。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Point.IsEmpty">
+      <summary>
+              获取一个值，该值指示此 <see cref="T:System.Drawing.Point" /> 是否为空。
+            </summary>
+      <returns>
+        <see langword="true" /> 如果两个 <see cref="P:System.Drawing.Point.X" /> 和 <see cref="P:System.Drawing.Point.Y" /> 0; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Point.Offset(System.Int32,System.Int32)">
+      <summary>
+              按指定量平移此 <see cref="T:System.Drawing.Point" />。
+            </summary>
+      <param name="dx">
+                x 坐标的偏移量。
+              </param>
+      <param name="dy">
+                y 坐标的偏移量。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Point.Offset(System.Drawing.Point)">
+      <summary>
+              会将其转换 <see cref="T:System.Drawing.Point" /> 由指定 <see cref="T:System.Drawing.Point" />。
+            </summary>
+      <param name="p">
+        <see cref="T:System.Drawing.Point" /> 使用偏移量这 <see cref="T:System.Drawing.Point" />。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Point.op_Addition(System.Drawing.Point,System.Drawing.Size)">
+      <summary>
+              将转换 <see cref="T:System.Drawing.Point" /> 由给定 <see cref="T:System.Drawing.Size" />。
+            </summary>
+      <param name="pt">
+        <see cref="T:System.Drawing.Point" /> 转换。
+              </param>
+      <param name="sz">
+                一个 <see cref="T:System.Drawing.Size" /> ，它指定的数字将添加到的坐标对 <paramref name="pt" />。
+              </param>
+      <returns>
+              经过平移 <see cref="T:System.Drawing.Point" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Point.op_Equality(System.Drawing.Point,System.Drawing.Point)">
+      <summary>
+              比较两个 <see cref="T:System.Drawing.Point" /> 对象。
+               此结果指定是否的值 <see cref="P:System.Drawing.Point.X" /> 和 <see cref="P:System.Drawing.Point.Y" /> 两个属性 <see cref="T:System.Drawing.Point" /> 对象是否相等。
+            </summary>
+      <param name="left">
+                要比较的 <see cref="T:System.Drawing.Point" />。
+              </param>
+      <param name="right">
+                要比较的 <see cref="T:System.Drawing.Point" />。
+              </param>
+      <returns>
+        <see langword="true" /> 如果 <see cref="P:System.Drawing.Point.X" /> 和 <see cref="P:System.Drawing.Point.Y" /> 值 <paramref name="left" /> 和 <paramref name="right" /> 相等; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Point.op_Explicit(System.Drawing.Point)~System.Drawing.Size">
+      <summary>
+              将指定 <see cref="T:System.Drawing.Point" /> 结构 <see cref="T:System.Drawing.Size" /> 结构。
+            </summary>
+      <param name="p">
+                要转换的 <see cref="T:System.Drawing.Point" />。
+              </param>
+      <returns>
+        <see cref="T:System.Drawing.Size" /> 中时得到的转换。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Point.op_Implicit(System.Drawing.Point)~System.Drawing.PointF">
+      <summary>
+              将指定 <see cref="T:System.Drawing.Point" /> 结构 <see cref="T:System.Drawing.PointF" /> 结构。
+            </summary>
+      <param name="p">
+                要转换的 <see cref="T:System.Drawing.Point" />。
+              </param>
+      <returns>
+        <see cref="T:System.Drawing.PointF" /> 中时得到的转换。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Point.op_Inequality(System.Drawing.Point,System.Drawing.Point)">
+      <summary>
+              比较两个 <see cref="T:System.Drawing.Point" /> 对象。
+               此结果指定是否的值 <see cref="P:System.Drawing.Point.X" /> 或 <see cref="P:System.Drawing.Point.Y" /> 的两个属性 <see cref="T:System.Drawing.Point" /> 对象不相等。
+            </summary>
+      <param name="left">
+                要比较的 <see cref="T:System.Drawing.Point" />。
+              </param>
+      <param name="right">
+                要比较的 <see cref="T:System.Drawing.Point" />。
+              </param>
+      <returns>
+        <see langword="true" /> 如果其中任何值 <see cref="P:System.Drawing.Point.X" /> 属性或 <see cref="P:System.Drawing.Point.Y" /> 属性 <paramref name="left" /> 和 <paramref name="right" /> 区分; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Point.op_Subtraction(System.Drawing.Point,System.Drawing.Size)">
+      <summary>
+              将转换 <see cref="T:System.Drawing.Point" /> 的负值由给定 <see cref="T:System.Drawing.Size" />。
+            </summary>
+      <param name="pt">
+        <see cref="T:System.Drawing.Point" /> 转换。
+              </param>
+      <param name="sz">
+                一个 <see cref="T:System.Drawing.Size" /> ，它指定要从其中的坐标减去的数字对 <paramref name="pt" />。
+              </param>
+      <returns>
+              一个 <see cref="T:System.Drawing.Point" /> 结构，它的负值转换给定 <see cref="T:System.Drawing.Size" /> 结构。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Point.Round(System.Drawing.PointF)">
+      <summary>
+              将指定 <see cref="T:System.Drawing.PointF" /> 到 <see cref="T:System.Drawing.Point" /> 通过舍入的对象 <see cref="T:System.Drawing.Point" /> 值到最接近的整数。
+            </summary>
+      <param name="value">
+                要转换的 <see cref="T:System.Drawing.PointF" />。
+              </param>
+      <returns>
+        <see cref="T:System.Drawing.Point" /> 此方法将转换为。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Point.Subtract(System.Drawing.Point,System.Drawing.Size)">
+      <summary>
+              返回的结果中减去指定 <see cref="T:System.Drawing.Size" /> 从指定 <see cref="T:System.Drawing.Point" />。
+            </summary>
+      <param name="pt">
+        <see cref="T:System.Drawing.Point" /> 被减数。
+              </param>
+      <param name="sz">
+        <see cref="T:System.Drawing.Size" /> 要从中减去 <see cref="T:System.Drawing.Point" />。
+              </param>
+      <returns>
+        <see cref="T:System.Drawing.Point" /> 它是减法运算的结果。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Point.ToString">
+      <summary>
+              将此转换 <see cref="T:System.Drawing.Point" /> 到用户可读字符串。
+            </summary>
+      <returns>
+              表示此 <see cref="T:System.Drawing.Point" /> 的字符串。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Point.Truncate(System.Drawing.PointF)">
+      <summary>
+              将指定 <see cref="T:System.Drawing.PointF" /> 到 <see cref="T:System.Drawing.Point" /> 通过截断的值 <see cref="T:System.Drawing.Point" />。
+            </summary>
+      <param name="value">
+                要转换的 <see cref="T:System.Drawing.PointF" />。
+              </param>
+      <returns>
+        <see cref="T:System.Drawing.Point" /> 此方法将转换为。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Point.X">
+      <summary>
+              获取或设置此的 x 坐标 <see cref="T:System.Drawing.Point" />。
+            </summary>
+      <returns>
+              此的 x 坐标 <see cref="T:System.Drawing.Point" />。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Point.Y">
+      <summary>
+              获取或设置此的 y 坐标 <see cref="T:System.Drawing.Point" />。
+            </summary>
+      <returns>
+              此的 y 坐标 <see cref="T:System.Drawing.Point" />。
+            </returns>
+    </member>
+    <member name="T:System.Drawing.PointF">
+      <summary>
+              表示的浮点 x 坐标和 y 坐标点定义在二维平面中的有序的对。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.PointF.#ctor(System.Single,System.Single)">
+      <summary>
+              新实例初始化 <see cref="T:System.Drawing.PointF" /> 类的指定坐标。
+            </summary>
+      <param name="x">
+                点的水平位置。
+              </param>
+      <param name="y">
+                点的垂直位置。
+              </param>
+    </member>
+    <member name="M:System.Drawing.PointF.Add(System.Drawing.PointF,System.Drawing.Size)">
+      <summary>
+              将转换给定 <see cref="T:System.Drawing.PointF" /> 由指定 <see cref="T:System.Drawing.Size" />。
+            </summary>
+      <param name="pt">
+        <see cref="T:System.Drawing.PointF" /> 转换。
+              </param>
+      <param name="sz">
+        <see cref="T:System.Drawing.Size" /> ，它指定要添加到的坐标的数字 <paramref name="pt" />。
+              </param>
+      <returns>
+              经过平移 <see cref="T:System.Drawing.PointF" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.PointF.Add(System.Drawing.PointF,System.Drawing.SizeF)">
+      <summary>
+              将转换给定 <see cref="T:System.Drawing.PointF" /> 由指定 <see cref="T:System.Drawing.SizeF" />。
+            </summary>
+      <param name="pt">
+        <see cref="T:System.Drawing.PointF" /> 转换。
+              </param>
+      <param name="sz">
+        <see cref="T:System.Drawing.SizeF" /> ，它指定要添加到的坐标的数字 <paramref name="pt" />。
+              </param>
+      <returns>
+              经过平移 <see cref="T:System.Drawing.PointF" />。
+            </returns>
+    </member>
+    <member name="F:System.Drawing.PointF.Empty">
+      <summary>
+              表示的新实例 <see cref="T:System.Drawing.PointF" /> 类的成员数据未被初始化。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.PointF.Equals(System.Drawing.PointF)">
+      <param name="other">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:System.Drawing.PointF.Equals(System.Object)">
+      <summary>
+              指定是否这 <see cref="T:System.Drawing.PointF" /> 包含与指定相同的坐标 <see cref="T:System.Object" />。
+            </summary>
+      <param name="obj">
+                要测试的 <see cref="T:System.Object" />。
+              </param>
+      <returns>
+              此方法返回 <see langword="true" /> 如果 <paramref name="obj" /> 是 <see cref="T:System.Drawing.PointF" /> 并且具有与此相同的坐标 <see cref="T:System.Drawing.Point" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.PointF.GetHashCode">
+      <summary>
+              返回此哈希代码 <see cref="T:System.Drawing.PointF" /> 结构。
+            </summary>
+      <returns>
+              一个整数值，指定此哈希值 <see cref="T:System.Drawing.PointF" /> 结构。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.PointF.IsEmpty">
+      <summary>
+              获取一个值，该值指示此 <see cref="T:System.Drawing.PointF" /> 是否为空。
+            </summary>
+      <returns>
+        <see langword="true" /> 如果两个 <see cref="P:System.Drawing.PointF.X" /> 和 <see cref="P:System.Drawing.PointF.Y" /> 0; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.PointF.op_Addition(System.Drawing.PointF,System.Drawing.SizeF)">
+      <summary>
+              将转换 <see cref="T:System.Drawing.PointF" /> 由指定 <see cref="T:System.Drawing.SizeF" />。
+            </summary>
+      <param name="pt">
+        <see cref="T:System.Drawing.PointF" /> 转换。
+              </param>
+      <param name="sz">
+        <see cref="T:System.Drawing.SizeF" /> ，它指定要添加到 x 坐标和 y 坐标的数字 <see cref="T:System.Drawing.PointF" />。
+              </param>
+      <returns>
+              经过平移 <see cref="T:System.Drawing.PointF" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.PointF.op_Addition(System.Drawing.PointF,System.Drawing.Size)">
+      <summary>
+              将转换 <see cref="T:System.Drawing.PointF" /> 由给定 <see cref="T:System.Drawing.Size" />。
+            </summary>
+      <param name="pt">
+        <see cref="T:System.Drawing.PointF" /> 转换。
+              </param>
+      <param name="sz">
+                一个 <see cref="T:System.Drawing.Size" /> ，它指定的数字将添加到的坐标对 <paramref name="pt" />。
+              </param>
+      <returns>
+              返回经过平移 <see cref="T:System.Drawing.PointF" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.PointF.op_Equality(System.Drawing.PointF,System.Drawing.PointF)">
+      <summary>
+              比较两个 <see cref="T:System.Drawing.PointF" /> 结构。
+               此结果指定是否的值 <see cref="P:System.Drawing.PointF.X" /> 和 <see cref="P:System.Drawing.PointF.Y" /> 两个属性 <see cref="T:System.Drawing.PointF" /> 结构是否相等。
+            </summary>
+      <param name="left">
+                要比较的 <see cref="T:System.Drawing.PointF" />。
+              </param>
+      <param name="right">
+                要比较的 <see cref="T:System.Drawing.PointF" />。
+              </param>
+      <returns>
+        <see langword="true" /> 如果 <see cref="P:System.Drawing.PointF.X" /> 和 <see cref="P:System.Drawing.PointF.Y" /> left 和 right 值 <see cref="T:System.Drawing.PointF" /> 结构是否相等; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.PointF.op_Inequality(System.Drawing.PointF,System.Drawing.PointF)">
+      <summary>
+              确定指定的点的坐标是否不相等。
+            </summary>
+      <param name="left">
+                要比较的 <see cref="T:System.Drawing.PointF" />。
+              </param>
+      <param name="right">
+                要比较的 <see cref="T:System.Drawing.PointF" />。
+              </param>
+      <returns>
+        <see langword="true" /> 若要指示 <see cref="P:System.Drawing.PointF.X" /> 和 <see cref="P:System.Drawing.PointF.Y" /> 值 <paramref name="left" /> 和 <paramref name="right" /> 不相等; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.PointF.op_Subtraction(System.Drawing.PointF,System.Drawing.Size)">
+      <summary>
+              将转换 <see cref="T:System.Drawing.PointF" /> 的负值由给定 <see cref="T:System.Drawing.Size" />。
+            </summary>
+      <param name="pt">
+        <see cref="T:System.Drawing.PointF" /> 转换。
+              </param>
+      <param name="sz">
+        <see cref="T:System.Drawing.Size" /> ，它指定要从中的坐标减去的数字 <paramref name="pt" />。
+              </param>
+      <returns>
+              经过平移 <see cref="T:System.Drawing.PointF" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.PointF.op_Subtraction(System.Drawing.PointF,System.Drawing.SizeF)">
+      <summary>
+              将转换 <see cref="T:System.Drawing.PointF" /> 通过指定负 <see cref="T:System.Drawing.SizeF" />。
+            </summary>
+      <param name="pt">
+        <see cref="T:System.Drawing.PointF" /> 转换。
+              </param>
+      <param name="sz">
+        <see cref="T:System.Drawing.SizeF" /> ，它指定要从中的坐标减去的数字 <paramref name="pt" />。
+              </param>
+      <returns>
+              经过平移 <see cref="T:System.Drawing.PointF" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.PointF.Subtract(System.Drawing.PointF,System.Drawing.Size)">
+      <summary>
+              将转换 <see cref="T:System.Drawing.PointF" /> 按指定大小的负值。
+            </summary>
+      <param name="pt">
+        <see cref="T:System.Drawing.PointF" /> 转换。
+              </param>
+      <param name="sz">
+        <see cref="T:System.Drawing.Size" /> ，它指定要从中的坐标减去的数字 <paramref name="pt" />。
+              </param>
+      <returns>
+              经过平移 <see cref="T:System.Drawing.PointF" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.PointF.Subtract(System.Drawing.PointF,System.Drawing.SizeF)">
+      <summary>
+              将转换 <see cref="T:System.Drawing.PointF" /> 按指定大小的负值。
+            </summary>
+      <param name="pt">
+        <see cref="T:System.Drawing.PointF" /> 转换。
+              </param>
+      <param name="sz">
+        <see cref="T:System.Drawing.SizeF" /> ，它指定要从中的坐标减去的数字 <paramref name="pt" />。
+              </param>
+      <returns>
+              经过平移 <see cref="T:System.Drawing.PointF" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.PointF.ToString">
+      <summary>
+              将此转换 <see cref="T:System.Drawing.PointF" /> 到可读字符串。
+            </summary>
+      <returns>
+              表示此 <see cref="T:System.Drawing.PointF" /> 的字符串。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.PointF.X">
+      <summary>
+              获取或设置此的 x 坐标 <see cref="T:System.Drawing.PointF" />。
+            </summary>
+      <returns>
+              此的 x 坐标 <see cref="T:System.Drawing.PointF" />。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.PointF.Y">
+      <summary>
+              获取或设置此的 y 坐标 <see cref="T:System.Drawing.PointF" />。
+            </summary>
+      <returns>
+              此的 y 坐标 <see cref="T:System.Drawing.PointF" />。
+            </returns>
+    </member>
+    <member name="T:System.Drawing.Rectangle">
+      <summary>
+              存储一组整数，共四个，表示一个矩形的位置和大小
+            </summary>
+    </member>
+    <member name="M:System.Drawing.Rectangle.#ctor(System.Drawing.Point,System.Drawing.Size)">
+      <summary>
+              用指定的位置和大小初始化 <see cref="T:System.Drawing.Rectangle" /> 类的新实例。
+            </summary>
+      <param name="location">
+        <see cref="T:System.Drawing.Point" />，它表示矩形区域的左上角。
+              </param>
+      <param name="size">
+        <see cref="T:System.Drawing.Size" />，它表示矩形区域的宽度和高度。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Rectangle.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+              用指定的位置和大小初始化 <see cref="T:System.Drawing.Rectangle" /> 类的新实例。
+            </summary>
+      <param name="x">
+                矩形左上角的 x 坐标。
+              </param>
+      <param name="y">
+                矩形左上角的 y 坐标。
+              </param>
+      <param name="width">
+                矩形的宽度。
+              </param>
+      <param name="height">
+                矩形的高度。
+              </param>
+    </member>
+    <member name="P:System.Drawing.Rectangle.Bottom">
+      <summary>
+              获取 y 坐标，该坐标是此 <see cref="T:System.Drawing.Rectangle" /> 结构的 <see cref="P:System.Drawing.Rectangle.Y" /> 与 <see cref="P:System.Drawing.Rectangle.Height" /> 属性值之和。
+            </summary>
+      <returns>
+              此 <see cref="T:System.Drawing.Rectangle" /> 的 <see cref="P:System.Drawing.Rectangle.Y" /> 与 <see cref="P:System.Drawing.Rectangle.Height" /> 之和的 y 坐标。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Rectangle.Ceiling(System.Drawing.RectangleF)">
+      <summary>
+              通过将 <see cref="T:System.Drawing.RectangleF" /> 值舍入到比它大的相邻整数值，将指定的 <see cref="T:System.Drawing.RectangleF" /> 结构转换为 <see cref="T:System.Drawing.Rectangle" /> 结构。
+            </summary>
+      <param name="value">
+                要转换的 <see cref="T:System.Drawing.RectangleF" /> 结构。
+              </param>
+      <returns>
+              返回 <see cref="T:System.Drawing.Rectangle" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Rectangle.Contains(System.Drawing.Point)">
+      <summary>
+              确定指定的点是否包含在此 <see cref="T:System.Drawing.Rectangle" /> 结构内。
+            </summary>
+      <param name="pt">
+                要测试的 <see cref="T:System.Drawing.Point" />。
+              </param>
+      <returns>
+              如果 <paramref name="pt" /> 表示的点包含在此 <see cref="T:System.Drawing.Rectangle" /> 结构中，此方法将返回 <see langword="true" />；否则将返回 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Rectangle.Contains(System.Drawing.Rectangle)">
+      <summary>
+              确定 <paramref name="rect" /> 表示的矩形区域是否完全包含在此 <see cref="T:System.Drawing.Rectangle" /> 结构内。
+            </summary>
+      <param name="rect">
+                要测试的 <see cref="T:System.Drawing.Rectangle" />。
+              </param>
+      <returns>
+              如果 <paramref name="rect" /> 表示的矩形区域完全包含在此 <see cref="T:System.Drawing.Rectangle" /> 结构内，此方法将返回 <see langword="true" />；否则将返回 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Rectangle.Contains(System.Int32,System.Int32)">
+      <summary>
+              确定指定的点是否包含在此 <see cref="T:System.Drawing.Rectangle" /> 结构内。
+            </summary>
+      <param name="x">
+                要测试的点的 X 坐标。
+              </param>
+      <param name="y">
+                要测试的点的 Y 坐标。
+              </param>
+      <returns>
+              如果 <paramref name="x" /> 和 <paramref name="y" /> 定义的点包含在此 <see cref="T:System.Drawing.Rectangle" /> 结构中，此方法将返回 <see langword="true" />；否则将返回 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="F:System.Drawing.Rectangle.Empty">
+      <summary>
+              表示其属性未被初始化的 <see cref="T:System.Drawing.Rectangle" /> 结构。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.Rectangle.Equals(System.Drawing.Rectangle)">
+      <param name="other">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:System.Drawing.Rectangle.Equals(System.Object)">
+      <summary>
+              测试 <paramref name="obj" /> 是否为与此 <see cref="T:System.Drawing.Rectangle" /> 结构具有相同位置和大小的 <see cref="T:System.Drawing.Rectangle" /> 结构。
+            </summary>
+      <param name="obj">
+                要测试的 <see cref="T:System.Object" />。
+              </param>
+      <returns>
+              如果 <paramref name="obj" /> 是 <see cref="T:System.Drawing.Rectangle" /> 结构，并且其 <see cref="P:System.Drawing.Rectangle.X" />、<see cref="P:System.Drawing.Rectangle.Y" />、<see cref="P:System.Drawing.Rectangle.Width" /> 和 <see cref="P:System.Drawing.Rectangle.Height" /> 属性与此 <see cref="T:System.Drawing.Rectangle" /> 结构的对应属性相等，此方法将返回 <see langword="true" />；否则将返回 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Rectangle.FromLTRB(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+              创建一个具有指定边缘位置的 <see cref="T:System.Drawing.Rectangle" /> 结构。
+            </summary>
+      <param name="left">
+                此 <see cref="T:System.Drawing.Rectangle" /> 结构左上角的 x 坐标。
+              </param>
+      <param name="top">
+                此 <see cref="T:System.Drawing.Rectangle" /> 结构左上角的 y 坐标。
+              </param>
+      <param name="right">
+                此 <see cref="T:System.Drawing.Rectangle" /> 结构右下角的 x 坐标。
+              </param>
+      <param name="bottom">
+                此 <see cref="T:System.Drawing.Rectangle" /> 结构右下角的 y 坐标。
+              </param>
+      <returns>
+              此方法创建的新 <see cref="T:System.Drawing.Rectangle" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Rectangle.GetHashCode">
+      <summary>
+              返回此 <see cref="T:System.Drawing.Rectangle" /> 结构的哈希代码。
+               有关如何使用哈希代码的信息，请参见 <see cref="M:System.Object.GetHashCode" />。
+            </summary>
+      <returns>
+              一个整数，表示此矩形的哈希代码。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Rectangle.Height">
+      <summary>
+              获取或设置此 <see cref="T:System.Drawing.Rectangle" /> 结构的高度。
+            </summary>
+      <returns>
+              此 <see cref="T:System.Drawing.Rectangle" /> 结构的高度。
+               默认值为 0。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Rectangle.Inflate(System.Drawing.Size)">
+      <summary>
+              将此 <see cref="T:System.Drawing.Rectangle" /> 放大指定量。
+            </summary>
+      <param name="size">
+                此矩形的放大量。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Rectangle.Inflate(System.Int32,System.Int32)">
+      <summary>
+              将此 <see cref="T:System.Drawing.Rectangle" /> 放大指定量。
+            </summary>
+      <param name="width">
+                此 <see cref="T:System.Drawing.Rectangle" /> 的水平放大量。
+              </param>
+      <param name="height">
+                此 <see cref="T:System.Drawing.Rectangle" /> 的垂直放大量。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Rectangle.Inflate(System.Drawing.Rectangle,System.Int32,System.Int32)">
+      <summary>
+              创建并返回指定 <see cref="T:System.Drawing.Rectangle" /> 结构的放大副本。
+               该副本被放大指定的量。
+               不修改原始 <see cref="T:System.Drawing.Rectangle" /> 结构。
+            </summary>
+      <param name="rect">
+                要从其开始操作的 <see cref="T:System.Drawing.Rectangle" />。
+                 不修改此矩形。
+              </param>
+      <param name="x">
+                此 <see cref="T:System.Drawing.Rectangle" /> 的水平放大量。
+              </param>
+      <param name="y">
+                此 <see cref="T:System.Drawing.Rectangle" /> 的垂直放大量。
+              </param>
+      <returns>
+              放大的 <see cref="T:System.Drawing.Rectangle" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Rectangle.Intersect(System.Drawing.Rectangle,System.Drawing.Rectangle)">
+      <summary>
+              返回第三个 <see cref="T:System.Drawing.Rectangle" /> 结构，它表示其他两个 <see cref="T:System.Drawing.Rectangle" /> 结构的交集。
+               如果没有重叠，将返回空的 <see cref="T:System.Drawing.Rectangle" />。
+            </summary>
+      <param name="a">
+                要相交的矩形。
+              </param>
+      <param name="b">
+                要相交的矩形。
+              </param>
+      <returns>
+              表示 <paramref name="a" /> 和 <paramref name="b" /> 的交集的 <see cref="T:System.Drawing.Rectangle" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Rectangle.Intersect(System.Drawing.Rectangle)">
+      <summary>
+              将此 <see cref="T:System.Drawing.Rectangle" /> 替换为其自身与指定 <see cref="T:System.Drawing.Rectangle" /> 的交集。
+            </summary>
+      <param name="rect">
+                用其进行相交操作的 <see cref="T:System.Drawing.Rectangle" />。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Rectangle.IntersectsWith(System.Drawing.Rectangle)">
+      <summary>
+              确定此矩形是否与 <paramref name="rect" /> 相交。
+            </summary>
+      <param name="rect">
+                要测试的矩形。
+              </param>
+      <returns>
+              如果有重叠，此方法将返回 <see langword="true" />；否则将返回 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Rectangle.IsEmpty">
+      <summary>
+              测试此 <see cref="T:System.Drawing.Rectangle" /> 的所有数值属性是否都具有零值。
+            </summary>
+      <returns>
+              如果此 <see cref="T:System.Drawing.Rectangle" /> 的 <see cref="P:System.Drawing.Rectangle.Width" />、<see cref="P:System.Drawing.Rectangle.Height" />、<see cref="P:System.Drawing.Rectangle.X" /> 和 <see cref="P:System.Drawing.Rectangle.Y" /> 属性都具有零值，此属性将返回 <see langword="true" />；否则将返回 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Rectangle.Left">
+      <summary>
+              获取此 <see cref="T:System.Drawing.Rectangle" /> 结构左边缘的 x 坐标。
+            </summary>
+      <returns>
+              此 <see cref="T:System.Drawing.Rectangle" /> 结构左边缘的 x 坐标。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Rectangle.Location">
+      <summary>
+              获取或设置此 <see cref="T:System.Drawing.Rectangle" /> 结构左上角的坐标。
+            </summary>
+      <returns>
+        <see cref="T:System.Drawing.Point" />，它表示此 <see cref="T:System.Drawing.Rectangle" /> 结构的左上角。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Rectangle.Offset(System.Drawing.Point)">
+      <summary>
+              将此矩形的位置调整指定的量。
+            </summary>
+      <param name="pos">
+                该位置的偏移量。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Rectangle.Offset(System.Int32,System.Int32)">
+      <summary>
+              将此矩形的位置调整指定的量。
+            </summary>
+      <param name="x">
+                水平偏移量。
+              </param>
+      <param name="y">
+                垂直偏移量。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Rectangle.op_Equality(System.Drawing.Rectangle,System.Drawing.Rectangle)">
+      <summary>
+              测试两个 <see cref="T:System.Drawing.Rectangle" /> 结构的位置和大小是否相同。
+            </summary>
+      <param name="left">
+                相等运算符左侧的 <see cref="T:System.Drawing.Rectangle" /> 结构。
+              </param>
+      <param name="right">
+                相等运算符右侧的 <see cref="T:System.Drawing.Rectangle" /> 结构。
+              </param>
+      <returns>
+              如果两个 <see cref="T:System.Drawing.Rectangle" /> 结构的 <see cref="P:System.Drawing.Rectangle.X" />、<see cref="P:System.Drawing.Rectangle.Y" />、<see cref="P:System.Drawing.Rectangle.Width" /> 和 <see cref="P:System.Drawing.Rectangle.Height" /> 属性值均相等，此运算符将返回 <see langword="true" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Rectangle.op_Inequality(System.Drawing.Rectangle,System.Drawing.Rectangle)">
+      <summary>
+              测试两个 <see cref="T:System.Drawing.Rectangle" /> 结构的位置或大小是否不同。
+            </summary>
+      <param name="left">
+                不等运算符左侧的 <see cref="T:System.Drawing.Rectangle" /> 结构。
+              </param>
+      <param name="right">
+                不等运算符右侧的 <see cref="T:System.Drawing.Rectangle" /> 结构。
+              </param>
+      <returns>
+              如果两个 <see cref="T:System.Drawing.Rectangle" /> 结构的 <see cref="P:System.Drawing.Rectangle.X" />、<see cref="P:System.Drawing.Rectangle.Y" />、<see cref="P:System.Drawing.Rectangle.Width" /> 或 <see cref="P:System.Drawing.Rectangle.Height" /> 属性值中有任何一个不相等，此运算符将返回 <see langword="true" />；否则将返回 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Rectangle.Right">
+      <summary>
+              获取 x 坐标，该坐标是此 <see cref="T:System.Drawing.Rectangle" /> 结构的 <see cref="P:System.Drawing.Rectangle.X" />与 <see cref="P:System.Drawing.Rectangle.Width" /> 属性值之和。
+            </summary>
+      <returns>
+              此 <see cref="T:System.Drawing.Rectangle" /> 的 <see cref="P:System.Drawing.Rectangle.X" /> 与 <see cref="P:System.Drawing.Rectangle.Width" /> 之和的 x 坐标。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Rectangle.Round(System.Drawing.RectangleF)">
+      <summary>
+              通过将 <see cref="T:System.Drawing.RectangleF" /> 舍入到最近的整数值，将指定的 <see cref="T:System.Drawing.RectangleF" /> 转换为 <see cref="T:System.Drawing.Rectangle" />。
+            </summary>
+      <param name="value">
+                要转换的 <see cref="T:System.Drawing.RectangleF" />。
+              </param>
+      <returns>
+        <see cref="T:System.Drawing.Rectangle" /> 的四舍五入整数值。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Rectangle.Size">
+      <summary>
+              获取或设置此 <see cref="T:System.Drawing.Rectangle" /> 的大小。
+            </summary>
+      <returns>
+        <see cref="T:System.Drawing.Size" />，它表示此 <see cref="T:System.Drawing.Rectangle" /> 结构的宽度和高度。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Rectangle.Top">
+      <summary>
+              获取此 <see cref="T:System.Drawing.Rectangle" /> 结构上边缘的 y 坐标。
+            </summary>
+      <returns>
+              此 <see cref="T:System.Drawing.Rectangle" /> 结构上边缘的 y 坐标。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Rectangle.ToString">
+      <summary>
+              将此 <see cref="T:System.Drawing.Rectangle" /> 的特性转换为可读字符串。
+            </summary>
+      <returns>
+              一个包含此 <see cref="T:System.Drawing.Rectangle" /> 结构 ¾ 的位置、宽度和高度的字符串，例如 {X=20, Y=20, Width=100, Height=50} 
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Rectangle.Truncate(System.Drawing.RectangleF)">
+      <summary>
+              通过截断 <see cref="T:System.Drawing.RectangleF" /> 值，将指定的 <see cref="T:System.Drawing.RectangleF" /> 转换为 <see cref="T:System.Drawing.Rectangle" />。
+            </summary>
+      <param name="value">
+                要转换的 <see cref="T:System.Drawing.RectangleF" />。
+              </param>
+      <returns>
+        <see cref="T:System.Drawing.Rectangle" /> 的截断值。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Rectangle.Union(System.Drawing.Rectangle,System.Drawing.Rectangle)">
+      <summary>
+              获取包含两个 <see cref="T:System.Drawing.Rectangle" /> 结构的交集的 <see cref="T:System.Drawing.Rectangle" /> 结构。
+            </summary>
+      <param name="a">
+                要合并的矩形。
+              </param>
+      <param name="b">
+                要合并的矩形。
+              </param>
+      <returns>
+              包含两个 <see cref="T:System.Drawing.Rectangle" /> 结构的交集的 <see cref="T:System.Drawing.Rectangle" /> 结构。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Rectangle.Width">
+      <summary>
+              获取或设置此 <see cref="T:System.Drawing.Rectangle" /> 结构的宽度。
+            </summary>
+      <returns>
+              此 <see cref="T:System.Drawing.Rectangle" /> 结构的宽度。
+               默认值为 0。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Rectangle.X">
+      <summary>
+              获取或设置此 <see cref="T:System.Drawing.Rectangle" /> 结构左上角的 x 坐标。
+            </summary>
+      <returns>
+              此 <see cref="T:System.Drawing.Rectangle" /> 结构左上角的 x 坐标。
+               默认值为 0。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Rectangle.Y">
+      <summary>
+              获取或设置此 <see cref="T:System.Drawing.Rectangle" /> 结构左上角的 y 坐标。
+            </summary>
+      <returns>
+              此 <see cref="T:System.Drawing.Rectangle" /> 结构左上角的 y 坐标。
+               默认值为 0。
+            </returns>
+    </member>
+    <member name="T:System.Drawing.RectangleF">
+      <summary>
+              存储一组表示位置的四个浮点数字和矩形的大小。
+               对于更高级的区域函数，请使用 <see cref="T:System.Drawing.Region" /> 对象。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.RectangleF.#ctor(System.Drawing.PointF,System.Drawing.SizeF)">
+      <summary>
+              用指定的位置和大小初始化 <see cref="T:System.Drawing.RectangleF" /> 类的新实例。
+            </summary>
+      <param name="location">
+        <see cref="T:System.Drawing.PointF" />，它表示矩形区域的左上角。
+              </param>
+      <param name="size">
+        <see cref="T:System.Drawing.SizeF" />，它表示矩形区域的宽度和高度。
+              </param>
+    </member>
+    <member name="M:System.Drawing.RectangleF.#ctor(System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+              用指定的位置和大小初始化 <see cref="T:System.Drawing.RectangleF" /> 类的新实例。
+            </summary>
+      <param name="x">
+                矩形左上角的 x 坐标。
+              </param>
+      <param name="y">
+                矩形左上角的 y 坐标。
+              </param>
+      <param name="width">
+                矩形的宽度。
+              </param>
+      <param name="height">
+                矩形的高度。
+              </param>
+    </member>
+    <member name="P:System.Drawing.RectangleF.Bottom">
+      <summary>
+              获取是之和的 y 坐标 <see cref="P:System.Drawing.RectangleF.Y" /> 和 <see cref="P:System.Drawing.RectangleF.Height" /> 此 <see cref="T:System.Drawing.RectangleF" /> 结构。
+            </summary>
+      <returns>
+              之和的 y 坐标 <see cref="P:System.Drawing.RectangleF.Y" /> 和 <see cref="P:System.Drawing.RectangleF.Height" /> 此 <see cref="T:System.Drawing.RectangleF" /> 结构。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.RectangleF.Contains(System.Drawing.PointF)">
+      <summary>
+              确定指定的点是否包含在此 <see cref="T:System.Drawing.RectangleF" /> 结构内。
+            </summary>
+      <param name="pt">
+                要测试的 <see cref="T:System.Drawing.PointF" />。
+              </param>
+      <returns>
+              此方法返回 <see langword="true" /> 如果表示的点 <paramref name="pt" /> 参数包含在此 <see cref="T:System.Drawing.RectangleF" /> 结构; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.RectangleF.Contains(System.Drawing.RectangleF)">
+      <summary>
+              确定 <paramref name="rect" /> 表示的矩形区域是否完全包含在此 <see cref="T:System.Drawing.RectangleF" /> 结构内。
+            </summary>
+      <param name="rect">
+                要测试的 <see cref="T:System.Drawing.RectangleF" />。
+              </param>
+      <returns>
+              此方法返回 <see langword="true" /> 如果表示矩形区域 <paramref name="rect" /> 所表示的矩形区域范围内完全包含 <see cref="T:System.Drawing.RectangleF" />; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.RectangleF.Contains(System.Single,System.Single)">
+      <summary>
+              确定指定的点是否包含在此 <see cref="T:System.Drawing.RectangleF" /> 结构内。
+            </summary>
+      <param name="x">
+                要测试的点的 X 坐标。
+              </param>
+      <param name="y">
+                要测试的点的 Y 坐标。
+              </param>
+      <returns>
+              如果 <paramref name="x" /> 和 <paramref name="y" /> 定义的点包含在此 <see cref="T:System.Drawing.RectangleF" /> 结构中，此方法将返回 <see langword="true" />；否则将返回 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="F:System.Drawing.RectangleF.Empty">
+      <summary>
+              表示实例 <see cref="T:System.Drawing.RectangleF" /> 未初始化其成员的类。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.RectangleF.Equals(System.Drawing.RectangleF)">
+      <param name="other">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:System.Drawing.RectangleF.Equals(System.Object)">
+      <summary>
+              测试是否 <paramref name="obj" /> 是 <see cref="T:System.Drawing.RectangleF" /> 具有相同的位置和大小的 <see cref="T:System.Drawing.RectangleF" />。
+            </summary>
+      <param name="obj">
+                要测试的 <see cref="T:System.Object" />。
+              </param>
+      <returns>
+              此方法返回 <see langword="true" /> 如果 <paramref name="obj" /> 是 <see cref="T:System.Drawing.RectangleF" /> 并将其 <see langword="X" />, ，<see langword="Y" />, ，<see langword="Width" />, ，和 <see langword="Height" /> 的对应属性相等 <see cref="T:System.Drawing.RectangleF" />; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.RectangleF.FromLTRB(System.Single,System.Single,System.Single,System.Single)">
+      <summary>
+              创建 <see cref="T:System.Drawing.RectangleF" /> 结构具有窗口左上角和右下角位于指定位置。
+            </summary>
+      <param name="left">
+                该矩形区域的左上角 x 坐标。
+              </param>
+      <param name="top">
+                该矩形区域的左上角 y 坐标。
+              </param>
+      <param name="right">
+                该矩形区域的右下角 x 坐标。
+              </param>
+      <param name="bottom">
+                该矩形区域的右下角 y 坐标。
+              </param>
+      <returns>
+              此方法创建的新 <see cref="T:System.Drawing.RectangleF" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.RectangleF.GetHashCode">
+      <summary>
+              获取此哈希代码 <see cref="T:System.Drawing.RectangleF" /> 结构。
+               有关使用哈希代码的信息，请参阅 <see langword="Object.GetHashCode" />。
+            </summary>
+      <returns>
+              此 <see cref="T:System.Drawing.RectangleF" /> 的哈希代码。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.RectangleF.Height">
+      <summary>
+              获取或设置此 <see cref="T:System.Drawing.RectangleF" /> 结构的高度。
+            </summary>
+      <returns>
+              此 <see cref="T:System.Drawing.RectangleF" /> 结构的高度。
+               默认值为 0。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.RectangleF.Inflate(System.Drawing.SizeF)">
+      <summary>
+              将此 <see cref="T:System.Drawing.RectangleF" /> 放大指定量。
+            </summary>
+      <param name="size">
+                此矩形的放大量。
+              </param>
+    </member>
+    <member name="M:System.Drawing.RectangleF.Inflate(System.Single,System.Single)">
+      <summary>
+              这将放大 <see cref="T:System.Drawing.RectangleF" /> 结构指定的量。
+            </summary>
+      <param name="x">
+                这样的放大量 <see cref="T:System.Drawing.RectangleF" /> 结构的水平。
+              </param>
+      <param name="y">
+                这样的放大量 <see cref="T:System.Drawing.RectangleF" /> 结构的垂直。
+              </param>
+    </member>
+    <member name="M:System.Drawing.RectangleF.Inflate(System.Drawing.RectangleF,System.Single,System.Single)">
+      <summary>
+              创建并返回指定 <see cref="T:System.Drawing.RectangleF" /> 结构的放大副本。
+               该副本被放大指定量并不修改原始矩形。
+            </summary>
+      <param name="rect">
+                要复制的 <see cref="T:System.Drawing.RectangleF" />。
+                 不修改此矩形。
+              </param>
+      <param name="x">
+                水平副本的矩形的放大量。
+              </param>
+      <param name="y">
+                副本的矩形垂直放大量。
+              </param>
+      <returns>
+              放大的 <see cref="T:System.Drawing.RectangleF" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.RectangleF.Intersect(System.Drawing.RectangleF,System.Drawing.RectangleF)">
+      <summary>
+              返回 <see cref="T:System.Drawing.RectangleF" /> 结构，它表示两个矩形交集。
+               如果没有重叠和空 <see cref="T:System.Drawing.RectangleF" /> 返回。
+            </summary>
+      <param name="a">
+                要相交的矩形。
+              </param>
+      <param name="b">
+                要相交的矩形。
+              </param>
+      <returns>
+              第三个 <see cref="T:System.Drawing.RectangleF" /> 结构的大小表示两个指定的矩形的重叠的区域。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.RectangleF.Intersect(System.Drawing.RectangleF)">
+      <summary>
+              将此 <see cref="T:System.Drawing.RectangleF" /> 结构替换为其自身与指定的 <see cref="T:System.Drawing.RectangleF" /> 结构的交集。
+            </summary>
+      <param name="rect">
+                要相交的矩形。
+              </param>
+    </member>
+    <member name="M:System.Drawing.RectangleF.IntersectsWith(System.Drawing.RectangleF)">
+      <summary>
+              确定此矩形是否与 <paramref name="rect" /> 相交。
+            </summary>
+      <param name="rect">
+                要测试的矩形。
+              </param>
+      <returns>
+              此方法返回 <see langword="true" /> 如果重叠。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.RectangleF.IsEmpty">
+      <summary>
+              测试是否 <see cref="P:System.Drawing.RectangleF.Width" /> 或 <see cref="P:System.Drawing.RectangleF.Height" /> 属性 <see cref="T:System.Drawing.RectangleF" /> 值为零。
+            </summary>
+      <returns>
+              此属性返回 <see langword="true" /> 如果 <see cref="P:System.Drawing.RectangleF.Width" /> 或 <see cref="P:System.Drawing.RectangleF.Height" /> 属性 <see cref="T:System.Drawing.RectangleF" /> 值为零; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.RectangleF.Left">
+      <summary>
+              获取此 <see cref="T:System.Drawing.RectangleF" /> 结构左边缘的 x 坐标。
+            </summary>
+      <returns>
+              此 <see cref="T:System.Drawing.RectangleF" /> 结构左边缘的 x 坐标。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.RectangleF.Location">
+      <summary>
+              获取或设置此 <see cref="T:System.Drawing.RectangleF" /> 结构左上角的坐标。
+            </summary>
+      <returns>
+        <see cref="T:System.Drawing.PointF" />，它表示此 <see cref="T:System.Drawing.RectangleF" /> 结构的左上角。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.RectangleF.Offset(System.Drawing.PointF)">
+      <summary>
+              将此矩形的位置调整指定的量。
+            </summary>
+      <param name="pos">
+                该位置的偏移量。
+              </param>
+    </member>
+    <member name="M:System.Drawing.RectangleF.Offset(System.Single,System.Single)">
+      <summary>
+              将此矩形的位置调整指定的量。
+            </summary>
+      <param name="x">
+                该位置的水平偏移量。
+              </param>
+      <param name="y">
+                该位置的垂直偏移量。
+              </param>
+    </member>
+    <member name="M:System.Drawing.RectangleF.op_Equality(System.Drawing.RectangleF,System.Drawing.RectangleF)">
+      <summary>
+              测试两个 <see cref="T:System.Drawing.RectangleF" /> 结构的位置和大小是否相同。
+            </summary>
+      <param name="left">
+                相等运算符左侧的 <see cref="T:System.Drawing.RectangleF" /> 结构。
+              </param>
+      <param name="right">
+                相等运算符右侧的 <see cref="T:System.Drawing.RectangleF" /> 结构。
+              </param>
+      <returns>
+              此运算符可返回 <see langword="true" /> 如果两个指定 <see cref="T:System.Drawing.RectangleF" /> 结构具有相等 <see cref="P:System.Drawing.RectangleF.X" />, ，<see cref="P:System.Drawing.RectangleF.Y" />, ，<see cref="P:System.Drawing.RectangleF.Width" />, ，和 <see cref="P:System.Drawing.RectangleF.Height" /> 属性。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.RectangleF.op_Implicit(System.Drawing.Rectangle)~System.Drawing.RectangleF">
+      <summary>
+              将指定 <see cref="T:System.Drawing.Rectangle" /> 结构 <see cref="T:System.Drawing.RectangleF" /> 结构。
+            </summary>
+      <param name="r">
+        <see cref="T:System.Drawing.Rectangle" /> 要转换的结构。
+              </param>
+      <returns>
+        <see cref="T:System.Drawing.RectangleF" /> 结构，它是从指定转换 <see cref="T:System.Drawing.Rectangle" /> 结构。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.RectangleF.op_Inequality(System.Drawing.RectangleF,System.Drawing.RectangleF)">
+      <summary>
+              测试两个 <see cref="T:System.Drawing.RectangleF" /> 结构的位置或大小是否不同。
+            </summary>
+      <param name="left">
+                不等运算符左侧的 <see cref="T:System.Drawing.RectangleF" /> 结构。
+              </param>
+      <param name="right">
+                不等运算符右侧的 <see cref="T:System.Drawing.RectangleF" /> 结构。
+              </param>
+      <returns>
+              此运算符可返回 <see langword="true" /> 如果任一 <see cref="P:System.Drawing.RectangleF.X" /> , ，<see cref="P:System.Drawing.RectangleF.Y" />, ，<see cref="P:System.Drawing.RectangleF.Width" />, ，或 <see cref="P:System.Drawing.RectangleF.Height" /> 的两个属性 <see cref="T:System.Drawing.Rectangle" /> 结构是否不相等; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.RectangleF.Right">
+      <summary>
+              获取是之和的 x 坐标 <see cref="P:System.Drawing.RectangleF.X" /> 和 <see cref="P:System.Drawing.RectangleF.Width" /> 此 <see cref="T:System.Drawing.RectangleF" /> 结构。
+            </summary>
+      <returns>
+              之和的 x 坐标 <see cref="P:System.Drawing.RectangleF.X" /> 和 <see cref="P:System.Drawing.RectangleF.Width" /> 此 <see cref="T:System.Drawing.RectangleF" /> 结构。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.RectangleF.Size">
+      <summary>
+              获取或设置此 <see cref="T:System.Drawing.RectangleF" /> 的大小。
+            </summary>
+      <returns>
+        <see cref="T:System.Drawing.SizeF" />，它表示此 <see cref="T:System.Drawing.RectangleF" /> 结构的宽度和高度。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.RectangleF.Top">
+      <summary>
+              获取此 <see cref="T:System.Drawing.RectangleF" /> 结构上边缘的 y 坐标。
+            </summary>
+      <returns>
+              此 <see cref="T:System.Drawing.RectangleF" /> 结构上边缘的 y 坐标。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.RectangleF.ToString">
+      <summary>
+              将转换 <see langword="Location" /> 和 <see cref="T:System.Drawing.Size" /> 此 <see cref="T:System.Drawing.RectangleF" /> 到用户可读字符串。
+            </summary>
+      <returns>
+              一个字符串，包含位置、 宽度和高度这 <see cref="T:System.Drawing.RectangleF" /> 结构。
+               例如，"{X = 20，Y = 20，Width = 100，Height = 50}"。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.RectangleF.Union(System.Drawing.RectangleF,System.Drawing.RectangleF)">
+      <summary>
+              创建可以包含两个形成并集的两个矩形的最小可能第三个矩形。
+            </summary>
+      <param name="a">
+                要合并的矩形。
+              </param>
+      <param name="b">
+                要合并的矩形。
+              </param>
+      <returns>
+              第三个 <see cref="T:System.Drawing.RectangleF" /> 结构，其中包含这两个形成并集的两个矩形。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.RectangleF.Width">
+      <summary>
+              获取或设置此 <see cref="T:System.Drawing.RectangleF" /> 结构的宽度。
+            </summary>
+      <returns>
+              此 <see cref="T:System.Drawing.RectangleF" /> 结构的宽度。
+               默认值为 0。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.RectangleF.X">
+      <summary>
+              获取或设置此 <see cref="T:System.Drawing.RectangleF" /> 结构左上角的 x 坐标。
+            </summary>
+      <returns>
+              此 <see cref="T:System.Drawing.RectangleF" /> 结构左上角的 x 坐标。
+               默认值为 0。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.RectangleF.Y">
+      <summary>
+              获取或设置此 <see cref="T:System.Drawing.RectangleF" /> 结构左上角的 y 坐标。
+            </summary>
+      <returns>
+              此 <see cref="T:System.Drawing.RectangleF" /> 结构左上角的 y 坐标。
+               默认值为 0。
+            </returns>
+    </member>
+    <member name="T:System.Drawing.Size">
+      <summary>
+              存储的整数，指定一个有序的对 <see cref="P:System.Drawing.Size.Height" /> 和 <see cref="P:System.Drawing.Size.Width" />。
+            </summary>
+    </member>
+    <member name="M:System.Drawing.Size.#ctor(System.Drawing.Point)">
+      <summary>
+              新实例初始化 <see cref="T:System.Drawing.Size" /> 从指定的结构 <see cref="T:System.Drawing.Point" /> 结构。
+            </summary>
+      <param name="pt">
+        <see cref="T:System.Drawing.Point" /> 结构，可用于初始化此 <see cref="T:System.Drawing.Size" /> 结构。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Size.#ctor(System.Int32,System.Int32)">
+      <summary>
+              新实例初始化 <see cref="T:System.Drawing.Size" /> 根据指定的维度的结构。
+            </summary>
+      <param name="width">
+                新的宽度分量 <see cref="T:System.Drawing.Size" />。
+              </param>
+      <param name="height">
+                新的高度分量 <see cref="T:System.Drawing.Size" />。
+              </param>
+    </member>
+    <member name="M:System.Drawing.Size.Add(System.Drawing.Size,System.Drawing.Size)">
+      <summary>
+              添加的宽度和高度的其中一个 <see cref="T:System.Drawing.Size" /> 结构的宽度和高度与另一个 <see cref="T:System.Drawing.Size" /> 结构。
+            </summary>
+      <param name="sz1">
+                第一个 <see cref="T:System.Drawing.Size" /> 可添加结构。
+              </param>
+      <param name="sz2">
+                第二个 <see cref="T:System.Drawing.Size" /> 可添加结构。
+              </param>
+      <returns>
+              一个 <see cref="T:System.Drawing.Size" /> 结构，它是加法运算的结果。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Size.Ceiling(System.Drawing.SizeF)">
+      <summary>
+              将指定 <see cref="T:System.Drawing.SizeF" /> 结构 <see cref="T:System.Drawing.Size" /> 按舍入的值显示结构 <see cref="T:System.Drawing.Size" /> 到下一个较大的整数值的结构。
+            </summary>
+      <param name="value">
+        <see cref="T:System.Drawing.SizeF" /> 要转换的结构。
+              </param>
+      <returns>
+        <see cref="T:System.Drawing.Size" /> 此方法将转换为结构。
+            </returns>
+    </member>
+    <member name="F:System.Drawing.Size.Empty">
+      <summary>
+              获取 <see cref="T:System.Drawing.Size" /> 结构具有 <see cref="P:System.Drawing.Size.Height" /> 和 <see cref="P:System.Drawing.Size.Width" /> 值为 0。
+            </summary>
+      <returns>
+              一个 <see cref="T:System.Drawing.Size" /> 具有 <see cref="P:System.Drawing.Size.Height" /> 和 <see cref="P:System.Drawing.Size.Width" /> 值为 0。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Size.Equals(System.Drawing.Size)">
+      <param name="other">
+      </param>
+      <returns>
+      </returns>
+    </member>
+    <member name="M:System.Drawing.Size.Equals(System.Object)">
+      <summary>
+              测试以确定指定的对象是否为 <see cref="T:System.Drawing.Size" /> 具有与此相同的维度的结构 <see cref="T:System.Drawing.Size" /> 结构。
+            </summary>
+      <param name="obj">
+                要测试的 <see cref="T:System.Object" />。
+              </param>
+      <returns>
+        <see langword="true" /> 如果 <paramref name="obj" /> 是 <see cref="T:System.Drawing.Size" /> 具有相同的宽度和高度与此 <see cref="T:System.Drawing.Size" />; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Size.GetHashCode">
+      <summary>
+              返回此哈希代码 <see cref="T:System.Drawing.Size" /> 结构。
+            </summary>
+      <returns>
+              一个整数值，指定此哈希值 <see cref="T:System.Drawing.Size" /> 结构。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Size.Height">
+      <summary>
+              获取或设置的垂直分量 <see cref="T:System.Drawing.Size" /> 结构。
+            </summary>
+      <returns>
+              垂直分量 <see cref="T:System.Drawing.Size" /> 结构，通常以像素为单位进行度量。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Size.IsEmpty">
+      <summary>
+              测试是否这 <see cref="T:System.Drawing.Size" /> 结构的宽度和高度均为 0。
+            </summary>
+      <returns>
+              此属性返回 <see langword="true" /> 时这 <see cref="T:System.Drawing.Size" /> 结构的宽度和高度均为 0; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Size.op_Addition(System.Drawing.Size,System.Drawing.Size)">
+      <summary>
+              添加的宽度和高度的其中一个 <see cref="T:System.Drawing.Size" /> 结构的宽度和高度与另一个 <see cref="T:System.Drawing.Size" /> 结构。
+            </summary>
+      <param name="sz1">
+                第一个 <see cref="T:System.Drawing.Size" /> 添加。
+              </param>
+      <param name="sz2">
+                第二个 <see cref="T:System.Drawing.Size" /> 添加。
+              </param>
+      <returns>
+              一个 <see cref="T:System.Drawing.Size" /> 结构，它是加法运算的结果。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Size.op_Equality(System.Drawing.Size,System.Drawing.Size)">
+      <summary>
+              测试两个 <see cref="T:System.Drawing.Size" /> 结构是否相等。
+            </summary>
+      <param name="sz1">
+        <see cref="T:System.Drawing.Size" /> 相等运算符左侧的结构。
+              </param>
+      <param name="sz2">
+        <see cref="T:System.Drawing.Size" /> 相等运算符右侧的结构。
+              </param>
+      <returns>
+        <see langword="true" /> 如果 <paramref name="sz1" /> 和 <paramref name="sz2" /> 具有相等宽度和高度; 否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Size.op_Explicit(System.Drawing.Size)~System.Drawing.Point">
+      <summary>
+              将指定 <see cref="T:System.Drawing.Size" /> 结构 <see cref="T:System.Drawing.Point" /> 结构。
+            </summary>
+      <param name="size">
+        <see cref="T:System.Drawing.Size" /> 要转换的结构。
+              </param>
+      <returns>
+        <see cref="T:System.Drawing.Point" /> 此运算符将转换为结构。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Size.op_Implicit(System.Drawing.Size)~System.Drawing.SizeF">
+      <summary>
+              将指定 <see cref="T:System.Drawing.Size" /> 结构 <see cref="T:System.Drawing.SizeF" /> 结构。
+            </summary>
+      <param name="p">
+        <see cref="T:System.Drawing.Size" /> 要转换的结构。
+              </param>
+      <returns>
+        <see cref="T:System.Drawing.SizeF" /> 此运算符将转换为结构。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Size.op_Inequality(System.Drawing.Size,System.Drawing.Size)">
+      <summary>
+              测试两个 <see cref="T:System.Drawing.Size" /> 结构是否不同。
+            </summary>
+      <param name="sz1">
+        <see cref="T:System.Drawing.Size" /> 不等运算符左侧的结构。
+              </param>
+      <param name="sz2">
+        <see cref="T:System.Drawing.Size" /> 不等运算符右侧的结构。
+              </param>
+      <returns>
+        <see langword="true" /> 如果 <paramref name="sz1" /> 和 <paramref name="sz2" /> 不同的宽度或高度; <see langword="false" /> 如果 <paramref name="sz1" /> 和 <paramref name="sz2" /> 是否相等。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Size.op_Subtraction(System.Drawing.Size,System.Drawing.Size)">
+      <summary>
+              减去的宽度和高度的其中一个 <see cref="T:System.Drawing.Size" /> 结构的宽度和高度与另一个从 <see cref="T:System.Drawing.Size" /> 结构。
+            </summary>
+      <param name="sz1">
+        <see cref="T:System.Drawing.Size" /> 减法运算符左侧的结构。
+              </param>
+      <param name="sz2">
+        <see cref="T:System.Drawing.Size" /> 减法运算符右侧的结构。
+              </param>
+      <returns>
+              一个 <see cref="T:System.Drawing.Size" /> 结构，它是减法运算的结果。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Size.Round(System.Drawing.SizeF)">
+      <summary>
+              将指定 <see cref="T:System.Drawing.SizeF" /> 结构 <see cref="T:System.Drawing.Size" /> 按舍入的值显示结构 <see cref="T:System.Drawing.SizeF" /> 到最接近的整数值的结构。
+            </summary>
+      <param name="value">
+        <see cref="T:System.Drawing.SizeF" /> 要转换的结构。
+              </param>
+      <returns>
+        <see cref="T:System.Drawing.Size" /> 此方法将转换为结构。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Size.Subtract(System.Drawing.Size,System.Drawing.Size)">
+      <summary>
+              减去的宽度和高度的其中一个 <see cref="T:System.Drawing.Size" /> 从宽度和高度与另一个结构 <see cref="T:System.Drawing.Size" /> 结构。
+            </summary>
+      <param name="sz1">
+        <see cref="T:System.Drawing.Size" /> 减法运算符左侧的结构。
+              </param>
+      <param name="sz2">
+        <see cref="T:System.Drawing.Size" /> 减法运算符右侧的结构。
+              </param>
+      <returns>
+              一个 <see cref="T:System.Drawing.Size" /> 结构，它是减法运算的结果。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Size.ToString">
+      <summary>
+              创建一个用户可读的字符串，表示此 <see cref="T:System.Drawing.Size" /> 结构。
+            </summary>
+      <returns>
+              表示此 <see cref="T:System.Drawing.Size" /> 的字符串。
+            </returns>
+    </member>
+    <member name="M:System.Drawing.Size.Truncate(System.Drawing.SizeF)">
+      <summary>
+              将指定 <see cref="T:System.Drawing.SizeF" /> 结构 <see cref="T:System.Drawing.Size" /> 通过截断的值的结构 <see cref="T:System.Drawing.SizeF" /> 到下一个较低的整数值的结构。
+            </summary>
+      <param name="value">
+        <see cref="T:System.Drawing.SizeF" /> 要转换的结构。
+              </param>
+      <returns>
+        <see cref="T:System.Drawing.Size" /> 此方法将转换为结构。
+            </returns>
+    </member>
+    <member name="P:System.Drawing.Size.Width">
+      <summary>
+              获取或设置此水平组件<see cref="T:System.Drawing.Size" />结构。
+            </summary>
+      <returns>
+              此水平组件<see cref="T:System.Drawing.Size" />结构，通常以像素度量。
+            </returns>
+    </member>
+  </members>
+</doc>

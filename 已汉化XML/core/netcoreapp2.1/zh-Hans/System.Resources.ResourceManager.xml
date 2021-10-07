@@ -1,0 +1,902 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>System.Resources.ResourceManager</name>
+  </assembly>
+  <members>
+    <member name="T:System.Resources.IResourceReader">
+      <summary>
+              提供用于从资源文件中读取数据的基本功能。
+            </summary>
+    </member>
+    <member name="M:System.Resources.IResourceReader.Close">
+      <summary>
+              在释放任何与之关联的资源后关闭资源读取器。
+            </summary>
+    </member>
+    <member name="M:System.Resources.IResourceReader.GetEnumerator">
+      <summary>
+              返回此读取器的资源的字典枚举数。
+            </summary>
+      <returns>
+              此读取器的资源字典枚举数。
+            </returns>
+    </member>
+    <member name="T:System.Resources.MissingManifestResourceException">
+      <summary>
+              如果主程序集不包含非特定区域性的资源，并且适当的附属程序集丢失，则引发异常。
+            </summary>
+    </member>
+    <member name="M:System.Resources.MissingManifestResourceException.#ctor">
+      <summary>
+              使用默认属性初始化 <see cref="T:System.Resources.MissingManifestResourceException" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Resources.MissingManifestResourceException.#ctor(System.String)">
+      <summary>
+              使用指定的错误消息初始化 <see cref="T:System.Resources.MissingManifestResourceException" /> 类的新实例。
+            </summary>
+      <param name="message">
+                解释异常原因的错误消息。
+              </param>
+    </member>
+    <member name="M:System.Resources.MissingManifestResourceException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+              用序列化数据初始化 <see cref="T:System.Resources.MissingManifestResourceException" /> 类的新实例。
+            </summary>
+      <param name="info">
+                承载序列化对象数据的对象。
+              </param>
+      <param name="context">
+                有关源或目标的异常的上下文信息。
+              </param>
+    </member>
+    <member name="M:System.Resources.MissingManifestResourceException.#ctor(System.String,System.Exception)">
+      <summary>
+              使用指定的错误消息和对作为此异常原因的内部异常的引用来初始化 <see cref="T:System.Resources.MissingManifestResourceException" /> 类的新实例。
+            </summary>
+      <param name="message">
+                解释异常原因的错误消息。
+              </param>
+      <param name="inner">
+                导致当前异常的异常。
+                 如果 <paramref name="inner" /> 参数不为 <see langword="null" />，则当前异常将在处理内部异常的 <see langword="catch" /> 块中引发。
+              </param>
+    </member>
+    <member name="T:System.Resources.MissingSatelliteAssemblyException">
+      <summary>
+              缺少默认区域性的资源的附属程序集时引发的异常。
+            </summary>
+    </member>
+    <member name="M:System.Resources.MissingSatelliteAssemblyException.#ctor">
+      <summary>
+              使用默认属性初始化 <see cref="T:System.Resources.MissingSatelliteAssemblyException" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Resources.MissingSatelliteAssemblyException.#ctor(System.String)">
+      <summary>
+              使用指定的错误消息初始化 <see cref="T:System.Resources.MissingSatelliteAssemblyException" /> 类的新实例。
+            </summary>
+      <param name="message">
+                解释异常原因的错误消息。
+              </param>
+    </member>
+    <member name="M:System.Resources.MissingSatelliteAssemblyException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>
+              用序列化数据初始化 <see cref="T:System.Resources.MissingSatelliteAssemblyException" /> 类的新实例。
+            </summary>
+      <param name="info">
+                承载序列化对象数据的对象。
+              </param>
+      <param name="context">
+                有关源或目标的异常的上下文信息。
+              </param>
+    </member>
+    <member name="M:System.Resources.MissingSatelliteAssemblyException.#ctor(System.String,System.Exception)">
+      <summary>
+              使用指定的错误消息和对作为此异常原因的内部异常的引用来初始化 <see cref="T:System.Resources.MissingSatelliteAssemblyException" /> 类的新实例。
+            </summary>
+      <param name="message">
+                解释异常原因的错误消息。
+              </param>
+      <param name="inner">
+                导致当前异常的异常。
+                 如果 <paramref name="inner" /> 参数不为 <see langword="null" />，则当前异常将在处理内部异常的 <see langword="catch" /> 块中引发。
+              </param>
+    </member>
+    <member name="M:System.Resources.MissingSatelliteAssemblyException.#ctor(System.String,System.String)">
+      <summary>
+              新实例初始化 <see cref="T:System.Resources.MissingSatelliteAssemblyException" /> 使用指定的错误消息和一个非特定区域性的名称。
+            </summary>
+      <param name="message">
+                解释异常原因的错误消息。
+              </param>
+      <param name="cultureName">
+                非特定区域性的名称。
+              </param>
+    </member>
+    <member name="P:System.Resources.MissingSatelliteAssemblyException.CultureName">
+      <summary>
+              获取默认区域性的名称。
+            </summary>
+      <returns>
+              默认区域性的名称。
+            </returns>
+    </member>
+    <member name="T:System.Resources.NeutralResourcesLanguageAttribute">
+      <summary>
+              通知应用程序的默认区域性的资源管理器。
+               此类不能被继承。
+            </summary>
+    </member>
+    <member name="M:System.Resources.NeutralResourcesLanguageAttribute.#ctor(System.String)">
+      <summary>
+              初始化 <see cref="T:System.Resources.NeutralResourcesLanguageAttribute" /> 类的新实例。
+            </summary>
+      <param name="cultureName">
+                在编写当前程序集的非特定语言资源的区域性的名称。
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="cultureName" /> 参数为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Resources.NeutralResourcesLanguageAttribute.#ctor(System.String,System.Resources.UltimateResourceFallbackLocation)">
+      <summary>
+              新实例初始化 <see cref="T:System.Resources.NeutralResourcesLanguageAttribute" /> 类，具有指定的最终资源回退位置。
+            </summary>
+      <param name="cultureName">
+                在编写当前程序集的非特定语言资源的区域性的名称。
+              </param>
+      <param name="location">
+                指示要从中检索非特定回退资源的位置的枚举值之一。
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="cultureName" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="location" /> 不是成员的 <see cref="T:System.Resources.UltimateResourceFallbackLocation" />。
+                </exception>
+    </member>
+    <member name="P:System.Resources.NeutralResourcesLanguageAttribute.CultureName">
+      <summary>
+              获取为区域性名称。
+            </summary>
+      <returns>
+              主程序集的默认区域性名称。
+            </returns>
+    </member>
+    <member name="P:System.Resources.NeutralResourcesLanguageAttribute.Location">
+      <summary>
+              获取 <see cref="T:System.Resources.ResourceManager" /> 类的位置，用于通过资源回退进程检索非特定语言资源。
+            </summary>
+      <returns>
+              其中一个枚举值，指示要从其检索非特定语言资源的位置（主程序集或附属程序集）。
+            </returns>
+    </member>
+    <member name="T:System.Resources.ResourceManager">
+      <summary>
+              表示资源管理器，其可在运行时提供对于特定文化资源的便利访问
+            
+              安全说明：在此类不受信任的数据中调用方法存在安全风险。
+               仅在受信任的数据类中调用方法。
+               有关详细信息，请参见不受信任的数据的安全风险。
+            </summary>
+    </member>
+    <member name="M:System.Resources.ResourceManager.#ctor">
+      <summary>
+              使用默认值初始化 <see cref="T:System.Resources.ResourceManager" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Resources.ResourceManager.#ctor(System.Type)">
+      <summary>
+              它根据指定的对象中的信息在附属程序集内查找资源来初始化 <see cref="T:System.Resources.ResourceManager" /> 类的新实例。
+            </summary>
+      <param name="resourceSource">
+                一个类型，从资源管理器中派生所有用于查找 .resources 文件的信息。
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="resourceSource" /> 参数为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Resources.ResourceManager.#ctor(System.String,System.Reflection.Assembly)">
+      <summary>
+              初始化 <see cref="T:System.Resources.ResourceManager" /> 类的新实例，该实例在给定的程序集中查找从指定根名称导出的文件中包含的资源。
+            </summary>
+      <param name="baseName">
+                资源文件的根名称，没有其扩展名但是包含所有完全限定的命名空间名称。
+                 例如，名为 MyApplication.MyResource.en-US.resources 的资源文件的根名称为 MyApplication.MyResource。
+              </param>
+      <param name="assembly">
+                资源的主程序集。
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="baseName" /> 或 <paramref name="assembly" /> 参数为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Resources.ResourceManager.#ctor(System.String,System.Reflection.Assembly,System.Type)">
+      <summary>
+              初始化使用指定 <see cref="T:System.Resources.ResourceSet" /> 的 <see cref="T:System.Resources.ResourceManager" /> 类的新实例，该实例在给定的程序集中的指定根名称类的文件中查找资源。
+            </summary>
+      <param name="baseName">
+                资源文件的根名称，没有其扩展名但是包含所有完全限定的命名空间名称。
+                 例如，名为 MyApplication.MyResource.en-US.resources 的资源文件的根名称为 MyApplication.MyResource。
+              </param>
+      <param name="assembly">
+                资源的主程序集。
+              </param>
+      <param name="usingResourceSet">
+                要使用的自定义 <see cref="T:System.Resources.ResourceSet" /> 的类型。
+                 如果为 <see langword="null" />，则使用默认的运行时 <see cref="T:System.Resources.ResourceSet" /> 对象。
+              </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="usingResourceset" /> 不是派生的类 <see cref="T:System.Resources.ResourceSet" />。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="baseName" /> 或 <paramref name="assembly" /> 参数为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="P:System.Resources.ResourceManager.BaseName">
+      <summary>
+              获取 <see cref="T:System.Resources.ResourceManager" /> 从其中搜索资源的资源文件的根名称。
+            </summary>
+      <returns>
+        <see cref="T:System.Resources.ResourceManager" /> 从其中搜索资源的资源文件的根名称。
+            </returns>
+    </member>
+    <member name="M:System.Resources.ResourceManager.CreateFileBasedResourceManager(System.String,System.String,System.Type)">
+      <summary>
+              返回一个 <see cref="T:System.Resources.ResourceManager" /> 对象，它在特定的目录中而不在资源的程序集清单。
+            </summary>
+      <param name="baseName">
+                资源的根名称。
+                 例如，名为“MyResource.en-US.resources”的资源文件的根名称为“MyResource”。
+              </param>
+      <param name="resourceDir">
+                要在其中搜索资源的目录的名称。
+                <paramref name="resourceDir" /> 可以是绝对路径或应用程序目录中的相对路径。
+              </param>
+      <param name="usingResourceSet">
+                要使用的自定义 <see cref="T:System.Resources.ResourceSet" /> 的类型。
+                 如果为 <see langword="null" />，则使用默认的运行时 <see cref="T:System.Resources.ResourceSet" /> 对象。
+              </param>
+      <returns>
+              搜索指定目录而不是资源的程序集清单的资源管理器的新实例。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="baseName" /> 或 <paramref name="resourceDir" /> 参数为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="P:System.Resources.ResourceManager.FallbackLocation">
+      <summary>
+              获取或设置检索默认回退资源的位置。
+            </summary>
+      <returns>
+              指定资源管理器能查找回退资源的位置的某个枚举值。
+            </returns>
+    </member>
+    <member name="M:System.Resources.ResourceManager.GetNeutralResourcesLanguage(System.Reflection.Assembly)">
+      <summary>
+              通过检索指定程序及上的 <see cref="T:System.Resources.NeutralResourcesLanguageAttribute" /> 特性为主程序集的默认资源返回区域性特定的信息。
+            </summary>
+      <param name="a">
+                要返回其的区域性特定的信息的程序集。
+              </param>
+      <returns>
+              如果找到的话，则为 <see cref="T:System.Resources.NeutralResourcesLanguageAttribute" /> 中的特性；否则为固定区域性性。
+            </returns>
+    </member>
+    <member name="M:System.Resources.ResourceManager.GetObject(System.String)">
+      <summary>
+              返回指定的非字符串资源的值。
+            </summary>
+      <param name="name">
+                要获取的资源名。
+              </param>
+      <returns>
+              针对调用方的当前区域性设置而本地化的资源的值。
+               如果相应的资源集存在，但无法找到 <paramref name="name" />，该方法返回 <see langword="null" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="name" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.Resources.MissingManifestResourceException">
+                  已找到的本地化资源没有可用集，并且没有默认区域性的资源。
+                   有关如何处理此异常的信息，请参阅中的"处理 MissingManifestResourceException 和 MissingSatelliteAssemblyException 异常"部分 <see cref="T:System.Resources.ResourceManager" /> 类主题。
+                </exception>
+      <exception cref="T:System.Resources.MissingSatelliteAssemblyException">
+                  找不到附属程序集中位于默认区域性的资源。
+                   有关如何处理此异常的信息，请参阅中的"处理 MissingManifestResourceException 和 MissingSatelliteAssemblyException 异常"部分 <see cref="T:System.Resources.ResourceManager" /> 类主题。
+                </exception>
+    </member>
+    <member name="M:System.Resources.ResourceManager.GetObject(System.String,System.Globalization.CultureInfo)">
+      <summary>
+              获取为指定区域性本地化的指定非字符串资源的值。
+            </summary>
+      <param name="name">
+                要获取的资源名。
+              </param>
+      <param name="culture">
+                要针对其本地化资源的区域性。
+                 如果资源未本地化为此区域性，则资源管理器使用回退规则找到适当的资源。
+              
+                如果此值为 <see langword="null" />，则 <see cref="T:System.Globalization.CultureInfo" /> 对象使用 <see cref="P:System.Globalization.CultureInfo.CurrentUICulture" /> 属性来获取。
+              </param>
+      <returns>
+              为指定区域性本地化的资源的值。
+               如果相应的资源集存在，但无法找到 <paramref name="name" />，该方法返回 <see langword="null" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="name" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.Resources.MissingManifestResourceException">
+                  没有可用的资源集具有已找到，并且没有默认区域性的资源。
+                   有关如何处理此异常的信息，请参阅中的"处理 MissingManifestResourceException 和 MissingSatelliteAssemblyException 异常"部分 <see cref="T:System.Resources.ResourceManager" /> 类主题。
+                </exception>
+      <exception cref="T:System.Resources.MissingSatelliteAssemblyException">
+                  找不到附属程序集中位于默认区域性的资源。
+                   有关如何处理此异常的信息，请参阅中的"处理 MissingManifestResourceException 和 MissingSatelliteAssemblyException 异常"部分 <see cref="T:System.Resources.ResourceManager" /> 类主题。
+                </exception>
+    </member>
+    <member name="M:System.Resources.ResourceManager.GetResourceFileName(System.Globalization.CultureInfo)">
+      <summary>
+              生成给定的 <see cref="T:System.Globalization.CultureInfo" /> 对象的资源文件的名称。
+            </summary>
+      <param name="culture">
+                构造资源文件名的区域性对象。
+              </param>
+      <returns>
+              可用于给定的 <see cref="T:System.Globalization.CultureInfo" /> 对象的资源文件的名称。
+            </returns>
+    </member>
+    <member name="M:System.Resources.ResourceManager.GetResourceSet(System.Globalization.CultureInfo,System.Boolean,System.Boolean)">
+      <summary>
+              检索特定区域性的资源集合。
+            </summary>
+      <param name="culture">
+                将要检索资源的区域性。
+              </param>
+      <param name="createIfNotExists">
+                如果尚未加载，<see langword="true" /> 要加载资源集；否则为 <see langword="false" />。
+              </param>
+      <param name="tryParents">
+        <see langword="true" /> 表示使用资源回退加载相应资源（如果找不到资源）；<see langword="false" /> 表示绕过资源回退进程。
+                 （请参见“备注”部分。）
+              </param>
+      <returns>
+              指定区域性的资源集。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="culture" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.Resources.MissingManifestResourceException">
+        <paramref name="tryParents" /> 是 <see langword="true" />, 、 已找到没有可用的资源集，并且没有默认区域性的资源。
+                </exception>
+    </member>
+    <member name="M:System.Resources.ResourceManager.GetSatelliteContractVersion(System.Reflection.Assembly)">
+      <summary>
+              返回给定程序集中的 <see cref="T:System.Resources.SatelliteContractVersionAttribute" /> 特性指定的版本。
+            </summary>
+      <param name="a">
+                要检查 <see cref="T:System.Resources.SatelliteContractVersionAttribute" /> 特性的程序集。
+              </param>
+      <returns>
+              给定程序集的附属版本，如果未找到任何版本，则为 <see langword="null" />。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+        <see cref="T:System.Version" /> 在程序集中找到 <paramref name="a" /> 无效。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="a" /> 为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Resources.ResourceManager.GetStream(System.String)">
+      <summary>
+              从指定资源返回非托管内存流对象。
+            </summary>
+      <param name="name">
+                资源的名称。
+              </param>
+      <returns>
+              表示资源的非托管内存流对象。
+            </returns>
+      <exception cref="T:System.InvalidOperationException">
+                  指定资源的值不是 <see cref="T:System.IO.MemoryStream" /> 对象。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="name" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.Resources.MissingManifestResourceException">
+                  找到可用的资源集，并没有默认的资源。
+                   有关如何处理此异常的信息，请参阅中的"处理 MissingManifestResourceException 和 MissingSatelliteAssemblyException 异常"部分 <see cref="T:System.Resources.ResourceManager" /> 类主题。
+                </exception>
+      <exception cref="T:System.Resources.MissingSatelliteAssemblyException">
+                  找不到附属程序集中位于默认区域性的资源。
+                   有关如何处理此异常的信息，请参阅中的"处理 MissingManifestResourceException 和 MissingSatelliteAssemblyException 异常"部分 <see cref="T:System.Resources.ResourceManager" /> 类主题。
+                </exception>
+    </member>
+    <member name="M:System.Resources.ResourceManager.GetStream(System.String,System.Globalization.CultureInfo)">
+      <summary>
+              使用指定的区域性从指定的资源返回非托管内存流对象。
+            </summary>
+      <param name="name">
+                资源的名称。
+              </param>
+      <param name="culture">
+                指定要用于资源查找的区域性的对象。
+                 如果 <paramref name="culture" /> 为 <see langword="null" />，则使用当前线程的区域性。
+              </param>
+      <returns>
+              表示资源的非托管内存流对象。
+            </returns>
+      <exception cref="T:System.InvalidOperationException">
+                  指定资源的值不是 <see cref="T:System.IO.MemoryStream" /> 对象。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="name" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.Resources.MissingManifestResourceException">
+                  找到可用的资源集，并没有默认的资源。
+                   有关如何处理此异常的信息，请参阅中的"处理 MissingManifestResourceException 和 MissingSatelliteAssemblyException 异常"部分 <see cref="T:System.Resources.ResourceManager" /> 类主题。
+                </exception>
+      <exception cref="T:System.Resources.MissingSatelliteAssemblyException">
+                  找不到附属程序集中位于默认区域性的资源。
+                   有关如何处理此异常的信息，请参阅中的"处理 MissingManifestResourceException 和 MissingSatelliteAssemblyException 异常"部分 <see cref="T:System.Resources.ResourceManager" /> 类主题。
+                </exception>
+    </member>
+    <member name="M:System.Resources.ResourceManager.GetString(System.String)">
+      <summary>
+              返回指定的字符串资源的值。
+            </summary>
+      <param name="name">
+                要检索的资源的名称。
+              </param>
+      <returns>
+              为调用方的当前 UI 区域性本地化的资源的值，如果在资源集中找不到 <paramref name="name" />，则为 <see langword="null" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="name" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+                  指定资源的值不是字符串。
+                </exception>
+      <exception cref="T:System.Resources.MissingManifestResourceException">
+                  已找到没有可用的资源集，并没有将默认区域性的资源。
+                   有关如何处理此异常的信息，请参阅中的"处理 MissingManifestResourceException 和 MissingSatelliteAssemblyException 异常"部分 <see cref="T:System.Resources.ResourceManager" /> 类主题。
+                </exception>
+      <exception cref="T:System.Resources.MissingSatelliteAssemblyException">
+                  找不到附属程序集中位于默认区域性的资源。
+                   有关如何处理此异常的信息，请参阅中的"处理 MissingManifestResourceException 和 MissingSatelliteAssemblyException 异常"部分 <see cref="T:System.Resources.ResourceManager" /> 类主题。
+                </exception>
+    </member>
+    <member name="M:System.Resources.ResourceManager.GetString(System.String,System.Globalization.CultureInfo)">
+      <summary>
+              返回为指定区域性本地化的字符串资源的值。
+            </summary>
+      <param name="name">
+                要检索的资源的名称。
+              </param>
+      <param name="culture">
+                一个对象，表示为其本地化资源的区域性。
+              </param>
+      <returns>
+              为指定区域性本地化的资源的值，如果在资源集中找不到 <paramref name="name" />，则为 <see langword="null" />。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="name" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+                  指定资源的值不是字符串。
+                </exception>
+      <exception cref="T:System.Resources.MissingManifestResourceException">
+                  已找到没有可用的资源集，并没有默认区域性的资源。
+                   有关如何处理此异常的信息，请参阅中的"处理 MissingManifestResourceException 和 MissingSatelliteAssemblyException 异常"部分 <see cref="T:System.Resources.ResourceManager" /> 类主题。
+                </exception>
+      <exception cref="T:System.Resources.MissingSatelliteAssemblyException">
+                  找不到附属程序集中位于默认区域性的资源。
+                   有关如何处理此异常的信息，请参阅中的"处理 MissingManifestResourceException 和 MissingSatelliteAssemblyException 异常"部分 <see cref="T:System.Resources.ResourceManager" /> 类主题。
+                </exception>
+    </member>
+    <member name="F:System.Resources.ResourceManager.HeaderVersionNumber">
+      <summary>
+               指定 <see cref="T:System.Resources.ResourceManager" /> 的当前实现可解释和产生的资源文件头的版本。
+            </summary>
+    </member>
+    <member name="P:System.Resources.ResourceManager.IgnoreCase">
+      <summary>
+              获取或设置值，该值指示资源管理器是否允许在 <see cref="M:System.Resources.ResourceManager.GetString(System.String)" /> 和 <see cref="M:System.Resources.ResourceManager.GetObject(System.String)" /> 方法中进行不区分大小写的资源查找。
+            </summary>
+      <returns>
+              要在资源查找过程中忽略大小写，则为 <see langword="true" />；否则为 <see langword="false" />。
+            </returns>
+    </member>
+    <member name="M:System.Resources.ResourceManager.InternalGetResourceSet(System.Globalization.CultureInfo,System.Boolean,System.Boolean)">
+      <summary>
+              提供用于查找资源集的实现。
+            </summary>
+      <param name="culture">
+                要查找的区域性对象。
+              </param>
+      <param name="createIfNotExists">
+                如果尚未加载，<see langword="true" /> 要加载资源集；否则为 <see langword="false" />。
+              </param>
+      <param name="tryParents">
+                要在无法加载资源集时检查父 <see cref="T:System.Globalization.CultureInfo" /> 对象，则为 <see langword="true" />；否则为 <see langword="false" />。
+              </param>
+      <returns>
+              指定的资源集。
+            </returns>
+      <exception cref="T:System.Resources.MissingManifestResourceException">
+                  主程序集不包含需查找资源的.resources 文件。
+                </exception>
+      <exception cref="T:System.ExecutionEngineException">
+                  在运行时没有出现内部错误。
+                </exception>
+      <exception cref="T:System.Resources.MissingSatelliteAssemblyException">
+                  与相关联的附属程序集 <paramref name="culture" /> 找不到。
+                </exception>
+    </member>
+    <member name="F:System.Resources.ResourceManager.MagicNumber">
+      <summary>
+              保留用于标识资源文件的数字。
+            </summary>
+    </member>
+    <member name="F:System.Resources.ResourceManager.MainAssembly">
+      <summary>
+              指定包含资源的主要程序集。
+            </summary>
+    </member>
+    <member name="M:System.Resources.ResourceManager.ReleaseAllResources">
+      <summary>
+              告知资源管理对所有 <see cref="T:System.Resources.ResourceSet" /> 对象调用方法 <see cref="M:System.Resources.ResourceSet.Close" />，并释放所有资源。
+            </summary>
+    </member>
+    <member name="P:System.Resources.ResourceManager.ResourceSetType">
+      <summary>
+              获取资源管理器使用构造 <see cref="T:System.Resources.ResourceSet" /> 对象的资源设置对象的类型。
+            </summary>
+      <returns>
+              使用构造对象的资源管理器 <see cref="T:System.Resources.ResourceSet" /> 的设置的对象的资源类型。
+            </returns>
+    </member>
+    <member name="T:System.Resources.ResourceReader">
+      <summary>
+              通过读取顺序资源名称/值对枚举二进制资源 (.resources) 文件的资源。
+            
+              安全说明：在此类不受信任的数据中调用方法存在安全风险。
+               仅在受信任的数据类中调用方法。
+               有关详细信息，请参见不受信任的数据的安全风险。
+            </summary>
+    </member>
+    <member name="M:System.Resources.ResourceReader.#ctor(System.IO.Stream)">
+      <summary>
+              为指定的流初始化 <see cref="T:System.Resources.ResourceReader" /> 类的新实例。
+            </summary>
+      <param name="stream">
+                用于读取资源的输入流。
+              </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="stream" /> 参数不是可读。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="stream" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.IO.IOException">
+                  访问时发生 I/O 错误 <paramref name="stream" />。
+                </exception>
+    </member>
+    <member name="M:System.Resources.ResourceReader.#ctor(System.String)">
+      <summary>
+              为指定的资源文件初始化 <see cref="T:System.Resources.ResourceReader" /> 类的新实例。
+            </summary>
+      <param name="fileName">
+                要读取的源文件的路径及名称。
+                <paramref name="filename" /> 不区分大小写。
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="fileName" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.IO.FileNotFoundException">
+                  无法找到该文件。
+                </exception>
+      <exception cref="T:System.IO.IOException">
+                  发生了 I/O 错误。
+                </exception>
+      <exception cref="T:System.BadImageFormatException">
+                  资源文件具有无效的格式。
+                   例如，文件的长度可能为零。
+                </exception>
+    </member>
+    <member name="M:System.Resources.ResourceReader.Close">
+      <summary>
+              释放与此 <see cref="T:System.Resources.ResourceReader" /> 对象相关联的所有操作系统资源。
+            </summary>
+    </member>
+    <member name="M:System.Resources.ResourceReader.Dispose">
+      <summary>
+              释放 <see cref="T:System.Resources.ResourceReader" /> 类的当前实例所使用的所有资源。
+            </summary>
+    </member>
+    <member name="M:System.Resources.ResourceReader.GetEnumerator">
+      <summary>
+              返回此 <see cref="T:System.Resources.ResourceReader" /> 对象的枚举器。
+            </summary>
+      <returns>
+              此 <see cref="T:System.Resources.ResourceReader" /> 对象的枚举器。
+            </returns>
+      <exception cref="T:System.InvalidOperationException">
+                  读取器已关闭或释放，并且无法访问。
+                </exception>
+    </member>
+    <member name="M:System.Resources.ResourceReader.GetResourceData(System.String,System.String@,System.Byte[]@)">
+      <summary>
+              从打开的资源文件或流检索指定资源的类型名称和数据。
+            </summary>
+      <param name="resourceName">
+                资源的名称。
+              </param>
+      <param name="resourceType">
+                当此方法返回时，包含表示检索资源的类型名称的字符串 (有关详细信息，请参见注释部分)。
+                 此参数未经初始化即被传递。
+              </param>
+      <param name="resourceData">
+                此方法返回时，包含一个字节数组，该字节数组为所检索类型的二进制表示形式。
+                 此参数未经初始化即被传递。
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="resourceName" /> 为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="resourceName" /> 不存在。
+                </exception>
+      <exception cref="T:System.BadImageFormatException">
+        <paramref name="resourceName" /> 具有无效的类型。
+                </exception>
+      <exception cref="T:System.FormatException">
+                  检索的资源数据已损坏。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+                  当前 <see cref="T:System.Resources.ResourceReader" /> 对象未初始化，可能因为它已经关闭。
+                </exception>
+    </member>
+    <member name="M:System.Resources.ResourceReader.System#Collections#IEnumerable#GetEnumerator">
+      <summary>
+              返回此 <see cref="T:System.Resources.ResourceReader" /> 对象的枚举器。
+            </summary>
+      <returns>
+              此 <see cref="T:System.Resources.ResourceReader" /> 对象的枚举器。
+            </returns>
+      <exception cref="T:System.InvalidOperationException">
+                  读取器已关闭，无法访问。
+                </exception>
+    </member>
+    <member name="T:System.Resources.ResourceSet">
+      <summary>
+              存储已针对某个特定区域性进行了本地化的所有资源，忽略所有其他区域性（包括任何代用规则）。
+            
+              安全说明：在此类不受信任的数据中调用方法存在安全风险。
+               仅在受信任的数据类中调用方法。
+               有关详细信息，请参见不受信任的数据的安全风险。
+            </summary>
+    </member>
+    <member name="M:System.Resources.ResourceSet.#ctor">
+      <summary>
+              使用默认属性初始化 <see cref="T:System.Resources.ResourceSet" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:System.Resources.ResourceSet.#ctor(System.IO.Stream)">
+      <summary>
+              使用从给定流中读取资源的系统默认的 <see cref="T:System.Resources.ResourceReader" /> 来创建 <see cref="T:System.Resources.ResourceSet" /> 类的新实例。
+            </summary>
+      <param name="stream">
+                要读取的资源的 <see cref="T:System.IO.Stream" />。
+                 流应引用现有的资源文件。
+              </param>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="stream" /> 不可读。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="stream" /> 参数为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Resources.ResourceSet.#ctor(System.Resources.IResourceReader)">
+      <summary>
+              使用指定的资源阅读器创建 <see cref="T:System.Resources.ResourceSet" /> 类的新实例。
+            </summary>
+      <param name="reader">
+                将使用的读取器。
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="reader" /> 参数为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Resources.ResourceSet.#ctor(System.String)">
+      <summary>
+              使用从给定文件打开并读取资源的系统默认的 <see cref="T:System.Resources.ResourceReader" /> 来创建 <see cref="T:System.Resources.ResourceSet" /> 类的新实例。
+            </summary>
+      <param name="fileName">
+                要读取的资源文件。
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="fileName" /> 参数为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="M:System.Resources.ResourceSet.Close">
+      <summary>
+              通过此 <see cref="T:System.Resources.ResourceSet" /> 来关闭和释放所有资源。
+            </summary>
+    </member>
+    <member name="M:System.Resources.ResourceSet.Dispose">
+      <summary>
+              处置由 <see cref="T:System.Resources.ResourceSet" /> 的当前实例使用的资源（内存除外）。
+            </summary>
+    </member>
+    <member name="M:System.Resources.ResourceSet.Dispose(System.Boolean)">
+      <summary>
+              释放与当前实例关联的资源（内存除外），并关闭内部托管对象（如果请求这样做）。
+            </summary>
+      <param name="disposing">
+                指示是否应显式关闭当前实例中包含的对象。
+              </param>
+    </member>
+    <member name="M:System.Resources.ResourceSet.GetDefaultReader">
+      <summary>
+              返回此类 <see cref="T:System.Resources.ResourceSet" /> 的首选资源读取器类。
+            </summary>
+      <returns>
+              返回这类 <see cref="T:System.Resources.ResourceSet" /> 的首选资源阅读器的 <see cref="T:System.Type" />。
+            </returns>
+    </member>
+    <member name="M:System.Resources.ResourceSet.GetDefaultWriter">
+      <summary>
+              返回此类 <see cref="T:System.Resources.ResourceSet" /> 的首选资源编写器类。
+            </summary>
+      <returns>
+              返回这类 <see cref="T:System.Resources.ResourceSet" /> 的首选资源编写器的 <see cref="T:System.Type" />。
+            </returns>
+    </member>
+    <member name="M:System.Resources.ResourceSet.GetEnumerator">
+      <summary>
+              返回 <see cref="T:System.Collections.IDictionaryEnumerator" />，它可以循环访问 <see cref="T:System.Resources.ResourceSet" />。
+            </summary>
+      <returns>
+              该 <see cref="T:System.Resources.ResourceSet" /> 的 <see cref="T:System.Collections.IDictionaryEnumerator" />。
+            </returns>
+      <exception cref="T:System.ObjectDisposedException">
+                  已关闭或释放资源集。
+                </exception>
+    </member>
+    <member name="M:System.Resources.ResourceSet.GetObject(System.String)">
+      <summary>
+              搜索具有指定名称的资源对象。
+            </summary>
+      <param name="name">
+                要搜索的资源的区分大小写的名称。
+              </param>
+      <returns>
+              所请求的资源。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="name" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.ObjectDisposedException">
+                  已关闭或释放该对象。
+                </exception>
+    </member>
+    <member name="M:System.Resources.ResourceSet.GetObject(System.String,System.Boolean)">
+      <summary>
+              如果请求的话，按照不区分大小写的方式搜索具有指定名称的资源对象。
+            </summary>
+      <param name="name">
+                要搜索的资源的名称。
+              </param>
+      <param name="ignoreCase">
+                指示是否应忽略指定名称的大小写。
+              </param>
+      <returns>
+              所请求的资源。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="name" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.ObjectDisposedException">
+                  已关闭或释放该对象。
+                </exception>
+    </member>
+    <member name="M:System.Resources.ResourceSet.GetString(System.String)">
+      <summary>
+              搜索具有指定名称的 <see cref="T:System.String" /> 资源。
+            </summary>
+      <param name="name">
+                要搜索的资源的名称。
+              </param>
+      <returns>
+              当值是 <see cref="T:System.String" /> 时为资源的值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="name" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+                  指定的资源 <paramref name="name" /> 不是 <see cref="T:System.String" />。
+                </exception>
+      <exception cref="T:System.ObjectDisposedException">
+                  已关闭或释放该对象。
+                </exception>
+    </member>
+    <member name="M:System.Resources.ResourceSet.GetString(System.String,System.Boolean)">
+      <summary>
+              如果请求的话，按照不区分大小写的方式搜索具有指定名称的 <see cref="T:System.String" /> 资源。
+            </summary>
+      <param name="name">
+                要搜索的资源的名称。
+              </param>
+      <param name="ignoreCase">
+                指示是否应忽略指定名称的大小写。
+              </param>
+      <returns>
+              当值是 <see cref="T:System.String" /> 时为资源的值。
+            </returns>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="name" /> 参数为 <see langword="null" />。
+                </exception>
+      <exception cref="T:System.InvalidOperationException">
+                  指定的资源 <paramref name="name" /> 不是 <see cref="T:System.String" />。
+                </exception>
+      <exception cref="T:System.ObjectDisposedException">
+                  已关闭或释放该对象。
+                </exception>
+    </member>
+    <member name="M:System.Resources.ResourceSet.ReadResources">
+      <summary>
+              读取所有资源，并将它们存储在 <see cref="F:System.Resources.ResourceSet.Table" /> 属性中指示的 <see cref="T:System.Collections.Hashtable" /> 中。
+            </summary>
+    </member>
+    <member name="M:System.Resources.ResourceSet.System#Collections#IEnumerable#GetEnumerator">
+      <summary>
+              返回一个 <see cref="T:System.Collections.IEnumerator" /> 对象，以避免与 <see langword="Dispose" /> 之间出现争用情况。
+               不应直接从代码中使用此成员。
+            </summary>
+      <returns>
+              当前 <see cref="T:System.Resources.ResourceSet" /> 对象的一个枚举数。
+            </returns>
+    </member>
+    <member name="T:System.Resources.SatelliteContractVersionAttribute">
+      <summary>
+              指示 <see cref="T:System.Resources.ResourceManager" /> 寻求附属程序集的特定版本的对象。
+            </summary>
+    </member>
+    <member name="M:System.Resources.SatelliteContractVersionAttribute.#ctor(System.String)">
+      <summary>
+              初始化 <see cref="T:System.Resources.SatelliteContractVersionAttribute" /> 类的新实例。
+            </summary>
+      <param name="version">
+                一个字符串，指定要加载的附属程序集的版本。
+              </param>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="version" /> 参数为 <see langword="null" />。
+                </exception>
+    </member>
+    <member name="P:System.Resources.SatelliteContractVersionAttribute.Version">
+      <summary>
+              获取具有所需的资源的附属程序集的版本。
+            </summary>
+      <returns>
+              一个字符串，包含具有所需的资源的附属程序集的版本。
+            </returns>
+    </member>
+    <member name="T:System.Resources.UltimateResourceFallbackLocation">
+      <summary>
+              指定是否 <see cref="T:System.Resources.ResourceManager" /> 对象中寻找在主程序集中或附属程序集中的应用程序的默认区域性的资源。
+            </summary>
+    </member>
+    <member name="F:System.Resources.UltimateResourceFallbackLocation.MainAssembly">
+      <summary>
+              回退资源都位于主程序集。
+            </summary>
+    </member>
+    <member name="F:System.Resources.UltimateResourceFallbackLocation.Satellite">
+      <summary>
+              回退资源都位于附属程序集。
+            </summary>
+    </member>
+  </members>
+</doc>

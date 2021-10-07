@@ -1,0 +1,3776 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Microsoft.VisualBasic</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.VisualBasic.CompilerServices.NewLateBinding">
+      <summary>
+              此类提供了帮助程序，Visual Basic 编译器使用后期绑定调用异步方法。它不是为了在代码中直接调用。
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackCall(System.Object,System.String,System.Object[],System.String[],System.Boolean)">
+      <summary>
+              执行后期绑定方法或函数调用。
+               此帮助器方法不是为了在代码中直接调用。
+            </summary>
+      <param name="Instance">
+                公开属性或方法的调用对象的实例。
+              </param>
+      <param name="MemberName">
+                属性或方法的调用对象的名称。
+              </param>
+      <param name="Arguments">
+                包含要传递给该属性或方法被调用的参数的数组。
+              </param>
+      <param name="ArgumentNames">
+                参数名称的数组。
+              </param>
+      <param name="IgnoreReturn">
+                一个 <see langword="Boolean" /> 值，该值指示是否可以忽略返回值。
+              </param>
+      <returns>
+              调用对象的实例。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackGet(System.Object,System.String,System.Object[],System.String[])">
+      <summary>
+              执行后期绑定属性获取或字段访问调用。
+               此帮助器方法不是为了在代码中直接调用。
+            </summary>
+      <param name="Instance">
+                公开属性或方法的调用对象的实例。
+              </param>
+      <param name="MemberName">
+                属性或方法的调用对象的名称。
+              </param>
+      <param name="Arguments">
+                包含要传递给该属性或方法被调用的参数的数组。
+              </param>
+      <param name="ArgumentNames">
+                参数名称的数组。
+              </param>
+      <returns>
+              调用对象的实例。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackIndexSet(System.Object,System.Object[],System.String[])">
+      <summary>
+              执行后期绑定属性集或字段写入调用。
+               此帮助器方法不是为了在代码中直接调用。
+            </summary>
+      <param name="Instance">
+                公开属性或方法的调用对象的实例。
+              </param>
+      <param name="Arguments">
+                包含要传递给该属性或方法被调用的参数的数组。
+              </param>
+      <param name="ArgumentNames">
+                参数名称的数组。
+              </param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackIndexSetComplex(System.Object,System.Object[],System.String[],System.Boolean,System.Boolean)">
+      <summary>
+              执行后期绑定属性集或字段写入调用。
+               此帮助器方法不是为了在代码中直接调用。
+            </summary>
+      <param name="Instance">
+                公开属性或方法的调用对象的实例。
+              </param>
+      <param name="Arguments">
+                包含要传递给该属性或方法被调用的参数的数组。
+              </param>
+      <param name="ArgumentNames">
+                参数名称的数组。
+              </param>
+      <param name="OptimisticSet">
+                一个 <see langword="Boolean" /> 值，该值用于确定是否设置操作将起作用。
+                 设置为 <see langword="True" /> 当您认为的中间值是否已设置中的属性或字段; 否则为 <see langword="False" />。
+              </param>
+      <param name="RValueBase">
+                一个 <see langword="Boolean" /> 值，该值指定后期引用的基引用时 <see langword="RValue" />。
+                 设置为 <see langword="True" /> 后期引用的基引用时 <see langword="RValue" />; 这使您可以生成后期工作分配的字段的运行时异常 <see langword="RValues" /> 值类型。
+                 否则，设置为 <see langword="False" />。
+              </param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackInvokeDefault1(System.Object,System.Object[],System.String[],System.Boolean)">
+      <summary>
+              执行默认属性或字段中或对默认方法或函数调用的后期绑定的获取。
+               此帮助器方法不是为了在代码中直接调用。
+            </summary>
+      <param name="Instance">
+                公开属性或方法的调用对象的实例。
+                 如果 <paramref name="Instance" /> 属于类型 <see cref="T:System.Dynamic.IDynamicMetaObjectProvider" />, ，然后用动态语言运行时进行绑定; 否则执行标准的后期绑定。
+              </param>
+      <param name="Arguments">
+                包含要传递给该属性或方法被调用的参数的数组。
+              </param>
+      <param name="ArgumentNames">
+                参数名称的数组。
+              </param>
+      <param name="ReportErrors">
+                一个 <see langword="Boolean" /> 值，该值用于指定是否在遇到错误时引发异常。
+                 设置为 <see langword="True" /> 引发异常。
+                 设置为 <see langword="False" /> 返回 <see langword="Nothing" /> 时遇到错误。
+              </param>
+      <returns>
+              调用对象的实例。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackInvokeDefault2(System.Object,System.Object[],System.String[],System.Boolean)">
+      <summary>
+              执行默认属性或字段中或对默认方法或函数调用的后期绑定的获取。
+               此帮助器方法不是为了在代码中直接调用。
+            </summary>
+      <param name="Instance">
+                公开属性或方法的调用对象的实例。
+              </param>
+      <param name="Arguments">
+                包含要传递给该属性或方法被调用的参数的数组。
+              </param>
+      <param name="ArgumentNames">
+                参数名称的数组。
+              </param>
+      <param name="ReportErrors">
+                一个 <see langword="Boolean" /> 值，该值用于指定是否在遇到错误时引发异常。
+                 设置为 <see langword="True" /> 引发异常。
+                 设置为 <see langword="False" /> 返回 <see langword="Nothing" /> 时遇到错误。
+              </param>
+      <returns>
+              调用对象的实例。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackSet(System.Object,System.String,System.Object[])">
+      <summary>
+              执行后期绑定属性集或字段写入调用。
+               此帮助器方法不是为了在代码中直接调用。
+            </summary>
+      <param name="Instance">
+                公开属性或方法的调用对象的实例。
+              </param>
+      <param name="MemberName">
+                属性或方法的调用对象的名称。
+              </param>
+      <param name="Arguments">
+                包含要传递给该属性或方法被调用的参数的数组。
+              </param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.FallbackSetComplex(System.Object,System.String,System.Object[],System.Boolean,System.Boolean)">
+      <summary>
+              执行后期绑定属性集或字段写入调用。
+               此帮助器方法不是为了在代码中直接调用。
+            </summary>
+      <param name="Instance">
+                公开属性或方法的调用对象的实例。
+              </param>
+      <param name="MemberName">
+                属性或方法的调用对象的名称。
+              </param>
+      <param name="Arguments">
+                包含要传递给该属性或方法被调用的参数的数组。
+              </param>
+      <param name="OptimisticSet">
+                一个 <see langword="Boolean" /> 值，该值用于确定是否设置操作将起作用。
+                 设置为 <see langword="True" /> 当您认为的中间值是否已设置中的属性或字段; 否则为 <see langword="False" />。
+              </param>
+      <param name="RValueBase">
+                一个 <see langword="Boolean" /> 值，该值指定后期引用的基引用时 <see langword="RValue" />。
+                 设置为 <see langword="True" /> 后期引用的基引用时 <see langword="RValue" />; 这使您可以生成后期工作分配的字段的运行时异常 <see langword="RValues" /> 值类型。
+                 否则，设置为 <see langword="False" />。
+              </param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateCall(System.Object,System.Type,System.String,System.Object[],System.String[],System.Type[],System.Boolean[],System.Boolean)">
+      <summary>
+              执行后期绑定方法或函数调用。
+               此帮助器方法不是为了在代码中直接调用。
+            </summary>
+      <param name="Instance">
+                公开属性或方法的调用对象的实例。
+              </param>
+      <param name="Type">
+                调用对象的类型。
+              </param>
+      <param name="MemberName">
+                属性或方法的调用对象的名称。
+              </param>
+      <param name="Arguments">
+                包含要传递给该属性或方法被调用的参数的数组。
+              </param>
+      <param name="ArgumentNames">
+                参数名称的数组。
+              </param>
+      <param name="TypeArguments">
+                数组的参数类型;仅用于泛型调用传递的参数类型。
+              </param>
+      <param name="CopyBack">
+                一个数组 <see langword="Boolean" /> 后期联编程序用来进行通信的值返回到调用站点的变量匹配 <see langword="ByRef" /> 参数。
+                 每个 <see langword="True" /> 值指示参数匹配，并应在调用之后复制出来 <see langword="LateCall" /> 已完成。
+              </param>
+      <param name="IgnoreReturn">
+                一个 <see langword="Boolean" /> 值，该值指示是否可以忽略返回值。
+              </param>
+      <returns>
+              调用对象的实例。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateCallInvokeDefault(System.Object,System.Object[],System.String[],System.Boolean)">
+      <summary>
+              执行对默认方法或函数的后期绑定调用。
+               此帮助器方法不是为了在代码中直接调用。
+            </summary>
+      <param name="Instance">
+                公开属性或方法的调用对象的实例。
+              </param>
+      <param name="Arguments">
+                包含要传递给该属性或方法被调用的参数的数组。
+              </param>
+      <param name="ArgumentNames">
+                参数名称的数组。
+              </param>
+      <param name="ReportErrors">
+                一个 <see langword="Boolean" /> 值，该值用于指定是否在遇到错误时引发异常。
+                 设置为 <see langword="True" /> 引发异常。
+                 设置为 <see langword="False" /> 返回 <see langword="Nothing" /> 时遇到错误。
+              </param>
+      <returns>
+              调用对象的实例。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateCanEvaluate(System.Object,System.Type,System.String,System.Object[],System.Boolean,System.Boolean)">
+      <summary>
+              指示调用是否需要后期绑定计算。
+               此帮助器方法不是为了在代码中直接调用。
+            </summary>
+      <param name="instance">
+                公开属性或方法的调用对象的实例。
+              </param>
+      <param name="type">
+                调用对象的类型。
+              </param>
+      <param name="memberName">
+                属性或方法的调用对象的名称。
+              </param>
+      <param name="arguments">
+                包含要传递给该属性或方法被调用的参数的数组。
+              </param>
+      <param name="allowFunctionEvaluation">
+                一个 <see langword="Boolean" /> 值，该值指定是否允许函数求值。
+              </param>
+      <param name="allowPropertyEvaluation">
+                一个 <see langword="Boolean" /> 值，该值指定是否允许属性求值。
+              </param>
+      <returns>
+              一个 <see langword="Boolean" /> 值，该值指示表达式是否需要后期绑定计算。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateGet(System.Object,System.Type,System.String,System.Object[],System.String[],System.Type[],System.Boolean[])">
+      <summary>
+              执行后期绑定属性获取或字段访问调用。
+               此帮助器方法不是为了在代码中直接调用。
+            </summary>
+      <param name="Instance">
+                公开属性或方法的调用对象的实例。
+              </param>
+      <param name="Type">
+                调用对象的类型。
+              </param>
+      <param name="MemberName">
+                属性或方法的调用对象的名称。
+              </param>
+      <param name="Arguments">
+                包含要传递给该属性或方法被调用的参数的数组。
+              </param>
+      <param name="ArgumentNames">
+                参数名称的数组。
+              </param>
+      <param name="TypeArguments">
+                数组的参数类型;仅用于泛型调用传递的参数类型。
+              </param>
+      <param name="CopyBack">
+                一个数组 <see langword="Boolean" /> 后期联编程序用来进行通信的值返回到调用站点的变量匹配 <see langword="ByRef" /> 参数。
+                 每个 <see langword="True" /> 值指示参数匹配，并应在调用之后复制出来 <see langword="LateCall" /> 已完成。
+              </param>
+      <returns>
+              调用对象的实例。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateGetInvokeDefault(System.Object,System.Object[],System.String[],System.Boolean)">
+      <summary>
+              执行默认属性或字段的后期绑定的获取。
+               此帮助器方法不是为了在代码中直接调用。
+            </summary>
+      <param name="Instance">
+                公开属性或方法的调用对象的实例。
+              </param>
+      <param name="Arguments">
+                包含要传递给该属性或方法被调用的参数的数组。
+              </param>
+      <param name="ArgumentNames">
+                参数名称的数组。
+              </param>
+      <param name="ReportErrors">
+                一个 <see langword="Boolean" /> 值，该值用于指定是否在遇到错误时引发异常。
+                 设置为 <see langword="True" /> 引发异常。
+                 设置为 <see langword="False" /> 返回 <see langword="Nothing" /> 时遇到错误。
+              </param>
+      <returns>
+              调用对象的实例。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateIndexGet(System.Object,System.Object[],System.String[])">
+      <summary>
+              执行后期绑定属性获取或字段访问调用。
+               此帮助器方法不是为了在代码中直接调用。
+            </summary>
+      <param name="Instance">
+                公开属性或方法的调用对象的实例。
+              </param>
+      <param name="Arguments">
+                包含要传递给该属性或方法被调用的参数的数组。
+              </param>
+      <param name="ArgumentNames">
+                参数名称的数组。
+              </param>
+      <returns>
+              调用对象的实例。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateIndexSet(System.Object,System.Object[],System.String[])">
+      <summary>
+              执行后期绑定属性集或字段写入调用。
+               此帮助器方法不是为了在代码中直接调用。
+            </summary>
+      <param name="Instance">
+                公开属性或方法的调用对象的实例。
+              </param>
+      <param name="Arguments">
+                包含要传递给该属性或方法被调用的参数的数组。
+              </param>
+      <param name="ArgumentNames">
+                参数名称的数组。
+              </param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateIndexSetComplex(System.Object,System.Object[],System.String[],System.Boolean,System.Boolean)">
+      <summary>
+              执行后期绑定属性集或字段写入调用。
+               此帮助器方法不是为了在代码中直接调用。
+            </summary>
+      <param name="Instance">
+                公开属性或方法的调用对象的实例。
+              </param>
+      <param name="Arguments">
+                包含要传递给该属性或方法被调用的参数的数组。
+              </param>
+      <param name="ArgumentNames">
+                参数名称的数组。
+              </param>
+      <param name="OptimisticSet">
+                一个 <see langword="Boolean" /> 值，该值用于确定是否设置操作将起作用。
+                 设置为 <see langword="True" /> 当您认为的中间值是否已设置中的属性或字段; 否则为 <see langword="False" />。
+              </param>
+      <param name="RValueBase">
+                一个 <see langword="Boolean" /> 值，该值指定后期引用的基引用时 <see langword="RValue" />。
+                 设置为 <see langword="True" /> 后期引用的基引用时 <see langword="RValue" />; 这使您可以生成后期工作分配的字段的运行时异常 <see langword="RValues" /> 值类型。
+                 否则，设置为 <see langword="False" />。
+              </param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateSet(System.Object,System.Type,System.String,System.Object[],System.String[],System.Type[])">
+      <summary>
+              执行后期绑定属性集或字段写入调用。
+               此帮助器方法不是为了在代码中直接调用。
+            </summary>
+      <param name="Instance">
+                公开属性或方法的调用对象的实例。
+              </param>
+      <param name="Type">
+                调用对象的类型。
+              </param>
+      <param name="MemberName">
+                属性或方法的调用对象的名称。
+              </param>
+      <param name="Arguments">
+                包含要传递给该属性或方法被调用的参数的数组。
+              </param>
+      <param name="ArgumentNames">
+                参数名称的数组。
+              </param>
+      <param name="TypeArguments">
+                数组的参数类型;仅用于泛型调用传递的参数类型。
+              </param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateSet(System.Object,System.Type,System.String,System.Object[],System.String[],System.Type[],System.Boolean,System.Boolean,Microsoft.VisualBasic.CallType)">
+      <summary>
+              执行后期绑定属性集或字段写入调用。
+               此帮助器方法不是为了在代码中直接调用。
+            </summary>
+      <param name="Instance">
+                公开属性或方法的调用对象的实例。
+              </param>
+      <param name="Type">
+                调用对象的类型。
+              </param>
+      <param name="MemberName">
+                属性或方法的调用对象的名称。
+              </param>
+      <param name="Arguments">
+                包含要传递给该属性或方法被调用的参数的数组。
+              </param>
+      <param name="ArgumentNames">
+                参数名称的数组。
+              </param>
+      <param name="TypeArguments">
+                数组的参数类型;仅用于泛型调用传递的参数类型。
+              </param>
+      <param name="OptimisticSet">
+                一个 <see langword="Boolean" /> 值，该值用于确定是否设置操作将起作用。
+                 设置为 <see langword="True" /> 当您认为的中间值是否已设置中的属性或字段; 否则为 <see langword="False" />。
+              </param>
+      <param name="RValueBase">
+                一个 <see langword="Boolean" /> 值，该值指定后期引用的基引用时 <see langword="RValue" />。
+                 设置为 <see langword="True" /> 后期引用的基引用时 <see langword="RValue" />; 这使您可以生成后期工作分配的字段的运行时异常 <see langword="RValues" /> 值类型。
+                 否则，设置为 <see langword="False" />。
+              </param>
+      <param name="CallType">
+                类型的枚举成员 <see cref="T:Microsoft.VisualBasic.CallType" /> 表示被调用过程的类型。
+                 CallType 值可以是 <see langword="Method" />, ，<see langword="Get" />, ，或 <see langword="Set" />。
+                 仅 <see langword="Set" /> 使用。
+              </param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.NewLateBinding.LateSetComplex(System.Object,System.Type,System.String,System.Object[],System.String[],System.Type[],System.Boolean,System.Boolean)">
+      <summary>
+              执行后期绑定属性集或字段写入调用。
+               此帮助器方法不是为了在代码中直接调用。
+            </summary>
+      <param name="Instance">
+                公开属性或方法的调用对象的实例。
+              </param>
+      <param name="Type">
+                调用对象的类型。
+              </param>
+      <param name="MemberName">
+                属性或方法的调用对象的名称。
+              </param>
+      <param name="Arguments">
+                包含要传递给该属性或方法被调用的参数的数组。
+              </param>
+      <param name="ArgumentNames">
+                参数名称的数组。
+              </param>
+      <param name="TypeArguments">
+                数组的参数类型;仅用于泛型调用传递的参数类型。
+              </param>
+      <param name="OptimisticSet">
+                一个 <see langword="Boolean" /> 值，该值用于确定是否设置操作将起作用。
+                 设置为 <see langword="True" /> 当您认为的中间值是否已设置中的属性或字段; 否则为 <see langword="False" />。
+              </param>
+      <param name="RValueBase">
+                一个 <see langword="Boolean" /> 值，该值指定后期引用的基引用时 <see langword="RValue" />。
+                 设置为 <see langword="True" /> 后期引用的基引用时 <see langword="RValue" />; 这使您可以生成后期工作分配的字段的运行时异常 <see langword="RValues" /> 值类型。
+                 否则，设置为 <see langword="False" />。
+              </param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Strings">
+      <summary>
+        <see langword="Strings" /> 模块包含用于执行字符串操作的过程。
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Asc(System.Char)">
+      <summary>
+              返回<see langword="Integer" />值，该值表示为字符相对应的字符代码。
+            </summary>
+      <param name="String">
+                必需。
+                 任何有效<see langword="Char" />或<see langword="String" />表达式。
+                 如果<paramref name="String" />是<see langword="String" />表达式，仅字符串的第一个字符用于输入。
+                 如果<paramref name="String" />是<see langword="Nothing" />或不包含任何字符，<see cref="T:System.ArgumentException" />发生错误。
+              </param>
+      <returns>
+              返回<see langword="Integer" />值，该值表示为字符相对应的字符代码。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Asc(System.String)">
+      <summary>
+              返回<see langword="Integer" />值，该值表示为字符相对应的字符代码。
+            </summary>
+      <param name="String">
+                必需。
+                 任何有效<see langword="Char" />或<see langword="String" />表达式。
+                 如果<paramref name="String" />是<see langword="String" />表达式，仅字符串的第一个字符用于输入。
+                 如果<paramref name="String" />是<see langword="Nothing" />或不包含任何字符，<see cref="T:System.ArgumentException" />发生错误。
+              </param>
+      <returns>
+              返回<see langword="Integer" />值，该值表示为字符相对应的字符代码。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.AscW(System.Char)">
+      <summary>
+              返回<see langword="Integer" />值，该值表示为字符相对应的字符代码。
+            </summary>
+      <param name="String">
+                必需。
+                 任何有效<see langword="Char" />或<see langword="String" />表达式。
+                 如果<paramref name="String" />是<see langword="String" />表达式，仅字符串的第一个字符用于输入。
+                 如果<paramref name="String" />是<see langword="Nothing" />或不包含任何字符，<see cref="T:System.ArgumentException" />发生错误。
+              </param>
+      <returns>
+              返回<see langword="Integer" />值，该值表示为字符相对应的字符代码。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.AscW(System.String)">
+      <summary>
+              返回<see langword="Integer" />值，该值表示为字符相对应的字符代码。
+            </summary>
+      <param name="String">
+                必需。
+                 任何有效<see langword="Char" />或<see langword="String" />表达式。
+                 如果<paramref name="String" />是<see langword="String" />表达式，仅字符串的第一个字符用于输入。
+                 如果<paramref name="String" />是<see langword="Nothing" />或不包含任何字符，<see cref="T:System.ArgumentException" />发生错误。
+              </param>
+      <returns>
+              返回<see langword="Integer" />值，该值表示为字符相对应的字符代码。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Chr(System.Int32)">
+      <summary>
+              返回与指定的字符代码关联的字符。
+            </summary>
+      <param name="CharCode">
+                必需。
+                <see langword="Integer" />表达式表示<paramref name="code point" />，或字符代码的字符。
+              </param>
+      <returns>
+              返回与指定的字符代码关联的字符。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="CharCode" />&lt; 0="" or=""&gt; 255 for <see langword="Chr" />.
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.ChrW(System.Int32)">
+      <summary>
+              返回与指定的字符代码关联的字符。
+            </summary>
+      <param name="CharCode">
+                必需。
+                <see langword="Integer" />表达式表示<paramref name="code point" />，或字符代码的字符。
+              </param>
+      <returns>
+              返回与指定的字符代码关联的字符。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="CharCode" />&lt; -32768="" or=""&gt;为 65535 <see langword="ChrW" />。
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Filter(System.Object[],System.String,System.Boolean,Microsoft.VisualBasic.CompareMethod)">
+      <summary>
+              返回从零开始的数组，包含的一个子集 <see langword="String" /> 数组基于指定筛选条件。
+            </summary>
+      <param name="Source">
+                必需。
+                 要搜索的字符串的一维数组。
+              </param>
+      <param name="Match">
+                必需。
+                 要搜索的字符串。
+              </param>
+      <param name="Include">
+                可选。
+                <see langword="Boolean" /> 值，该值指示是否返回子字符串，用于包含或排除 <paramref name="Match" />。
+                 如果 <paramref name="Include" /> 是 <see langword="True" />, 、 <see langword="Filter" /> 函数将返回包含数组的子集 <paramref name="Match" /> 作为子字符串。
+                 如果 <paramref name="Include" /> 是 <see langword="False" />, 、 <see langword="Filter" /> 函数将返回不包含数组的子集 <paramref name="Match" /> 作为子字符串。
+              </param>
+      <param name="Compare">
+                可选。
+                 数字值，该值指示要使用的字符串比较的类型。
+                 值，请参阅"设置"。
+              </param>
+      <returns>
+              返回从零开始的数组，包含的一个子集 <see langword="String" /> 数组基于指定筛选条件。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="Source" /> 是 <see langword="Nothing" /> 或者不是一个一维数组。
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Filter(System.String[],System.String,System.Boolean,Microsoft.VisualBasic.CompareMethod)">
+      <summary>
+              返回从零开始的数组，包含的一个子集 <see langword="String" /> 数组基于指定筛选条件。
+            </summary>
+      <param name="Source">
+                必需。
+                 要搜索的字符串的一维数组。
+              </param>
+      <param name="Match">
+                必需。
+                 要搜索的字符串。
+              </param>
+      <param name="Include">
+                可选。
+                <see langword="Boolean" /> 值，该值指示是否返回子字符串，用于包含或排除 <paramref name="Match" />。
+                 如果 <paramref name="Include" /> 是 <see langword="True" />, 、 <see langword="Filter" /> 函数将返回包含数组的子集 <paramref name="Match" /> 作为子字符串。
+                 如果 <paramref name="Include" /> 是 <see langword="False" />, 、 <see langword="Filter" /> 函数将返回不包含数组的子集 <paramref name="Match" /> 作为子字符串。
+              </param>
+      <param name="Compare">
+                可选。
+                 数字值，该值指示要使用的字符串比较的类型。
+                 值，请参阅"设置"。
+              </param>
+      <returns>
+              返回从零开始的数组，包含的一个子集 <see langword="String" /> 数组基于指定筛选条件。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="Source" /> 是 <see langword="Nothing" /> 或者不是一个一维数组。
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Format(System.Object,System.String)">
+      <summary>
+              返回根据格式中包含的说明设置格式的字符串 <see langword="String" /> 表达式。
+            </summary>
+      <param name="Expression">
+                必需。
+                 任何有效表达式。
+              </param>
+      <param name="Style">
+                可选。
+                 有效的已命名的或用户定义格式 <see langword="String" /> 表达式。
+              </param>
+      <returns>
+              返回根据格式中包含的说明设置格式的字符串 <see langword="String" /> 表达式。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.FormatCurrency(System.Object,System.Int32,Microsoft.VisualBasic.TriState,Microsoft.VisualBasic.TriState,Microsoft.VisualBasic.TriState)">
+      <summary>
+              返回格式设置为使用系统控制面板中定义的货币符号的货币值的表达式。
+            </summary>
+      <param name="Expression">
+                必需。
+                 要设置格式的表达式。
+              </param>
+      <param name="NumDigitsAfterDecimal">
+                可选。
+                 指示小数点右侧显示的位数的数字值。
+                 默认值为-1，指示所使用的计算机的区域设置。
+              </param>
+      <param name="IncludeLeadingDigit">
+                可选。
+                <see cref="T:Microsoft.VisualBasic.TriState" /> 枚举，指示显示小数值的前导零。
+                 值，请参阅"备注"。
+              </param>
+      <param name="UseParensForNegativeNumbers">
+                可选。
+                <see cref="T:Microsoft.VisualBasic.TriState" /> 枚举，指示将放在括号内的负值。
+                 值，请参阅"备注"。
+              </param>
+      <param name="GroupDigits">
+                可选。
+                <see cref="T:Microsoft.VisualBasic.TriState" /> 枚举，指示使用计算机的区域设置中指定的组分隔符对数字进行分组。
+                 值，请参阅"备注"。
+              </param>
+      <returns>
+              返回格式设置为使用系统控制面板中定义的货币符号的货币值的表达式。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+                  小数点后的位数大于 99。
+                </exception>
+      <exception cref="T:System.InvalidCastException">
+                  类型不是数值。
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.FormatDateTime(System.DateTime,Microsoft.VisualBasic.DateFormat)">
+      <summary>
+              返回表示日期/时间值的字符串表达式。
+            </summary>
+      <param name="Expression">
+                必需。
+                <see langword="Date" /> 要设置格式的表达式。
+              </param>
+      <param name="NamedFormat">
+                可选。
+                 使用数字值，该值指示日期/时间格式。
+                 如果省略， <see langword="DateFormat.GeneralDate" /> 使用。
+              </param>
+      <returns>
+              返回表示日期/时间值的字符串表达式。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="NamedFormat" /> 设置不是有效的。
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.FormatNumber(System.Object,System.Int32,Microsoft.VisualBasic.TriState,Microsoft.VisualBasic.TriState,Microsoft.VisualBasic.TriState)">
+      <summary>
+              返回格式化为一个数字的表达式。
+            </summary>
+      <param name="Expression">
+                必需。
+                 要设置格式的表达式。
+              </param>
+      <param name="NumDigitsAfterDecimal">
+                可选。
+                 指示小数点右侧显示的位数的数字值。
+                 默认值为-1，指示所使用的计算机的区域设置。
+              </param>
+      <param name="IncludeLeadingDigit">
+                可选。
+                <see cref="T:Microsoft.VisualBasic.TriState" /> 指示是否显示小数值的前导 0 的常量。
+                 值，请参阅"设置"。
+              </param>
+      <param name="UseParensForNegativeNumbers">
+                可选。
+                <see cref="T:Microsoft.VisualBasic.TriState" /> 常量，指示是否要将放在括号内的负值。
+                 值，请参阅"设置"。
+              </param>
+      <param name="GroupDigits">
+                可选。
+                <see cref="T:Microsoft.VisualBasic.TriState" /> 常量，指示使用的区域设置中指定的组分隔符对数字进行分组。
+                 值，请参阅"设置"。
+              </param>
+      <returns>
+              返回格式化为一个数字的表达式。
+            </returns>
+      <exception cref="T:System.InvalidCastException">
+                  类型不是数值。
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.FormatPercent(System.Object,System.Int32,Microsoft.VisualBasic.TriState,Microsoft.VisualBasic.TriState,Microsoft.VisualBasic.TriState)">
+      <summary>
+              返回以 % 字符结尾的百分比格式的表达式（即乘以 100）。
+            </summary>
+      <param name="Expression">
+                必需。
+                 要格式化的表达式。
+              </param>
+      <param name="NumDigitsAfterDecimal">
+                可选。
+                 数字值，该值指示要显示小数点右侧的多少位。
+                 默认值为 -1，指示使用了区域设置。
+              </param>
+      <param name="IncludeLeadingDigit">
+                可选。
+                <see cref="T:Microsoft.VisualBasic.TriState" /> 常量，指示是否显示小数值前的零。
+                 请参阅“设置”，以获取值。
+              </param>
+      <param name="UseParensForNegativeNumbers">
+                可选。
+                <see cref="T:Microsoft.VisualBasic.TriState" /> 常量，指示是否在括号内放入负值。
+                 请参阅“设置”，以获取值。
+              </param>
+      <param name="GroupDigits">
+                可选。
+                <see cref="T:Microsoft.VisualBasic.TriState" /> 常量，指示是否使用区域设置中指定的组分隔符对数字进行分组。
+                 请参阅“设置”，以获取值。
+              </param>
+      <returns>
+              返回以 % 字符结尾的百分比格式的表达式（即乘以 100）。
+            </returns>
+      <exception cref="T:System.InvalidCastException">
+                  不是数字类型。
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.GetChar(System.String,System.Int32)">
+      <summary>
+              返回 <see langword="Char" /> 表示所提供的字符串中指定索引处的字符的值。
+            </summary>
+      <param name="str">
+                必需。
+                 任何有效的 <see langword="String" /> 表达式。
+              </param>
+      <param name="Index">
+                必需。
+                <see langword="Integer" /> 表达式。
+                 将索引 （从 1 开始） 中字符的 <paramref name="str" /> 要返回。
+              </param>
+      <returns>
+        <see langword="Char" /> 表示所提供的字符串中指定索引处的字符的值。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="str" /> 是 <see langword="Nothing" />, ，<paramref name="Index" /> &lt; 1，或 <paramref name="Index" /> 大于最后一个字符的索引 <paramref name="str" />。
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.InStr(System.Int32,System.String,System.String,Microsoft.VisualBasic.CompareMethod)">
+      <summary>
+              返回一个整数，指定一个字符串在另一个字符串的第一个匹配项的起始位置。
+            </summary>
+      <param name="Start">
+                可选。
+                 设置为每个搜索的起始位置的数值表达式。
+                 如果省略，则第一个字符位置开始搜索。
+                 起始索引是从 1 开始。
+              </param>
+      <param name="String1">
+                必需。
+                <see langword="String" /> 要搜索的表达式。
+              </param>
+      <param name="String2">
+                必需。
+                <see langword="String" /> 查找的表达式。
+              </param>
+      <param name="Compare">
+                可选。
+                 指定的字符串比较的类型。
+                 如果 <paramref name="Compare" /> 省略，则 <see langword="Option Compare" /> 设置将确定比较的类型。
+              </param>
+      <returns>
+                      如果
+                    
+                      InStr 返回
+                    
+                      <paramref name="String1" /> 长度为零或 <see langword="Nothing" />
+                    
+                      0
+                    
+                      <paramref name="String2" /> 长度为零或 <see langword="Nothing" /><paramref name="start" /><paramref name="String2" /> 找不到
+                    
+                      0
+                    
+                      <paramref name="String2" /> 在中找到 <paramref name="String1" />
+                    
+                      匹配的开始位置的位置
+                    
+                      <paramref name="Start" /> &gt; 的长度 <paramref name="String1" />
+                    
+                      0
+                    </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="Start" /> &lt; 1.
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.InStr(System.String,System.String,Microsoft.VisualBasic.CompareMethod)">
+      <summary>
+              返回一个整数，指定一个字符串在另一个字符串的第一个匹配项的起始位置。
+            </summary>
+      <param name="String1">
+                必需。
+                <see langword="String" /> 要搜索的表达式。
+              </param>
+      <param name="String2">
+                必需。
+                <see langword="String" /> 查找的表达式。
+              </param>
+      <param name="Compare">
+                可选。
+                 指定的字符串比较的类型。
+                 如果 <paramref name="Compare" /> 省略，则 <see langword="Option Compare" /> 设置将确定比较的类型。
+              </param>
+      <returns>
+                      如果
+                    
+                      InStr 返回
+                    
+                      <paramref name="String1" /> 长度为零或 <see langword="Nothing" />
+                    
+                      0
+                    
+                      <paramref name="String2" /> 长度为零或 <see langword="Nothing" />
+                    
+                      搜索，默认值为第一个字符位置开始位置。
+                    
+                      <paramref name="String2" /> 找不到
+                    
+                      0
+                    
+                      <paramref name="String2" /> 在中找到 <paramref name="String1" />
+                    
+                      匹配的开始位置的位置
+                    </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.InStrRev(System.String,System.String,System.Int32,Microsoft.VisualBasic.CompareMethod)">
+      <summary>
+              返回一个字符串在另一个从字符串的右侧开始的第一个匹配项的位置。
+            </summary>
+      <param name="StringCheck">
+                必需。
+                 要搜索的字符串表达式。
+              </param>
+      <param name="StringMatch">
+                必需。
+                 要搜索的字符串表达式。
+              </param>
+      <param name="Start">
+                可选。
+                 数值表达式，设置每次搜索，从该字符串的左侧开始的 1 开始的起始位置。
+                 如果 <paramref name="Start" /> 省略则使用 – 1，意味着最后一个字符位置开始执行搜索。
+                 从右到左然后继续搜索。
+              </param>
+      <param name="Compare">
+                可选。
+                 数字值，该值指示要评估的子字符串时使用的比较类型。
+                 如果省略，则执行二进制比较。
+                 值，请参阅设置。
+              </param>
+      <returns>
+                      如果
+                    
+                      InStrRev 返回
+                    
+                      <paramref name="StringCheck" /> 长度为零
+                    
+                      0
+                    
+                      <paramref name="StringMatch" /> 长度为零
+                    
+                      <paramref name="Start" /><paramref name="StringMatch" /> 找不到
+                    
+                      0
+                    
+                      <paramref name="StringMatch" /> 在中找到 <paramref name="StringCheck" />
+                    
+                      与该字符串的右侧开始找到第一个匹配项的位置。
+                    
+                      <paramref name="Start" /> 长度大于 <paramref name="StringMatch" />
+                    
+                      0
+                    </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="Start" /> = 0 或 <paramref name="Start" /> &lt;-1。
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Join(System.Object[],System.String)">
+      <summary>
+              返回通过联接的多个子数组中包含创建的字符串。
+            </summary>
+      <param name="SourceArray">
+                必需。
+                 一维数组，包含要联接的子字符串。
+              </param>
+      <param name="Delimiter">
+                可选。
+                 任意字符串，用于分隔返回的字符串中子字符串。
+                 如果省略，空格字符 ("") 使用。
+                 如果<paramref name="Delimiter" />是零长度字符串 ("") 或<see langword="Nothing" />，列表中的所有项都不使用分隔符都连接。
+              </param>
+      <returns>
+              返回通过联接的多个子数组中包含创建的字符串。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="SourceArray" />不是一个维度。
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Join(System.String[],System.String)">
+      <summary>
+              返回通过联接的多个子数组中包含创建的字符串。
+            </summary>
+      <param name="SourceArray">
+                必需。
+                 一维数组，包含要联接的子字符串。
+              </param>
+      <param name="Delimiter">
+                可选。
+                 任意字符串，用于分隔返回的字符串中子字符串。
+                 如果省略，空格字符 ("") 使用。
+                 如果<paramref name="Delimiter" />是零长度字符串 ("") 或<see langword="Nothing" />，列表中的所有项都不使用分隔符都连接。
+              </param>
+      <returns>
+              返回通过联接的多个子数组中包含创建的字符串。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="SourceArray" />不是一个维度。
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.LCase(System.Char)">
+      <summary>
+              返回一个字符串或字符转换为小写形式。
+            </summary>
+      <param name="Value">
+                必需。
+                 任何有效 <see langword="String" /> 或 <see langword="Char" /> 表达式。
+              </param>
+      <returns>
+              返回一个字符串或字符转换为小写形式。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.LCase(System.String)">
+      <summary>
+              返回一个字符串或字符转换为小写形式。
+            </summary>
+      <param name="Value">
+                必需。
+                 任何有效 <see langword="String" /> 或 <see langword="Char" /> 表达式。
+              </param>
+      <returns>
+              返回一个字符串或字符转换为小写形式。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Left(System.String,System.Int32)">
+      <summary>
+              返回包含指定的数量的从字符串的左侧的字符的字符串。
+            </summary>
+      <param name="str">
+                必需。
+                <see langword="String" /> 从中返回最左边的字符表达式。
+              </param>
+      <param name="Length">
+                必需。
+                <see langword="Integer" /> 表达式。
+                 指示要返回多少个字符的数值表达式。
+                 如果为 0，一个零长度字符串 ("") 返回。
+                 如果大于或等于的中的字符数 <paramref name="str" />, ，则返回整个字符串。
+              </param>
+      <returns>
+              返回包含指定的数量的从字符串的左侧的字符的字符串。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="Length" /> &lt; 0.
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Len(System.UInt64)">
+      <summary>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </summary>
+      <param name="Expression">
+                任何有效 <see langword="String" /> 表达式或变量的名称。
+                 如果 <paramref name="Expression" /> 属于类型 <see langword="Object" />, 、 <see langword="Len" /> 函数返回时将写入的文件的大小 <see langword="FilePut" /> 函数。
+              </param>
+      <returns>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Len(System.UInt32)">
+      <summary>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </summary>
+      <param name="Expression">
+                任何有效 <see langword="String" /> 表达式或变量的名称。
+                 如果 <paramref name="Expression" /> 属于类型 <see langword="Object" />, 、 <see langword="Len" /> 函数返回时将写入的文件的大小 <see langword="FilePut" /> 函数。
+              </param>
+      <returns>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Len(System.UInt16)">
+      <summary>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </summary>
+      <param name="Expression">
+                任何有效 <see langword="String" /> 表达式或变量的名称。
+                 如果 <paramref name="Expression" /> 属于类型 <see langword="Object" />, 、 <see langword="Len" /> 函数返回时将写入的文件的大小 <see langword="FilePut" /> 函数。
+              </param>
+      <returns>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Len(System.String)">
+      <summary>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </summary>
+      <param name="Expression">
+                任何有效 <see langword="String" /> 表达式或变量的名称。
+                 如果 <paramref name="Expression" /> 属于类型 <see langword="Object" />, 、 <see langword="Len" /> 函数返回时将写入的文件的大小 <see langword="FilePut" /> 函数。
+              </param>
+      <returns>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Len(System.Single)">
+      <summary>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </summary>
+      <param name="Expression">
+                任何有效 <see langword="String" /> 表达式或变量的名称。
+                 如果 <paramref name="Expression" /> 属于类型 <see langword="Object" />, 、 <see langword="Len" /> 函数返回时将写入的文件的大小 <see langword="FilePut" /> 函数。
+              </param>
+      <returns>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Len(System.SByte)">
+      <summary>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </summary>
+      <param name="Expression">
+                任何有效 <see langword="String" /> 表达式或变量的名称。
+                 如果 <paramref name="Expression" /> 属于类型 <see langword="Object" />, 、 <see langword="Len" /> 函数返回时将写入的文件的大小 <see langword="FilePut" /> 函数。
+              </param>
+      <returns>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Len(System.Object)">
+      <summary>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </summary>
+      <param name="Expression">
+                任何有效 <see langword="String" /> 表达式或变量的名称。
+                 如果 <paramref name="Expression" /> 属于类型 <see langword="Object" />, 、 <see langword="Len" /> 函数返回时将写入的文件的大小 <see langword="FilePut" /> 函数。
+              </param>
+      <returns>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Len(System.Int64)">
+      <summary>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </summary>
+      <param name="Expression">
+                任何有效 <see langword="String" /> 表达式或变量的名称。
+                 如果 <paramref name="Expression" /> 属于类型 <see langword="Object" />, 、 <see langword="Len" /> 函数返回时将写入的文件的大小 <see langword="FilePut" /> 函数。
+              </param>
+      <returns>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Len(System.Int16)">
+      <summary>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </summary>
+      <param name="Expression">
+                任何有效 <see langword="String" /> 表达式或变量的名称。
+                 如果 <paramref name="Expression" /> 属于类型 <see langword="Object" />, 、 <see langword="Len" /> 函数返回时将写入的文件的大小 <see langword="FilePut" /> 函数。
+              </param>
+      <returns>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Len(System.Double)">
+      <summary>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </summary>
+      <param name="Expression">
+                任何有效 <see langword="String" /> 表达式或变量的名称。
+                 如果 <paramref name="Expression" /> 属于类型 <see langword="Object" />, 、 <see langword="Len" /> 函数返回时将写入的文件的大小 <see langword="FilePut" /> 函数。
+              </param>
+      <returns>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Len(System.Decimal)">
+      <summary>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </summary>
+      <param name="Expression">
+                任何有效 <see langword="String" /> 表达式或变量的名称。
+                 如果 <paramref name="Expression" /> 属于类型 <see langword="Object" />, 、 <see langword="Len" /> 函数返回时将写入的文件的大小 <see langword="FilePut" /> 函数。
+              </param>
+      <returns>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Len(System.DateTime)">
+      <summary>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </summary>
+      <param name="Expression">
+                任何有效 <see langword="String" /> 表达式或变量的名称。
+                 如果 <paramref name="Expression" /> 属于类型 <see langword="Object" />, 、 <see langword="Len" /> 函数返回时将写入的文件的大小 <see langword="FilePut" /> 函数。
+              </param>
+      <returns>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Len(System.Char)">
+      <summary>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </summary>
+      <param name="Expression">
+                任何有效 <see langword="String" /> 表达式或变量的名称。
+                 如果 <paramref name="Expression" /> 属于类型 <see langword="Object" />, 、 <see langword="Len" /> 函数返回时将写入的文件的大小 <see langword="FilePut" /> 函数。
+              </param>
+      <returns>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Len(System.Byte)">
+      <summary>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </summary>
+      <param name="Expression">
+                任何有效 <see langword="String" /> 表达式或变量的名称。
+                 如果 <paramref name="Expression" /> 属于类型 <see langword="Object" />, 、 <see langword="Len" /> 函数返回时将写入的文件的大小 <see langword="FilePut" /> 函数。
+              </param>
+      <returns>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Len(System.Boolean)">
+      <summary>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </summary>
+      <param name="Expression">
+                任何有效 <see langword="String" /> 表达式或变量的名称。
+                 如果 <paramref name="Expression" /> 属于类型 <see langword="Object" />, 、 <see langword="Len" /> 函数返回时将写入的文件的大小 <see langword="FilePut" /> 函数。
+              </param>
+      <returns>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Len(System.Int32)">
+      <summary>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </summary>
+      <param name="Expression">
+                任何有效 <see langword="String" /> 表达式或变量的名称。
+                 如果 <paramref name="Expression" /> 属于类型 <see langword="Object" />, 、 <see langword="Len" /> 函数返回时将写入的文件的大小 <see langword="FilePut" /> 函数。
+              </param>
+      <returns>
+              返回一个包含 string 中的字符数或名义存储变量所需的字节数的整数。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.LSet(System.String,System.Int32)">
+      <summary>
+              返回左对齐字符串，字符串包含调整为指定长度的指定的字符串。
+            </summary>
+      <param name="Source">
+                必需。
+                <see langword="String" /> 表达式。
+                 字符串变量的名称。
+              </param>
+      <param name="Length">
+                必需。
+                <see langword="Integer" /> 表达式。
+                 返回字符串的长度。
+              </param>
+      <returns>
+              返回左对齐字符串，字符串包含调整为指定长度的指定的字符串。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.LTrim(System.String)">
+      <summary>
+              返回一个包含一份的指定字符串删除前导空格的字符串 (<see langword="LTrim" />)，则没有尾随空格 (<see langword="RTrim" />)，或没有前导空格或尾随空格 (<see langword="Trim" />)。
+            </summary>
+      <param name="str">
+                必需。
+                 任何有效的 <see langword="String" /> 表达式。
+              </param>
+      <returns>
+              返回一个包含一份的指定字符串删除前导空格的字符串 (<see langword="LTrim" />)，则没有尾随空格 (<see langword="RTrim" />)，或没有前导空格或尾随空格 (<see langword="Trim" />)。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Mid(System.String,System.Int32)">
+      <summary>
+              返回一个字符串，包含从字符串中的指定位置开始的所有字符。
+            </summary>
+      <param name="str">
+                必需。
+                <see langword="String" /> 从中返回字符表达式。
+              </param>
+      <param name="Start">
+                必需。
+                <see langword="Integer" /> 表达式。
+                 要返回的字符的起始位置。
+                 如果 <paramref name="Start" /> 个中的字符数大于 <paramref name="str" />, 、 <see langword="Mid" /> 函数将返回一个零长度字符串 ("")。
+                <paramref name="Start" /> 是一个基于。
+              </param>
+      <returns>
+              一个从字符串中指定的位置开始的所有字符都组成的字符串。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="Start" /> &lt; = 0 或 <paramref name="Length" /> &lt; 0。
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Mid(System.String,System.Int32,System.Int32)">
+      <summary>
+              返回一个字符串，包含指定的数量的从字符串中指定位置开始的字符。
+            </summary>
+      <param name="str">
+                必需。
+                <see langword="String" /> 从中返回字符表达式。
+              </param>
+      <param name="Start">
+                必需。
+                <see langword="Integer" /> 表达式。
+                 要返回的字符的起始位置。
+                 如果 <paramref name="Start" /> 个中的字符数大于 <paramref name="str" />, 、 <see langword="Mid" /> 函数将返回一个零长度字符串 ("")。
+                <paramref name="Start" /> 从 1 开始。
+              </param>
+      <param name="Length">
+                可选。
+                <see langword="Integer" /> 表达式。
+                 要返回的字符数。
+                 如果省略，或者如果有数不能超过 <paramref name="Length" /> 文本中的字符 (包括位置处的字符 <paramref name="Start" />)，则返回从 start 位置到字符串的末尾的所有字符。
+              </param>
+      <returns>
+              一个字符串，其中包含指定数量的字符从字符串中的指定位置开始。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="Start" /> &lt; = 0 或 <paramref name="Length" /> &lt; 0。
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Replace(System.String,System.String,System.String,System.Int32,System.Int32,Microsoft.VisualBasic.CompareMethod)">
+      <summary>
+              返回一个字符串，其中指定的子字符串已替换为另一个子字符串指定的次数。
+            </summary>
+      <param name="Expression">
+                必需。
+                 字符串表达式，包含要替换子字符串。
+              </param>
+      <param name="Find">
+                必需。
+                 要搜索的子字符串。
+              </param>
+      <param name="Replacement">
+                必需。
+                 替换的子字符串。
+              </param>
+      <param name="Start">
+                可选。
+                 内的位置 <paramref name="Expression" /> 启动用于替换的子字符串。
+                 返回值 <see langword="Replace" /> 是一个字符串，开始 <paramref name="Start" />, ，具有相应的子。
+                 如果省略，则假定为 1。
+              </param>
+      <param name="Count">
+                可选。
+                 要执行的子字符串替换操作的数量。
+                 如果省略，默认值为 1，这意味着"使所有可能的替换"。
+              </param>
+      <param name="Compare">
+                可选。
+                 数字值，该值指示要评估的子字符串时使用的比较类型。
+                 值，请参阅设置。
+              </param>
+      <returns>
+        <see langword="Replace" /> 返回下列值。
+            
+                      如果
+                    
+                      Replace 返回
+                    
+                      <paramref name="Find" /> 长度为零或 <see langword="Nothing" />
+                    
+                      副本 <paramref name="Expression" /><paramref name="Replace" /> 长度为零
+                    
+                      要将复制 <paramref name="Expression" /> 与未出现 <paramref name="Find" /><paramref name="Expression" /> 长度为零或 <see langword="Nothing" />, ，或 <paramref name="Start" /> 大于的长度 <paramref name="Expression" /><see langword="Nothing" /><paramref name="Count" /> 为 0
+                    
+                      副本 <paramref name="Expression" /></returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="Count" /> &lt;-1 或 <paramref name="Start" /> &lt; = 0。
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Right(System.String,System.Int32)">
+      <summary>
+              返回包含指定的数量的从右侧的字符串的字符的字符串。
+            </summary>
+      <param name="str">
+                必需。
+                <see langword="String" /> 从中返回最右边的字符表达式。
+              </param>
+      <param name="Length">
+                必需。
+                <see langword="Integer" />。
+                 指示要返回多少个字符的数值表达式。
+                 如果为 0，一个零长度字符串 ("") 返回。
+                 如果大于或等于的中的字符数 <paramref name="str" />, ，则返回整个字符串。
+              </param>
+      <returns>
+              返回包含指定的数量的从右侧的字符串的字符的字符串。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="Length" /> &lt; 0.
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.RSet(System.String,System.Int32)">
+      <summary>
+              返回右对齐字符串，字符串包含调整为指定长度的指定的字符串。
+            </summary>
+      <param name="Source">
+                必需。
+                <see langword="String" /> 表达式。
+                 字符串变量的名称。
+              </param>
+      <param name="Length">
+                必需。
+                <see langword="Integer" /> 表达式。
+                 返回字符串的长度。
+              </param>
+      <returns>
+              返回右对齐字符串，字符串包含调整为指定长度的指定的字符串。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.RTrim(System.String)">
+      <summary>
+              返回一个包含一份的指定字符串删除前导空格的字符串 (<see langword="LTrim" />)，则没有尾随空格 (<see langword="RTrim" />)，或没有前导空格或尾随空格 (<see langword="Trim" />)。
+            </summary>
+      <param name="str">
+                必需。
+                 任何有效的 <see langword="String" /> 表达式。
+              </param>
+      <returns>
+              返回一个包含一份的指定字符串删除前导空格的字符串 (<see langword="LTrim" />)，则没有尾随空格 (<see langword="RTrim" />)，或没有前导空格或尾随空格 (<see langword="Trim" />)。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Space(System.Int32)">
+      <summary>
+              返回指定数量的空格组成的字符串。
+            </summary>
+      <param name="Number">
+                必需。
+                <see langword="Integer" /> 表达式。
+                 要在字符串中的空格数。
+              </param>
+      <returns>
+              返回指定数量的空格组成的字符串。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="Number" /> &lt; 0.
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Split(System.String,System.String,System.Int32,Microsoft.VisualBasic.CompareMethod)">
+      <summary>
+              返回包含指定的数量的子字符串的从零开始的一维数组。
+            </summary>
+      <param name="Expression">
+                必需。
+                <see langword="String" /> 表达式，包含子字符串和分隔符。
+              </param>
+      <param name="Delimiter">
+                可选。
+                 任何单个字符用于标识子字符串的界限。
+                 如果 <paramref name="Delimiter" /> 省略，则空格字符 ("") 被假定为分隔符。
+              </param>
+      <param name="Limit">
+                可选。
+                 应在其中拆分输入的字符串的子字符串的最大数量。
+                 默认值为-1，指示在每个出现的输入的字符串都拆分 <paramref name="Delimiter" /> 字符串。
+              </param>
+      <param name="Compare">
+                可选。
+                 数字值，该值指示要在评估时使用的比较的子字符串。
+                 值，请参阅"设置"。
+              </param>
+      <returns>
+        <see langword="String" /> 数组。
+               如果 <paramref name="Expression" /> 是零长度字符串 ("")， <see langword="Split" /> 返回包含零长度字符串的单元素数组。
+               如果 <paramref name="Delimiter" /> 是零长度字符串，或者如果它不会不显示任何位置中 <paramref name="Expression" />, ，<see langword="Split" /> 返回包含整个的单元素数组 <paramref name="Expression" /> 字符串。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.StrComp(System.String,System.String,Microsoft.VisualBasic.CompareMethod)">
+      <summary>
+              返回-1、 0 或 1，基于字符串比较的结果。
+            </summary>
+      <param name="String1">
+                必需。
+                 任何有效的 <see langword="String" /> 表达式。
+              </param>
+      <param name="String2">
+                必需。
+                 任何有效的 <see langword="String" /> 表达式。
+              </param>
+      <param name="Compare">
+                可选。
+                 指定的字符串比较的类型。
+                 如果 <paramref name="Compare" /> 省略，则 <see langword="Option Compare" /> 设置将确定比较的类型。
+              </param>
+      <returns>
+        <see langword="StrComp" /> 函数具有下列返回值。
+            
+                      如果
+                    
+                      StrComp 返回
+                    
+                      <paramref name="String1" /> 提前进行排序 <paramref name="String2" />
+                    
+                      -1
+                    
+                      <paramref name="String1" /> 等于 <paramref name="String2" />
+                    
+                       0
+                    
+                      <paramref name="String1" /> 之后进行排序 <paramref name="String2" />
+                    
+                       1
+                    </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="Compare" /> 值无效。
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.StrConv(System.String,Microsoft.VisualBasic.VbStrConv,System.Int32)">
+      <summary>
+              返回根据指定进行转换的字符串。
+            </summary>
+      <param name="str">
+                必需。
+                <see langword="String" /> 要转换的表达式。
+              </param>
+      <param name="Conversion">
+                必需。
+                <see cref="T:Microsoft.VisualBasic.VbStrConv" /> 成员。
+                 枚举值，该值指定执行转换的类型。
+              </param>
+      <param name="LocaleID">
+                可选。
+                <see langword="LocaleID" /> 值，如果不同于系统 <see langword="LocaleID" /> 值。
+                 (系统 <see langword="LocaleID" /> 该值是默认值。)
+              </param>
+      <returns>
+              返回根据指定进行转换的字符串。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+                  不支持 <paramref name="LocaleID" />, ，<paramref name="Conversion" /> &lt; 0 或 &gt; 2048，或不受支持的指定区域设置的转换。
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.StrDup(System.Int32,System.Char)">
+      <summary>
+              返回字符串或对象包含的指定字符重复指定的次数。
+            </summary>
+      <param name="Number">
+                必需。
+                <see langword="Integer" /> 表达式。
+                 要返回的字符串长度。
+              </param>
+      <param name="Character">
+                必需。
+                 任何有效 <see langword="Char" />, ，<see langword="String" />, ，或 <see langword="Object" /> 表达式。
+                 将使用仅该表达式的第一个字符。
+                 如果字符是类型的 <see langword="Object" />, ，它必须包含 <see langword="Char" /> 或 <see langword="String " />值。
+              </param>
+      <returns>
+              返回字符串或对象包含的指定字符重复指定的次数。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="Number" /> 小于 0 或 <paramref name="Character" /> 类型无效。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="Character" /> 为 <see langword="Nothing" />。
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.StrDup(System.Int32,System.Object)">
+      <summary>
+              返回字符串或对象包含的指定字符重复指定的次数。
+            </summary>
+      <param name="Number">
+                必需。
+                <see langword="Integer" /> 表达式。
+                 要返回的字符串长度。
+              </param>
+      <param name="Character">
+                必需。
+                 任何有效 <see langword="Char" />, ，<see langword="String" />, ，或 <see langword="Object" /> 表达式。
+                 将使用仅该表达式的第一个字符。
+                 如果字符是类型的 <see langword="Object" />, ，它必须包含 <see langword="Char" /> 或 <see langword="String " />值。
+              </param>
+      <returns>
+              返回字符串或对象包含的指定字符重复指定的次数。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="Number" /> 小于 0 或 <paramref name="Character" /> 类型无效。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="Character" /> 为 <see langword="Nothing" />。
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.StrDup(System.Int32,System.String)">
+      <summary>
+              返回字符串或对象包含的指定字符重复指定的次数。
+            </summary>
+      <param name="Number">
+                必需。
+                <see langword="Integer" /> 表达式。
+                 要返回的字符串长度。
+              </param>
+      <param name="Character">
+                必需。
+                 任何有效 <see langword="Char" />, ，<see langword="String" />, ，或 <see langword="Object" /> 表达式。
+                 将使用仅该表达式的第一个字符。
+                 如果字符是类型的 <see langword="Object" />, ，它必须包含 <see langword="Char" /> 或 <see langword="String " />值。
+              </param>
+      <returns>
+              返回字符串或对象包含的指定字符重复指定的次数。
+            </returns>
+      <exception cref="T:System.ArgumentException">
+        <paramref name="Number" /> 小于 0 或 <paramref name="Character" /> 类型无效。
+                </exception>
+      <exception cref="T:System.ArgumentNullException">
+        <paramref name="Character" /> 为 <see langword="Nothing" />。
+                </exception>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.StrReverse(System.String)">
+      <summary>
+              返回指定字符串的字符顺序相反的字符串。
+            </summary>
+      <param name="Expression">
+                必需。
+                 字符串的表达式，其字符顺序反转。
+                 如果 <paramref name="Expression" /> 是零长度字符串 ("")，则返回长度为零的字符串。
+              </param>
+      <returns>
+              返回指定字符串的字符顺序相反的字符串。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.Trim(System.String)">
+      <summary>
+              返回一个包含一份的指定字符串删除前导空格的字符串 (<see langword="LTrim" />)，则没有尾随空格 (<see langword="RTrim" />)，或没有前导空格或尾随空格 (<see langword="Trim" />)。
+            </summary>
+      <param name="str">
+                必需。
+                 任何有效的 <see langword="String" /> 表达式。
+              </param>
+      <returns>
+              返回一个包含一份的指定字符串删除前导空格的字符串 (<see langword="LTrim" />)，则没有尾随空格 (<see langword="RTrim" />)，或没有前导空格或尾随空格 (<see langword="Trim" />)。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.UCase(System.Char)">
+      <summary>
+              返回字符串或字符，其中包含指定的字符串转换为大写形式。
+            </summary>
+      <param name="Value">
+                必需。
+                 任何有效 <see langword="String" /> 或 <see langword="Char" /> 表达式。
+              </param>
+      <returns>
+              返回字符串或字符，其中包含指定的字符串转换为大写形式。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.Strings.UCase(System.String)">
+      <summary>
+              返回字符串或字符，其中包含指定的字符串转换为大写形式。
+            </summary>
+      <param name="Value">
+                必需。
+                 任何有效 <see langword="String" /> 或 <see langword="Char" /> 表达式。
+              </param>
+      <returns>
+              返回字符串或字符，其中包含指定的字符串转换为大写形式。
+            </returns>
+    </member>
+    <member name="T:Microsoft.VisualBasic.CallType">
+      <summary>
+              指示的调用时要调用的过程的类型<see langword="CallByName" />函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.CallType.Get">
+      <summary>
+              正在检索属性值。
+                此成员等效于 Visual Basic 常量 <see langword="vbGet" />。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.CallType.Let">
+      <summary>
+              要确定某个对象属性值。
+               此成员等效于 Visual Basic 常量 <see langword="vbLet" />。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.CallType.Method">
+      <summary>
+              正在调用的方法。
+                此成员等效于 Visual Basic 常量 <see langword="vbMethod" />。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.CallType.Set">
+      <summary>
+              要确定属性值。
+                此成员等效于 Visual Basic 常量 <see langword="vbSet" />。
+            </summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.CompilerServices.DesignerGeneratedAttribute">
+      <summary>
+              应用于某个类时，编译器将从默认的综合构造函数隐式调用组件初始化方法。
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.DesignerGeneratedAttribute.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.VisualBasic.CompilerServices.DesignerGeneratedAttribute" /> 属性的新实例。
+            </summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.CompilerServices.IncompleteInitialization">
+      <summary>
+              Visual Basic 编译器在静态本地初始化，则为过程中使用此类它不是为了在代码中直接调用。
+               如果静态局部变量无法初始化，将引发此类型的异常。
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.IncompleteInitialization.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.VisualBasic.CompilerServices.IncompleteInitialization" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.IncompleteInitialization.#ctor(System.String)">
+      <summary>
+              初始化 <see cref="T:Microsoft.VisualBasic.CompilerServices.IncompleteInitialization" /> 类的新实例。
+            </summary>
+      <param name="message">
+                一个表示要发送的消息字符串。
+              </param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.IncompleteInitialization.#ctor(System.String,System.Exception)">
+      <summary>
+              初始化 <see cref="T:Microsoft.VisualBasic.CompilerServices.IncompleteInitialization" /> 类的新实例。
+            </summary>
+      <param name="message">
+                一个表示要发送的消息字符串。
+              </param>
+      <param name="innerException">
+                一个 <see cref="T:System.Exception" /> 对象。
+              </param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.CompilerServices.Conversions">
+      <summary>
+              提供执行各种类型转换的方法。
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ChangeType(System.Object,System.Type)">
+      <summary>
+              将对象转换为指定的类型。
+            </summary>
+      <param name="Expression">
+                要转换的对象。
+              </param>
+      <param name="TargetType">
+                要将对象转换为类型。
+              </param>
+      <returns>
+              指定的目标类型的对象。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.FallbackUserDefinedConversion(System.Object,System.Type)">
+      <summary>
+              将对象转换为指定的类型。
+            </summary>
+      <param name="Expression">
+                要转换的对象。
+              </param>
+      <param name="TargetType">
+                若要将对象转换为的类型。
+              </param>
+      <returns>
+              指定的目标类型的对象。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.FromCharAndCount(System.Char,System.Int32)">
+      <summary>
+              将转换 <see cref="T:System.Char" /> 为一个字符串，指定为字节数的值。
+            </summary>
+      <param name="Value">
+                要转换的 <see langword="Char" /> 值。
+              </param>
+      <param name="Count">
+                字节数 <see langword="Char" /> 值。
+              </param>
+      <returns>
+              指定值的字符串表示形式。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.FromCharArray(System.Char[])">
+      <summary>
+              将转换 <see cref="T:System.Char" /> 数组转换为一个字符串。
+            </summary>
+      <param name="Value">
+        <see langword="Char" /> 要转换的数组。
+              </param>
+      <returns>
+              指定数组的字符串表示形式。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.FromCharArraySubset(System.Char[],System.Int32,System.Int32)">
+      <summary>
+              将转换的一个子集 <see cref="T:System.Char" /> 数组转换为一个字符串。
+            </summary>
+      <param name="Value">
+        <see langword="Char" /> 要转换的数组。
+              </param>
+      <param name="StartIndex">
+                起始位置的从零开始索引。
+              </param>
+      <param name="Length">
+                以字节为单位的子集的长度。
+              </param>
+      <returns>
+              指定数组中的起始位置为指定长度的字符串表示形式。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToBoolean(System.Object)">
+      <summary>
+              将对象转换为 <see cref="T:System.Boolean" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的对象。
+              </param>
+      <returns>
+              一个 <see langword="Boolean" /> 值。
+               返回 <see langword="False" /> 的对象是否为 null; 否则为 <see langword="True" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToBoolean(System.String)">
+      <summary>
+              将字符串转换为 <see cref="T:System.Boolean" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的字符串。
+              </param>
+      <returns>
+              一个 <see langword="Boolean" /> 值。
+               返回 <see langword="False" /> 如果字符串为空; 否则为 <see langword="True" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToByte(System.Object)">
+      <summary>
+              将对象转换为 <see cref="T:System.Byte" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的对象。
+              </param>
+      <returns>
+        <see langword="Byte" /> 对象值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToByte(System.String)">
+      <summary>
+              将字符串转换为 <see cref="T:System.Byte" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的字符串。
+              </param>
+      <returns>
+        <see langword="Byte" /> 字符串的值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToChar(System.Object)">
+      <summary>
+              将对象转换为 <see cref="T:System.Char" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的对象。
+              </param>
+      <returns>
+        <see langword="Char" /> 对象值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToChar(System.String)">
+      <summary>
+              将字符串转换为 <see cref="T:System.Char" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的字符串。
+              </param>
+      <returns>
+        <see langword="Char" /> 字符串的值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToCharArrayRankOne(System.String)">
+      <summary>
+              将字符串转换到一维 <see cref="T:System.Char" /> 数组。
+            </summary>
+      <param name="Value">
+                要转换的字符串。
+              </param>
+      <returns>
+              一维 <see langword="Char" /> 数组。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToCharArrayRankOne(System.Object)">
+      <summary>
+              将对象转换到一维 <see cref="T:System.Char" /> 数组。
+            </summary>
+      <param name="Value">
+                要转换的对象。
+              </param>
+      <returns>
+              一维 <see langword="Char" /> 数组。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToDate(System.Object)">
+      <summary>
+              将对象转换为 <see cref="T:System.DateTime" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的对象。
+              </param>
+      <returns>
+        <see langword="DateTime" /> 对象值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToDate(System.String)">
+      <summary>
+              将字符串转换为 <see cref="T:System.DateTime" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的字符串。
+              </param>
+      <returns>
+        <see langword="DateTime" /> 字符串的值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToDecimal(System.Boolean)">
+      <summary>
+              将转换 <see cref="T:System.Boolean" /> 值赋给 <see cref="T:System.Decimal" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的布尔值。
+              </param>
+      <returns>
+        <see langword="Decimal" /> 布尔值的值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToDecimal(System.Object)">
+      <summary>
+              将对象转换为 <see cref="T:System.Decimal" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的对象。
+              </param>
+      <returns>
+        <see langword="Decimal" /> 对象值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToDecimal(System.String)">
+      <summary>
+              将字符串转换为 <see cref="T:System.Decimal" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的字符串。
+              </param>
+      <returns>
+        <see langword="Decimal" /> 字符串的值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToDouble(System.Object)">
+      <summary>
+              将对象转换为 <see cref="T:System.Double" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的对象。
+              </param>
+      <returns>
+        <see langword="Double" /> 对象值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToDouble(System.String)">
+      <summary>
+              将字符串转换为 <see cref="T:System.Double" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的字符串。
+              </param>
+      <returns>
+        <see langword="Double" /> 字符串的值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToGenericParameter``1(System.Object)">
+      <summary>
+              将对象转换为泛型类型 <paramref name="T" />。
+            </summary>
+      <param name="Value">
+                要转换的对象。
+              </param>
+      <typeparam name="T">
+                要转换的类型 <paramref name="Value" /> 到。
+              </typeparam>
+      <returns>
+              结构或泛型类型的对象 <paramref name="T" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger(System.Object)">
+      <summary>
+              将对象转换为整数值。
+            </summary>
+      <param name="Value">
+                要转换的对象。
+              </param>
+      <returns>
+        <see langword="int" /> 对象值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToInteger(System.String)">
+      <summary>
+              将字符串转换为整数值。
+            </summary>
+      <param name="Value">
+                要转换的字符串。
+              </param>
+      <returns>
+        <see langword="int" /> 字符串的值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToLong(System.Object)">
+      <summary>
+              将对象转换为 <see langword="Long" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的对象。
+              </param>
+      <returns>
+        <see langword="Long" /> 对象值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToLong(System.String)">
+      <summary>
+              将字符串转换为 <see langword="Long" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的字符串。
+              </param>
+      <returns>
+        <see langword="Long" /> 字符串的值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToSByte(System.String)">
+      <summary>
+              将字符串转换为 <see cref="T:System.SByte" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的字符串。
+              </param>
+      <returns>
+        <see langword="SByte" /> 字符串的值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToSByte(System.Object)">
+      <summary>
+              将对象转换为 <see cref="T:System.SByte" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的对象。
+              </param>
+      <returns>
+        <see langword="SByte" /> 对象值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToShort(System.Object)">
+      <summary>
+              将对象转换为 <see langword="Short" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的对象。
+              </param>
+      <returns>
+        <see langword="Short" /> 对象值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToShort(System.String)">
+      <summary>
+              将字符串转换为 <see langword="Short" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的字符串。
+              </param>
+      <returns>
+        <see langword="Short" /> 字符串的值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToSingle(System.Object)">
+      <summary>
+              将对象转换为 <see cref="T:System.Single" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的对象。
+              </param>
+      <returns>
+        <see langword="Single" /> 对象值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToSingle(System.String)">
+      <summary>
+              将转换 <see cref="T:System.String" /> 到 <see cref="T:System.Single" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的字符串。
+              </param>
+      <returns>
+        <see langword="Single" /> 字符串的值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToString(System.Int64)">
+      <summary>
+              将转换 <see langword="Long" /> 值赋给 <see cref="T:System.String" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的 <see langword="Long" /> 值。
+              </param>
+      <returns>
+        <see langword="String" /> 表示形式 <see langword="Long" /> 值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToString(System.Single,System.Globalization.NumberFormatInfo)">
+      <summary>
+              将转换 <see cref="T:System.Single" /> 值赋给 <see cref="T:System.String" /> 值，而且使用指定的数字格式。
+            </summary>
+      <param name="Value">
+                要转换的 <see langword="Single" /> 值。
+              </param>
+      <param name="NumberFormat">
+                数字的格式，若要使用，根据 <see cref="T:System.Globalization.NumberFormatInfo" />。
+              </param>
+      <returns>
+        <see langword="String" /> 表示形式 <see langword="Single" /> 值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToString(System.Double,System.Globalization.NumberFormatInfo)">
+      <summary>
+              将转换 <see cref="T:System.Double" /> 值赋给 <see cref="T:System.String" /> 值，而且使用指定的数字格式。
+            </summary>
+      <param name="Value">
+                要转换的 <see langword="Double" /> 值。
+              </param>
+      <param name="NumberFormat">
+                数字的格式，若要使用，根据 <see cref="T:System.Globalization.NumberFormatInfo" />。
+              </param>
+      <returns>
+        <see langword="String" /> 表示形式 <see langword="Double" /> 值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToString(System.Decimal,System.Globalization.NumberFormatInfo)">
+      <summary>
+              将转换 <see cref="T:System.Decimal" /> 值赋给 <see cref="T:System.String" /> 值，而且使用指定的数字格式。
+            </summary>
+      <param name="Value">
+                要转换的 <see langword="decimal" /> 值。
+              </param>
+      <param name="NumberFormat">
+                数字的格式，若要使用，根据 <see cref="T:System.Globalization.NumberFormatInfo" />。
+              </param>
+      <returns>
+        <see langword="String" /> 表示形式 <see langword="Decimal" /> 值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToString(System.UInt64)">
+      <summary>
+              将转换 <see langword="Ulong" /> 值赋给 <see cref="T:System.String" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的 <see langword="Ulong" /> 值。
+              </param>
+      <returns>
+        <see langword="String" /> 表示形式 <see langword="Ulong" /> 值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToString(System.UInt32)">
+      <summary>
+              将转换 <see langword="uint" /> 值赋给 <see cref="T:System.String" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的 <see langword="Uint" /> 值。
+              </param>
+      <returns>
+        <see langword="String" /> 表示形式 <see langword="Uint" /> 值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToString(System.Single)">
+      <summary>
+              将转换 <see cref="T:System.Single" /> 值 （单精度浮点数） 到 <see cref="T:System.String" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的 <see langword="Single" /> 值。
+              </param>
+      <returns>
+        <see langword="String" /> 表示形式 <see langword="Single" /> 值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToString(System.Object)">
+      <summary>
+              将对象转换为 <see cref="T:System.String" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的对象。
+              </param>
+      <returns>
+        <see langword="String" /> 对象表示形式。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToString(System.Int32)">
+      <summary>
+              将转换为一个整数值 <see cref="T:System.String" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的 <see langword="int" /> 值。
+              </param>
+      <returns>
+        <see langword="String" /> 表示形式 <see langword="int" /> 值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToString(System.Int16)">
+      <summary>
+              将转换 <see langword="Short" /> 值赋给 <see cref="T:System.String" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的 <see langword="Short" /> 值。
+              </param>
+      <returns>
+        <see langword="String" /> 表示形式 <see langword="Short" /> 值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToString(System.Double)">
+      <summary>
+              将转换 <see cref="T:System.Double" /> 值赋给 <see cref="T:System.String" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的 <see langword="Double" /> 值。
+              </param>
+      <returns>
+        <see langword="String" /> 表示形式 <see langword="Double" /> 值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToString(System.Decimal)">
+      <summary>
+              将转换 <see cref="T:System.Decimal" /> 值赋给 <see cref="T:System.String" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的 <see langword="Decimal" /> 值。
+              </param>
+      <returns>
+        <see langword="String" /> 表示形式 <see langword="Decimal" /> 值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToString(System.DateTime)">
+      <summary>
+              将转换 <see cref="T:System.DateTime" /> 值赋给 <see cref="T:System.String" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的 <see langword="DateTime" /> 值。
+              </param>
+      <returns>
+        <see langword="String" /> 表示形式 <see langword="DateTime" /> 值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToString(System.Char)">
+      <summary>
+              将转换 <see cref="T:System.Char" /> 值赋给 <see cref="T:System.String" />。
+            </summary>
+      <param name="Value">
+                要转换的 <see langword="Char" /> 值。
+              </param>
+      <returns>
+        <see langword="String" /> 表示形式 <see langword="Char" /> 值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToString(System.Byte)">
+      <summary>
+              将转换 <see cref="T:System.Byte" /> 值赋给 <see cref="T:System.String" />。
+            </summary>
+      <param name="Value">
+                要转换的 <see langword="Byte" /> 值。
+              </param>
+      <returns>
+        <see langword="String" /> 表示形式 <see langword="Byte" /> 值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToString(System.Boolean)">
+      <summary>
+              将转换 <see cref="T:System.Boolean" /> 值赋给 <see cref="T:System.String" />。
+            </summary>
+      <param name="Value">
+                要转换的 <see langword="Boolean" /> 值。
+              </param>
+      <returns>
+        <see langword="String" /> 表示形式 <see langword="Boolean" /> 值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToUInteger(System.Object)">
+      <summary>
+              将对象转换为 <see langword="Uint" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的对象。
+              </param>
+      <returns>
+        <see langword="Uint" /> 对象值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToUInteger(System.String)">
+      <summary>
+              将字符串转换为 <see langword="Uint" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的字符串。
+              </param>
+      <returns>
+        <see langword="Uint" /> 字符串的值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToULong(System.Object)">
+      <summary>
+              将对象转换为 <see langword="Ulong" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的对象。
+              </param>
+      <returns>
+        <see langword="Ulong" /> 对象值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToULong(System.String)">
+      <summary>
+              将字符串转换为 <see langword="Ulong" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的字符串。
+              </param>
+      <returns>
+        <see langword="Ulong" /> 字符串的值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToUShort(System.Object)">
+      <summary>
+              将对象转换为 <see langword="Ushort" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的对象。
+              </param>
+      <returns>
+        <see langword="Ushort" /> 对象值。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Conversions.ToUShort(System.String)">
+      <summary>
+              将字符串转换为 <see langword="Ushort" /> 值。
+            </summary>
+      <param name="Value">
+                要转换的字符串。
+              </param>
+      <returns>
+        <see langword="Ushort" /> 字符串的值。
+            </returns>
+    </member>
+    <member name="T:Microsoft.VisualBasic.CompilerServices.StandardModuleAttribute">
+      <summary>
+              此类提供了发送到中间语言 (IL) 时将应用于标准模块构造的属性。
+               但并不是直接从代码中调用。
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.StandardModuleAttribute.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.VisualBasic.CompilerServices.StandardModuleAttribute" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.CompilerServices.StaticLocalInitFlag">
+      <summary>
+              Visual Basic 编译器使用此类在内部初始化静态本地成员; 时它不是为了在代码中直接调用。
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.StaticLocalInitFlag.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.VisualBasic.CompilerServices.StaticLocalInitFlag" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.CompilerServices.StaticLocalInitFlag.State">
+      <summary>
+              返回 （或未初始化） 的静态本地成员的初始化标志的状态。
+            </summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.CompilerServices.Utils">
+      <summary>
+              包含 Visual Basic 编译器使用的实体。
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Utils.CopyArray(System.Array,System.Array)">
+      <summary>
+              Visual Basic 编译器用作帮助器<see langword="Redim" />。
+            </summary>
+      <param name="arySrc">
+                要复制的数组。
+              </param>
+      <param name="aryDest">
+                目标数组。
+              </param>
+      <returns>
+              复制的数组。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Utils.GetResourceString(System.String,System.String[])">
+      <summary>
+              检索并设置本地化的资源字符串或错误消息的格式。
+            </summary>
+      <param name="ResourceKey">
+                要检索的字符串或错误消息的标识符。
+              </param>
+      <param name="Args">
+                要替换的字符串或错误消息中的占位符的参数数组。
+              </param>
+      <returns>
+              带格式的资源字符串或错误消息。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Utils.MethodToString(System.Reflection.MethodBase)">
+      <summary>
+              返回 Visual Basic 方法签名。
+            </summary>
+      <param name="Method">
+                一个 <see cref="T:System.Reflection.MethodBase" /> 要返回的 Visual Basic 方法签名对象。
+              </param>
+      <returns>
+              所提供的 Visual Basic 方法签名 <see cref="T:System.Reflection.MethodBase" /> 对象。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Utils.SetCultureInfo(System.Globalization.CultureInfo)">
+      <summary>
+              设置当前线程的区域性。
+            </summary>
+      <param name="Culture">
+                一个 <see cref="T:System.Globalization.CultureInfo" /> 要设置为当前线程的区域性对象。
+              </param>
+      <returns>
+              以前的值 <see cref="P:System.Threading.Thread.CurrentCulture" /> 当前线程的属性。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Utils.ThrowException(System.Int32)">
+      <summary>
+              将本地化的 Visual Basic 异常引发。
+            </summary>
+      <param name="hr">
+                Visual Basic 错误标识符。
+              </param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.Constants">
+      <summary>
+        <see langword="Constants" />模块包含杂项常量。
+               可以在代码中任意位置使用这些常量。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbAbort">
+      <summary>
+              指示 <see langword="Abort" /> 在消息框中所单击的按钮。
+               返回 <see langword="MsgBox" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbAbortRetryIgnore">
+      <summary>
+              指示 <see langword="Abort" />, ，<see langword="Retry" />, ，和 <see langword="Ignore" /> 按钮将显示当 <see langword="MsgBox" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbApplicationModal">
+      <summary>
+              指示消息框中，将显示为模式对话框框中时 <see langword="MsgBox" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbArchive">
+      <summary>
+              指示该文件已更改自文件访问函数的最后一个备份操作。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbArray">
+      <summary>
+              指示 variant 的对象的类型是一个数组。
+               返回 <see langword="VarType" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbBack">
+      <summary>
+              表示一个退格符用于打印和显示功能。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbBinaryCompare">
+      <summary>
+              指定在比较函数的调用时，应执行二进制比较。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbBoolean">
+      <summary>
+              指示 variant 的对象的类型是 <see langword="Boolean" />。
+               返回 <see langword="VarType" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbByte">
+      <summary>
+              指示 variant 的对象的类型是 <see langword="Byte" />。
+               返回 <see langword="VarType" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbCancel">
+      <summary>
+              指示 <see langword="Cancel" /> 在消息框中所单击的按钮。
+               返回 <see langword="MsgBox" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbCr">
+      <summary>
+              表示一个回车符用于打印和显示功能。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbCritical">
+      <summary>
+              指示将关键消息图标时，所显示 <see langword="MsgBox" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbCrLf">
+      <summary>
+              表示与打印一个换行字符和显示功能结合使用回车符。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbCurrency">
+      <summary>
+              指示 variant 的对象的类型是 <see langword="Currency" />。
+               返回 <see langword="VarType" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbDate">
+      <summary>
+              指示 variant 的对象的类型是 <see langword="Date" />。
+               返回 <see langword="VarType" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbDecimal">
+      <summary>
+              指示 variant 的对象的类型是 <see langword="Decimal" />。
+               返回 <see langword="VarType" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbDefaultButton1">
+      <summary>
+              指示当消息框出现时，为默认按钮选择最左侧的按钮。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbDefaultButton2">
+      <summary>
+              指示当消息框出现时，为默认按钮选择左起第二个按钮。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbDefaultButton3">
+      <summary>
+              指示当消息框出现时，为默认按钮选择左侧起的第三个按钮。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbDirectory">
+      <summary>
+              指示该文件的目录或文件访问函数的文件夹。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbDouble">
+      <summary>
+              指示 variant 的对象的类型是 <see langword="Double" />。
+               返回 <see langword="VarType" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbEmpty">
+      <summary>
+              指示 variant 的对象的类型是 <see langword="Empty" />。
+               返回 <see langword="VarType" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbExclamation">
+      <summary>
+              指示感叹号图标将显示当 <see langword="MsgBox" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbFalse">
+      <summary>
+              指示 <see langword="Boolean" /> 值 <see langword="False" /> 数字格式的函数调用时，应使用。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbFirstFourDays">
+      <summary>
+              指示包含至少四天的年份的第一周应使用与日期相关的函数调用时。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbFirstFullWeek">
+      <summary>
+              指示调用与日期相关的函数时，应使用该年的第一个完整的周。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbFirstJan1">
+      <summary>
+              表示，其中 1 月 1 日发生与日期相关的函数调用时，应使用该年的周。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbFormFeed">
+      <summary>
+              表示用于打印功能的换页符字符。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbFriday">
+      <summary>
+              指定星期五应该用作与日期相关的函数调用时一周的第一天。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbGeneralDate">
+      <summary>
+              指示是否应将当前区域性的常规日期格式时使用 <see langword="FormatDateTime" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbGet">
+      <summary>
+              指定属性值应为检索时 <see langword="CallByName" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbHidden">
+      <summary>
+              指示该文件是隐藏的文件的文件访问函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbHide">
+      <summary>
+              指示是否隐藏的窗口样式对所调用程序何时 <see langword="Shell" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbHiragana">
+      <summary>
+              指示应将平假名字符转换为片假名字符时 <see langword="StrConv" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbIgnore">
+      <summary>
+              指示 <see langword="Ignore" /> 在消息框中所单击的按钮。
+               返回 <see langword="MsgBox" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbInformation">
+      <summary>
+              指示信息图标将显示当 <see langword="MsgBox" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbInteger">
+      <summary>
+              指示 variant 的对象的类型是 <see langword="Integer" />。
+               返回 <see langword="VarType" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbKatakana">
+      <summary>
+              指示应将字符转换为平假名片假名字符时 <see langword="StrConv" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbLet">
+      <summary>
+              指示属性值应设置为一个对象实例时 <see langword="CallByName" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbLf">
+      <summary>
+              表示一个换行符字符对打印和显示功能。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbLinguisticCasing">
+      <summary>
+              指示应将字符转换为使用语言规则进行大小写，而不是文件系统时的大小写规则 <see langword="StrConv" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbLong">
+      <summary>
+              指示 variant 的对象类型为 <see langword="Long" />。
+               返回 <see langword="VarType" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbLongDate">
+      <summary>
+              指示是否应将当前区域性的长日期格式时使用 <see langword="FormatDateTime" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbLongTime">
+      <summary>
+              指示是否应将当前区域性的长时间格式时使用 <see langword="FormatDateTime" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbLowerCase">
+      <summary>
+              指示应将字符转换为小写时 <see langword="StrConv" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbMaximizedFocus">
+      <summary>
+              指示窗口样式最大化并将焦点提供给调用程序何时 <see langword="Shell" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbMethod">
+      <summary>
+              指定时，应调用一种方法 <see langword="CallByName" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbMinimizedFocus">
+      <summary>
+              指示焦点提供给所调用的窗口样式已最小化进行编程时 <see langword="Shell" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbMinimizedNoFocus">
+      <summary>
+              指示窗口样式最小化而无需焦点提供给调用程序何时 <see langword="Shell" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbMonday">
+      <summary>
+              指定星期一应该用作与日期相关的函数调用时一周的第一天。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbMsgBoxHelp">
+      <summary>
+              指示 <see langword="Help" /> 按钮将处于时显示 <see langword="MsgBox" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbMsgBoxRight">
+      <summary>
+              指示，文本将是右对齐时<see langword="MsgBox" />调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbMsgBoxRtlReading">
+      <summary>
+              指示右到左读取文本 （希伯来语和阿拉伯语系统） 将显示当 <see langword="MsgBox" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbMsgBoxSetForeground">
+      <summary>
+              指示该消息框将显示在前台时 <see langword="MsgBox" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbNarrow">
+      <summary>
+              表示应转换的宽 （双字节） 字符来缩小范围 （单字节） 字符时 <see langword="StrConv" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbNewLine">
+      <summary>
+              表示一个新行字符对打印和显示功能。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbNo">
+      <summary>
+              指示 <see langword="No" /> 在消息框中所单击的按钮。
+               返回 <see langword="MsgBox" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbNormal">
+      <summary>
+              指示该文件是文件访问功能的普通文件。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbNormalFocus">
+      <summary>
+              指示窗口样式为正常并且焦点提供给调用程序何时 <see langword="Shell" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbNormalNoFocus">
+      <summary>
+              指示窗口样式为正常而无需焦点提供给调用程序何时 <see langword="Shell" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbNull">
+      <summary>
+              指示 variant 的对象的类型是<see langword="Nothing" />。
+               返回<see langword="VarType" />函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbNullChar">
+      <summary>
+              表示一个 null 字符对打印和显示功能。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbNullString">
+      <summary>
+              表示一个零长度字符串用于打印和显示功能，以及用于调用外部过程。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbObject">
+      <summary>
+              指示 variant 的对象的类型是 <see langword="Object" />。
+               返回 <see langword="VarType" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbObjectError">
+      <summary>
+              表示对象的错误号。
+               用户定义的错误号应大于此值。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbOK">
+      <summary>
+              指示 <see langword="OK" /> 在消息框中所单击的按钮。
+               返回 <see langword="MsgBox" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbOKCancel">
+      <summary>
+              指示 <see langword="OK" /> 和 <see langword="Cancel" /> 按钮将显示当 <see langword="MsgBox" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbOKOnly">
+      <summary>
+              它仅指示 <see langword="OK" /> 按钮将处于时显示 <see langword="MsgBox" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbProperCase">
+      <summary>
+              指示应将字符串中的每个词的第一个字母转换为大写，并将其余字符到小写时 <see langword="StrConv" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbQuestion">
+      <summary>
+              指示工作流问号图标将显示当 <see langword="MsgBox" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbReadOnly">
+      <summary>
+              指示该文件是文件访问功能的只读文件。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbRetry">
+      <summary>
+              指示 <see langword="Retry" /> 在消息框中所单击的按钮。
+               返回 <see langword="MsgBox" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbRetryCancel">
+      <summary>
+              指示 <see langword="Retry" /> 和 <see langword="Cancel" /> 按钮将显示当 <see langword="MsgBox" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbSaturday">
+      <summary>
+              指定星期六应该用作与日期相关的函数调用时一周的第一天。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbSet">
+      <summary>
+              指示时，应设置属性值 <see langword="CallByName" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbShortDate">
+      <summary>
+              指示是否应将当前区域性的短日期格式时使用 <see langword="FormatDateTime" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbShortTime">
+      <summary>
+              指示是否应将当前区域性的短时间格式时使用 <see langword="FormatDateTime" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbSimplifiedChinese">
+      <summary>
+              指示应将字符转换为简体中文时 <see langword="StrConv" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbSingle">
+      <summary>
+              指示 variant 的对象的类型是 <see langword="Single" />。
+               返回 <see langword="VarType" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbString">
+      <summary>
+              指示 variant 的对象的类型是 <see langword="String" />。
+               返回 <see langword="VarType" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbSunday">
+      <summary>
+              指定星期日应该用作与日期相关的函数调用时一周的第一天。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbSystem">
+      <summary>
+              指示该文件是文件访问函数的系统文件。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbSystemModal">
+      <summary>
+              指示消息框中，将显示为模式对话框框中时 <see langword="MsgBox" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbTab">
+      <summary>
+              表示一个选项卡用于打印和显示功能。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbTextCompare">
+      <summary>
+              指示在比较函数的调用时应执行文本比较。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbThursday">
+      <summary>
+              指定 （星期四） 应该用作与日期相关的函数调用时一周的第一天。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbTraditionalChinese">
+      <summary>
+              指示应将字符转换为传统中文 <see langword="StrConv" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbTrue">
+      <summary>
+              指示 <see langword="Boolean" /> 值 <see langword="True" /> 数字格式的函数调用时，应使用。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbTuesday">
+      <summary>
+              指定 （星期二） 应该用作与日期相关的函数调用时一周的第一天。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbUpperCase">
+      <summary>
+              指示应将字符转换为大写时 <see langword="StrConv" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbUseDefault">
+      <summary>
+              指示默认值 <see langword="Boolean" /> 数字格式的函数调用时，应使用的值。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbUserDefinedType">
+      <summary>
+              指示 variant 的对象的类型的用户定义的类型。
+               返回 <see langword="VarType" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbUseSystem">
+      <summary>
+              指示一周指定您的系统为该年的第一周应使用与日期相关的函数调用时。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbUseSystemDayOfWeek">
+      <summary>
+              表示一天指定您的系统为一周的第一天应使用与日期相关的函数调用时。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbVariant">
+      <summary>
+              指示 variant 的对象的类型是 <see langword="Variant" />。
+               返回 <see langword="VarType" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbVerticalTab">
+      <summary>
+              表示用于打印功能回车符。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbVolume">
+      <summary>
+              指示文件访问功能的卷标签文件属性。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbWednesday">
+      <summary>
+              指定 （星期三） 应该用作与日期相关的函数调用时一周的第一天。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbWide">
+      <summary>
+              指示应将窄 （单字节） 字符转换为宽 （双字节） 字符时 <see langword="StrConv" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbYes">
+      <summary>
+              指示 <see langword="Yes" /> 在消息框中所单击的按钮。
+               返回 <see langword="MsgBox" /> 函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbYesNo">
+      <summary>
+              指示 <see langword="Yes" /> 和 <see langword="No" /> 按钮将显示当 <see langword="MsgBox" /> 调用函数。
+            </summary>
+    </member>
+    <member name="F:Microsoft.VisualBasic.Constants.vbYesNoCancel">
+      <summary>
+              指示 <see langword="Yes" />, ，<see langword="No" />, ，和 <see langword="Cancel" /> 按钮将显示当 <see langword="MsgBox" /> 调用函数。
+            </summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.CompilerServices.ObjectFlowControl.ForLoopControl">
+      <summary>
+              提供服务添加到 Visual Basic 编译器编译 <see langword="For...Next" /> 循环。
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.ObjectFlowControl.ForLoopControl.ForLoopInitObj(System.Object,System.Object,System.Object,System.Object,System.Object@,System.Object@)">
+      <summary>
+              初始化 <see langword="For...Next" /> 循环。
+            </summary>
+      <param name="Counter">
+                循环计数器变量。
+              </param>
+      <param name="Start">
+                循环计数器的初始值。
+              </param>
+      <param name="Limit">
+                值 <see langword="To" /> 选项。
+              </param>
+      <param name="StepValue">
+                值 <see langword="Step" /> 选项。
+              </param>
+      <param name="LoopForResult">
+                一个对象，包含已验证循环值的值。
+              </param>
+      <param name="CounterResult">
+                下一步的循环迭代该计数器值。
+              </param>
+      <returns>
+        <see langword="False" /> 如果循环已终止;否则为 <see langword="True" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.ObjectFlowControl.ForLoopControl.ForNextCheckDec(System.Decimal,System.Decimal,System.Decimal)">
+      <summary>
+              有关有效值的范围，循环计数器检查 <see langword="Step" />, ，和 <see langword="To" /> 值。
+            </summary>
+      <param name="count">
+                必需。
+                 一个 <see langword="Decimal" /> 为循环计数器变量的值，该值表示初始值传递。
+              </param>
+      <param name="limit">
+                必需。
+                 一个 <see langword="Decimal" /> 值，该值表示通过使用传递的值 <see langword="To" /> 关键字。
+              </param>
+      <param name="StepValue">
+                必需。
+                 一个 <see langword="Decimal" /> 值，该值表示通过使用传递的值 <see langword="Step" /> 关键字。
+              </param>
+      <returns>
+        <see langword="True" /> 如果 <paramref name="StepValue" /> 大于零并 <paramref name="count" /> 是否小于或等于 <paramref name="limit" /> 或 <paramref name="StepValue" /> 是否小于或等于零和 <paramref name="count" /> 是否大于或等于 <paramref name="limit" />; 否则为 <see langword="False" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.ObjectFlowControl.ForLoopControl.ForNextCheckObj(System.Object,System.Object,System.Object@)">
+      <summary>
+              增量 <see langword="For...Next" /> 循环。
+            </summary>
+      <param name="Counter">
+                循环计数器变量。
+              </param>
+      <param name="LoopObj">
+                一个对象，包含已验证循环值的值。
+              </param>
+      <param name="CounterResult">
+                下一步的循环迭代该计数器值。
+              </param>
+      <returns>
+        <see langword="False" /> 如果循环已终止;否则为 <see langword="True" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.ObjectFlowControl.ForLoopControl.ForNextCheckR4(System.Single,System.Single,System.Single)">
+      <summary>
+              有关有效值的范围，循环计数器检查 <see langword="Step" />, ，和 <see langword="To" /> 值。
+            </summary>
+      <param name="count">
+                必需。
+                 一个 <see langword="Single" /> 为循环计数器变量的值，该值表示初始值传递。
+              </param>
+      <param name="limit">
+                必需。
+                 一个 <see langword="Single" /> 值，该值表示通过使用传递的值 <see langword="To" /> 关键字。
+              </param>
+      <param name="StepValue">
+                必需。
+                 一个 <see langword="Single" /> 值，该值表示通过使用传递的值 <see langword="Step" /> 关键字。
+              </param>
+      <returns>
+        <see langword="True" /> 如果 <paramref name="StepValue" /> 大于零并 <paramref name="count" /> 是否小于或等于 <paramref name="limit" />, ，或者如果 <paramref name="StepValue" /> 是否小于或等于零和 <paramref name="count" /> 是否大于或等于 <paramref name="limit" />; 否则为 <see langword="False" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.ObjectFlowControl.ForLoopControl.ForNextCheckR8(System.Double,System.Double,System.Double)">
+      <summary>
+              有关有效值的范围，循环计数器检查 <see langword="Step" />, ，和 <see langword="To" /> 值。
+            </summary>
+      <param name="count">
+                必需。
+                 一个 <see langword="Double" /> 为循环计数器变量的值，该值表示初始值传递。
+              </param>
+      <param name="limit">
+                必需。
+                 一个 <see langword="Double" /> 值，该值表示通过使用传递的值 <see langword="To" /> 关键字。
+              </param>
+      <param name="StepValue">
+                必需。
+                 一个 <see langword="Double" /> 值，该值表示通过使用传递的值 <see langword="Step" /> 关键字。
+              </param>
+      <returns>
+        <see langword="True" /> 如果 <paramref name="StepValue" /> 大于零并 <paramref name="count" /> 是否小于或等于 <paramref name="limit" />, ，或者如果 <paramref name="StepValue" /> 是否小于或等于零和 <paramref name="count" /> 是否大于或等于 <paramref name="limit" />; 否则为 <see langword="False" />。
+            </returns>
+    </member>
+    <member name="T:Microsoft.VisualBasic.CompilerServices.ObjectFlowControl">
+      <summary>
+              Visual Basic 编译器使用此类对象流控制;它不是为了在代码中直接调用。
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.ObjectFlowControl.CheckForSyncLockOnValueType(System.Object)">
+      <summary>
+              检查的同步锁定上指定的类型。
+            </summary>
+      <param name="Expression">
+                数据类型对其进行检查的同步锁定。
+              </param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.CompilerServices.Operators">
+      <summary>
+              提供了后期绑定的数学运算符，如 <see cref="M:Microsoft.VisualBasic.CompilerServices.Operators.AddObject(System.Object,System.Object)" /> 和 <see cref="M:Microsoft.VisualBasic.CompilerServices.Operators.CompareObject(System.Object,System.Object,System.Boolean)" />, ，后者对 Visual Basic 编译器内部使用。
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.AddObject(System.Object,System.Object)">
+      <summary>
+              表示 Visual Basic 加法 （+） 运算符。
+            </summary>
+      <param name="Left">
+                必需。
+                 任何数值表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何数值表达式。
+              </param>
+      <returns>
+        <paramref name="Left" /> 与 <paramref name="Right" /> 的和。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.AndObject(System.Object,System.Object)">
+      <summary>
+              表示 Visual Basic<see langword="And" />运算符。
+            </summary>
+      <param name="Left">
+                必需。
+                 任何<see langword="Boolean" />或数值表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何<see langword="Boolean" />或数值表达式。
+              </param>
+      <returns>
+              有关<see langword="Boolean" />操作，<see langword="True" />如果这两个<paramref name="Left" />和<paramref name="Right" />计算结果为<see langword="True" />; 否则为<see langword="False" />。
+               对于按位运算，如果这两个 1<paramref name="Left" />和<paramref name="Right" />计算结果为 1; 否则为 0。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.CompareObject(System.Object,System.Object,System.Boolean)">
+      <summary>
+              表示 Visual Basic 比较运算符。
+            </summary>
+      <param name="Left">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="TextCompare">
+                必需。
+                <see langword="True" />若要执行不区分大小写的字符串比较;否则为<see langword="False" />。
+              </param>
+      <returns>
+                      值 
+                    
+                      条件 
+                    
+                      -1 
+                    
+                      <paramref name="Left" /> 小于 <paramref name="Right" />。
+                    
+                      0 
+                    
+                      <paramref name="Left" /> 与 <paramref name="Right" /> 相等。
+                    
+                      1 
+                    
+                      <paramref name="Left" /> 大于 <paramref name="Right" />。
+                    </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectEqual(System.Object,System.Object,System.Boolean)">
+      <summary>
+              表示 Visual Basic 等号 （=） 运算符。
+            </summary>
+      <param name="Left">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="TextCompare">
+                必需。
+                <see langword="True" />若要执行不区分大小写的字符串比较;否则为<see langword="False" />。
+              </param>
+      <returns>
+              如果 <paramref name="Left" /> 和 <paramref name="Right" /> 相等，则为 <see langword="True" />；否则为 <see langword="False" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectGreater(System.Object,System.Object,System.Boolean)">
+      <summary>
+              表示 Visual Basic 更高的比 (&gt;) 运算符。
+            </summary>
+      <param name="Left">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="TextCompare">
+                必需。
+                <see langword="True" />若要执行不区分大小写的字符串比较;否则为<see langword="False" />。
+              </param>
+      <returns>
+              如果 <see langword="True" /> 大于 <paramref name="Left" />，则为 <paramref name="Right" />；否则为 <see langword="False" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectGreaterEqual(System.Object,System.Object,System.Boolean)">
+      <summary>
+              表示大于 Visual Basic-于或等于 (1&gt; =) 运算符。
+            </summary>
+      <param name="Left">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="TextCompare">
+                必需。
+                <see langword="True" />若要执行不区分大小写的字符串比较;否则为<see langword="False" />。
+              </param>
+      <returns>
+              如果 <paramref name="Left" /> 大于等于 <paramref name="Right" />，则为 <see langword="True" />；否则为 <see langword="False" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectLess(System.Object,System.Object,System.Boolean)">
+      <summary>
+              表示 Visual Basic 较低的比 （&lt;) operator.&gt;&lt;/) operator.&gt;
+            </summary>
+      <param name="Left">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="TextCompare">
+                必需。
+                <see langword="True" />若要执行不区分大小写的字符串比较;否则为<see langword="False" />。
+              </param>
+      <returns>
+              如果 <paramref name="Left" /> 小于 <paramref name="Right" />，则为 <see langword="True" />；否则为 <see langword="False" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectLessEqual(System.Object,System.Object,System.Boolean)">
+      <summary>
+              不太表示 Visual Basic-于或等于 （&lt;=) operator.&gt;&lt;/=) operator.&gt;
+            </summary>
+      <param name="Left">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="TextCompare">
+                必需。
+                <see langword="True" />若要执行不区分大小写的字符串比较;否则为<see langword="False" />。
+              </param>
+      <returns>
+              如果 <paramref name="Left" /> 小于等于 <paramref name="Right" />，则为 <see langword="True" />；否则为 <see langword="False" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.CompareObjectNotEqual(System.Object,System.Object,System.Boolean)">
+      <summary>
+              表示 Visual Basic 不相等 (&lt;&gt;) 运算符。
+            </summary>
+      <param name="Left">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="TextCompare">
+                必需。
+                <see langword="True" />若要执行不区分大小写的字符串比较;否则为<see langword="False" />。
+              </param>
+      <returns>
+              如果 <see langword="True" /> 不等于 <paramref name="Left" />，则为 <paramref name="Right" />；否则为 <see langword="False" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.CompareString(System.String,System.String,System.Boolean)">
+      <summary>
+              执行二进制或文本的字符串比较在给定两个字符串。
+            </summary>
+      <param name="Left">
+                必需。
+                 任何 <see langword="String" /> 表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何 <see langword="String" /> 表达式。
+              </param>
+      <param name="TextCompare">
+                必需。
+                <see langword="True" />若要执行不区分大小写的字符串比较;否则为<see langword="False" />。
+              </param>
+      <returns>
+                      值 
+                    
+                      条件 
+                    
+                      -1 
+                    
+                      <paramref name="Left" /> 小于 <paramref name="Right" />。
+                    
+                      0
+                    
+                      <paramref name="Left" /> 等于 <paramref name="Right" />。
+                    
+                      1 
+                    
+                      <paramref name="Left" /> 大于 <paramref name="Right" />。
+                    </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.ConcatenateObject(System.Object,System.Object)">
+      <summary>
+              表示 Visual Basic 串联 （&amp;） 运算符。
+            </summary>
+      <param name="Left">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何表达式。
+              </param>
+      <returns>
+              一个字符串，表示的串联<paramref name="Left" />和<paramref name="Right" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectEqual(System.Object,System.Object,System.Boolean)">
+      <summary>
+              表示重载的 Visual Basic 等号 （=） 运算符。
+            </summary>
+      <param name="Left">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="TextCompare">
+                必需。
+                <see langword="True" />若要执行不区分大小写的字符串比较;否则为<see langword="False" />。
+              </param>
+      <returns>
+              重载的 equals 运算符的结果。
+              <see langword="False" />如果不支持运算符重载。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectGreater(System.Object,System.Object,System.Boolean)">
+      <summary>
+              表示重载更高版本的 Visual Basic 的比 (&gt;) 运算符。
+            </summary>
+      <param name="Left">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="TextCompare">
+                必需。
+                <see langword="True" />若要执行不区分大小写的字符串比较;否则为<see langword="False" />。
+              </param>
+      <returns>
+              重载更大的结果的运算符。
+              <see langword="False" />如果不支持运算符重载。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectGreaterEqual(System.Object,System.Object,System.Boolean)">
+      <summary>
+              表示重载更高版本的 Visual Basic-于或等于 (1&gt; =) 运算符。
+            </summary>
+      <param name="Left">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="TextCompare">
+                必需。
+                <see langword="True" />若要执行不区分大小写的字符串比较;否则为<see langword="False" />。
+              </param>
+      <returns>
+              重载更大的结果-比或相等运算符。
+              <see langword="False" />如果不支持运算符重载。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectLess(System.Object,System.Object,System.Boolean)">
+      <summary>
+              表示重载的 Visual Basic 较低的比 （&lt;) operator.&gt;&lt;/) operator.&gt;
+            </summary>
+      <param name="Left">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="TextCompare">
+                必需。
+                <see langword="True" />若要执行不区分大小写的字符串比较;否则为<see langword="False" />。
+              </param>
+      <returns>
+              重载的结果更少的运算符。
+              <see langword="False" />如果不支持运算符重载。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectLessEqual(System.Object,System.Object,System.Boolean)">
+      <summary>
+              不太表示重载的 Visual Basic-于或等于 （&lt;=) operator.&gt;&lt;/=) operator.&gt;
+            </summary>
+      <param name="Left">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="TextCompare">
+                必需。
+                <see langword="True" />若要执行不区分大小写的字符串比较;否则为<see langword="False" />。
+              </param>
+      <returns>
+              重载的结果更少-比或相等运算符。
+              <see langword="False" />如果不支持运算符重载。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.ConditionalCompareObjectNotEqual(System.Object,System.Object,System.Boolean)">
+      <summary>
+              表示重载的 Visual Basic 不相等 (&lt;&gt;) 运算符。
+            </summary>
+      <param name="Left">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="TextCompare">
+                必需。
+                <see langword="True" />若要执行不区分大小写的字符串比较;否则为<see langword="False" />。
+              </param>
+      <returns>
+              重载的不相等运算符的结果。
+              <see langword="False" />如果不支持运算符重载。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.DivideObject(System.Object,System.Object)">
+      <summary>
+              表示 Visual Basic 除 （/） 运算符。
+            </summary>
+      <param name="Left">
+                必需。
+                 任何数值表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何数值表达式。
+              </param>
+      <returns>
+              完整的商 <paramref name="Left" /> 除以 <paramref name="Right" />, ，包括任何余数。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.ExponentObject(System.Object,System.Object)">
+      <summary>
+              表示 Visual Basic 指数 (^) 运算符。
+            </summary>
+      <param name="Left">
+                必需。
+                 任何数值表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何数值表达式。
+              </param>
+      <returns>
+              结果 <paramref name="Left" /> 的次幂 <paramref name="Right" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.FallbackInvokeUserDefinedOperator(System.Object,System.Object[])">
+      <summary>
+              执行用户定义的运算符进行后期绑定的评估。
+               此帮助器方法不是为了在代码中直接调用。
+            </summary>
+      <param name="vbOp">
+                用户定义的运算符。
+              </param>
+      <param name="Arguments">
+                要传递给用户定义运算符的参数值。
+              </param>
+      <returns>
+              从用户定义运算符返回的结果。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.IntDivideObject(System.Object,System.Object)">
+      <summary>
+              表示 Visual Basic 整除 (\) 运算符。
+            </summary>
+      <param name="Left">
+                必需。
+                 任何数值表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何数值表达式。
+              </param>
+      <returns>
+              整数商 <paramref name="Left" /> 除以 <paramref name="Right" />, ，它将放弃所有余数并保留仅整数部分。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.LeftShiftObject(System.Object,System.Object)">
+      <summary>
+              表示 Visual Basic 算术左的移位 (&lt;&lt;) 运算符。
+            </summary>
+      <param name="Operand">
+                必需。
+                 整型数值表达式。
+                 要移动的位模式。
+                 数据类型必须是整数类型 (<see langword="SByte" />, ，<see langword="Byte" />, ，<see langword="Short" />, ，<see langword="UShort" />, ，<see langword="Integer" />, ，<see langword="UInteger" />, ，<see langword="Long" />, ，或 <see langword="ULong" />)。
+              </param>
+      <param name="Amount">
+                必需。
+                 数值表达式。
+                 要位移的位模式的比特数。
+                 数据类型必须为 <see langword="Integer" /> 或扩大到 <see langword="Integer" />。
+              </param>
+      <returns>
+              一个整型数值。
+               移位的位模式的结果。
+               数据类型是相同的 <paramref name="Operand" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.LikeObject(System.Object,System.Object,Microsoft.VisualBasic.CompareMethod)">
+      <summary>
+              表示 Visual Basic <see langword="Like" /> 运算符。
+            </summary>
+      <param name="Source">
+                必需。
+                 任何表达式。
+              </param>
+      <param name="Pattern">
+                必需。
+                 任何符合 Like 运算符中所述的模式匹配的约定的字符串表达式。
+              </param>
+      <param name="CompareOption">
+                必需。
+                 一个 <see cref="T:Microsoft.VisualBasic.CompareMethod" /> 值，该值指定该操作使用文本或二进制比较。
+              </param>
+      <returns>
+        <see langword="True" /> 如果的字符串表示形式中的值 <paramref name="Source" /> 满足包含在该模式 <paramref name="Pattern" />; 否则为 <see langword="False" />。
+              <see langword="True" /> 如果两个 <paramref name="Source" /> 和 <paramref name="Pattern" /> 是 <see langword="Nothing" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.LikeString(System.String,System.String,Microsoft.VisualBasic.CompareMethod)">
+      <summary>
+              表示 Visual Basic <see langword="Like" /> 运算符。
+            </summary>
+      <param name="Source">
+                必需。
+                 任何 <see langword="String" /> 表达式。
+              </param>
+      <param name="Pattern">
+                必需。
+                 任何 <see langword="String" /> 符合 Like 运算符中所述的模式匹配约定表达式。
+              </param>
+      <param name="CompareOption">
+                必需。
+                 一个 <see cref="T:Microsoft.VisualBasic.CompareMethod" /> 值，该值指定该操作使用文本或二进制比较。
+              </param>
+      <returns>
+        <see langword="True" /> 如果中的值 <paramref name="Source" /> 满足包含在该模式 <paramref name="Pattern" />; 否则为 <see langword="False" />。
+              <see langword="True" /> 如果两个 <paramref name="Source" /> 和 <paramref name="Pattern" /> 为空。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.ModObject(System.Object,System.Object)">
+      <summary>
+              表示 Visual Basic <see langword="Mod" /> 运算符。
+            </summary>
+      <param name="Left">
+                必需。
+                 任何数值表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何数值表达式。
+              </param>
+      <returns>
+              后的余数 <paramref name="Left" /> 除以 <paramref name="Right" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.MultiplyObject(System.Object,System.Object)">
+      <summary>
+              表示 Visual Basic 乘 （*） 运算符。
+            </summary>
+      <param name="Left">
+                必需。
+                 任何数值表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何数值表达式。
+              </param>
+      <returns>
+              产品 <paramref name="Left" /> 和 <paramref name="Right" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.NegateObject(System.Object)">
+      <summary>
+              表示 Visual Basic 一元减号 （-） 运算符。
+            </summary>
+      <param name="Operand">
+                必需。
+                 任何数值表达式。
+              </param>
+      <returns>
+              值为负 <paramref name="Operand" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.NotObject(System.Object)">
+      <summary>
+              表示 Visual Basic <see langword="Not" /> 运算符。
+            </summary>
+      <param name="Operand">
+                必需。
+                 任何 <see langword="Boolean" /> 或数值表达式。
+              </param>
+      <returns>
+              有关 <see langword="Boolean" /> 操作， <see langword="False" /> 如果 <paramref name="Operand" /> 是 <see langword="True" />; 否则为 <see langword="True" />。
+               对于按位运算 1 如果 <paramref name="Operand" /> 0; 否则为 0。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.OrObject(System.Object,System.Object)">
+      <summary>
+              表示 Visual Basic <see langword="Or" /> 运算符。
+            </summary>
+      <param name="Left">
+                必需。
+                 任何 <see langword="Boolean" /> 或数值表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何 <see langword="Boolean" /> 或数值表达式。
+              </param>
+      <returns>
+              有关 <see langword="Boolean" /> 操作， <see langword="False" /> 如果两个 <paramref name="Left" /> 和 <paramref name="Right" /> 的计算结果为 <see langword="False" />; 否则为 <see langword="True" />。
+               对于按位运算，0，如果这两个 <paramref name="Left" /> 和 <paramref name="Right" /> 计算结果为 0; 否则为 1。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.PlusObject(System.Object)">
+      <summary>
+              表示 Visual Basic 一元加号 （+） 运算符。
+            </summary>
+      <param name="Operand">
+                必需。
+                 任何数值表达式。
+              </param>
+      <returns>
+        <paramref name="Operand" /> 的值。
+               (符号 <paramref name="Operand" /> 保持不变。)
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.RightShiftObject(System.Object,System.Object)">
+      <summary>
+              表示 Visual Basic 算术右移位 (&gt;&gt;) 运算符。
+            </summary>
+      <param name="Operand">
+                必需。
+                 整型数值表达式。
+                 要移动的位模式。
+                 数据类型必须是整数类型 (<see langword="SByte" />, ，<see langword="Byte" />, ，<see langword="Short" />, ，<see langword="UShort" />, ，<see langword="Integer" />, ，<see langword="UInteger" />, ，<see langword="Long" />, ，或 <see langword="ULong" />)。
+              </param>
+      <param name="Amount">
+                必需。
+                 数值表达式。
+                 要位移的位模式的比特数。
+                 数据类型必须为 <see langword="Integer" /> 或扩大到 <see langword="Integer" />。
+              </param>
+      <returns>
+              一个整型数值。
+               移位的位模式的结果。
+               数据类型是相同的 <paramref name="Operand" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.SubtractObject(System.Object,System.Object)">
+      <summary>
+              表示 Visual Basic 减号 （-） 运算符。
+            </summary>
+      <param name="Left">
+                必需。
+                 任何数值表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何数值表达式。
+              </param>
+      <returns>
+              之间的差异 <paramref name="Left" /> 和 <paramref name="Right" />。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.Operators.XorObject(System.Object,System.Object)">
+      <summary>
+              表示 Visual Basic <see langword="Xor" /> 运算符。
+            </summary>
+      <param name="Left">
+                必需。
+                 任何 <see langword="Boolean" /> 或数值表达式。
+              </param>
+      <param name="Right">
+                必需。
+                 任何 <see langword="Boolean" /> 或数值表达式。
+              </param>
+      <returns>
+              一个 <see langword="Boolean" /> 或数字值。
+               有关 <see langword="Boolean" /> 比较，返回值是两个逻辑异 （排他逻辑析取） <see langword="Boolean" /> 值。
+               对于按位 （数字） 运算，返回值是一个数字值，表示按位异 （排他位或运算） 的两个数值的位模式。
+               有关详细信息，请参阅异或运算符 (Visual Basic)。
+            </returns>
+    </member>
+    <member name="T:Microsoft.VisualBasic.CompilerServices.OptionCompareAttribute">
+      <summary>
+              指定当前 <see langword="Option Compare" /> 设置应传递作为参数的默认值。
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.OptionCompareAttribute.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.VisualBasic.CompilerServices.OptionCompareAttribute" /> 类的新实例。
+            </summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.CompilerServices.OptionTextAttribute">
+      <summary>
+              Visual Basic 编译器将发出此帮助器类，以指示 （用于 Visual Basic 调试） 正在使用的比较选项、 二进制或文本
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.OptionTextAttribute.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.VisualBasic.CompilerServices.OptionTextAttribute" /> 类的新实例。
+               这是一个帮助器方法。
+            </summary>
+    </member>
+    <member name="T:Microsoft.VisualBasic.CompilerServices.ProjectData">
+      <summary>
+              对于 Visual Basic 中提供帮助器 <see langword="Err" /> 对象。
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.ProjectData.ClearProjectError">
+      <summary>
+              执行的工作<see langword="Clear" />方法<see langword="Err" />对象。
+               一个帮助器方法。
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.ProjectData.CreateProjectError(System.Int32)">
+      <summary>
+              执行的工作<see langword="Raise" />方法<see langword="Err" />对象。
+               一个帮助器方法。
+            </summary>
+      <param name="hr">
+                一个整数值，标识错误的性质。
+                 Visual Basic 错误都在范围之内 0 – 65535;为系统错误; 保留范围 0 – 512513 – 65535 的范围是可用于用户定义的错误。
+              </param>
+      <returns>
+              一个 <see cref="T:System.Exception" /> 对象。
+            </returns>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.ProjectData.EndApp">
+      <summary>
+              关闭，以调用程序集的所有文件和停止的进程。
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.ProjectData.SetProjectError(System.Exception)">
+      <summary>
+              Visual Basic 编译器使用此帮助器方法来捕获中的异常 <see langword="Err" /> 对象。
+            </summary>
+      <param name="ex">
+        <see cref="T:System.Exception" /> 对象被捕获。
+              </param>
+    </member>
+    <member name="M:Microsoft.VisualBasic.CompilerServices.ProjectData.SetProjectError(System.Exception,System.Int32)">
+      <summary>
+              Visual Basic 编译器使用此帮助器方法来捕获中的异常 <see langword="Err" /> 对象。
+            </summary>
+      <param name="ex">
+        <see cref="T:System.Exception" /> 对象被捕获。
+              </param>
+      <param name="lErl">
+                异常的行号。
+              </param>
+    </member>
+    <member name="T:Microsoft.VisualBasic.HideModuleNameAttribute">
+      <summary>
+        <see langword="HideModuleNameAttribute" />属性，当应用于某个模块时允许使用仅该模块所需的资格访问模块成员。
+            </summary>
+    </member>
+    <member name="M:Microsoft.VisualBasic.HideModuleNameAttribute.#ctor">
+      <summary>
+              初始化 <see cref="T:Microsoft.VisualBasic.HideModuleNameAttribute" /> 属性的新实例。
+            </summary>
+    </member>
+  </members>
+</doc>
