@@ -1,13 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,9 +11,19 @@ namespace DllXmlToCN
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        bool autoExit;
+
+        public Form1(string[] args)
         {
             InitializeComponent();
+            if (args.Length >= 2)
+            {
+                textBox源.Text = args[0];
+                textBox目标.Text = args[1];
+                buttonDiv_Click(new object(), new EventArgs());
+                autoExit = true;
+                buttonStart_Click(new object(), new EventArgs());
+            }
         }
 
         List<string> files源 = new List<string>();
@@ -186,6 +190,15 @@ namespace DllXmlToCN
             files源XML = new List<XmlNodeList>();
             files目标 = new List<string>();
             buttonStart.Enabled = false;
+
+            if (autoExit)
+            {
+                foreach (var item in textBox1.Text.Split(new char[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    Console.WriteLine(item);
+                }
+                Application.Exit();
+            }
         }
 
         private void buttonS_Click(object sender, EventArgs e)
@@ -238,5 +251,6 @@ namespace DllXmlToCN
             Thread th = new Thread(ts);
             th.Start();
         }
+
     }
 }
