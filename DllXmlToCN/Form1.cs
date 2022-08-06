@@ -44,8 +44,6 @@ namespace DllXmlToCN
 
         void ParseDirectory(string path, List<string> list)
         {
-
-            List<string> tttt = new List<string>();
             string[] dirs = Directory.GetDirectories(path);//得到子目录
             IEnumerator iter = dirs.GetEnumerator();
             while (iter.MoveNext())
